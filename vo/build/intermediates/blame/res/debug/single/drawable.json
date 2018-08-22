@@ -1,23 +1,23 @@
 [
     {
-        "merged": "D:\\AndroidContent\\vo2.0\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\drawable\\nim_emoji_item_selector.xml",
-        "source": "D:\\AndroidContent\\vo2.0\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\drawable\\nim_emoji_item_selector.xml"
+        "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\drawable\\message_plus_file_selector.xml",
+        "source": "E:\\vo2.0\\vo\\res\\drawable\\message_plus_file_selector.xml"
     },
     {
         "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\drawable\\multi_select_text_color_selector.xml",
         "source": "E:\\vo2.0\\avchatkit\\build\\intermediates\\bundles\\debug\\res\\drawable\\multi_select_text_color_selector.xml"
     },
     {
-        "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\drawable\\message_plus_file_selector.xml",
-        "source": "E:\\vo2.0\\vo\\res\\drawable\\message_plus_file_selector.xml"
-    },
-    {
-        "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\drawable\\nim_video_play_icon_selector.xml",
-        "source": "E:\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\drawable\\nim_video_play_icon_selector.xml"
+        "merged": "D:\\AndroidContent\\vo2.0\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\drawable\\nim_emoji_item_selector.xml",
+        "source": "D:\\AndroidContent\\vo2.0\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\drawable\\nim_emoji_item_selector.xml"
     },
     {
         "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\drawable\\tooltip_frame_light.xml",
         "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\493a8f3a6bbc5f9655a5f8489feb9d07\\res\\drawable\\tooltip_frame_light.xml"
+    },
+    {
+        "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\drawable\\nim_video_play_icon_selector.xml",
+        "source": "E:\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\drawable\\nim_video_play_icon_selector.xml"
     },
     {
         "merged": "D:\\AndroidContent\\vo2.0\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\drawable\\jrmf_w_shape_unbind.xml",
@@ -120,12 +120,12 @@
         "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\62678fe17e6c52e38ecef09e49c33f36\\res\\drawable\\notification_bg.xml"
     },
     {
-        "merged": "D:\\AndroidContent\\vo2.0\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\drawable\\nim_g_image_preview_white_btn_selecter.xml",
-        "source": "D:\\AndroidContent\\vo2.0\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\drawable\\nim_g_image_preview_white_btn_selecter.xml"
-    },
-    {
         "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\drawable\\nim_robot_link_view_press_round.xml",
         "source": "E:\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\drawable\\nim_robot_link_view_press_round.xml"
+    },
+    {
+        "merged": "D:\\AndroidContent\\vo2.0\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\drawable\\nim_g_image_preview_white_btn_selecter.xml",
+        "source": "D:\\AndroidContent\\vo2.0\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\drawable\\nim_g_image_preview_white_btn_selecter.xml"
     },
     {
         "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\drawable\\jrmf_rp_shape_click_blue_round_btn_bg.xml",
@@ -188,12 +188,12 @@
         "source": "E:\\vo2.0\\faceunity\\build\\intermediates\\bundles\\debug\\res\\drawable\\blur_level_item_unselected.xml"
     },
     {
-        "merged": "D:\\AndroidContent\\vo2.0\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\drawable\\t_avchat_speaker_selector.xml",
-        "source": "D:\\AndroidContent\\vo2.0\\vo2.0\\avchatkit\\build\\intermediates\\bundles\\debug\\res\\drawable\\t_avchat_speaker_selector.xml"
-    },
-    {
         "merged": "D:\\AndroidContent\\vo2.0\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\drawable\\t_avchat_microphone_mute_selector.xml",
         "source": "D:\\AndroidContent\\vo2.0\\vo2.0\\avchatkit\\build\\intermediates\\bundles\\debug\\res\\drawable\\t_avchat_microphone_mute_selector.xml"
+    },
+    {
+        "merged": "D:\\AndroidContent\\vo2.0\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\drawable\\t_avchat_speaker_selector.xml",
+        "source": "D:\\AndroidContent\\vo2.0\\vo2.0\\avchatkit\\build\\intermediates\\bundles\\debug\\res\\drawable\\t_avchat_speaker_selector.xml"
     },
     {
         "merged": "D:\\AndroidContent\\vo2.0\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\drawable\\jrmf_rp_bg_white_round.xml",
@@ -228,24 +228,24 @@
         "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\02c126e1e8371624cd4fdba658400035\\res\\drawable\\design_fab_background.xml"
     },
     {
-        "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_dark.xml",
-        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\493a8f3a6bbc5f9655a5f8489feb9d07\\res\\drawable\\abc_item_background_holo_dark.xml"
-    },
-    {
         "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\drawable\\blur_level_item_selected.xml",
         "source": "E:\\vo2.0\\faceunity\\build\\intermediates\\bundles\\debug\\res\\drawable\\blur_level_item_selected.xml"
     },
     {
-        "merged": "D:\\AndroidContent\\vo2.0\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_clear_material.xml",
-        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\9d8e48ae4db7b3c2727390317233e907\\res\\drawable\\abc_ic_clear_material.xml"
+        "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_dark.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\493a8f3a6bbc5f9655a5f8489feb9d07\\res\\drawable\\abc_item_background_holo_dark.xml"
+    },
+    {
+        "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_voice_search_api_material.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\493a8f3a6bbc5f9655a5f8489feb9d07\\res\\drawable\\abc_ic_voice_search_api_material.xml"
     },
     {
         "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\drawable\\jrmf_w_shape_default_avatar.xml",
         "source": "E:\\vo2.0\\jrmfRpWalletlib\\build\\intermediates\\bundles\\debug\\res\\drawable\\jrmf_w_shape_default_avatar.xml"
     },
     {
-        "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_voice_search_api_material.xml",
-        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\493a8f3a6bbc5f9655a5f8489feb9d07\\res\\drawable\\abc_ic_voice_search_api_material.xml"
+        "merged": "D:\\AndroidContent\\vo2.0\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_clear_material.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\9d8e48ae4db7b3c2727390317233e907\\res\\drawable\\abc_ic_clear_material.xml"
     },
     {
         "merged": "D:\\AndroidContent\\vo2.0\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\drawable\\nim_gray_edit_text_bg.xml",
@@ -336,12 +336,12 @@
         "source": "E:\\vo2.0\\vo\\res\\drawable\\register_tip_selector.xml"
     },
     {
-        "merged": "D:\\AndroidContent\\vo2.0\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\drawable\\jrmf_b_selector_cursor.xml",
-        "source": "D:\\AndroidContent\\vo2.0\\vo2.0\\jrmfRpWalletlib\\build\\intermediates\\bundles\\debug\\res\\drawable\\jrmf_b_selector_cursor.xml"
-    },
-    {
         "merged": "D:\\AndroidContent\\vo2.0\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\drawable\\nim_popup_menu_item_selector.xml",
         "source": "D:\\AndroidContent\\vo2.0\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\drawable\\nim_popup_menu_item_selector.xml"
+    },
+    {
+        "merged": "D:\\AndroidContent\\vo2.0\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\drawable\\jrmf_b_selector_cursor.xml",
+        "source": "D:\\AndroidContent\\vo2.0\\vo2.0\\jrmfRpWalletlib\\build\\intermediates\\bundles\\debug\\res\\drawable\\jrmf_b_selector_cursor.xml"
     },
     {
         "merged": "D:\\AndroidContent\\vo2.0\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\drawable\\nim_chatroom_robot_link_view_selector.xml",
@@ -464,12 +464,12 @@
         "source": "E:\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\drawable\\nim_ic_menu_selector.xml"
     },
     {
-        "merged": "D:\\AndroidContent\\vo2.0\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\drawable\\actionbar_white_logo_space.xml",
-        "source": "D:\\AndroidContent\\vo2.0\\vo2.0\\vo\\res\\drawable\\actionbar_white_logo_space.xml"
-    },
-    {
         "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_light.xml",
         "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\493a8f3a6bbc5f9655a5f8489feb9d07\\res\\drawable\\abc_list_selector_background_transition_holo_light.xml"
+    },
+    {
+        "merged": "D:\\AndroidContent\\vo2.0\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\drawable\\actionbar_white_logo_space.xml",
+        "source": "D:\\AndroidContent\\vo2.0\\vo2.0\\vo\\res\\drawable\\actionbar_white_logo_space.xml"
     },
     {
         "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\drawable\\t_avchat_disable_user_audio_selector.xml",
@@ -480,24 +480,24 @@
         "source": "D:\\AndroidContent\\vo2.0\\vo2.0\\jrmfRpWalletlib\\build\\intermediates\\bundles\\debug\\res\\drawable\\jrmf_b_shape_round_white.xml"
     },
     {
-        "merged": "D:\\AndroidContent\\vo2.0\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_light.xml",
-        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\9d8e48ae4db7b3c2727390317233e907\\res\\drawable\\abc_list_selector_holo_light.xml"
+        "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_icon_background.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\d7ac9d25a3435c0b9d2e802dbed524e3\\res\\drawable\\notification_icon_background.xml"
     },
     {
         "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\drawable\\effect_item_circle_selected.xml",
         "source": "E:\\vo2.0\\faceunity\\build\\intermediates\\bundles\\debug\\res\\drawable\\effect_item_circle_selected.xml"
     },
     {
-        "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_icon_background.xml",
-        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\d7ac9d25a3435c0b9d2e802dbed524e3\\res\\drawable\\notification_icon_background.xml"
-    },
-    {
-        "merged": "D:\\AndroidContent\\vo2.0\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\drawable\\nim_progress_bar_foreground.xml",
-        "source": "D:\\AndroidContent\\vo2.0\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\drawable\\nim_progress_bar_foreground.xml"
+        "merged": "D:\\AndroidContent\\vo2.0\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_light.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\9d8e48ae4db7b3c2727390317233e907\\res\\drawable\\abc_list_selector_holo_light.xml"
     },
     {
         "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\drawable\\nim_emoji_item_selector.xml",
         "source": "E:\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\drawable\\nim_emoji_item_selector.xml"
+    },
+    {
+        "merged": "D:\\AndroidContent\\vo2.0\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\drawable\\nim_progress_bar_foreground.xml",
+        "source": "D:\\AndroidContent\\vo2.0\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\drawable\\nim_progress_bar_foreground.xml"
     },
     {
         "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_spinner_textfield_background_material.xml",
@@ -652,12 +652,12 @@
         "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\493a8f3a6bbc5f9655a5f8489feb9d07\\res\\drawable\\abc_list_selector_background_transition_holo_dark.xml"
     },
     {
-        "merged": "D:\\AndroidContent\\vo2.0\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_textfield_search_material.xml",
-        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\9d8e48ae4db7b3c2727390317233e907\\res\\drawable\\abc_textfield_search_material.xml"
-    },
-    {
         "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\drawable\\t_avchat_voice_normal.xml",
         "source": "E:\\vo2.0\\avchatkit\\build\\intermediates\\bundles\\debug\\res\\drawable\\t_avchat_voice_normal.xml"
+    },
+    {
+        "merged": "D:\\AndroidContent\\vo2.0\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_textfield_search_material.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\9d8e48ae4db7b3c2727390317233e907\\res\\drawable\\abc_textfield_search_material.xml"
     },
     {
         "merged": "D:\\AndroidContent\\vo2.0\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\drawable\\nim_bg_edittext_rectangle_focused.xml",

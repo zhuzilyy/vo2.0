@@ -20,12 +20,12 @@
         "source": "D:\\AndroidContent\\vo2.0\\vo2.0\\faceunity\\build\\intermediates\\bundles\\debug\\res\\mipmap-xhdpi-v4\\beagledog.png"
     },
     {
-        "merged": "D:\\AndroidContent\\vo2.0\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\happyrabbi.png",
-        "source": "D:\\AndroidContent\\vo2.0\\vo2.0\\faceunity\\build\\intermediates\\bundles\\debug\\res\\mipmap-xhdpi-v4\\happyrabbi.png"
-    },
-    {
         "merged": "D:\\AndroidContent\\vo2.0\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\yellowear.png",
         "source": "D:\\AndroidContent\\vo2.0\\vo2.0\\faceunity\\build\\intermediates\\bundles\\debug\\res\\mipmap-xhdpi-v4\\yellowear.png"
+    },
+    {
+        "merged": "D:\\AndroidContent\\vo2.0\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\happyrabbi.png",
+        "source": "D:\\AndroidContent\\vo2.0\\vo2.0\\faceunity\\build\\intermediates\\bundles\\debug\\res\\mipmap-xhdpi-v4\\happyrabbi.png"
     },
     {
         "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\princesscrown.png",
@@ -80,12 +80,12 @@
         "source": "E:\\vo2.0\\faceunity\\build\\intermediates\\bundles\\debug\\res\\mipmap-xhdpi-v4\\warm.png"
     },
     {
-        "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_delete_all.png",
-        "source": "E:\\vo2.0\\faceunity\\build\\intermediates\\bundles\\debug\\res\\mipmap-xhdpi-v4\\ic_delete_all.png"
-    },
-    {
         "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\tiara.png",
         "source": "E:\\vo2.0\\faceunity\\build\\intermediates\\bundles\\debug\\res\\mipmap-xhdpi-v4\\tiara.png"
+    },
+    {
+        "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_delete_all.png",
+        "source": "E:\\vo2.0\\faceunity\\build\\intermediates\\bundles\\debug\\res\\mipmap-xhdpi-v4\\ic_delete_all.png"
     },
     {
         "merged": "D:\\AndroidContent\\vo2.0\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\camera_front.png",
@@ -108,12 +108,12 @@
         "source": "E:\\vo2.0\\faceunity\\build\\intermediates\\bundles\\debug\\res\\mipmap-xhdpi-v4\\deer.png"
     },
     {
-        "merged": "D:\\AndroidContent\\vo2.0\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\hartshorn.png",
-        "source": "D:\\AndroidContent\\vo2.0\\vo2.0\\faceunity\\build\\intermediates\\bundles\\debug\\res\\mipmap-xhdpi-v4\\hartshorn.png"
-    },
-    {
         "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\delta.png",
         "source": "E:\\vo2.0\\faceunity\\build\\intermediates\\bundles\\debug\\res\\mipmap-xhdpi-v4\\delta.png"
+    },
+    {
+        "merged": "D:\\AndroidContent\\vo2.0\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\hartshorn.png",
+        "source": "D:\\AndroidContent\\vo2.0\\vo2.0\\faceunity\\build\\intermediates\\bundles\\debug\\res\\mipmap-xhdpi-v4\\hartshorn.png"
     },
     {
         "merged": "D:\\AndroidContent\\vo2.0\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\delta.png",
