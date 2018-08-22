@@ -4,7 +4,15 @@
         "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\base-2.6.0.301.aar\\2c1cb0179ad4e18759538943451e8299\\res\\layout-ar\\upsdk_ota_update_view.xml"
     },
     {
+        "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\layout-ar\\upsdk_app_dl_progress_dialog.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\base-2.6.0.301.aar\\2fafb85556d8fd3cdaf7b37062abde59\\res\\layout-ar\\upsdk_app_dl_progress_dialog.xml"
+    },
+    {
         "merged": "D:\\AndroidContent\\vo2.0\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\layout-ar\\upsdk_app_dl_progress_dialog.xml",
         "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\base-2.6.0.301.aar\\2c1cb0179ad4e18759538943451e8299\\res\\layout-ar\\upsdk_app_dl_progress_dialog.xml"
+    },
+    {
+        "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\layout-ar\\upsdk_ota_update_view.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\base-2.6.0.301.aar\\2fafb85556d8fd3cdaf7b37062abde59\\res\\layout-ar\\upsdk_ota_update_view.xml"
     }
 ]

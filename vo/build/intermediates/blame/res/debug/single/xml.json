@@ -4,6 +4,14 @@
         "source": "D:\\AndroidContent\\vo2.0\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\xml\\provider_paths.xml"
     },
     {
+        "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\xml\\provider_paths.xml",
+        "source": "E:\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\xml\\provider_paths.xml"
+    },
+    {
+        "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\xml\\nrtc_setting_pref.xml",
+        "source": "E:\\vo2.0\\avchatkit\\build\\intermediates\\bundles\\debug\\res\\xml\\nrtc_setting_pref.xml"
+    },
+    {
         "merged": "D:\\AndroidContent\\vo2.0\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\xml\\nrtc_setting_pref.xml",
         "source": "D:\\AndroidContent\\vo2.0\\vo2.0\\avchatkit\\build\\intermediates\\bundles\\debug\\res\\xml\\nrtc_setting_pref.xml"
     }
