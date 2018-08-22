@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\androidTest\\debug\\xml\\nrtc_setting_pref.xml",
+        "source": "E:\\vo2.0\\avchatkit\\build\\intermediates\\bundles\\debug\\res\\xml\\nrtc_setting_pref.xml"
+    },
+    {
+        "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\androidTest\\debug\\xml\\provider_paths.xml",
+        "source": "E:\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\xml\\provider_paths.xml"
+    }
+]

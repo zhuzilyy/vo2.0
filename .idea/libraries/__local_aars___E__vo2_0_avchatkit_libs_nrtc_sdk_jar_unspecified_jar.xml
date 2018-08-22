@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="__local_aars__:E.\vo2.0\avchatkit\libs\nrtc-sdk.jar:unspecified@jar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/avchatkit/libs/nrtc-sdk.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

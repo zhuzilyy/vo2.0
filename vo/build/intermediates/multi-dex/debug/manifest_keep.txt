@@ -1,0 +1,3 @@
+# view AndroidManifest.xml #generated:103
+-keep class com.zl.vo_.NimApplication { <init>(...); }
+
