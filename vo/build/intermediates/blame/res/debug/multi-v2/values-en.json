@@ -1,16 +1,16 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\vo2.0\\vo\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-en\\values-en.xml",
+            "outputFile": "D:\\AndroidContent\\vo2.0\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\values-en\\values-en.xml",
             "map": [
                 {
-                    "source": "E:\\vo2.0\\vo\\res\\values-en\\strings.xml",
+                    "source": "D:\\AndroidContent\\vo2.0\\vo2.0\\vo\\res\\values-en\\strings.xml",
                     "from": {
                         "startLines": "2,3,4,5,13,9,6,7,8,10,11,12",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,97,190,284,1000,644,366,457,561,730,814,908",
+                        "startOffsets": "57,100,194,289,1013,653,372,464,569,740,825,920",
                         "endColumns": "41,92,93,81,88,85,90,103,82,83,93,91",
-                        "endOffsets": "92,185,279,361,1084,725,452,556,639,809,903,995"
+                        "endOffsets": "94,188,283,366,1097,734,458,563,647,819,914,1007"
                     },
                     "to": {
                         "startLines": "2,6,7,8,9,10,11,12,13,14,15,16",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "E:\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "source": "D:\\AndroidContent\\vo2.0\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "from": {
                         "startLines": "2,3,4",
                         "startColumns": "4,4,4",
@@ -40,16 +40,16 @@
             ]
         },
         {
-            "outputFile": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\values-en\\values-en.xml",
+            "outputFile": "D:\\AndroidContent\\vo2.0\\vo2.0\\vo\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-en\\values-en.xml",
             "map": [
                 {
-                    "source": "E:\\vo2.0\\vo\\res\\values-en\\strings.xml",
+                    "source": "D:\\AndroidContent\\vo2.0\\vo2.0\\vo\\res\\values-en\\strings.xml",
                     "from": {
                         "startLines": "2,3,4,5,13,9,6,7,8,10,11,12",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,97,190,284,1000,644,366,457,561,730,814,908",
+                        "startOffsets": "57,100,194,289,1013,653,372,464,569,740,825,920",
                         "endColumns": "41,92,93,81,88,85,90,103,82,83,93,91",
-                        "endOffsets": "92,185,279,361,1084,725,452,556,639,809,903,995"
+                        "endOffsets": "94,188,283,366,1097,734,458,563,647,819,914,1007"
                     },
                     "to": {
                         "startLines": "2,6,7,8,9,10,11,12,13,14,15,16",
@@ -60,7 +60,7 @@
                     }
                 },
                 {
-                    "source": "E:\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "source": "D:\\AndroidContent\\vo2.0\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "from": {
                         "startLines": "2,3,4",
                         "startColumns": "4,4,4",

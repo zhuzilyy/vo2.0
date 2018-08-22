@@ -40,13 +40,13 @@ android {
 
     signingConfigs {
         debug {
-            storeFile file('C:/Program Files/Java/jre1.8.0_131/bin/android.keystore')
+            storeFile file('D:/AndroidContent/keystory/android.keystore')
             keyAlias 'android.keystore'
             keyPassword '031424'
             storePassword '031424'
         }
         release {
-            storeFile file('C:/Program Files/Java/jre1.8.0_131/bin/android.keystore')
+            storeFile file('D:/AndroidContent/keystory/android.keystore')
             storePassword '031424'
             keyAlias 'android.keystore'
             keyPassword '031424'
