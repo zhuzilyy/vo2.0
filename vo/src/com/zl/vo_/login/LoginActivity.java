@@ -285,12 +285,9 @@ public class LoginActivity extends UI implements OnKeyListener {
             @Override
             public void onSuccess(LoginInfo param) {
                 LogUtil.i(TAG, "login success");
-
                 onLoginDone();
-
                 DemoCache.setAccount(account);
                 saveLoginInfo(account, token);
-
                 // 初始化消息提醒配置
                 initNotificationConfig();
 
@@ -335,12 +332,10 @@ public class LoginActivity extends UI implements OnKeyListener {
         loginRequest = null;
         DialogMaker.dismissProgressDialog();
     }
-
     private void saveLoginInfo(final String account, final String token) {
         Preferences.saveUserAccount(account);
         Preferences.saveUserToken(token);
     }
-
     //DEMO中使用 username 作为 NIM 的account ，md5(password) 作为 token
     //开发者需要根据自己的实际情况配置自身用户系统和 NIM 用户系统的关系
     private String tokenFromPassword(String password) {

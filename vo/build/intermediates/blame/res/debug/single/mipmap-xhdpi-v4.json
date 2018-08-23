@@ -8,6 +8,10 @@
         "source": "E:\\vo2.0\\faceunity\\build\\intermediates\\bundles\\debug\\res\\mipmap-xhdpi-v4\\camera_front.png"
     },
     {
+        "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\dialog_close.png",
+        "source": "E:\\vo2.0\\vo\\res\\mipmap-xhdpi\\dialog_close.png"
+    },
+    {
         "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\head_search.png",
         "source": "E:\\vo2.0\\vo\\res\\mipmap-xhdpi\\head_search.png"
     },

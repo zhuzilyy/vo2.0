@@ -9,7 +9,6 @@ import android.widget.Toast;
 
 import com.netease.nim.uikit.api.NimUIKit;
 import com.netease.nim.uikit.common.ui.dialog.DialogMaker;
-import com.netease.nim.uikit.common.util.log.LogUtil;
 import com.netease.nim.uikit.common.util.string.MD5;
 import com.netease.nimlib.sdk.NIMClient;
 import com.netease.nimlib.sdk.RequestCallback;
@@ -20,9 +19,11 @@ import com.zl.vo_.R;
 import com.zl.vo_.config.preference.Preferences;
 import com.zl.vo_.config.preference.UserPreferences;
 import com.zl.vo_.contact.ContactHttpClient;
-import com.zl.vo_.login.LoginActivity;
 import com.zl.vo_.main.activity.MainActivity;
+import com.zl.vo_.own.api.ApiAccount;
 import com.zl.vo_.own.base.BaseActivity;
+import com.zl.vo_.own.dialog.CustomerDialog;
+import com.zl.vo_.own.listener.OnRequestDataListener;
 import com.zl.vo_.own.util.WeiboDialogUtils;
 
 import butterknife.OnClick;
@@ -58,7 +59,24 @@ public class RegisterActivity extends BaseActivity{
     public void click(View view){
         switch (view.getId()){
             case R.id.btn_register:
-                register();
+                //register();
+                final CustomerDialog customerDialog=new CustomerDialog(this);
+                customerDialog.setDialogTitle("11111");
+                customerDialog.setDialogMessage("2222222222");
+                customerDialog.setDialogConfirmText("3333333333333");
+                customerDialog.setNoOnclickListener(new CustomerDialog.onNoOnclickListener() {
+                    @Override
+                    public void onNoClick() {
+                        customerDialog.dismiss();
+                    }
+                });
+                customerDialog.setYesOnclickListener(new CustomerDialog.onYesOnclickListener() {
+                    @Override
+                    public void onYesClick() {
+                        Toast.makeText(RegisterActivity.this, "44444444444444", Toast.LENGTH_SHORT).show();
+                    }
+                });
+                customerDialog.show();
                 break;
             case R.id.btn_login:
                 login();

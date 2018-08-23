@@ -35,20 +35,14 @@ import java.util.Map;
  * Created by huangjun on 2015/2/1.
  */
 public class WelcomeActivity extends UI {
-
     private static final String TAG = "WelcomeActivity456";
-
     private boolean customSplash = false;
-
     private static boolean firstEnter = true; // 是否首次进入
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
-
         DemoCache.setMainTaskLaunching(true);
-
         if (savedInstanceState != null) {
             setIntent(new Intent()); // 从堆栈恢复，不再重复解析之前的intent
         }

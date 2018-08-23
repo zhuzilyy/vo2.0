@@ -8,16 +8,18 @@ import com.zl.vo_.own.callback.RequestCallBack;
 import com.zl.vo_.own.listener.OnRequestDataListener;
 import com.zl.vo_.own.util.OkHttpManager;
 import com.zl.vo_.own.util.WeiboDialogUtils;
+
 import java.util.Map;
 
 import okhttp3.Call;
 import okhttp3.Response;
 
 /**
- * Created by Administrator on 2018/7/12.
+ * Created by Administrator on 2018/8/23.
  */
 
-public class Api {
+public class ApiAccount {
+    /*注册的方法*/
     public static void doRegister(final Context context, Map<String,String> params, final OnRequestDataListener listener) {
         Dialog dialog = WeiboDialogUtils.createLoadingDialog(context, "加载中");
         excutePost("http://47.104.73.127:8080/news-0.0.1/api/user/login", context, params,dialog, listener);

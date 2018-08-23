@@ -14,13 +14,11 @@ public class ForgetPwdActivity extends BaseActivity {
     protected void initData() {
 
     }
-
     @Override
     protected void getResLayout() {
         setContentView(R.layout.activity_own_forget_pwd);
 
     }
-
     @Override
     protected void initListener() {
     }

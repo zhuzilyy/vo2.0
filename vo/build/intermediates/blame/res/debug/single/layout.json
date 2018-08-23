@@ -624,6 +624,10 @@
         "source": "E:\\vo2.0\\vo\\res\\layout\\multiport_activity.xml"
     },
     {
+        "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\layout\\dialog_customer.xml",
+        "source": "E:\\vo2.0\\vo\\res\\layout\\dialog_customer.xml"
+    },
+    {
         "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\layout\\jrmf_w_activity_secure_setting.xml",
         "source": "E:\\vo2.0\\jrmfRpWalletlib\\build\\intermediates\\bundles\\debug\\res\\layout\\jrmf_w_activity_secure_setting.xml"
     },

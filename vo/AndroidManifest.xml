@@ -105,11 +105,7 @@
             android:screenOrientation="portrait"
             android:theme="@style/WelcomeEntranceActionBarTheme"
             android:windowSoftInputMode="adjustPan">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-                <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER" />
-            </intent-filter>
+
         </activity>
 
         <!-- 主界面 -->
@@ -529,7 +525,11 @@
         <activity
             android:screenOrientation="portrait"
             android:name=".own.ui.account.RegisterActivity">
-
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER" />
+            </intent-filter>
         </activity>
         <!--主界面-->
         <activity android:name=".own.ui.MainActivity"
