@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.netease.nim.uikit.api.NimUIKit;
@@ -26,6 +27,7 @@ import com.zl.vo_.own.dialog.CustomerDialog;
 import com.zl.vo_.own.listener.OnRequestDataListener;
 import com.zl.vo_.own.util.WeiboDialogUtils;
 
+import butterknife.BindView;
 import butterknife.OnClick;
 
 /**
@@ -34,9 +36,13 @@ import butterknife.OnClick;
 
 public class RegisterActivity extends BaseActivity{
     private Dialog dialog;
+    @BindView(R.id.tv_title)
+    TextView title;
+
     @Override
     protected void initViews() {
         dialog = WeiboDialogUtils.createLoadingDialog(RegisterActivity.this, "加载中");
+        title.setText("注册");
     }
     @Override
     protected void initData() {
@@ -55,31 +61,11 @@ public class RegisterActivity extends BaseActivity{
     protected void setStatusBarColor() {
 
     }
-    @OnClick({R.id.btn_register,R.id.btn_login})
+    @OnClick({R.id.iv_back})
     public void click(View view){
         switch (view.getId()){
-            case R.id.btn_register:
-                //register();
-                final CustomerDialog customerDialog=new CustomerDialog(this);
-                customerDialog.setDialogTitle("11111");
-                customerDialog.setDialogMessage("2222222222");
-                customerDialog.setDialogConfirmText("3333333333333");
-                customerDialog.setNoOnclickListener(new CustomerDialog.onNoOnclickListener() {
-                    @Override
-                    public void onNoClick() {
-                        customerDialog.dismiss();
-                    }
-                });
-                customerDialog.setYesOnclickListener(new CustomerDialog.onYesOnclickListener() {
-                    @Override
-                    public void onYesClick() {
-                        Toast.makeText(RegisterActivity.this, "44444444444444", Toast.LENGTH_SHORT).show();
-                    }
-                });
-                customerDialog.show();
-                break;
-            case R.id.btn_login:
-                login();
+            case R.id.iv_back:
+                finish();
                 break;
         }
     }

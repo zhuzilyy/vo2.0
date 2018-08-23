@@ -1,14 +1,120 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
     >
+    <!--引用title-->
     <include layout="@layout/layout_title"/>
-    <View
+
+    <!--登录-->
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/gray"/>
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <!--账号-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <com.zl.vo_.own.views.ClearEditText
+                android:singleLine="true"
+                android:inputType="number"
+                android:maxLength="11"
+                android:id="@+id/login_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+
+                android:hint="手机号/VO号"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:text=""
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray"
+                android:textSize="14sp"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/common_line"/>
+        </LinearLayout>
+
+        <!--密码-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:orientation="horizontal">
+                <com.zl.vo_.own.views.ClearEditText
+                    android:paddingRight="15dp"
+                    android:paddingLeft="15dp"
+                    android:inputType="textPassword"
+                    android:singleLine="true"
+                    android:id="@+id/login_pwd"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:password="true"
+                    android:hint="请输入密码"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray"
+                    android:textSize="14sp"
+                    />
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/common_line"/>
+        </LinearLayout>
+
+        <!--登录按钮-->
+        <com.dd.CircularProgressButton
+            android:id="@+id/login_submit"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:layout_marginTop="30dp"
+            app:cpb_cornerRadius="3dp"
+            app:cpb_iconComplete="@drawable/login_accept"
+            app:cpb_selectorIdle="@drawable/login_idle_state_selector"
+            app:cpb_selectorError="@drawable/login_error_state_selector"
+            app:cpb_selectorComplete="@drawable/login_complete_state_selector"
+            app:cpb_iconError="@drawable/login_cancel"
+            app:cpb_colorIndicatorBackground="@color/white"
+            app:cpb_colorIndicator="@color/mainColor"
+            app:cpb_textIdle="登录" />
+
+        <!--忘记密码-->
+        <TextView
+            android:id="@+id/login_forgetpwd_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="忘记密码?"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+
+    </LinearLayout>
 
 
 </LinearLayout>

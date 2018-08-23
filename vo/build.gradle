@@ -145,6 +145,8 @@ dependencies {
     compile 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.3@aar'
     //底部导航栏
     compile 'com.ashokvarma.android:bottom-navigation-bar:2.0.4'
+    //登录按钮动画
+    compile 'com.github.dmytrodanylyk.circular-progress-button:library:1.1.3'
 }
 
 

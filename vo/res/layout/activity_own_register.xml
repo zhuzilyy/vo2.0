@@ -5,15 +5,209 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <include layout="@layout/layout_title"/>
-    <Button
-        android:id="@+id/btn_register"
-        android:text="注册"
+    <!--昵称-->
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp" />
-    <Button
+        android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:id="@+id/btn_login"
-        android:text="登录"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <com.zl.vo_.own.views.ClearEditText
+                android:singleLine="true"
+                android:inputType="number"
+                android:layout_marginLeft="15dp"
+                android:maxLength="11"
+                android:id="@+id/register_nick"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="请输入昵称"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text=""
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray"
+                android:textSize="14sp"
+                />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/common_line"/>
+    </LinearLayout>
+
+    <!--账号-->
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp" />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:orientation="horizontal"
+            >
+            <com.zl.vo_.own.views.ClearEditText
+                android:singleLine="true"
+                android:inputType="number"
+                android:layout_marginLeft="15dp"
+                android:maxLength="11"
+                android:id="@+id/register_phone"
+                android:layout_height="35dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:background="@null"
+                android:hint="请输入手机号"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text=""
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray"
+                android:textSize="14sp"
+                />
+            <TextView
+                android:id="@+id/register_getcode"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="获取验证码"
+                android:layout_weight="1"
+                android:textSize="14sp"
+                android:gravity="center"
+                />
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/common_line"/>
+    </LinearLayout>
+    <!--账号-->
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:orientation="vertical">
+        <com.zl.vo_.own.views.ClearEditText
+            android:singleLine="true"
+            android:inputType="number"
+            android:layout_marginLeft="15dp"
+            android:maxLength="11"
+            android:id="@+id/register_code"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="请输入验证码"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text=""
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            android:textSize="14sp"
+            />
+
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/common_line"/>
+    </LinearLayout>
+
+    <!--密码-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <com.zl.vo_.own.views.ClearEditText
+                android:singleLine="true"
+                android:inputType="number"
+                android:layout_marginLeft="15dp"
+                android:maxLength="11"
+                android:id="@+id/register_pwd"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="请输入密码"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text=""
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray"
+                android:textSize="14sp"
+                />
+
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/common_line"/>
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/register_submit"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="注册"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:background="@drawable/login_btn_selector"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        />
+    <LinearLayout
+        android:id="@+id/ll_Protocol"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="点击'注册'即将表示同意"
+            android:textSize="12sp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="用户协议"
+            android:textColor="@color/mainColor"
+            android:textSize="12sp"
+            />
+    </LinearLayout>
+
 </LinearLayout>
