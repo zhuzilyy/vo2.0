@@ -74,4 +74,5 @@
     <color name="common_line">#ebebeb</color>
     <color name="tipcolor">#333333</color>
     <color name="mainColor">#5544aa</color>
+    <color name="main_bottom_color">#333333</color>
 </resources>
