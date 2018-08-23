@@ -25,6 +25,7 @@ import com.netease.nimlib.sdk.mixpush.MixPushService;
 import com.netease.nimlib.sdk.msg.MessageBuilder;
 import com.netease.nimlib.sdk.msg.constant.SessionTypeEnum;
 import com.netease.nimlib.sdk.msg.model.IMMessage;
+import com.zl.vo_.own.ui.account.Login_Register_Acitivity;
 
 import java.util.ArrayList;
 import java.util.Map;
@@ -35,14 +36,20 @@ import java.util.Map;
  * Created by huangjun on 2015/2/1.
  */
 public class WelcomeActivity extends UI {
+
     private static final String TAG = "WelcomeActivity456";
+
     private boolean customSplash = false;
+
     private static boolean firstEnter = true; // 是否首次进入
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
+        //跟 AVChat 聊天有关
         DemoCache.setMainTaskLaunching(true);
+
         if (savedInstanceState != null) {
             setIntent(new Intent()); // 从堆栈恢复，不再重复解析之前的intent
         }
@@ -85,15 +92,15 @@ public class WelcomeActivity extends UI {
                 public void run() {
                     if (!NimUIKit.isInitComplete()) {
                         LogUtil.i(TAG, "wait for uikit cache!");
-                        new Handler().postDelayed(this, 100);
+                        new Handler().postDelayed(this, 200);
                         return;
                     }
 
                     customSplash = false;
-                    if (canAutoLogin()) {
+                    if (canAutoLogin()) { //是否自动登录过
                         onIntent();
                     } else {
-                        LoginActivity.start(WelcomeActivity.this);
+                        Login_Register_Acitivity.start(WelcomeActivity.this);
                         finish();
                     }
                 }
@@ -131,7 +138,7 @@ public class WelcomeActivity extends UI {
         if (TextUtils.isEmpty(DemoCache.getAccount())) {
             // 判断当前app是否正在运行
             if (!SysInfoUtil.stackResumed(this)) {
-                LoginActivity.start(this);
+                Login_Register_Acitivity.start(this);
             }
             finish();
         } else {

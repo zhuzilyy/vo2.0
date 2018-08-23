@@ -109,7 +109,6 @@ public class SessionHelper {
     public static void init() {
         // 注册自定义消息附件解析器
         NIMClient.getService(MsgService.class).registerCustomAttachmentParser(new CustomAttachParser());
-
         // 注册各种扩展消息类型的显示ViewHolder
         registerViewHolders();
 

@@ -40,13 +40,13 @@ android {
 
     signingConfigs {
         debug {
-            storeFile file('C:/Program Files/Java/jre1.8.0_131/bin/android.keystore')
+            storeFile file('D:/AndroidContent/keystory/android.keystore')
             keyAlias 'android.keystore'
             keyPassword '031424'
             storePassword '031424'
         }
         release {
-            storeFile file('C:/Program Files/Java/jre1.8.0_131/bin/android.keystore')
+            storeFile file('D:/AndroidContent/keystory/android.keystore')
             storePassword '031424'
             keyAlias 'android.keystore'
             keyPassword '031424'
@@ -75,6 +75,7 @@ android {
             manifest.srcFile 'AndroidManifest.xml'
             java.srcDirs = ['src']
             resources.srcDirs = ['src']
+
             aidl.srcDirs = ['src']
             renderscript.srcDirs = ['src']
             res.srcDirs = ['res', 'res-chatroom', 'res-rp']
@@ -113,7 +114,6 @@ android {
 }
 
 dependencies {
-    
     implementation 'com.android.support:multidex:1.0.2'
     implementation fileTree(include: '*.jar', dir: 'libs')
     implementation project(path: ':uikit')

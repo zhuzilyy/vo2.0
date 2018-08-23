@@ -1,4 +1,0 @@
-#Thu Aug 23 14:05:36 CST 2018
-base.0=E\:\\vo2.0\\vo\\build\\intermediates\\transforms\\dexMerger\\debug\\8
-renamed.0=classes.dex
-file.0=E\:\\vo2.0\\vo\\build\\intermediates\\transforms\\dexMerger\\debug\\8\\classes.dex

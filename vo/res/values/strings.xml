@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">云信 Demo</string>
+    <string name="app_name">VO2</string>
     <string name="empty"></string>
     <string name="main_tab_session">会话</string>
     <string name="main_tab_contact">通讯录</string>

@@ -1,7 +1,9 @@
 package com.zl.vo_.own.ui.account;
 
 
+import android.Manifest;
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.hardware.Camera;
 import android.util.Log;
@@ -15,7 +17,12 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 
+import com.netease.nim.uikit.support.permission.MPermission;
+import com.netease.nim.uikit.support.permission.annotation.OnMPermissionDenied;
+import com.netease.nim.uikit.support.permission.annotation.OnMPermissionGranted;
+import com.netease.nim.uikit.support.permission.annotation.OnMPermissionNeverAskAgain;
 import com.zl.vo_.R;
+
 import com.zl.vo_.own.base.BaseActivity;
 import com.zl.vo_.own.ui.MainActivity;
 import com.zl.vo_.own.util.CameraUtil;
@@ -32,6 +39,9 @@ import butterknife.OnClick;
 
 
 public class Login_Register_Acitivity extends BaseActivity implements View.OnClickListener, SurfaceHolder.Callback  {
+    private static final String TAG = LoginActivity.class.getSimpleName();
+    private static final String KICK_OUT = "KICK_OUT";
+    private final int BASIC_PERMISSION_REQUEST_CODE = 110;
 
     private int screenWidth;
     private int screenheight;
@@ -67,6 +77,37 @@ public class Login_Register_Acitivity extends BaseActivity implements View.OnCli
     }
     private void minit() {
         instance=this;
+        requestBasicPermission();
+    }
+    /**
+     * 基本权限管理
+     */
+    private final String[] BASIC_PERMISSIONS = new String[]{
+            Manifest.permission.WRITE_EXTERNAL_STORAGE,
+            Manifest.permission.READ_EXTERNAL_STORAGE,
+            Manifest.permission.CAMERA
+    };
+
+    private void requestBasicPermission() {
+        MPermission.with(Login_Register_Acitivity.this)
+                .setRequestCode(BASIC_PERMISSION_REQUEST_CODE)
+                .permissions(BASIC_PERMISSIONS)
+                .request();
+    }
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+        MPermission.onRequestPermissionsResult(this, requestCode, permissions, grantResults);
+    }
+
+    @OnMPermissionGranted(BASIC_PERMISSION_REQUEST_CODE)
+    public void onBasicPermissionSuccess() {
+       // Toast.makeText(this, "授权成功", Toast.LENGTH_SHORT).show();
+    }
+
+    @OnMPermissionDenied(BASIC_PERMISSION_REQUEST_CODE)
+    @OnMPermissionNeverAskAgain(BASIC_PERMISSION_REQUEST_CODE)
+    public void onBasicPermissionFailed() {
+      //  Toast.makeText(this, "授权失败", Toast.LENGTH_SHORT).show();
     }
     @Override
     protected void onResume() {
@@ -84,7 +125,7 @@ public class Login_Register_Acitivity extends BaseActivity implements View.OnCli
         super.onPause();
         releaseCamera();
     }
-    /**
+    /*
      * 获取Camera实例
      *
      * @return
@@ -97,7 +138,7 @@ public class Login_Register_Acitivity extends BaseActivity implements View.OnCli
         }
         return camera;
     }
-    /**
+    /*
      * 预览相机
      */
     private void startPreview(Camera camera, SurfaceHolder holder) {
@@ -115,7 +156,7 @@ public class Login_Register_Acitivity extends BaseActivity implements View.OnCli
             e.printStackTrace();
         }
     }
-    /**
+    /*
      * 设置
      */
     private void setupCamera(Camera camera) {
@@ -151,7 +192,7 @@ public class Login_Register_Acitivity extends BaseActivity implements View.OnCli
         }
     }
 
-    /**
+    /*
      * 释放相机资源
      */
     private void releaseCamera() {
@@ -196,6 +237,19 @@ public class Login_Register_Acitivity extends BaseActivity implements View.OnCli
     public void surfaceDestroyed(SurfaceHolder surfaceHolder) {
         releaseCamera();
     }
+
+    //----------------------
+    public static void start(Context context) {
+        start(context, false);
+    }
+
+    public static void start(Context context, boolean kickOut) {
+        Intent intent = new Intent(context, Login_Register_Acitivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+        intent.putExtra(KICK_OUT, kickOut);
+        context.startActivity(intent);
+    }
+
     @OnClick({ R.id.ll_wx_login,R.id.ll_phone_register,R.id.ll_phone_login
     })
     @Override
@@ -203,25 +257,20 @@ public class Login_Register_Acitivity extends BaseActivity implements View.OnCli
         switch (v.getId()) {
             case R.id.ll_wx_login:
                 //微信登录
-               // loginWX();
-               startActivity(new Intent(Login_Register_Acitivity.this, MainActivity.class));
+
                 break;
             case R.id.ll_phone_login:
                 //手机号登录
-                startActivity(new Intent(Login_Register_Acitivity.this,RegisterActivity.class));
+                startActivity(new Intent(Login_Register_Acitivity.this, LoginActivity.class));
                 break;
             case R.id.ll_phone_register:
                 //手机号注册
-              //  startActivity(new Intent(LoginActivity.this,RegisterActivityVo.class));
-                Toast.makeText(instance, "手机号注册3333444", Toast.LENGTH_SHORT).show();
+
 
                 break;
-
             default:
                 break;
         }
     }
-        /***
-         * 微信登录
-         */
+
 }
