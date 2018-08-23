@@ -106,12 +106,7 @@
             android:screenOrientation="portrait"
             android:theme="@style/WelcomeEntranceActionBarTheme"
             android:windowSoftInputMode="adjustPan">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-                <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <!-- 主界面 -->
@@ -526,6 +521,31 @@
         <meta-data
             android:name="io.fabric.ApiKey"
             android:value="c3b7877640734c92138bf0a8becce1df29155681" />
+        <!--自己添加的清单文件-->
+        <!--注册-->
+        <activity
+            android:screenOrientation="portrait"
+            android:name=".own.ui.account.RegisterActivity">
+
+        </activity>
+        <!--主界面-->
+        <activity android:name=".own.ui.MainActivity"
+            android:screenOrientation="portrait"/>
+        <!--选择登录还是注册界面-->
+        <activity android:name=".own.ui.account.Login_Register_Acitivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <!--手机登录界面-->
+        <activity android:name=".own.ui.account.LoginActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".own.ui.account.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

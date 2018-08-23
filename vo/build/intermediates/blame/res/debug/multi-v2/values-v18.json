@@ -1,21 +1,6 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\AndroidContent\\vo2.0\\vo2.0\\vo\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v18\\values-v18.xml",
-            "map": [
-                {
-                    "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\9d8e48ae4db7b3c2727390317233e907\\res\\values-v18\\values-v18.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "48",
-                        "endOffsets": "99"
-                    }
-                }
-            ]
-        },
-        {
             "outputFile": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\values-v18\\values-v18.xml",
             "map": [
                 {
@@ -35,21 +20,6 @@
             "map": [
                 {
                     "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\493a8f3a6bbc5f9655a5f8489feb9d07\\res\\values-v18\\values-v18.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "48",
-                        "endOffsets": "99"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "D:\\AndroidContent\\vo2.0\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\values-v18\\values-v18.xml",
-            "map": [
-                {
-                    "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\9d8e48ae4db7b3c2727390317233e907\\res\\values-v18\\values-v18.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

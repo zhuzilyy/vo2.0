@@ -107,6 +107,7 @@
         android:icon="@drawable/ic_logo"
         android:label="@string/app_name"
         android:supportsRtl="true"
+        android:testOnly="true"
         android:theme="@style/AppTheme.NoActionBar" >
 
         <!-- 如果IDE是Eclipse，此处可将build.gradle中的AMAP_KEY定义拷贝过来。 -->
@@ -141,12 +142,6 @@
             android:screenOrientation="portrait"
             android:theme="@style/WelcomeEntranceActionBarTheme"
             android:windowSoftInputMode="adjustPan" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-                <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <!-- 主界面 -->
@@ -549,12 +544,51 @@
         <meta-data
             android:name="io.fabric.ApiKey"
             android:value="c3b7877640734c92138bf0a8becce1df29155681" />
+        <!-- 自己添加的清单文件 -->
+        <!-- 注册 -->
+        <activity
+            android:name="com.zl.vo_.own.ui.account.RegisterActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 主界面 -->
+        <activity
+            android:name="com.zl.vo_.own.ui.MainActivity"
+            android:screenOrientation="portrait" />
+        <!-- 选择登录还是注册界面 -->
+        <activity
+            android:name="com.zl.vo_.own.ui.account.Login_Register_Acitivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <!-- 手机登录界面 -->
+        <activity
+            android:name="com.zl.vo_.own.ui.account.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.zl.vo_.own.ui.account.SplashActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER" />
+            </intent-filter>
+        </activity>
 
         <provider
             android:name="com.crashlytics.android.CrashlyticsInitProvider"
             android:authorities="com.zl.vo_.crashlyticsinitprovider"
             android:exported="false"
-            android:initOrder="100" /> <!-- 白板 -->
+            android:initOrder="100" />
+
+        <activity
+            android:name="pub.devrel.easypermissions.AppSettingsDialogHolderActivity"
+            android:exported="false"
+            android:label=""
+            android:theme="@style/EasyPermissions.Transparent" />
+        <activity
+            android:name="com.yanzhenjie.permission.PermissionActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="standard"
+            android:theme="@style/permission_PermissionActivity"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" /> <!-- 白板 -->
         <activity
             android:name="com.netease.nim.rtskit.activity.RTSActivity"
             android:launchMode="singleInstance"

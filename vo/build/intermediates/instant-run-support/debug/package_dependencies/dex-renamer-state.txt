@@ -1,7 +1,7 @@
-#Wed Aug 22 19:06:12 CST 2018
-base.0=D\:\\AndroidContent\\vo2.0\\vo2.0\\vo\\build\\intermediates\\transforms\\dexMerger\\debug\\10
+#Thu Aug 23 10:31:24 CST 2018
+base.0=E\:\\vo2.0\\vo\\build\\intermediates\\transforms\\dexMerger\\debug\\10
 renamed.1=classes2.dex
 renamed.0=classes.dex
-file.1=D\:\\AndroidContent\\vo2.0\\vo2.0\\vo\\build\\intermediates\\transforms\\dexMerger\\debug\\10\\classes2.dex
-base.1=D\:\\AndroidContent\\vo2.0\\vo2.0\\vo\\build\\intermediates\\transforms\\dexMerger\\debug\\10
-file.0=D\:\\AndroidContent\\vo2.0\\vo2.0\\vo\\build\\intermediates\\transforms\\dexMerger\\debug\\10\\classes.dex
+file.1=E\:\\vo2.0\\vo\\build\\intermediates\\transforms\\dexMerger\\debug\\10\\classes2.dex
+base.1=E\:\\vo2.0\\vo\\build\\intermediates\\transforms\\dexMerger\\debug\\10
+file.0=E\:\\vo2.0\\vo\\build\\intermediates\\transforms\\dexMerger\\debug\\10\\classes.dex

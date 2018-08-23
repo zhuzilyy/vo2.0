@@ -40,45 +40,6 @@
             ]
         },
         {
-            "outputFile": "D:\\AndroidContent\\vo2.0\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\values-en\\values-en.xml",
-            "map": [
-                {
-                    "source": "D:\\AndroidContent\\vo2.0\\vo2.0\\vo\\res\\values-en\\strings.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,13,9,6,7,8,10,11,12",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "57,100,194,289,1013,653,372,464,569,740,825,920",
-                        "endColumns": "41,92,93,81,88,85,90,103,82,83,93,91",
-                        "endOffsets": "94,188,283,366,1097,734,458,563,647,819,914,1007"
-                    },
-                    "to": {
-                        "startLines": "2,6,7,8,9,10,11,12,13,14,15,16",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,251,344,438,520,609,695,786,890,973,1057,1151",
-                        "endColumns": "41,92,93,81,88,85,90,103,82,83,93,91",
-                        "endOffsets": "92,339,433,515,604,690,781,885,968,1052,1146,1238"
-                    }
-                },
-                {
-                    "source": "D:\\AndroidContent\\vo2.0\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
-                    "from": {
-                        "startLines": "2,3,4",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "55,105,162",
-                        "endColumns": "49,56,46",
-                        "endOffsets": "100,157,204"
-                    },
-                    "to": {
-                        "startLines": "3,4,5",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "97,147,204",
-                        "endColumns": "49,56,46",
-                        "endOffsets": "142,199,246"
-                    }
-                }
-            ]
-        },
-        {
             "outputFile": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\values-en\\values-en.xml",
             "map": [
                 {
@@ -100,45 +61,6 @@
                 },
                 {
                     "source": "E:\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
-                    "from": {
-                        "startLines": "2,3,4",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "55,105,162",
-                        "endColumns": "49,56,46",
-                        "endOffsets": "100,157,204"
-                    },
-                    "to": {
-                        "startLines": "3,4,5",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "97,147,204",
-                        "endColumns": "49,56,46",
-                        "endOffsets": "142,199,246"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "D:\\AndroidContent\\vo2.0\\vo2.0\\vo\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-en\\values-en.xml",
-            "map": [
-                {
-                    "source": "D:\\AndroidContent\\vo2.0\\vo2.0\\vo\\res\\values-en\\strings.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,13,9,6,7,8,10,11,12",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "57,100,194,289,1013,653,372,464,569,740,825,920",
-                        "endColumns": "41,92,93,81,88,85,90,103,82,83,93,91",
-                        "endOffsets": "94,188,283,366,1097,734,458,563,647,819,914,1007"
-                    },
-                    "to": {
-                        "startLines": "2,6,7,8,9,10,11,12,13,14,15,16",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,251,344,438,520,609,695,786,890,973,1057,1151",
-                        "endColumns": "41,92,93,81,88,85,90,103,82,83,93,91",
-                        "endOffsets": "92,339,433,515,604,690,781,885,968,1052,1146,1238"
-                    }
-                },
-                {
-                    "source": "D:\\AndroidContent\\vo2.0\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "from": {
                         "startLines": "2,3,4",
                         "startColumns": "4,4,4",

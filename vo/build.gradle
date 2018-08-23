@@ -40,13 +40,13 @@ android {
 
     signingConfigs {
         debug {
-            storeFile file('D:/AndroidContent/keystory/android.keystore')
+            storeFile file('C:/Program Files/Java/jre1.8.0_131/bin/android.keystore')
             keyAlias 'android.keystore'
             keyPassword '031424'
             storePassword '031424'
         }
         release {
-            storeFile file('D:/AndroidContent/keystory/android.keystore')
+            storeFile file('C:/Program Files/Java/jre1.8.0_131/bin/android.keystore')
             storePassword '031424'
             keyAlias 'android.keystore'
             keyPassword '031424'
@@ -128,11 +128,23 @@ dependencies {
     compile('com.crashlytics.sdk.android:crashlytics:2.8.0@aar') {
         transitive = true
     }
+    implementation 'pub.devrel:easypermissions:0.3.0'
+    compile 'pub.devrel:easypermissions:0.3.0'
+    compile 'com.yanzhenjie:permission:1.1.0'
+    compile 'com.jakewharton:butterknife:8.4.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
     // ViewModel and LiveData
     implementation 'android.arch.lifecycle:extensions:1.1.0'
     // Java8 support for Lifecycles
     implementation 'android.arch.lifecycle:common-java8:1.1.0'
     compile project(path: ':rtskit')
+    //添加的部分
+    //动态权限
+    compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    compile 'io.reactivex.rxjava2:rxjava:2.0.5'
+    compile 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.3@aar'
+    //底部导航栏
+    compile 'com.ashokvarma.android:bottom-navigation-bar:2.0.4'
 }
 
 

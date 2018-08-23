@@ -66,4 +66,11 @@
     <color name="color_black_ff999999">#ff999999</color>
     <color name="color_gray_bfc2c5">#bfc2c5</color>
 
+    <!--own-->
+    <color name="white_alpha">#a5ffffff</color>
+    <color name="orange">#f27e09</color>
+    <color name="gray">#999999</color>
+    <color name="main_blue">#1aa1f3</color>
+    <color name="common_line">#ececec</color>
+
 </resources>
