@@ -36,7 +36,7 @@ import java.util.Map;
  */
 public class WelcomeActivity extends UI {
 
-    private static final String TAG = "WelcomeActivity";
+    private static final String TAG = "WelcomeActivity456";
 
     private boolean customSplash = false;
 
