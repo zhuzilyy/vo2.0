@@ -25,6 +25,7 @@ import com.netease.nimlib.sdk.mixpush.MixPushService;
 import com.netease.nimlib.sdk.msg.MessageBuilder;
 import com.netease.nimlib.sdk.msg.constant.SessionTypeEnum;
 import com.netease.nimlib.sdk.msg.model.IMMessage;
+import com.zl.vo_.own.ui.account.Login_Register_Acitivity;
 
 import java.util.ArrayList;
 import java.util.Map;
@@ -91,15 +92,15 @@ public class WelcomeActivity extends UI {
                 public void run() {
                     if (!NimUIKit.isInitComplete()) {
                         LogUtil.i(TAG, "wait for uikit cache!");
-                        new Handler().postDelayed(this, 100);
+                        new Handler().postDelayed(this, 200);
                         return;
                     }
 
                     customSplash = false;
-                    if (canAutoLogin()) {
+                    if (canAutoLogin()) { //是否自动登录过
                         onIntent();
                     } else {
-                        LoginActivity.start(WelcomeActivity.this);
+                        Login_Register_Acitivity.start(WelcomeActivity.this);
                         finish();
                     }
                 }
@@ -137,7 +138,7 @@ public class WelcomeActivity extends UI {
         if (TextUtils.isEmpty(DemoCache.getAccount())) {
             // 判断当前app是否正在运行
             if (!SysInfoUtil.stackResumed(this)) {
-                LoginActivity.start(this);
+                Login_Register_Acitivity.start(this);
             }
             finish();
         } else {
