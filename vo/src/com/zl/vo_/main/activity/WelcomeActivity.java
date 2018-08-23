@@ -46,7 +46,7 @@ public class WelcomeActivity extends UI {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
-
+        //跟 AVChat 聊天有关
         DemoCache.setMainTaskLaunching(true);
 
         if (savedInstanceState != null) {

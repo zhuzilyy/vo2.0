@@ -150,13 +150,10 @@ public class MessageFragment extends TFragment implements ModuleProxy {
             inputPanel = new InputPanel(container, rootView, getActionList());
             inputPanel.setCustomization(customization);
         } else {
-            inputPanel.reload(container, customization);
+            inputPanel.reload(container,customization);
         }
-
         initAitManager();
-
         inputPanel.switchRobotMode(NimUIKitImpl.getRobotInfoProvider().getRobotByAccount(sessionId) != null);
-
         registerObservers(true);
 
         if (customization != null) {

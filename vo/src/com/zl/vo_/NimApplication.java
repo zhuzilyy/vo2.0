@@ -48,7 +48,6 @@ public class NimApplication extends Application {
         super.attachBaseContext(newBase);
         MultiDex.install(this);
     }
-
     @Override
     public void onCreate() {
         super.onCreate();
@@ -83,12 +82,13 @@ public class NimApplication extends Application {
             // 初始化rts模块
             initRTSKit();
         }
-
+        //jar 包里的
         Crashlytics crashlyticsKit = new Crashlytics.Builder()
                 .core(new CrashlyticsCore.Builder().disabled(BuildConfig.DEBUG).build())
                 .build();
 
         // Initialize Fabric with the debug-disabled crashlytics.
+        // jar包里的
         Fabric.with(this, crashlyticsKit);
     }
 
@@ -107,7 +107,6 @@ public class NimApplication extends Application {
     private void initUIKit() {
         // 初始化
         NimUIKit.init(this, buildUIKitOptions());
-
         // 设置地理位置提供者。如果需要发送地理位置消息，该参数必须提供。如果不需要，可以忽略。
         NimUIKit.setLocationProvider(new NimDemoLocationProvider());
 
