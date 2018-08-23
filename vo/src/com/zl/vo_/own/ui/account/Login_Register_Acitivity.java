@@ -208,8 +208,7 @@ public class Login_Register_Acitivity extends BaseActivity implements View.OnCli
                 break;
             case R.id.ll_phone_login:
                 //手机号登录
-                startActivity(new Intent(Login_Register_Acitivity.this,LoginActivity.class));
-
+                startActivity(new Intent(Login_Register_Acitivity.this,RegisterActivity.class));
                 break;
             case R.id.ll_phone_register:
                 //手机号注册

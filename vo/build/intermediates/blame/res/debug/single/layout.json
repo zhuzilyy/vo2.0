@@ -20,12 +20,12 @@
         "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\493a8f3a6bbc5f9655a5f8489feb9d07\\res\\layout\\abc_screen_simple_overlay_action_mode.xml"
     },
     {
-        "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\layout\\jrmf_w_activity_update_pwd.xml",
-        "source": "E:\\vo2.0\\jrmfRpWalletlib\\build\\intermediates\\bundles\\debug\\res\\layout\\jrmf_w_activity_update_pwd.xml"
-    },
-    {
         "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\layout\\settings_activity.xml",
         "source": "E:\\vo2.0\\vo\\res\\layout\\settings_activity.xml"
+    },
+    {
+        "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\layout\\jrmf_w_activity_update_pwd.xml",
+        "source": "E:\\vo2.0\\jrmfRpWalletlib\\build\\intermediates\\bundles\\debug\\res\\layout\\jrmf_w_activity_update_pwd.xml"
     },
     {
         "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\layout\\nim_contacts.xml",
@@ -280,12 +280,12 @@
         "source": "E:\\vo2.0\\vo\\res\\layout\\ack_msg_info_layout.xml"
     },
     {
-        "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\layout\\activity_welcome.xml",
-        "source": "E:\\vo2.0\\vo\\res\\layout\\activity_welcome.xml"
-    },
-    {
         "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\layout\\jrmf_w_activity_select_sub_bank.xml",
         "source": "E:\\vo2.0\\jrmfRpWalletlib\\build\\intermediates\\bundles\\debug\\res\\layout\\jrmf_w_activity_select_sub_bank.xml"
+    },
+    {
+        "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\layout\\activity_welcome.xml",
+        "source": "E:\\vo2.0\\vo\\res\\layout\\activity_welcome.xml"
     },
     {
         "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\layout\\nim_message_activity_text_layout.xml",
@@ -304,12 +304,12 @@
         "source": "E:\\vo2.0\\jrmfRpWalletlib\\build\\intermediates\\bundles\\debug\\res\\layout\\jrmf_w_activity_getdeposit.xml"
     },
     {
-        "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\layout\\system_notification_message_activity.xml",
-        "source": "E:\\vo2.0\\vo\\res\\layout\\system_notification_message_activity.xml"
-    },
-    {
         "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\layout\\multiport_item.xml",
         "source": "E:\\vo2.0\\vo\\res\\layout\\multiport_item.xml"
+    },
+    {
+        "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\layout\\system_notification_message_activity.xml",
+        "source": "E:\\vo2.0\\vo\\res\\layout\\system_notification_message_activity.xml"
     },
     {
         "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\layout\\avchat_refuse_receive_layout.xml",
@@ -472,12 +472,12 @@
         "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\493a8f3a6bbc5f9655a5f8489feb9d07\\res\\layout\\abc_list_menu_item_checkbox.xml"
     },
     {
-        "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\layout\\nim_ait_contact_robot_item.xml",
-        "source": "E:\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\layout\\nim_ait_contact_robot_item.xml"
-    },
-    {
         "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\layout\\red_packet_item.xml",
         "source": "E:\\vo2.0\\vo\\res-rp\\layout\\red_packet_item.xml"
+    },
+    {
+        "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\layout\\nim_ait_contact_robot_item.xml",
+        "source": "E:\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\layout\\nim_ait_contact_robot_item.xml"
     },
     {
         "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\layout\\nim_user_profile_toggle_item.xml",
@@ -564,12 +564,12 @@
         "source": "E:\\vo2.0\\vo\\res\\layout\\chatroom_rock_paper_scissors.xml"
     },
     {
-        "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_title_item.xml",
-        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\493a8f3a6bbc5f9655a5f8489feb9d07\\res\\layout\\abc_action_bar_title_item.xml"
-    },
-    {
         "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\layout\\chat_room_activity.xml",
         "source": "E:\\vo2.0\\vo\\res\\layout\\chat_room_activity.xml"
+    },
+    {
+        "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_title_item.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\493a8f3a6bbc5f9655a5f8489feb9d07\\res\\layout\\abc_action_bar_title_item.xml"
     },
     {
         "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\layout\\nim_pull_to_refresh_header_custom.xml",
@@ -636,12 +636,12 @@
         "source": "E:\\vo2.0\\vo\\res\\layout\\add_friend_activity.xml"
     },
     {
-        "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\layout\\jrmf_rp_activity_setting_pswd.xml",
-        "source": "E:\\vo2.0\\jrmfRpWalletlib\\build\\intermediates\\bundles\\debug\\res\\layout\\jrmf_rp_activity_setting_pswd.xml"
-    },
-    {
         "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\layout\\activity_own_register.xml",
         "source": "E:\\vo2.0\\vo\\res\\layout\\activity_own_register.xml"
+    },
+    {
+        "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\layout\\jrmf_rp_activity_setting_pswd.xml",
+        "source": "E:\\vo2.0\\jrmfRpWalletlib\\build\\intermediates\\bundles\\debug\\res\\layout\\jrmf_rp_activity_setting_pswd.xml"
     },
     {
         "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\layout\\jrmf_rp_activity_check_userinfo.xml",
@@ -680,12 +680,12 @@
         "source": "E:\\vo2.0\\vo\\res\\layout\\layout_medit.xml"
     },
     {
-        "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\layout\\activity_robot_profile.xml",
-        "source": "E:\\vo2.0\\vo\\res\\layout\\activity_robot_profile.xml"
-    },
-    {
         "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item_subheader.xml",
         "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\02c126e1e8371624cd4fdba658400035\\res\\layout\\design_navigation_item_subheader.xml"
+    },
+    {
+        "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\layout\\activity_robot_profile.xml",
+        "source": "E:\\vo2.0\\vo\\res\\layout\\activity_robot_profile.xml"
     },
     {
         "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\layout\\jrmf_rp_fragment_trade_detail.xml",
@@ -740,12 +740,12 @@
         "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\push-internal-3.6.3.aar\\5f27b82adc162cefcdfbdbc618c64d1b\\res\\layout\\push_expandable_big_image_notification.xml"
     },
     {
-        "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\layout\\nim_message_item_snapchat.xml",
-        "source": "E:\\vo2.0\\vo\\res\\layout\\nim_message_item_snapchat.xml"
-    },
-    {
         "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_snackbar_include.xml",
         "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\02c126e1e8371624cd4fdba658400035\\res\\layout\\design_layout_snackbar_include.xml"
+    },
+    {
+        "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\layout\\nim_message_item_snapchat.xml",
+        "source": "E:\\vo2.0\\vo\\res\\layout\\nim_message_item_snapchat.xml"
     },
     {
         "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\layout\\multi_select_dialog_title.xml",

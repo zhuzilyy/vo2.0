@@ -113,7 +113,6 @@ public class RegisterActivity extends BaseActivity{
             }
         });
     }
-
     private void saveLoginInfo(final String account, final String token) {
         Preferences.saveUserAccount(account);
         Preferences.saveUserToken(token);

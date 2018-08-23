@@ -12,12 +12,12 @@
         "source": "E:\\vo2.0\\jrmfRpWalletlib\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\jrmf_w_crown.png"
     },
     {
-        "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\nick_name_icon.png",
-        "source": "E:\\vo2.0\\vo\\res\\drawable-xhdpi\\nick_name_icon.png"
-    },
-    {
         "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\message_view_scissors.png",
         "source": "E:\\vo2.0\\vo\\res\\drawable-xhdpi\\message_view_scissors.png"
+    },
+    {
+        "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\nick_name_icon.png",
+        "source": "E:\\vo2.0\\vo\\res\\drawable-xhdpi\\nick_name_icon.png"
     },
     {
         "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\actionbar_dark_back_icon.png",
@@ -40,12 +40,12 @@
         "source": "E:\\vo2.0\\vo\\res\\drawable-xhdpi\\icon_delete_normal.png"
     },
     {
-        "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_btn_radio_to_on_mtrl_000.png",
-        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\493a8f3a6bbc5f9655a5f8489feb9d07\\res\\drawable-xhdpi-v4\\abc_btn_radio_to_on_mtrl_000.png"
-    },
-    {
         "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\nim_female.png",
         "source": "E:\\vo2.0\\vo\\res\\drawable-xhdpi\\nim_female.png"
+    },
+    {
+        "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_btn_radio_to_on_mtrl_000.png",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\493a8f3a6bbc5f9655a5f8489feb9d07\\res\\drawable-xhdpi-v4\\abc_btn_radio_to_on_mtrl_000.png"
     },
     {
         "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\t_avchat_disable_user_audio.png",
@@ -60,12 +60,12 @@
         "source": "E:\\vo2.0\\jrmfRpWalletlib\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\jrmf_w_bank_setting.png"
     },
     {
-        "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\nim_male.png",
-        "source": "E:\\vo2.0\\vo\\res\\drawable-xhdpi\\nim_male.png"
-    },
-    {
         "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_ic_star_black_36dp.png",
         "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\493a8f3a6bbc5f9655a5f8489feb9d07\\res\\drawable-xhdpi-v4\\abc_ic_star_black_36dp.png"
+    },
+    {
+        "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\nim_male.png",
+        "source": "E:\\vo2.0\\vo\\res\\drawable-xhdpi\\nim_male.png"
     },
     {
         "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\jrmf_b_round_spinner_fade_00.png",
@@ -92,28 +92,28 @@
         "source": "E:\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\nim_ic_menu_normal.png"
     },
     {
-        "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\notification_bg_normal.9.png",
-        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\d7ac9d25a3435c0b9d2e802dbed524e3\\res\\drawable-xhdpi-v4\\notification_bg_normal.9.png"
-    },
-    {
         "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\notification_bg_low_normal.9.png",
         "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\d7ac9d25a3435c0b9d2e802dbed524e3\\res\\drawable-xhdpi-v4\\notification_bg_low_normal.9.png"
     },
     {
-        "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\googleg_standard_color_18.png",
-        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-11.6.0.aar\\2ad785aedffc02480d4ed8798a6cee1b\\res\\drawable-xhdpi-v4\\googleg_standard_color_18.png"
+        "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\notification_bg_normal.9.png",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\d7ac9d25a3435c0b9d2e802dbed524e3\\res\\drawable-xhdpi-v4\\notification_bg_normal.9.png"
     },
     {
         "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\red_packet_send_normal.png",
         "source": "E:\\vo2.0\\vo\\res-rp\\drawable-xhdpi\\red_packet_send_normal.png"
     },
     {
-        "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\jrmf_rp_crown.png",
-        "source": "E:\\vo2.0\\jrmfRpWalletlib\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\jrmf_rp_crown.png"
+        "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\googleg_standard_color_18.png",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-11.6.0.aar\\2ad785aedffc02480d4ed8798a6cee1b\\res\\drawable-xhdpi-v4\\googleg_standard_color_18.png"
     },
     {
         "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\nim_picker_preview_normal.png",
         "source": "E:\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\nim_picker_preview_normal.png"
+    },
+    {
+        "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\jrmf_rp_crown.png",
+        "source": "E:\\vo2.0\\jrmfRpWalletlib\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\jrmf_rp_crown.png"
     },
     {
         "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\message_view_holder_left_snapchat_disable.png",
@@ -124,16 +124,16 @@
         "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-11.6.0.aar\\2ad785aedffc02480d4ed8798a6cee1b\\res\\drawable-xhdpi-v4\\common_google_signin_btn_text_light_normal_background.9.png"
     },
     {
-        "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\message_plus_guess_pressed.png",
-        "source": "E:\\vo2.0\\vo\\res\\drawable-xhdpi\\message_plus_guess_pressed.png"
+        "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\t_avchat_volume_mute.png",
+        "source": "E:\\vo2.0\\avchatkit\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\t_avchat_volume_mute.png"
     },
     {
         "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\t_avchat_microphone_mute.png",
         "source": "E:\\vo2.0\\avchatkit\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\t_avchat_microphone_mute.png"
     },
     {
-        "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\t_avchat_volume_mute.png",
-        "source": "E:\\vo2.0\\avchatkit\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\t_avchat_volume_mute.png"
+        "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\message_plus_guess_pressed.png",
+        "source": "E:\\vo2.0\\vo\\res\\drawable-xhdpi\\message_plus_guess_pressed.png"
     },
     {
         "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\t_avchat_switch_camera.png",
@@ -188,12 +188,12 @@
         "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\push-internal-3.6.3.aar\\5f27b82adc162cefcdfbdbc618c64d1b\\res\\drawable-xhdpi-v4\\stat_sys_third_app_notify.png"
     },
     {
-        "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\nim_ic_trans_fail.png",
-        "source": "E:\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\nim_ic_trans_fail.png"
-    },
-    {
         "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\nim_picker_image_selected.png",
         "source": "E:\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\nim_picker_image_selected.png"
+    },
+    {
+        "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\nim_ic_trans_fail.png",
+        "source": "E:\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\nim_ic_trans_fail.png"
     },
     {
         "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\nim_actionbar_search_dark_icon.png",
@@ -244,12 +244,12 @@
         "source": "E:\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\nim_video_play_icon.png"
     },
     {
-        "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\message_view_rock.png",
-        "source": "E:\\vo2.0\\vo\\res\\drawable-xhdpi\\message_view_rock.png"
-    },
-    {
         "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\jrmf_b_bg_search_input.9.png",
         "source": "E:\\vo2.0\\jrmfRpWalletlib\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\jrmf_b_bg_search_input.9.png"
+    },
+    {
+        "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\message_view_rock.png",
+        "source": "E:\\vo2.0\\vo\\res\\drawable-xhdpi\\message_view_rock.png"
     },
     {
         "merged": "E:\\vo2.0\\vo\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\nim_message_input_emotion_pressed.png",

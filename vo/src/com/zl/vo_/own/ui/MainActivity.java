@@ -22,9 +22,6 @@ public class MainActivity extends BaseActivity{
     private Fragment currentFragment;
     @Override
     protected void initViews() {
-
-        Toast.makeText(this, "789", Toast.LENGTH_SHORT).show();
-        Toast.makeText(this, "789", Toast.LENGTH_SHORT).show();
     }
     @Override
     protected void initData() {

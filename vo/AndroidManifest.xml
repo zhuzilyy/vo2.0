@@ -77,10 +77,9 @@
         <meta-data
             android:name="com.amap.api.v2.apikey"
             android:value="${AMAP_KEY}" />
-
         <meta-data
             android:name="com.netease.nim.appKey"
-			android:value="45c6af3c98409b18a84451215d0bdd6e" />
+			android:value="f09dda3419685a8d64d627c2fe97bafd" />
 
         <uses-library
             android:name="com.google.android.maps"
@@ -106,7 +105,11 @@
             android:screenOrientation="portrait"
             android:theme="@style/WelcomeEntranceActionBarTheme"
             android:windowSoftInputMode="adjustPan">
-
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER" />
+            </intent-filter>
         </activity>
 
         <!-- 主界面 -->
@@ -539,12 +542,6 @@
         <activity android:name=".own.ui.account.LoginActivity"
             android:screenOrientation="portrait"/>
         <activity android:name=".own.ui.account.SplashActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-                <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 

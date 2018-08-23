@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Thu Aug 23 10:36:46 CST 2018
+#Thu Aug 23 12:16:58 CST 2018
 1117.file=E\:\\vo2.0\\vo\\build\\intermediates\\res\\debug\\resources-debug.ap_\\res\\anim\\jrmf_rp_fade_out.xml
 1391.set=ANDROID_RESOURCE
 1034.base=E\:\\vo2.0\\vo\\build\\intermediates\\res\\debug\\resources-debug.ap_
