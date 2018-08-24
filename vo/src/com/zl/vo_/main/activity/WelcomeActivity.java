@@ -84,7 +84,7 @@ public class WelcomeActivity extends UI {
     @Override
     protected void onResume() {
         super.onResume();
-
+        Log.i("ss","");
         if (firstEnter) {
             firstEnter = false;
             Runnable runnable = new Runnable() {

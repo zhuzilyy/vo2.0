@@ -11,6 +11,7 @@ import android.widget.Toast;
 import com.netease.nim.uikit.api.NimUIKit;
 import com.netease.nim.uikit.common.ui.dialog.DialogMaker;
 import com.netease.nim.uikit.common.util.string.MD5;
+import com.netease.nim.uikit.common.util.sys.NetworkUtil;
 import com.netease.nimlib.sdk.NIMClient;
 import com.netease.nimlib.sdk.RequestCallback;
 import com.netease.nimlib.sdk.StatusBarNotificationConfig;
@@ -20,12 +21,14 @@ import com.zl.vo_.R;
 import com.zl.vo_.config.preference.Preferences;
 import com.zl.vo_.config.preference.UserPreferences;
 import com.zl.vo_.contact.ContactHttpClient;
+import com.zl.vo_.login.LoginActivity;
 import com.zl.vo_.main.activity.MainActivity;
 import com.zl.vo_.own.api.ApiAccount;
 import com.zl.vo_.own.base.BaseActivity;
 import com.zl.vo_.own.dialog.CustomerDialog;
 import com.zl.vo_.own.listener.OnRequestDataListener;
 import com.zl.vo_.own.util.WeiboDialogUtils;
+import com.zl.vo_.own.views.ClearEditText;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -39,6 +42,14 @@ public class RegisterActivity extends BaseActivity{
     @BindView(R.id.tv_title)
     TextView title;
 
+    @BindView(R.id.register_nick)//昵称
+    ClearEditText register_nick;
+
+    @BindView(R.id.register_phone)//电话（账号）
+    ClearEditText register_phone;
+
+    @BindView(R.id.register_pwd)//密码
+    ClearEditText register_pwd;
     @Override
     protected void initViews() {
         dialog = WeiboDialogUtils.createLoadingDialog(RegisterActivity.this, "加载中");
@@ -61,98 +72,80 @@ public class RegisterActivity extends BaseActivity{
     protected void setStatusBarColor() {
 
     }
-    @OnClick({R.id.iv_back})
+    @OnClick({R.id.iv_back,R.id.register_submit})
     public void click(View view){
         switch (view.getId()){
             case R.id.iv_back:
                 finish();
                 break;
+            case R.id.register_submit:
+                register();
+                break;
         }
     }
     //注册
     private void register() {
-        ContactHttpClient.getInstance().register("199319xjz", "199319xjz", "chenpengfei", new ContactHttpClient.ContactHttpCallback<Void>() {
+        if (!checkRegisterContentValid()) {
+            return;
+        }
+
+        if (!NetworkUtil.isNetAvailable(RegisterActivity.this)) {
+            Toast.makeText(RegisterActivity.this, R.string.network_is_not_available, Toast.LENGTH_SHORT).show();
+            return;
+        }
+        // 注册流程
+        final String account = register_phone.getText().toString();
+        final String nickName = register_nick.getText().toString();
+        final String password = register_pwd.getText().toString();
+
+        ContactHttpClient.getInstance().register(account, nickName, password, new ContactHttpClient.ContactHttpCallback<Void>() {
             @Override
             public void onSuccess(Void aVoid) {
                 Toast.makeText(RegisterActivity.this, R.string.register_success, Toast.LENGTH_SHORT).show();
                 DialogMaker.dismissProgressDialog();
             }
+
             @Override
             public void onFailed(int code, String errorMsg) {
-                        Toast.makeText(RegisterActivity.this, getString(R.string.register_failed, String.valueOf(code), errorMsg), Toast.LENGTH_SHORT)
+                Toast.makeText(RegisterActivity.this, getString(R.string.register_failed, String.valueOf(code), errorMsg), Toast.LENGTH_SHORT)
                         .show();
                 DialogMaker.dismissProgressDialog();
             }
         });
     }
-    private void login() {
-        dialog.show();
-        final String account="199319xjz";
-        final String token = tokenFromPassword("chenpengfei");
-        NimUIKit.login(new LoginInfo(account, token), new RequestCallback<LoginInfo>() {
-            @Override
-            public void onSuccess(LoginInfo param) {
-                dialog.dismiss();
-                DemoCache.setAccount(account);
-                saveLoginInfo(account, token);
-                // 初始化消息提醒配置
-                initNotificationConfig();
-                // 进入主界面
-                MainActivity.start(RegisterActivity.this, null);
-                finish();
-            }
-            @Override
-            public void onFailed(int code) {
-                dialog.dismiss();
-                if (code == 302 || code == 404) {
-                    Toast.makeText(RegisterActivity.this, R.string.login_failed, Toast.LENGTH_SHORT).show();
-                } else {
-                    Toast.makeText(RegisterActivity.this, "登录失败: " + code, Toast.LENGTH_SHORT).show();
-                }
-            }
 
-            @Override
-            public void onException(Throwable exception) {
-                Toast.makeText(RegisterActivity.this, R.string.login_exception, Toast.LENGTH_LONG).show();
-            }
-        });
-    }
-    private void saveLoginInfo(final String account, final String token) {
-        Preferences.saveUserAccount(account);
-        Preferences.saveUserToken(token);
-    }
-    //DEMO中使用 username 作为 NIM 的account ，md5(password) 作为 token
-    //开发者需要根据自己的实际情况配置自身用户系统和 NIM 用户系统的关系
-    private String tokenFromPassword(String password) {
-        String appKey = readAppKey(this);
-        boolean isDemo = "45c6af3c98409b18a84451215d0bdd6e".equals(appKey)
-                || "fe416640c8e8a72734219e1847ad2547".equals(appKey);
+    private boolean checkRegisterContentValid() {
 
-        return isDemo ? MD5.getStringMD5(password) : password;
-    }
-    private static String readAppKey(Context context) {
-        try {
-            ApplicationInfo appInfo = context.getPackageManager().getApplicationInfo(context.getPackageName(), PackageManager.GET_META_DATA);
-            if (appInfo != null) {
-                return appInfo.metaData.getString("com.netease.nim.appKey");
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
+
+        // 帐号检查
+        String account = register_phone.getText().toString().trim();
+        if (account.length() <= 0 || account.length() > 20) {
+            Toast.makeText(this, R.string.register_account_tip, Toast.LENGTH_SHORT).show();
+
+            return false;
         }
-        return null;
-    }
-    private void initNotificationConfig() {
-        // 初始化消息提醒
-        NIMClient.toggleNotification(UserPreferences.getNotificationToggle());
 
-        // 加载状态栏配置
-        StatusBarNotificationConfig statusBarNotificationConfig = UserPreferences.getStatusConfig();
-        if (statusBarNotificationConfig == null) {
-            statusBarNotificationConfig = DemoCache.getNotificationConfig();
-            UserPreferences.setStatusConfig(statusBarNotificationConfig);
+        // 昵称检查
+        String nick = register_nick.getText().toString().trim();
+        if (nick.length() <= 0 || nick.length() > 10) {
+            Toast.makeText(this, R.string.register_nick_name_tip, Toast.LENGTH_SHORT).show();
+
+            return false;
         }
-        // 更新配置
-        NIMClient.updateStatusBarNotificationConfig(statusBarNotificationConfig);
+
+        // 密码检查
+        String password = register_pwd.getText().toString().trim();
+        if (password.length() < 6 || password.length() > 20) {
+            Toast.makeText(this, R.string.register_password_tip, Toast.LENGTH_SHORT).show();
+
+            return false;
+        }
+
+        return true;
     }
+
+
+
+
 
 }

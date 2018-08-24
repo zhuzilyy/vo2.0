@@ -23,7 +23,6 @@
 
             <com.zl.vo_.own.views.ClearEditText
                 android:singleLine="true"
-                android:inputType="number"
                 android:maxLength="11"
                 android:id="@+id/login_name"
                 android:layout_width="match_parent"

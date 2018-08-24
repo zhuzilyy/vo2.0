@@ -67,7 +67,7 @@ public class NimApplication extends Application {
             NIMPushClient.registerMixPushMessageHandler(new DemoMixPushMessageHandler());
 
             // 初始化红包模块，在初始化UIKit模块之前执行
-            NIMRedPacketClient.init(this);
+            //NIMRedPacketClient.init(this);
             // init pinyin
             PinYin.init(this);
             PinYin.validate();
