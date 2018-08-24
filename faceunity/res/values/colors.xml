@@ -9,9 +9,9 @@
 
     <color name="camera_line_gray">#4dffffff</color>
 
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimary">#5544aa</color>
+    <color name="colorPrimaryDark">#5544aa</color>
+    <color name="colorAccent">#5544aa</color>
 	
 	<color name="c80000000">#80000000</color> <!--50%-->
     <color name="cb2000000">#b2000000</color>

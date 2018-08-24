@@ -20,11 +20,8 @@ import com.zl.vo_.R;
 import com.zl.vo_.config.preference.Preferences;
 import com.zl.vo_.config.preference.UserPreferences;
 import com.zl.vo_.contact.ContactHttpClient;
-import com.zl.vo_.main.activity.MainActivity;
-import com.zl.vo_.own.api.ApiAccount;
 import com.zl.vo_.own.base.BaseActivity;
-import com.zl.vo_.own.dialog.CustomerDialog;
-import com.zl.vo_.own.listener.OnRequestDataListener;
+import com.zl.vo_.own.ui.MainActivity;
 import com.zl.vo_.own.util.WeiboDialogUtils;
 
 import butterknife.BindView;
@@ -61,17 +58,20 @@ public class RegisterActivity extends BaseActivity{
     protected void setStatusBarColor() {
 
     }
-    @OnClick({R.id.iv_back})
+    @OnClick({R.id.iv_back,R.id.register_submit})
     public void click(View view){
         switch (view.getId()){
             case R.id.iv_back:
                 finish();
                 break;
+            case R.id.register_submit:
+               login();
+                break;
         }
     }
     //注册
     private void register() {
-        ContactHttpClient.getInstance().register("199319xjz", "199319xjz", "chenpengfei", new ContactHttpClient.ContactHttpCallback<Void>() {
+        ContactHttpClient.getInstance().register("199319xjz1", "199319xjz1", "chenpengfei1", new ContactHttpClient.ContactHttpCallback<Void>() {
             @Override
             public void onSuccess(Void aVoid) {
                 Toast.makeText(RegisterActivity.this, R.string.register_success, Toast.LENGTH_SHORT).show();
@@ -87,8 +87,9 @@ public class RegisterActivity extends BaseActivity{
     }
     private void login() {
         dialog.show();
-        final String account="199319xjz";
-        final String token = tokenFromPassword("chenpengfei");
+        final String account="xzy031424";
+        //final String token = tokenFromPassword("031424xzy");
+        final String token = "031424xzy";
         NimUIKit.login(new LoginInfo(account, token), new RequestCallback<LoginInfo>() {
             @Override
             public void onSuccess(LoginInfo param) {
@@ -98,7 +99,8 @@ public class RegisterActivity extends BaseActivity{
                 // 初始化消息提醒配置
                 initNotificationConfig();
                 // 进入主界面
-                MainActivity.start(RegisterActivity.this, null);
+                //MainActivity.start(RegisterActivity.this, null);
+                jumpActivity(RegisterActivity.this, MainActivity.class);
                 finish();
             }
             @Override
@@ -125,9 +127,8 @@ public class RegisterActivity extends BaseActivity{
     //开发者需要根据自己的实际情况配置自身用户系统和 NIM 用户系统的关系
     private String tokenFromPassword(String password) {
         String appKey = readAppKey(this);
-        boolean isDemo = "45c6af3c98409b18a84451215d0bdd6e".equals(appKey)
-                || "fe416640c8e8a72734219e1847ad2547".equals(appKey);
-
+        boolean isDemo = "f09dda3419685a8d64d627c2fe97bafd".equals(appKey);
+               // || "f09dda3419685a8d64d627c2fe97bafd".equals(appKey);
         return isDemo ? MD5.getStringMD5(password) : password;
     }
     private static String readAppKey(Context context) {
