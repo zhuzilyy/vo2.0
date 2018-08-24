@@ -28,9 +28,9 @@
     <color name="chocolateColor">#5e2605</color>
     <color name="cinnamonColor">#7b3f09</color>
     <color name="coffeeColor">#8d3c0f</color>
-    <color name="colorAccent">#FF4081</color>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#5544aa</color>
+    <color name="colorPrimary">#5544aa</color>
+    <color name="colorPrimaryDark">#5544aa</color>
     <color name="colorTranslucent">#00000000</color>
     <color name="colorWhite">#ffffffff</color>
     <color name="coolGrayColor">#767a85</color>
@@ -126,9 +126,9 @@
     <dimen name="normal_space">8dp</dimen>
     <string name="app_name">faceunity</string>
     <style name="AppTheme" parent="android:Theme.DeviceDefault.Light">
-        <!-- Customize your theme here. -->
+        
     </style>
     <style name="FullScreenTheme" parent="@android:style/Theme.Light.NoTitleBar.Fullscreen">
-        <!-- Customize your theme here. -->
+        
     </style>
 </resources>

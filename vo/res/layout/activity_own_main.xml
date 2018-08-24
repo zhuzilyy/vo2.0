@@ -14,10 +14,114 @@
         android:layout_height="0.2dp"
         android:visibility="gone"
         android:background="@color/common_line"/>
-    <com.ashokvarma.bottomnavigation.BottomNavigationBar
-        android:id="@+id/bar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-    </com.ashokvarma.bottomnavigation.BottomNavigationBar>
+   <LinearLayout
+       android:background="@color/white"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+       <!--消息-->
+       <RelativeLayout
+           android:id="@+id/rl_msg"
+           android:layout_weight="1"
+           android:layout_width="0dp"
+           android:layout_height="wrap_content">
+           <LinearLayout
+               android:layout_centerInParent="true"
+               android:id="@+id/ll_msg"
+               android:layout_marginBottom="3dp"
+               android:layout_marginTop="3dp"
+               android:gravity="center"
+               android:orientation="vertical"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content">
+               <ImageView
+                   android:id="@+id/iv_msg"
+                   android:src="@drawable/selector_msg"
+                   android:layout_width="25dp"
+                   android:layout_height="25dp" />
+               <TextView
+                   android:textColor="@color/mainColor"
+                   android:textSize="12sp"
+                   android:text="消息"
+                   android:id="@+id/tv_message"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content" />
+           </LinearLayout>
+
+       </RelativeLayout>
+       <!--好友-->
+       <LinearLayout
+           android:id="@+id/ll_frineds"
+           android:layout_marginBottom="3dp"
+           android:layout_marginTop="3dp"
+           android:gravity="center"
+           android:layout_weight="1"
+           android:orientation="vertical"
+           android:layout_width="0dp"
+           android:layout_height="wrap_content">
+           <ImageView
+               android:src="@drawable/selector_friend"
+               android:id="@+id/iv_friends"
+               android:layout_width="25dp"
+               android:layout_height="25dp" />
+           <TextView
+               android:textSize="12sp"
+               android:text="朋友"
+               android:id="@+id/tv_friends"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content" />
+       </LinearLayout>
+       <!--发现-->
+       <RelativeLayout
+           android:id="@+id/rl_find"
+           android:layout_weight="1"
+           android:layout_width="0dp"
+           android:layout_height="wrap_content">
+           <LinearLayout
+               android:layout_centerInParent="true"
+               android:id="@+id/ll_find"
+               android:layout_marginBottom="3dp"
+               android:layout_marginTop="3dp"
+               android:gravity="center"
+               android:orientation="vertical"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content">
+               <ImageView
+                   android:src="@drawable/selector_find"
+                   android:id="@+id/iv_find"
+                   android:layout_width="25dp"
+                   android:layout_height="25dp" />
+               <TextView
+                   android:textSize="12sp"
+                   android:text="发现"
+                   android:id="@+id/tv_find"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content" />
+           </LinearLayout>
+
+       </RelativeLayout>
+
+       <!--我的-->
+       <LinearLayout
+           android:id="@+id/ll_mine"
+           android:layout_marginBottom="3dp"
+           android:layout_marginTop="3dp"
+           android:gravity="center"
+           android:layout_weight="1"
+           android:orientation="vertical"
+           android:layout_width="0dp"
+           android:layout_height="wrap_content">
+           <ImageView
+               android:id="@+id/iv_mine"
+               android:src="@drawable/selector_mine"
+               android:layout_width="25dp"
+               android:layout_height="25dp" />
+           <TextView
+               android:textSize="12sp"
+               android:text="我的"
+               android:id="@+id/tv_mine"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content" />
+       </LinearLayout>
+   </LinearLayout>
 
 </LinearLayout>

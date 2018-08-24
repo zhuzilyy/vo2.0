@@ -1,10 +1,13 @@
 package com.zl.vo_.main.activity;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.Window;
+import android.view.WindowManager;
 
 import com.alibaba.fastjson.JSON;
 import com.netease.nim.avchatkit.activity.AVChatActivity;
@@ -45,8 +48,14 @@ public class WelcomeActivity extends UI {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
         super.onCreate(savedInstanceState);
+        //设置全屏
         setContentView(R.layout.activity_welcome);
+        //设置状态栏的颜色
+        setStatusColor();
         //跟 AVChat 聊天有关
         DemoCache.setMainTaskLaunching(true);
 
@@ -60,10 +69,21 @@ public class WelcomeActivity extends UI {
             showSplashView(); // APP进程重新起来
         }
     }
-
+    public void setStatusColor() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            setTranslucentStatus();
+        }
+    }
+    private void setTranslucentStatus() {
+        Window window = getWindow();
+        WindowManager.LayoutParams params = window.getAttributes();
+        final int status = WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS;
+        params.flags |= status;
+        window.setAttributes(params);
+    }
     private void showSplashView() {
         // 首次进入，打开欢迎界面
-        getWindow().setBackgroundDrawableResource(R.drawable.splash_bg);
+        //getWindow().setBackgroundDrawableResource(R.drawable.splash_bg);
         customSplash = true;
     }
 

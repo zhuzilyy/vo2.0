@@ -59,6 +59,12 @@
         <item name="android:windowFullscreen">true</item>
         <item name="android:windowBackground">@drawable/splash_bg</item>
     </style>
+    <style name="splashTheme" parent="AppTheme.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowDisablePreview">true</item>
+    </style>
 
     <!-- 搜索界面主题 -->
     <style name="global_search_bg" parent="@style/AppTheme">
