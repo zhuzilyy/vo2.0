@@ -28,6 +28,8 @@ import com.netease.nimlib.sdk.mixpush.MixPushService;
 import com.netease.nimlib.sdk.msg.MessageBuilder;
 import com.netease.nimlib.sdk.msg.constant.SessionTypeEnum;
 import com.netease.nimlib.sdk.msg.model.IMMessage;
+import com.zl.vo_.own.ui.*;
+import com.zl.vo_.own.ui.MainActivity;
 import com.zl.vo_.own.ui.account.Login_Register_Acitivity;
 
 import java.util.ArrayList;
@@ -225,7 +227,9 @@ public class WelcomeActivity extends UI {
     }
 
     private void showMainActivity(Intent intent) {
-        MainActivity.start(WelcomeActivity.this, intent);
+        //MainActivity.start(WelcomeActivity.this, intent);
+        Intent intentMain=new Intent(this, MainActivity.class);
+        startActivity(intentMain);
         finish();
     }
 

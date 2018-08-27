@@ -1,12 +1,288 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
+    android:orientation="vertical"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <TextView
-        android:text="我的"
-        android:gravity="center"
+    <include layout="@layout/layout_fragment_title"/>
+    <!--头像-->
+    <RelativeLayout
+        android:background="@color/white"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:id="@+id/rl_userInfo"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        >
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_centerVertical="true"
+            android:id="@+id/iv_avatar"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginLeft="12dp"
+            android:src="@mipmap/logo" />
+        <LinearLayout
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@+id/iv_avatar"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="昵称"
+                android:textColor="@color/tipcolor"
+                android:textSize="16sp" />
+            <TextView
+                android:layout_marginTop="5dp"
+                android:textColor="#AAAAAA"
+                android:id="@+id/tv_voId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="vo号:"
+                android:textSize="14sp" />
+        </LinearLayout>
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="30dp"
+            android:src="@drawable/fx_icon_qrcode"
+            />
+    </RelativeLayout>
+    <!--人生笔记  通用设置  开通VO会员-->
+    <LinearLayout
+        android:layout_marginTop="15dp"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!--人生笔记-->
+        <RelativeLayout
+            android:id="@+id/rl_lifeNote"
+            android:layout_width="match_parent"
+            android:layout_height="48dp">
+            <ImageView
+                android:id="@+id/iv_lifeNote"
+                android:layout_marginLeft="24dp"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/publish_lifenote"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginLeft="20dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/iv_lifeNote"
+                android:textColor="@color/tipcolor"
+                android:textSize="15sp"
+                android:text="人生笔记"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
 
+        </RelativeLayout>
+        <View
+            android:background="@color/common_line"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"/>
+        <!--通用设置-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp">
+            <ImageView
+                android:id="@+id/iv_setting"
+                android:layout_marginLeft="24dp"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/settings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginLeft="20dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/iv_setting"
+                android:textColor="@color/tipcolor"
+                android:textSize="15sp"
+                android:text="通用设置"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+        <View
+            android:background="@color/common_line"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"/>
+        <!--开通VO会员-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp">
+            <ImageView
+                android:id="@+id/iv_openVip"
+                android:layout_marginLeft="24dp"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/vip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginLeft="20dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/iv_openVip"
+                android:textColor="@color/tipcolor"
+                android:textSize="15sp"
+                android:text="开通VO会员"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+    </LinearLayout>
+    <!--隐私好友设置  人生笔记密码设置  信息传输加密设置  隐私好友一键删除-->
+    <LinearLayout
+        android:background="@color/white"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!--隐私好友设置-->
+        <RelativeLayout
+            android:id="@+id/rl_setPrivacyFriends"
+            android:layout_width="match_parent"
+            android:layout_height="48dp">
+            <ImageView
+                android:id="@+id/iv_setPrivacyFriends"
+                android:layout_marginLeft="24dp"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/vo_pracy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginLeft="20dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/iv_setPrivacyFriends"
+                android:textColor="@color/tipcolor"
+                android:textSize="15sp"
+                android:text="隐私好友设置"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:id="@+id/iv_guidePravcyFriends"
+                android:layout_marginRight="15dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:src="@mipmap/guide_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+        <View
+            android:background="@color/common_line"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"/>
+
+        <!--人生笔记密码设置-->
+        <RelativeLayout
+            android:id="@+id/rl_lifeNotePwdSetting"
+            android:layout_width="match_parent"
+            android:layout_height="48dp">
+            <ImageView
+                android:id="@+id/iv_lifeNotePwdSetting"
+                android:layout_marginLeft="24dp"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/vo_lifelock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginLeft="20dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/iv_lifeNotePwdSetting"
+                android:textColor="@color/tipcolor"
+                android:textSize="15sp"
+                android:text="人生笔记密码设置"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:id="@+id/iv_guideLifeNotePwd"
+                android:layout_marginRight="15dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:src="@mipmap/guide_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+        <View
+            android:background="@color/common_line"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"/>
+
+        <!--信息传输加密设置-->
+        <RelativeLayout
+            android:id="@+id/rl_infoTransmission"
+            android:layout_width="match_parent"
+            android:layout_height="48dp">
+            <ImageView
+                android:id="@+id/iv_infoTransmission"
+                android:layout_marginLeft="24dp"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/vo_infopwd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginLeft="20dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/iv_infoTransmission"
+                android:textColor="@color/tipcolor"
+                android:textSize="15sp"
+                android:text="信息传输加密设置"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:id="@+id/iv_guideInfoTrans"
+                android:layout_marginRight="15dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:src="@mipmap/guide_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+        <View
+            android:background="@color/common_line"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"/>
+
+        <!--隐私好友一键删除-->
+        <RelativeLayout
+            android:id="@+id/rl_deletePravcyFriends"
+            android:layout_width="match_parent"
+            android:layout_height="48dp">
+            <ImageView
+                android:id="@+id/iv_deletePravcyFriends"
+                android:layout_marginLeft="24dp"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/vo_allclear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginLeft="20dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/iv_deletePravcyFriends"
+                android:textColor="@color/tipcolor"
+                android:textSize="15sp"
+                android:text="隐私好友一键删除"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:id="@+id/iv_guideDeletePravcyFriends"
+                android:layout_marginRight="15dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:src="@mipmap/guide_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+    </LinearLayout>
 </LinearLayout>
