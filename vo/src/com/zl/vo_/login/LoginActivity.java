@@ -340,17 +340,16 @@ public class LoginActivity extends UI implements OnKeyListener {
     //开发者需要根据自己的实际情况配置自身用户系统和 NIM 用户系统的关系
     private String tokenFromPassword(String password) {
         String appKey = readAppKey(this);
-        boolean isDemo = "45c6af3c98409b18a84451215d0bdd6e".equals(appKey)
-                || "fe416640c8e8a72734219e1847ad2547".equals(appKey);
+        boolean isVO = "f09dda3419685a8d64d627c2fe97bafd".equals(appKey);
+        return isVO ? MD5.getStringMD5(password) : password;
 
-        return isDemo ? MD5.getStringMD5(password) : password;
     }
 
     private static String readAppKey(Context context) {
         try {
             ApplicationInfo appInfo = context.getPackageManager().getApplicationInfo(context.getPackageName(), PackageManager.GET_META_DATA);
             if (appInfo != null) {
-                return appInfo.metaData.getString("com.netease.nim.appKey");
+                return appInfo.metaData.getString("com.zl.vo_.appKey");
             }
         } catch (Exception e) {
             e.printStackTrace();

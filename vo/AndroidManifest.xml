@@ -78,7 +78,7 @@
             android:name="com.amap.api.v2.apikey"
             android:value="${AMAP_KEY}" />
         <meta-data
-            android:name="com.netease.nim.appKey"
+            android:name="com.zl.vo_.appKey"
 			android:value="f09dda3419685a8d64d627c2fe97bafd" />
         <uses-library
             android:name="com.google.android.maps"

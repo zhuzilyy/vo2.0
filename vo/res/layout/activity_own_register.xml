@@ -18,7 +18,6 @@
             android:orientation="horizontal">
             <com.zl.vo_.own.views.ClearEditText
                 android:singleLine="true"
-                android:inputType="number"
                 android:layout_marginLeft="15dp"
                 android:maxLength="11"
                 android:id="@+id/register_nick"
@@ -144,7 +143,6 @@
             android:orientation="horizontal">
             <com.zl.vo_.own.views.ClearEditText
                 android:singleLine="true"
-                android:inputType="number"
                 android:layout_marginLeft="15dp"
                 android:maxLength="11"
                 android:id="@+id/register_pwd"

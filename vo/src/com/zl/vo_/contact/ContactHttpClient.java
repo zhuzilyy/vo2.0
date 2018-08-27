@@ -124,7 +124,7 @@ public class ContactHttpClient {
             ApplicationInfo appInfo = DemoCache.getContext().getPackageManager()
                     .getApplicationInfo(DemoCache.getContext().getPackageName(), PackageManager.GET_META_DATA);
             if (appInfo != null) {
-                return appInfo.metaData.getString("com.netease.nim.appKey");
+                return appInfo.metaData.getString("com.zl.vo_.appKey");
             }
         } catch (Exception e) {
             e.printStackTrace();
