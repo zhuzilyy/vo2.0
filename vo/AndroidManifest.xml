@@ -78,12 +78,11 @@
             android:name="com.amap.api.v2.apikey"
             android:value="${AMAP_KEY}" />
         <meta-data
-            android:name="com.zl.vo_.appKey"
+            android:name="com.netease.nim.appKey"
 			android:value="f09dda3419685a8d64d627c2fe97bafd" />
         <uses-library
             android:name="com.google.android.maps"
             android:required="false" />
-
         <!-- 金融魔方SDK 渠道id以及红包名称-->
         <meta-data
             android:name="JRMF_PARTNER_NAME"
@@ -586,6 +585,22 @@
             />
         <!--更多-->
         <activity android:name=".own.ui.mine.ui.ChangeMoreActivity"
+            android:screenOrientation="portrait"
+            />
+        <!--帮助与反馈-->
+        <activity android:name=".own.ui.find.ui.HelpAndFeedBackActivity"
+            android:screenOrientation="portrait"
+            />
+        <!--webview界面-->
+        <activity android:name=".own.ui.account.WebViweActivity"
+            android:screenOrientation="portrait"
+            />
+        <!--反馈界面-->
+        <activity android:name=".own.ui.find.ui.FeebackActivity"
+            android:screenOrientation="portrait"
+            />
+        <!--关于VO-->
+        <activity android:name=".own.ui.find.ui.AboutVoActivity"
             android:screenOrientation="portrait"
             />
     </application>

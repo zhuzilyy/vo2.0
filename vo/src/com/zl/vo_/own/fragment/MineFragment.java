@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.zl.vo_.R;
+import com.zl.vo_.own.api.ApiConstant;
 import com.zl.vo_.own.base.BaseFragment;
 import com.zl.vo_.own.dialog.CustomerDialog;
 import com.zl.vo_.own.dialog.JiamiDialog;
@@ -20,6 +21,7 @@ import com.zl.vo_.own.dialog.LifeNotePwdSettingDialog;
 import com.zl.vo_.own.dialog.PrivateFriendsDialog;
 import com.zl.vo_.own.dialog.VipDialog;
 import com.zl.vo_.own.dialog.VipFunctionIntroduceDialog;
+import com.zl.vo_.own.ui.account.WebViweActivity;
 import com.zl.vo_.own.ui.mine.ui.CancleLifeNotePwdActivity;
 import com.zl.vo_.own.ui.mine.ui.ChangePrivateFriendsActivity;
 import com.zl.vo_.own.ui.mine.ui.FindLifeNotePwdActivity;
@@ -121,13 +123,10 @@ public class MineFragment extends BaseFragment{
                         break;
                     //帮助及反馈
                     case 3:
-                        Toast.makeText(getActivity(), "33333333333333", Toast.LENGTH_SHORT).show();
-                      /*  Intent intent=new Intent(getActivity(),Help_Feedback.class);
-                        intent.putExtra("url", Url.NEW_HELPANDFEEDBACK);
-                        intent.putExtra("param","");
+                        Intent intent=new Intent(getActivity(),WebViweActivity.class);
+                        intent.putExtra("url", ApiConstant.FUNCTION_INTRODUCE);
                         intent.putExtra("title","功能介绍");
-                        startActivity(intent);*/
-
+                        startActivity(intent);
                         break;
                 }
             }

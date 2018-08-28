@@ -3,7 +3,9 @@
     android:orientation="vertical"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:id="@+id/ll_help"
+    >
     <include layout="@layout/layout_fragment_title"/>
     <!--扫一扫-->
     <RelativeLayout
@@ -66,7 +68,7 @@
     <RelativeLayout
         android:background="@color/white"
         android:layout_marginTop="15dp"
-        android:id="@+id/rl_helpfeedback"
+        android:id="@+id/rl_helpAndFeedback"
         android:layout_width="match_parent"
         android:layout_height="55dp"
         android:clickable="true"

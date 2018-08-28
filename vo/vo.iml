@@ -166,6 +166,7 @@
     <orderEntry type="library" name="com.google.firebase:firebase-analytics-impl-11.6.0" level="project" />
     <orderEntry type="library" name="com.google.android.gms:play-services-tasks-license-11.6.0" level="project" />
     <orderEntry type="library" name="com.google.firebase:firebase-iid-license-11.6.0" level="project" />
+    <orderEntry type="library" name="__local_aars__:E.\vo2.0\vo\libs\libammsdk.jar:unspecified@jar" level="project" />
     <orderEntry type="library" name="com.huawei.android.hms:push-2.6.0.301" level="project" />
     <orderEntry type="library" name="android.arch.core:common:1.1.0@jar" level="project" />
     <orderEntry type="library" name="com.android.support:support-fragment-26.1.0" level="project" />

@@ -81,7 +81,7 @@
                 android:layout_centerVertical="true"
                 android:layout_toRightOf="@+id/iv_lifeNote"
                 android:textColor="@color/tipcolor"
-                android:textSize="15sp"
+                android:textSize="14sp"
                 android:text="人生笔记"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
@@ -107,7 +107,7 @@
                 android:layout_centerVertical="true"
                 android:layout_toRightOf="@+id/iv_setting"
                 android:textColor="@color/tipcolor"
-                android:textSize="15sp"
+                android:textSize="14sp"
                 android:text="通用设置"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
@@ -132,7 +132,7 @@
                 android:layout_centerVertical="true"
                 android:layout_toRightOf="@+id/iv_openVip"
                 android:textColor="@color/tipcolor"
-                android:textSize="15sp"
+                android:textSize="14sp"
                 android:text="开通VO会员"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
@@ -162,7 +162,7 @@
                 android:layout_centerVertical="true"
                 android:layout_toRightOf="@+id/iv_setPrivacyFriends"
                 android:textColor="@color/tipcolor"
-                android:textSize="15sp"
+                android:textSize="14sp"
                 android:text="隐私好友设置"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
@@ -198,7 +198,7 @@
                 android:layout_centerVertical="true"
                 android:layout_toRightOf="@+id/iv_lifeNotePwdSetting"
                 android:textColor="@color/tipcolor"
-                android:textSize="15sp"
+                android:textSize="14sp"
                 android:text="人生笔记密码设置"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
@@ -234,7 +234,7 @@
                 android:layout_centerVertical="true"
                 android:layout_toRightOf="@+id/iv_infoTransmission"
                 android:textColor="@color/tipcolor"
-                android:textSize="15sp"
+                android:textSize="14sp"
                 android:text="信息传输加密设置"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
@@ -270,7 +270,7 @@
                 android:layout_centerVertical="true"
                 android:layout_toRightOf="@+id/iv_deletePravcyFriends"
                 android:textColor="@color/tipcolor"
-                android:textSize="15sp"
+                android:textSize="14sp"
                 android:text="隐私好友一键删除"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
@@ -282,7 +282,6 @@
                 android:src="@mipmap/guide_icon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
-
         </RelativeLayout>
     </LinearLayout>
 </LinearLayout>

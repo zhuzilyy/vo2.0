@@ -5,6 +5,7 @@ import android.widget.TextView;
 
 import com.zl.vo_.R;
 import com.zl.vo_.own.base.BaseActivity;
+import com.zl.vo_.own.dialog.PhotoChioceDialog;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -20,7 +21,7 @@ public class AvatarActivity extends BaseActivity {
     TextView tv_right;
     @Override
     protected void initViews() {
-        tv_title.setText("更改昵称");
+        tv_title.setText("更改头像");
         tv_right.setVisibility(View.VISIBLE);
     }
 
@@ -43,12 +44,33 @@ public class AvatarActivity extends BaseActivity {
     protected void setStatusBarColor() {
 
     }
-    @OnClick({R.id.iv_back})
+    @OnClick({R.id.iv_back,R.id.rl_avatar})
     public void click(View view){
         switch (view.getId()){
             case R.id.iv_back:
                 finish();
                 break;
+            case R.id.rl_avatar:
+                showPhotoDialog();
+                break;
         }
+    }
+    //照片选择器
+    private void showPhotoDialog() {
+        PhotoChioceDialog photoChioceDialog = new PhotoChioceDialog(this);
+        photoChioceDialog.show();
+        photoChioceDialog.setClickCallback(new PhotoChioceDialog.ClickCallback() {
+            @Override
+            public void doAlbum() {
+                //readPhotoAlbum();
+            }
+            @Override
+            public void doCancel() {
+            }
+            @Override
+            public void doCamera() {
+                //takePhoto();
+            }
+        });
     }
 }
