@@ -87,7 +87,6 @@ public class RecentContactsFragment extends TFragment {
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-
         findViews();
         initMessageList();
         requestMessages(true);
@@ -95,19 +94,16 @@ public class RecentContactsFragment extends TFragment {
         registerDropCompletedListener(true);
         registerOnlineStateChangeListener(true);
     }
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         return inflater.inflate(R.layout.nim_recent_contacts, container, false);
     }
-
     private void notifyDataSetChanged() {
         adapter.notifyDataSetChanged();
         boolean empty = items.isEmpty() && msgLoaded;
         emptyBg.setVisibility(empty ? View.VISIBLE : View.GONE);
         emptyHint.setHint("还没有会话，在通讯录中找个人聊聊吧！");
     }
-
     @Override
     public void onDestroy() {
         super.onDestroy();
