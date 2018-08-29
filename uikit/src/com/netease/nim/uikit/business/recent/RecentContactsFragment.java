@@ -81,7 +81,6 @@ public class RecentContactsFragment extends TFragment {
     private boolean msgLoaded = false;
 
     private RecentContactsCallback callback;
-
     private UserInfoObserver userInfoObserver;
 
     @Override
