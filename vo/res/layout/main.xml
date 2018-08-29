@@ -29,7 +29,7 @@
         android:layout_alignParentBottom="true"
         android:background="@drawable/skin_global_bg"/>
 
-    <android.support.v4.view.ViewPager
+    <com.zl.vo_.own.views.NoScrollViewPager
         android:id="@+id/main_tab_pager"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
