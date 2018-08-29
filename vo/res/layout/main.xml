@@ -6,6 +6,7 @@
     android:background="@drawable/skin_global_bg">
     <!--主界面 顶部 云信字样 title-->
     <android.support.design.widget.AppBarLayout
+        android:visibility="gone"
         android:id="@+id/app_bar_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

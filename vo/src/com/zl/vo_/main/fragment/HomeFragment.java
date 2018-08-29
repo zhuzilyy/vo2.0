@@ -53,7 +53,6 @@ public class HomeFragment extends TFragment implements OnPageChangeListener, Rem
         rootView = inflater.inflate(R.layout.main, container, false);
         return rootView;
     }
-
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
