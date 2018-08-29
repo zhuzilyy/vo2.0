@@ -26,9 +26,11 @@ import com.zl.vo_.own.ui.mine.ui.CancleLifeNotePwdActivity;
 import com.zl.vo_.own.ui.mine.ui.ChangePrivateFriendsActivity;
 import com.zl.vo_.own.ui.mine.ui.FindLifeNotePwdActivity;
 import com.zl.vo_.own.ui.mine.ui.FixLifeNotePwdActivity;
+import com.zl.vo_.own.ui.mine.ui.LifeNoteActivity;
 import com.zl.vo_.own.ui.mine.ui.SetLifeNotePwdActivity;
 import com.zl.vo_.own.ui.mine.ui.SetPrivateFriendsActivity;
 import com.zl.vo_.own.ui.mine.ui.UserInfoActivity;
+import com.zl.vo_.own.ui.mine.ui.VipActivity;
 import com.zl.vo_.own.views.DetailsTypePopupWindow;
 
 import butterknife.BindView;
@@ -65,12 +67,14 @@ public class MineFragment extends BaseFragment{
 
     }
     @OnClick({R.id.rl_lifeNote,R.id.rl_setPrivacyFriends,R.id.rl_lifeNotePwdSetting,R.id.rl_infoTransmission,R.id.rl_deletePravcyFriends,
-    R.id.rl_userInfo,R.id.iv_add})
+    R.id.rl_userInfo,R.id.iv_add,R.id.rl_openVip})
     public void click(View view){
         Intent intent=null;
         switch (view.getId()){
             case R.id.rl_lifeNote:
-                showLifeNoteDialog();
+                //showLifeNoteDialog();
+                intent=new Intent(getActivity(), LifeNoteActivity.class);
+                startActivity(intent);
                 break;
             //隐私好友设置
             case R.id.rl_setPrivacyFriends:
@@ -97,6 +101,10 @@ public class MineFragment extends BaseFragment{
             //添加
             case R.id.iv_add:
                 showAddPw(iv_add);
+                break;
+            case R.id.rl_openVip:
+                intent=new Intent(getActivity(), VipActivity.class);
+                startActivity(intent);
                 break;
         }
     }

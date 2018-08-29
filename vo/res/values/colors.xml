@@ -80,4 +80,5 @@
     <color name="vip">#ffaf30</color>
     <color name="backgroundColor">#f7f7f7</color>
     <color name="photoDialog">#ffffff</color>
+    <color name="vipcolor">#e2b24f</color>
 </resources>

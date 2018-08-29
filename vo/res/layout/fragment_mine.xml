@@ -118,6 +118,7 @@
             android:layout_height="0.5dp"/>
         <!--开通VO会员-->
         <RelativeLayout
+            android:id="@+id/rl_openVip"
             android:layout_width="match_parent"
             android:layout_height="48dp">
             <ImageView

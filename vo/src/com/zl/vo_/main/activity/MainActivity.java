@@ -89,7 +89,6 @@ public class MainActivity extends UI {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_tab);
         requestBasicPermission();
-
         onParseIntent();
 
         // 等待同步数据完成
@@ -160,7 +159,6 @@ public class MainActivity extends UI {
     private void onInit() {
         // 加载主页面
         showMainFragment();
-
         LogUtil.ui("NIM SDK cache path=" + NIMClient.getSdkStorageDirPath());
     }
 

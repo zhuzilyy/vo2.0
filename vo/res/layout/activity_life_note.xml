@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/layout_title"/>
+    <include
+        android:visibility="gone"
+        layout="@layout/header_life_note"/>
+    <com.zl.vo_.own.views.PullToRefreshView
+        android:orientation="vertical"
+        android:id="@+id/pulltorefreshView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ListView
+            android:divider="@null"
+            android:id="@+id/lv_lifeNote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </com.zl.vo_.own.views.PullToRefreshView>
+
+</LinearLayout>

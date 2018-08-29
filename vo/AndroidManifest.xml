@@ -603,6 +603,14 @@
         <activity android:name=".own.ui.find.ui.AboutVoActivity"
             android:screenOrientation="portrait"
             />
+        <!--人生笔记-->
+        <activity android:name=".own.ui.mine.ui.LifeNoteActivity"
+            android:screenOrientation="portrait"
+            />
+        <!--开通vip-->
+        <activity android:name=".own.ui.mine.ui.VipActivity"
+            android:screenOrientation="portrait"
+            />
     </application>
 
 </manifest>

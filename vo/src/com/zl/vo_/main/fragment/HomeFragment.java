@@ -80,9 +80,7 @@ public class HomeFragment extends TFragment implements OnPageChangeListener, Rem
     public void onPageSelected(int position) {
         // TO TABS
         tabs.onPageSelected(position);
-
         selectPage(position);
-
         enableMsgNotification(false);
     }
 
