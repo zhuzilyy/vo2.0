@@ -17,6 +17,7 @@ def static getGitVersion() {
         th.printStackTrace()
         return ""
     }
+
 }
 
 android {
