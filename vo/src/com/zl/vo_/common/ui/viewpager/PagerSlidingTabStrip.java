@@ -40,6 +40,7 @@ import android.view.ViewTreeObserver.OnGlobalLayoutListener;
 import android.widget.HorizontalScrollView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.zl.vo_.R;
@@ -264,7 +265,7 @@ public class PagerSlidingTabStrip extends HorizontalScrollView implements OnPage
         int[] imgPressed={R.mipmap.msg_p,R.mipmap.friend_p,R.mipmap.help_p,R.mipmap.help_p,R.mipmap.mine_p};
         int childCount = tabsContainer.getChildCount();
         for (int i = 0; i <childCount ; i++) {
-            LinearLayout tabView = (LinearLayout) tabsContainer.getChildAt(i);
+            RelativeLayout tabView = (RelativeLayout) tabsContainer.getChildAt(i);
             TextView textView = tabView.findViewById(R.id.tab_title_label);
             ImageView iv_tab = tabView.findViewById(R.id.iv_tab);
             imageViewList.add(iv_tab);
@@ -374,7 +375,7 @@ public class PagerSlidingTabStrip extends HorizontalScrollView implements OnPage
     }
 
     public void updateTab(int index, ReminderItem item) {
-        LinearLayout tabView = (LinearLayout) tabsContainer.getChildAt(index);
+        RelativeLayout tabView = (RelativeLayout) tabsContainer.getChildAt(index);
         ImageView indicatorView = (ImageView) tabView.findViewById(R.id.tab_new_indicator);
         final DropFake unreadTV = ((DropFake) tabView.findViewById(R.id.tab_new_msg_label));
 
