@@ -48,6 +48,8 @@ import com.netease.nim.uikit.common.ui.drop.DropFake;
 import com.netease.nim.uikit.common.ui.drop.DropManager;
 import com.netease.nim.uikit.common.util.sys.ScreenUtil;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
 
 public class PagerSlidingTabStrip extends HorizontalScrollView implements OnPageChangeListener {
@@ -260,12 +262,12 @@ public class PagerSlidingTabStrip extends HorizontalScrollView implements OnPage
 
     }
     private void setChooseTabViewTextColor(int position) {
+        List<ImageView> imageViewList= new ArrayList<>();
+        List<TextView> textViewList=new ArrayList<>();
+        int[] imgNormal={R.mipmap.msg_n,R.mipmap.friend_n,R.mipmap.help_n,R.mipmap.mine_n,R.mipmap.mine_n};
+        int[] imgPressed={R.mipmap.msg_p,R.mipmap.friend_p,R.mipmap.help_p,R.mipmap.mine_p,R.mipmap.mine_p};
         int childCount = tabsContainer.getChildCount();
-
-        LinearLayout tabView;
-        TextView textView;
-        ImageView imageView;
-        for (int i = 0; i < childCount; ++i) {
+      /*  for (int i = 0; i < childCount; ++i) {
             tabView = (LinearLayout) tabsContainer.getChildAt(i);
             textView = (TextView) tabView.findViewById(R.id.tab_title_label);
 
@@ -276,7 +278,29 @@ public class PagerSlidingTabStrip extends HorizontalScrollView implements OnPage
                 textView.setTextColor(getResources().getColor(unCheckedTextColor));
 
             }
+        }*/
+        for (int i = 0; i <childCount ; i++) {
+            LinearLayout tabView = (LinearLayout) tabsContainer.getChildAt(i);
+            TextView textView = tabView.findViewById(R.id.tab_title_label);
+            ImageView iv_tab = tabView.findViewById(R.id.iv_tab);
+            imageViewList.add(iv_tab);
+            textViewList.add(textView);
+            if (i==2){
+                tabView.setVisibility(GONE);
+            }
         }
+        for (int i = 0; i <childCount; i++) {
+            ImageView imageView = imageViewList.get(i);
+            TextView textView = textViewList.get(i);
+            if (position==i){
+                imageView.setImageResource(imgPressed[i]);
+                textView.setTextColor(getResources().getColor(checkedTextColor));
+            }else{
+                imageView.setImageResource(imgNormal[i]);
+                textView.setTextColor(getResources().getColor(unCheckedTextColor));
+            }
+        }
+
     }
 
     private void addTabView(final int position, String title) {

@@ -181,7 +181,7 @@ public class HomeFragment extends TFragment implements OnPageChangeListener, Rem
         tabs.setOnCustomTabListener(new PagerSlidingTabStrip.OnCustomTabListener() {
             @Override
             public int getTabLayoutResId(int position) {
-                if(0 == position){
+               /* if(0 == position){
                     return R.layout.tab_layout_main;
                 } else if (1 == position){
                     return R.layout.tab_layout_main;
@@ -191,7 +191,7 @@ public class HomeFragment extends TFragment implements OnPageChangeListener, Rem
                     return R.layout.tab_layout_main;
                 } else if (4 == position){
                     return R.layout.tab_layout_main;
-                }
+                }*/
                 return R.layout.tab_layout_main;
             }
 
