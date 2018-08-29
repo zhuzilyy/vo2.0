@@ -38,7 +38,6 @@
                 android:contentDescription="@string/empty"
                 android:src="@drawable/nim_main_tab_new_message_notify"
                 android:visibility="gone"/>
-
         </LinearLayout>
     </RelativeLayout>
     <!--未读消息数-->
