@@ -91,21 +91,21 @@ public class MainActivity extends UI {
         requestBasicPermission();
         onParseIntent();
 
-        // 等待同步数据完成
-        boolean syncCompleted = LoginSyncDataStatusObserver.getInstance().observeSyncDataCompletedEvent(new Observer<Void>() {
-            @Override
-            public void onEvent(Void v) {
-                DialogMaker.dismissProgressDialog();
-            }
-        });
+    // 等待同步数据完成
+    boolean syncCompleted = LoginSyncDataStatusObserver.getInstance().observeSyncDataCompletedEvent(new Observer<Void>() {
+        @Override
+        public void onEvent(Void v) {
+            DialogMaker.dismissProgressDialog();
+        }
+    });
 
         LogUtil.i(TAG, "sync completed = " + syncCompleted);
         if (!syncCompleted) {
-            DialogMaker.showProgressDialog(MainActivity.this, getString(R.string.prepare_data)).setCanceledOnTouchOutside(false);
-        }
-
-        onInit();
+        DialogMaker.showProgressDialog(MainActivity.this, getString(R.string.prepare_data)).setCanceledOnTouchOutside(false);
     }
+
+    onInit();
+}
 
     /**
      * 基本权限管理

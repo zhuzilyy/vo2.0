@@ -1,5 +1,7 @@
 package com.zl.vo_.own.ui;
 
+import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -53,6 +55,22 @@ public class MainActivity extends BaseActivity{
     private Fragment currentFragment;
     private List<ImageView> imageViewList;
     private List<TextView> textViewList;
+
+
+    public static void start(Context context) {
+        start(context, null);
+    }
+
+    public static void start(Context context, Intent extras) {
+        Intent intent = new Intent();
+        intent.setClass(context, MainActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+        if (extras != null) {
+            intent.putExtras(extras);
+        }
+        context.startActivity(intent);
+    }
+
     @Override
     protected void initViews() {
         messageFragment=new MessageFragment();
