@@ -17,20 +17,19 @@
             >
             <ImageView
                 android:id="@+id/iv_tab"
-                android:layout_width="28dp"
-                android:layout_height="28dp"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:scaleType="centerCrop"
                 android:src="@mipmap/beagledog"
                 />
-
             <TextView
+                android:layout_marginTop="3dp"
                 android:id="@+id/tab_title_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="gdg"
-                android:layout_gravity="center_vertical"
-                android:textColor="@color/action_bar_tittle_color_555555"
+                android:textColor="@color/tipcolor"
                 android:textSize="15sp"/>
-
             <ImageView
                 android:id="@+id/tab_new_indicator"
                 android:layout_width="wrap_content"
