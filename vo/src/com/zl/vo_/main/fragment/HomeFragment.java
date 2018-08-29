@@ -27,6 +27,7 @@ import com.netease.nimlib.sdk.msg.SystemMessageObserver;
 import com.netease.nimlib.sdk.msg.SystemMessageService;
 import com.netease.nimlib.sdk.msg.constant.SessionTypeEnum;
 import com.netease.nimlib.sdk.msg.model.RecentContact;
+import com.zl.vo_.own.views.NoScrollViewPager;
 
 /**
  * 云信主界面（导航页）
@@ -35,7 +36,7 @@ public class HomeFragment extends TFragment implements OnPageChangeListener, Rem
 
     private PagerSlidingTabStrip tabs;
 
-    private ViewPager pager;
+    private NoScrollViewPager pager;
 
     private int scrollState;
 
@@ -57,7 +58,6 @@ public class HomeFragment extends TFragment implements OnPageChangeListener, Rem
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         setToolBar(R.id.toolbar, R.string.app_name, R.drawable.actionbar_dark_logo);
-
         setTitle(R.string.app_name);
 
         findViews();
@@ -79,12 +79,11 @@ public class HomeFragment extends TFragment implements OnPageChangeListener, Rem
 
     @Override
     public void onPageSelected(int position) {
-        Toast.makeText(getActivity(), "posotion = "+position, Toast.LENGTH_SHORT).show();
+
         // TO TABS
         if(2 == position){
             tabs.onPageSelected(position+1);
             selectPage(position+1);
-
             enableMsgNotification(false);
         }else {
             tabs.onPageSelected(position);
@@ -92,6 +91,9 @@ public class HomeFragment extends TFragment implements OnPageChangeListener, Rem
             enableMsgNotification(false);
         }
 
+//        tabs.onPageSelected(position);
+//        selectPage(position);
+//        enableMsgNotification(false);
 
 
     }
@@ -109,13 +111,8 @@ public class HomeFragment extends TFragment implements OnPageChangeListener, Rem
     private void selectPage(int page) {
         // TO PAGE
         if (scrollState == ViewPager.SCROLL_STATE_IDLE) {
-            if(2 == page){
-                adapter.onPageSelected(3);
-            }else {
-                adapter.onPageSelected(pager.getCurrentItem());
-            }
 
-
+            adapter.onPageSelected(pager.getCurrentItem());
         }
     }
 

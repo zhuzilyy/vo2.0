@@ -4,6 +4,7 @@ import android.content.Context;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 
 import com.netease.nim.uikit.common.fragment.TabFragment;
 
@@ -60,6 +61,9 @@ public abstract class SlidingTabPagerAdapter extends FragmentPagerAdapter implem
     }
 
     public void onPageSelected(int position) {
+        if(3 == position){
+            Log.i("","");
+        }
         TabFragment fragment = getFragmentByPosition(position);
 
         // INSTANCE
