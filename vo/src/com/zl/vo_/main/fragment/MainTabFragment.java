@@ -8,10 +8,7 @@ import android.view.ViewGroup;
 import com.zl.vo_.R;
 import com.zl.vo_.main.model.MainTab;
 import com.netease.nim.uikit.common.fragment.TabFragment;
-
-
 public abstract class MainTabFragment extends TabFragment {
-
     private boolean loaded = false;
 
     private MainTab tabData;
