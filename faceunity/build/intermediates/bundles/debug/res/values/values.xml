@@ -126,9 +126,9 @@
     <dimen name="normal_space">8dp</dimen>
     <string name="app_name">faceunity</string>
     <style name="AppTheme" parent="android:Theme.DeviceDefault.Light">
-        
+        <!-- Customize your theme here. -->
     </style>
     <style name="FullScreenTheme" parent="@android:style/Theme.Light.NoTitleBar.Fullscreen">
-        
+        <!-- Customize your theme here. -->
     </style>
 </resources>

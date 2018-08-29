@@ -16,7 +16,6 @@ import com.zl.vo_.DemoCache;
 import com.zl.vo_.R;
 import com.zl.vo_.common.util.sys.SysInfoUtil;
 import com.zl.vo_.config.preference.Preferences;
-import com.zl.vo_.login.LoginActivity;
 import com.zl.vo_.mixpush.DemoMixPushMessageHandler;
 import com.netease.nim.uikit.api.NimUIKit;
 import com.netease.nim.uikit.common.activity.UI;
@@ -28,6 +27,7 @@ import com.netease.nimlib.sdk.mixpush.MixPushService;
 import com.netease.nimlib.sdk.msg.MessageBuilder;
 import com.netease.nimlib.sdk.msg.constant.SessionTypeEnum;
 import com.netease.nimlib.sdk.msg.model.IMMessage;
+
 import com.zl.vo_.own.ui.account.Login_Register_Acitivity;
 
 import java.util.ArrayList;
