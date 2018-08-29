@@ -20,6 +20,7 @@ public class MainTabPagerAdapter extends SlidingTabPagerAdapter {
 
     public MainTabPagerAdapter(FragmentManager fm, Context context, ViewPager pager) {
         super(fm, MainTab.values().length, context.getApplicationContext(), pager);
+        MainTab[] mainTabs = MainTab.values();
 
         for (MainTab tab : MainTab.values()) {
             try {

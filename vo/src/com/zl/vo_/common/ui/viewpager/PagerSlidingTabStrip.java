@@ -262,16 +262,21 @@ public class PagerSlidingTabStrip extends HorizontalScrollView implements OnPage
 
     private void setChooseTabViewTextColor(int position) {
         int childCount = tabsContainer.getChildCount();
+
         LinearLayout tabView;
         TextView textView;
+        ImageView imageView;
         for (int i = 0; i < childCount; ++i) {
 
             tabView = (LinearLayout) tabsContainer.getChildAt(i);
             textView = (TextView) tabView.findViewById(R.id.tab_title_label);
+
             if (i == position) {
                 textView.setTextColor(getResources().getColor(checkedTextColor));
+
             } else {
                 textView.setTextColor(getResources().getColor(unCheckedTextColor));
+
             }
         }
     }

@@ -16,6 +16,7 @@
             android:gravity="center"
             >
             <ImageView
+                android:id="@+id/iv_tab"
                 android:layout_width="28dp"
                 android:layout_height="28dp"
                 android:src="@mipmap/beagledog"
