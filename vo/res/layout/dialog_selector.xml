@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_dialog"
+    android:orientation="vertical">
+    <TextView
+        android:gravity="center"
+        android:textColor="@color/tipcolor"
+        android:textSize="16sp"
+        android:text="相机"
+        android:id="@+id/tv_selector1"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+    <View
+        android:background="@color/common_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+    <TextView
+        android:gravity="center"
+        android:textColor="@color/tipcolor"
+        android:textSize="16sp"
+        android:text="相册"
+        android:id="@+id/tv_selector2"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+    <TextView
+        android:gravity="center"
+        android:textColor="@color/tipcolor"
+        android:textSize="16sp"
+        android:text="取消"
+        android:id="@+id/tv_cancle"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+
+</LinearLayout>

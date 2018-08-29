@@ -87,7 +87,6 @@ public class RecentContactsFragment extends TFragment {
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-
         findViews();
         initMessageList();
         requestMessages(true);
@@ -95,7 +94,6 @@ public class RecentContactsFragment extends TFragment {
         registerDropCompletedListener(true);
         registerOnlineStateChangeListener(true);
     }
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         return inflater.inflate(R.layout.nim_recent_contacts, container, false);
@@ -131,7 +129,6 @@ public class RecentContactsFragment extends TFragment {
     private void initMessageList() {
         items = new ArrayList<>();
         cached = new HashMap<>(3);
-
         // adapter
         adapter = new RecentContactAdapter(recyclerView, items);
         initCallBack();
@@ -187,14 +184,12 @@ public class RecentContactsFragment extends TFragment {
             public String getDigestOfAttachment(RecentContact recentContact, MsgAttachment attachment) {
                 return null;
             }
-
             @Override
             public String getDigestOfTipMsg(RecentContact recent) {
                 return null;
             }
         };
     }
-
     private SimpleClickListener<RecentContactAdapter> touchListener = new SimpleClickListener<RecentContactAdapter>() {
         @Override
         public void onItemClick(RecentContactAdapter adapter, View view, int position) {
@@ -203,7 +198,6 @@ public class RecentContactsFragment extends TFragment {
                 callback.onItemClick(recent);
             }
         }
-
         @Override
         public void onItemLongClick(RecentContactAdapter adapter, View view, int position) {
             showLongClickMenu(adapter.getItem(position), position);

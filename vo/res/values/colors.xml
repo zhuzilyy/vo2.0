@@ -75,4 +75,10 @@
     <color name="mainColor">#5544aa</color>
     <color name="main_bottom_color">#333333</color>
     <color name="actionBarColor">#ffffff</color>
+    <color name="vipYellow">#bf8d37</color>
+    <color name="vipTextColor">#b46114</color>
+    <color name="vip">#ffaf30</color>
+    <color name="backgroundColor">#f7f7f7</color>
+    <color name="photoDialog">#ffffff</color>
+    <color name="vipcolor">#e2b24f</color>
 </resources>

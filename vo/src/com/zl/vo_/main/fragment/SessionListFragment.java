@@ -42,28 +42,20 @@ import java.util.Map;
  * Created by zhoujianghua on 2015/8/17.
  */
 public class SessionListFragment extends MainTabFragment {
-
     private View notifyBar;
-
     private TextView notifyBarText;
-
     // 同时在线的其他端的信息
     private List<OnlineClient> onlineClients;
-
     private View multiportBar;
-
     private RecentContactsFragment fragment;
-
     public SessionListFragment() {
         this.setContainerId(MainTab.RECENT_CONTACTS.fragmentId);
     }
-
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         onCurrent();
     }
-
     @Override
     public void onDestroy() {
         registerObservers(false);
@@ -74,7 +66,6 @@ public class SessionListFragment extends MainTabFragment {
     protected void onInit() {
         findViews();
         registerObservers(true);
-
         addRecentContactsFragment();
     }
 
@@ -182,7 +173,6 @@ public class SessionListFragment extends MainTabFragment {
     private void addRecentContactsFragment() {
         fragment = new RecentContactsFragment();
         fragment.setContainerId(R.id.messages_fragment);
-
         final UI activity = (UI) getActivity();
 
         // 如果是activity从堆栈恢复，FM中已经存在恢复而来的fragment，此时会使用恢复来的，而new出来这个会被丢弃掉

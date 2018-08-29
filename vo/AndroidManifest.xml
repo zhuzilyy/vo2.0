@@ -79,11 +79,10 @@
             android:value="${AMAP_KEY}" />
         <meta-data
             android:name="com.netease.nim.appKey"
-			android:value="f09dda3419685a8d64d627c2fe97bafd"/>
+			android:value="f09dda3419685a8d64d627c2fe97bafd" />
         <uses-library
             android:name="com.google.android.maps"
             android:required="false" />
-
         <!-- 金融魔方SDK 渠道id以及红包名称-->
         <meta-data
             android:name="JRMF_PARTNER_NAME"
@@ -93,7 +92,6 @@
         <meta-data
             android:name="android.max_aspect"
             android:value="2.1" />
-
         <!-- 导航页 -->
         <activity
             android:theme="@style/splashTheme"
@@ -109,8 +107,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
                 <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER" />
             </intent-filter>
-
-
         </activity>
 
         <!-- 主界面 -->
@@ -530,7 +526,6 @@
         <activity
             android:screenOrientation="portrait"
             android:name=".own.ui.account.RegisterActivity">
-
         </activity>
         <!--主界面-->
         <activity android:name=".own.ui.MainActivity"
@@ -544,6 +539,78 @@
             android:screenOrientation="portrait"/>
         <activity android:name=".own.ui.account.SplashActivity">
         </activity>
+        <!--人生笔记设置密码-->
+        <activity android:name=".own.ui.mine.ui.SetLifeNotePwdActivity"
+            android:screenOrientation="portrait"
+            />
+        <!--人生笔记修改密码-->
+        <activity android:name=".own.ui.mine.ui.FixLifeNotePwdActivity"
+            android:screenOrientation="portrait"
+            />
+        <!--人生笔记取消密码-->
+        <activity android:name=".own.ui.mine.ui.CancleLifeNotePwdActivity"
+            android:screenOrientation="portrait"
+            />
+        <!--人生笔记找回密码-->
+        <activity android:name=".own.ui.mine.ui.FindLifeNotePwdActivity"
+            android:screenOrientation="portrait"
+            />
+        <!--设置加密好友-->
+        <activity android:name=".own.ui.mine.ui.SetPrivateFriendsActivity"
+            android:screenOrientation="portrait"
+            />
+        <!--修改加密好友-->
+        <activity android:name=".own.ui.mine.ui.ChangePrivateFriendsActivity"
+            android:screenOrientation="portrait"
+            />
+        <!--用户信息-->
+        <activity android:name=".own.ui.mine.ui.UserInfoActivity"
+            android:screenOrientation="portrait"
+            />
+        <!--更改昵称-->
+        <activity android:name=".own.ui.mine.ui.ChangeNickNameActivity"
+            android:screenOrientation="portrait"
+            />
+        <!--更改VO号-->
+        <activity android:name=".own.ui.mine.ui.ChangeVoIDActivity"
+            android:screenOrientation="portrait"
+            />
+        <!--二维码-->
+        <activity android:name=".own.ui.mine.ui.QrCodeActivity"
+            android:screenOrientation="portrait"
+            />
+        <!--头像-->
+        <activity android:name=".own.ui.mine.ui.AvatarActivity"
+            android:screenOrientation="portrait"
+            />
+        <!--更多-->
+        <activity android:name=".own.ui.mine.ui.ChangeMoreActivity"
+            android:screenOrientation="portrait"
+            />
+        <!--帮助与反馈-->
+        <activity android:name=".own.ui.find.ui.HelpAndFeedBackActivity"
+            android:screenOrientation="portrait"
+            />
+        <!--webview界面-->
+        <activity android:name=".own.ui.account.WebViweActivity"
+            android:screenOrientation="portrait"
+            />
+        <!--反馈界面-->
+        <activity android:name=".own.ui.find.ui.FeebackActivity"
+            android:screenOrientation="portrait"
+            />
+        <!--关于VO-->
+        <activity android:name=".own.ui.find.ui.AboutVoActivity"
+            android:screenOrientation="portrait"
+            />
+        <!--人生笔记-->
+        <activity android:name=".own.ui.mine.ui.LifeNoteActivity"
+            android:screenOrientation="portrait"
+            />
+        <!--开通vip-->
+        <activity android:name=".own.ui.mine.ui.VipActivity"
+            android:screenOrientation="portrait"
+            />
     </application>
 
 </manifest>

@@ -115,7 +115,7 @@ public class LoginActivity extends BaseActivity {
                 initNotificationConfig();
 
                 // 进入主界面
-                startActivity(new Intent(LoginActivity.this,MainActivity.class));
+                startActivity(new Intent(LoginActivity.this, com.zl.vo_.main.activity.MainActivity.class));
                 finish();
             }
 

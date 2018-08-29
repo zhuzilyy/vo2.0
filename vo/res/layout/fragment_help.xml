@@ -1,12 +1,152 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
+    android:orientation="vertical"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <TextView
-        android:text="帮助"
-        android:gravity="center"
+    android:layout_height="match_parent"
+    android:id="@+id/ll_help"
+    >
+    <include layout="@layout/layout_fragment_title"/>
+    <!--扫一扫-->
+    <RelativeLayout
+        android:background="@color/white"
+        android:id="@+id/rl_qrcode"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="55dp"
+        android:clickable="true"
+        android:paddingLeft="12dp">
+        <ImageView
+            android:id="@+id/iv_friends"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:src="@mipmap/help_sao" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/iv_friends"
+            android:text="扫一扫"
+            android:textColor="@color/tipcolor"
+            android:textSize="14sp" />
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/common_line" />
+    <!--分享给好友-->
+    <RelativeLayout
+        android:background="@color/white"
+        android:id="@+id/rl_share"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:clickable="true"
+        android:paddingLeft="12dp">
+        <ImageView
+            android:id="@+id/iv_share"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:src="@mipmap/share" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/iv_share"
+            android:text="分享给好友"
+            android:textColor="#353535"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <!--帮助与反馈-->
+    <RelativeLayout
+        android:background="@color/white"
+        android:layout_marginTop="15dp"
+        android:id="@+id/rl_helpAndFeedback"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:clickable="true"
+        android:paddingLeft="12dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/iv_yaoyiyao"
+            android:text="帮助与反馈"
+            android:textColor="#353535"
+            android:textSize="14sp"
+            android:id="@+id/textView7" />
+
+        <ImageView
+            android:id="@+id/iv_yaoyiyao"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:src="@mipmap/help_help"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="12dp" />
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/common_line" />
+
+    android:background="@color/common_line" />
+    <!--关于vo-->
+    <RelativeLayout
+        android:id="@+id/rl_aboutVo"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/white"
+        android:clickable="true"
+        android:paddingLeft="12dp">
+
+        <ImageView
+            android:id="@+id/iv_aboutvo"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:src="@mipmap/help_about" />
+
+        <TextView
+            android:id="@+id/aboutTvVo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/iv_aboutvo"
+            android:text="关于VO"
+            android:textColor="#353535"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_update_flag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:visibility="visible"
+            android:layout_marginTop="6dp"
+            android:layout_toRightOf="@+id/aboutTvVo"
+            android:background="@drawable/bg_update"
+            android:paddingBottom="2dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="2dp"
+            android:text="更新"
+            android:textColor="@color/white"
+            android:textSize="10sp" />
+    </RelativeLayout>
 
 </LinearLayout>
