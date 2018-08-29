@@ -285,7 +285,7 @@ public class PagerSlidingTabStrip extends HorizontalScrollView implements OnPage
             imageViewList.add(iv_tab);
             textViewList.add(textView);
             if (i==2){
-                tabView.setVisibility(GONE);
+                tabView.setVisibility(INVISIBLE);
             }
         }
         for (int i = 0; i <childCount; i++) {
