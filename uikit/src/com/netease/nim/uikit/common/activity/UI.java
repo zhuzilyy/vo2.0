@@ -84,7 +84,7 @@ public abstract class UI extends AppCompatActivity {
             toolbar.setTitle(options.titleString);
         }
         if (options.logoId != 0) {
-            toolbar.setLogo(options.logoId);
+          //  toolbar.setLogo(options.logoId);
         }
         setSupportActionBar(toolbar);
 
@@ -103,7 +103,7 @@ public abstract class UI extends AppCompatActivity {
     public void setToolBar(int toolbarId, int titleId, int logoId) {
         toolbar = (Toolbar) findViewById(toolbarId);
         toolbar.setTitle(titleId);
-        toolbar.setLogo(logoId);
+       // toolbar.setLogo(logoId);
         setSupportActionBar(toolbar);
     }
 

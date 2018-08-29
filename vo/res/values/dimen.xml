@@ -6,7 +6,7 @@
     <dimen name="isetting_item_padding_left">15dip</dimen>
     <dimen name="isetting_item_padding_right">15dip</dimen>
     <dimen name="action_bar_height">48dip</dimen>
-    <dimen name="pager_sliding_tab_strip_height">55dip</dimen>
+    <dimen name="pager_sliding_tab_strip_height">48dip</dimen>
     <dimen name="actionbar_title_size">17dp</dimen>
     <dimen name="actionbar_sub_title_size">13dp</dimen>
     <dimen name="text_size_9">9sp</dimen>

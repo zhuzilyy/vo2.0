@@ -175,6 +175,7 @@ public class HomeFragment extends TFragment implements OnPageChangeListener, Rem
      * 设置tab条目
      */
     private void setupTabs() {
+
         tabs.setOnCustomTabListener(new PagerSlidingTabStrip.OnCustomTabListener() {
             @Override
             public int getTabLayoutResId(int position) {
