@@ -259,7 +259,6 @@ public class PagerSlidingTabStrip extends HorizontalScrollView implements OnPage
         });
 
     }
-
     private void setChooseTabViewTextColor(int position) {
         int childCount = tabsContainer.getChildCount();
 
