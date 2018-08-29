@@ -265,6 +265,7 @@ public class PagerSlidingTabStrip extends HorizontalScrollView implements OnPage
         LinearLayout tabView;
         TextView textView;
         for (int i = 0; i < childCount; ++i) {
+
             tabView = (LinearLayout) tabsContainer.getChildAt(i);
             textView = (TextView) tabView.findViewById(R.id.tab_title_label);
             if (i == position) {

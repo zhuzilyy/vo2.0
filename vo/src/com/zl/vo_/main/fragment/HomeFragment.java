@@ -6,6 +6,7 @@ import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.zl.vo_.R;
 import com.zl.vo_.common.ui.viewpager.FadeInOutPageTransformer;
@@ -78,10 +79,21 @@ public class HomeFragment extends TFragment implements OnPageChangeListener, Rem
 
     @Override
     public void onPageSelected(int position) {
+        Toast.makeText(getActivity(), "posotion = "+position, Toast.LENGTH_SHORT).show();
         // TO TABS
-        tabs.onPageSelected(position);
-        selectPage(position);
-        enableMsgNotification(false);
+        if(2 == position){
+            tabs.onPageSelected(position+1);
+            selectPage(position+1);
+
+            enableMsgNotification(false);
+        }else {
+            tabs.onPageSelected(position);
+            selectPage(position);
+            enableMsgNotification(false);
+        }
+
+
+
     }
 
     @Override
@@ -97,7 +109,13 @@ public class HomeFragment extends TFragment implements OnPageChangeListener, Rem
     private void selectPage(int page) {
         // TO PAGE
         if (scrollState == ViewPager.SCROLL_STATE_IDLE) {
-            adapter.onPageSelected(pager.getCurrentItem());
+            if(2 == page){
+                adapter.onPageSelected(3);
+            }else {
+                adapter.onPageSelected(pager.getCurrentItem());
+            }
+
+
         }
     }
 
@@ -163,6 +181,17 @@ public class HomeFragment extends TFragment implements OnPageChangeListener, Rem
         tabs.setOnCustomTabListener(new PagerSlidingTabStrip.OnCustomTabListener() {
             @Override
             public int getTabLayoutResId(int position) {
+                if(0 == position){
+                    return R.layout.tab_layout_main;
+                } else if (1 == position){
+                    return R.layout.tab_layout_main;
+                } else if (2 == position){
+                    return R.layout.tab_layout_main_empty;
+                } else if (3 == position){
+                    return R.layout.tab_layout_main;
+                } else if (4 == position){
+                    return R.layout.tab_layout_main;
+                }
                 return R.layout.tab_layout_main;
             }
 
