@@ -3,14 +3,18 @@ package com.zl.vo_.main.model;
 import com.zl.vo_.R;
 import com.zl.vo_.main.fragment.ChatRoomListFragment;
 import com.zl.vo_.main.fragment.ContactListFragment;
+import com.zl.vo_.main.fragment.FindFragment;
 import com.zl.vo_.main.fragment.MainTabFragment;
+import com.zl.vo_.main.fragment.MineFragment;
 import com.zl.vo_.main.fragment.SessionListFragment;
 import com.zl.vo_.main.reminder.ReminderId;
 
 public enum MainTab {
     RECENT_CONTACTS(0, ReminderId.SESSION, SessionListFragment.class, R.string.main_tab_session, R.layout.session_list),
     CONTACT(1, ReminderId.CONTACT, ContactListFragment.class, R.string.main_tab_contact, R.layout.contacts_list),
-    CHAT_ROOM(2, ReminderId.INVALID, ChatRoomListFragment.class, R.string.chat_room, R.layout.chat_room_tab);
+    CHAT_ROOM(2, ReminderId.INVALID, ChatRoomListFragment.class, R.string.main_tab_empty, R.layout.chat_room_tab),
+    FIND(3, ReminderId.INVALID, FindFragment.class, R.string.main_tab_find, R.layout.fragment_find),
+    MINE(4, ReminderId.INVALID, MineFragment.class, R.string.main_tab_mine, R.layout.fragment_mine2);
 
     public final int tabIndex;
 
