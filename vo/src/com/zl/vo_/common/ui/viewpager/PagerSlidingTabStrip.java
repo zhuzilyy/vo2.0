@@ -259,7 +259,6 @@ public class PagerSlidingTabStrip extends HorizontalScrollView implements OnPage
                 scrollToChild(currentPosition, 0);
             }
         });
-
     }
     private void setChooseTabViewTextColor(int position) {
         List<ImageView> imageViewList= new ArrayList<>();
