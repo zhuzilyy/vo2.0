@@ -1,5 +1,10 @@
 package com.zl.vo_.main.model;
 
+import android.content.Context;
+import android.view.LayoutInflater;
+import android.view.View;
+
+import com.zl.vo_.NimApplication;
 import com.zl.vo_.R;
 import com.zl.vo_.main.fragment.ChatRoomListFragment;
 import com.zl.vo_.main.fragment.ContactListFragment;
@@ -9,13 +14,14 @@ import com.zl.vo_.main.fragment.MineFragment;
 import com.zl.vo_.main.fragment.SessionListFragment;
 import com.zl.vo_.main.reminder.ReminderId;
 
+import butterknife.ButterKnife;
+
 public enum MainTab {
     RECENT_CONTACTS(0, ReminderId.SESSION, SessionListFragment.class, R.string.main_tab_session, R.layout.session_list),
     CONTACT(1, ReminderId.CONTACT, ContactListFragment.class, R.string.main_tab_contact, R.layout.contacts_list),
     CHAT_ROOM(2, ReminderId.INVALID, ChatRoomListFragment.class, R.string.main_tab_empty, R.layout.chat_room_tab),
     FIND(3, ReminderId.INVALID, FindFragment.class, R.string.main_tab_find, R.layout.fragment_help),
     MINE(4, ReminderId.INVALID, MineFragment.class, R.string.main_tab_mine, R.layout.fragment_mine);
-
     public final int tabIndex;
 
     public final int reminderId;

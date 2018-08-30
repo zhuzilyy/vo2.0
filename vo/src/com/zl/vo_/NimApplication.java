@@ -42,7 +42,7 @@ import com.netease.nimlib.sdk.util.NIMUtil;
 import io.fabric.sdk.android.Fabric;
 
 public class NimApplication extends Application {
-
+    private static NimApplication nimApplication;
     @Override
     protected void attachBaseContext(Context newBase) {
         super.attachBaseContext(newBase);
@@ -81,6 +81,7 @@ public class NimApplication extends Application {
             initAVChatKit();
             // 初始化rts模块
             initRTSKit();
+            nimApplication=this;
         }
         //jar 包里的
         Crashlytics crashlyticsKit = new Crashlytics.Builder()
@@ -179,5 +180,8 @@ public class NimApplication extends Application {
         };
         RTSKit.init(rtsOptions);
         RTSHelper.init();
+    }
+    public static NimApplication getAppliaction(){
+        return nimApplication;
     }
 }
