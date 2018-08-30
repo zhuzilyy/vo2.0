@@ -70,7 +70,6 @@ public class HomeFragment extends TFragment implements OnPageChangeListener, Rem
     ImageView iv_add;
     public HomeFragment() {
         setContainerId(R.id.welcome_container);
-
     }
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
