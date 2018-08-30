@@ -1,10 +1,10 @@
 package com.zl.vo_.main.fragment;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
-import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +12,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.netease.nim.uikit.api.NimUIKit;
+import com.netease.nim.uikit.business.contact.selector.activity.ContactSelectActivity;
+import com.netease.nim.uikit.business.team.helper.TeamHelper;
 import com.netease.nim.uikit.common.fragment.TFragment;
 import com.netease.nim.uikit.common.ui.drop.DropCover;
 import com.netease.nim.uikit.common.ui.drop.DropManager;
@@ -26,31 +29,21 @@ import com.netease.nimlib.sdk.msg.model.RecentContact;
 import com.zl.vo_.R;
 import com.zl.vo_.common.ui.viewpager.FadeInOutPageTransformer;
 import com.zl.vo_.common.ui.viewpager.PagerSlidingTabStrip;
+import com.zl.vo_.contact.activity.AddFriendActivity;
+import com.zl.vo_.main.activity.MainActivity;
 import com.zl.vo_.main.adapter.MainTabPagerAdapter;
 import com.zl.vo_.main.helper.SystemMessageUnreadManager;
 import com.zl.vo_.main.model.MainTab;
 import com.zl.vo_.main.reminder.ReminderItem;
 import com.zl.vo_.main.reminder.ReminderManager;
 import com.zl.vo_.own.api.ApiConstant;
-import com.zl.vo_.own.dialog.CustomerDialog;
-import com.zl.vo_.own.dialog.JiamiDialog;
-import com.zl.vo_.own.dialog.LifeNotePwdDialog;
-import com.zl.vo_.own.dialog.LifeNotePwdSettingDialog;
-import com.zl.vo_.own.dialog.PrivateFriendsDialog;
-import com.zl.vo_.own.dialog.VipDialog;
-import com.zl.vo_.own.dialog.VipFunctionIntroduceDialog;
 import com.zl.vo_.own.ui.account.WebViweActivity;
-import com.zl.vo_.own.ui.mine.ui.CancleLifeNotePwdActivity;
-import com.zl.vo_.own.ui.mine.ui.ChangePrivateFriendsActivity;
-import com.zl.vo_.own.ui.mine.ui.FindLifeNotePwdActivity;
-import com.zl.vo_.own.ui.mine.ui.FixLifeNotePwdActivity;
-import com.zl.vo_.own.ui.mine.ui.LifeNoteActivity;
-import com.zl.vo_.own.ui.mine.ui.SetLifeNotePwdActivity;
-import com.zl.vo_.own.ui.mine.ui.SetPrivateFriendsActivity;
-import com.zl.vo_.own.ui.mine.ui.UserInfoActivity;
-import com.zl.vo_.own.ui.mine.ui.VipActivity;
 import com.zl.vo_.own.views.DetailsTypePopupWindow;
 import com.zl.vo_.own.views.NoScrollViewPager;
+import com.zl.vo_.team.TeamCreateHelper;
+import com.zl.vo_.team.activity.AdvancedTeamSearchActivity;
+
+import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -68,6 +61,8 @@ public class HomeFragment extends TFragment implements OnPageChangeListener, Rem
     private View rootView;
     @BindView(R.id.iv_add)
     ImageView iv_add;
+    private static final int REQUEST_CODE_NORMAL = 1;
+    private static final int REQUEST_CODE_ADVANCED = 2;
     public HomeFragment() {
         setContainerId(R.id.welcome_container);
     }
@@ -82,7 +77,6 @@ public class HomeFragment extends TFragment implements OnPageChangeListener, Rem
         super.onActivityCreated(savedInstanceState);
         setToolBar(R.id.toolbar, R.string.app_name, R.drawable.actionbar_dark_logo);
         setTitle(R.string.app_name);
-
         findViews();
         setupPager();
         setupTabs();
@@ -328,31 +322,46 @@ public class HomeFragment extends TFragment implements OnPageChangeListener, Rem
             public void itemsOnClick(int position) {
                 switch (position) {
                     case 0:
-                        Toast.makeText(getActivity(), "00000000000", Toast.LENGTH_SHORT).show();
-                        //startActivity(new Intent(getActivity(), GroupsActivity.class));
+                        AdvancedTeamSearchActivity.start(getActivity());
                         break;
                     //添加新的好友
                     case 1:
-                        Toast.makeText(getActivity(), "111111111111", Toast.LENGTH_SHORT).show();
-                        //startActivity(new Intent(getActivity(), addFriendActivity_ContactsVo.class));
+                        AddFriendActivity.start(getActivity());
                         break;
                     //扫一扫
                     case 2:
-                        Toast.makeText(getActivity(), "222222222222222", Toast.LENGTH_SHORT).show();
-                        //startActivity(new Intent(getActivity(), ScanCaptureActivity.class));
+                        ContactSelectActivity.Option option = TeamHelper.getCreateContactSelectOption(null, 50);
+                        NimUIKit.startContactSelector(getActivity(), option, REQUEST_CODE_NORMAL);
                         break;
                     //帮助及反馈
                     case 3:
-                        Intent intent=new Intent(getActivity(),WebViweActivity.class);
+                      /*  Intent intent=new Intent(getActivity(),WebViweActivity.class);
                         intent.putExtra("url", ApiConstant.FUNCTION_INTRODUCE);
                         intent.putExtra("title","功能介绍");
-                        startActivity(intent);
+                        startActivity(intent);*/
+                        ContactSelectActivity.Option advancedOption = TeamHelper.getCreateContactSelectOption(null, 50);
+                        NimUIKit.startContactSelector(getActivity(), advancedOption, REQUEST_CODE_ADVANCED);
                         break;
                 }
             }
         });
     }
 
-
-
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (resultCode == Activity.RESULT_OK) {
+            if (requestCode == REQUEST_CODE_NORMAL) {
+                final ArrayList<String> selected = data.getStringArrayListExtra(ContactSelectActivity.RESULT_DATA);
+                if (selected != null && !selected.isEmpty()) {
+                    TeamCreateHelper.createNormalTeam(getActivity(), selected, false, null);
+                } else {
+                    Toast.makeText(getActivity(), "请选择至少一个联系人！", Toast.LENGTH_SHORT).show();
+                }
+            } else if (requestCode == REQUEST_CODE_ADVANCED) {
+                final ArrayList<String> selected = data.getStringArrayListExtra(ContactSelectActivity.RESULT_DATA);
+                TeamCreateHelper.createAdvancedTeam(getActivity(), selected);
+            }
+        }
+    }
 }
