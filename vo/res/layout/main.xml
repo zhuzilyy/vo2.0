@@ -21,14 +21,6 @@
             android:visibility="visible"
             app:titleTextAppearance="@style/Toolbar.TitleText"/>
     </android.support.design.widget.AppBarLayout>
-    <!--自定义tab-->
-    <com.zl.vo_.common.ui.viewpager.PagerSlidingTabStrip
-        android:id="@+id/tabs"
-        android:layout_width="match_parent"
-        app:pstsIndicatorHeight="0dp"
-        android:layout_height="@dimen/pager_sliding_tab_strip_height"
-        android:layout_alignParentBottom="true"
-        android:background="@drawable/skin_global_bg"/>
 
     <com.zl.vo_.own.views.NoScrollViewPager
         android:id="@+id/main_tab_pager"
@@ -44,5 +36,106 @@
         android:layout_height="match_parent"
         android:visibility="invisible"
         />
+    <RelativeLayout
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_width="58dp"
+        android:layout_height="58dp"
+        android:background="@drawable/circle_white_stroke"
+        android:layout_marginBottom="7dp"/>
+    <!--自定义tab-->
+    <com.zl.vo_.common.ui.viewpager.PagerSlidingTabStrip
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        app:pstsIndicatorHeight="0dp"
+        android:layout_height="@dimen/pager_sliding_tab_strip_height"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/skin_global_bg"/>
+    <View
+        android:id="@+id/view_temp"
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:layout_above="@id/tabs"
+        android:background="@color/gray"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        >
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+        <!--隐私=================================-->
+        <RelativeLayout
+            android:layout_width="0dp"
+
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <RelativeLayout
+                android:id="@+id/show_incircle"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_width="57dp"
+                android:layout_height="57dp"
+                android:background="@drawable/circle_white"
+                android:layout_marginBottom="7dp"/>
+            <RelativeLayout
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_width="57dp"
+                android:layout_height="57dp"
+                android:background="@drawable/circle_white"
+                android:layout_marginBottom="7dp"
+                >
+                <RelativeLayout
+                    android:id="@+id/re_plus"
+                    android:layout_width="43dp"
+                    android:layout_height="43dp"
+                    android:background="@drawable/circle"
+                    android:layout_centerInParent="true"
+                    >
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@mipmap/plus"
+                        android:layout_centerInParent="true"
+                        />
+                    <!--出现菜单时的x号-->
+                    <RelativeLayout
+                        android:id="@+id/close_menu"
+                        android:layout_centerInParent="true"
+                        android:layout_width="match_parent"
+                        android:visibility="invisible"
+                        android:background="@drawable/circle_white_stoke5"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@mipmap/close_main"
+                            android:layout_centerInParent="true"
+                            />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+        <!--隐私=================================-->
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
 
 </RelativeLayout>

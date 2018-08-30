@@ -70,6 +70,7 @@ android {
             manifestPlaceholders = [AMAP_KEY: "ee20324fba1c7f4ad7a4a207e7f08e8d"]
             ext.enableCrashlytics = true
         }
+
     }
 
     sourceSets {
