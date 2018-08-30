@@ -20,6 +20,7 @@
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
             android:visibility="visible"
+
             app:titleTextAppearance="@style/Toolbar.TitleText"/>
     </android.support.design.widget.AppBarLayout>
 
