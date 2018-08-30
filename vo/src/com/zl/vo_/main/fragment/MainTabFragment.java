@@ -8,6 +8,9 @@ import android.view.ViewGroup;
 import com.zl.vo_.R;
 import com.zl.vo_.main.model.MainTab;
 import com.netease.nim.uikit.common.fragment.TabFragment;
+
+import butterknife.ButterKnife;
+
 public abstract class MainTabFragment extends TabFragment {
     private boolean loaded = false;
 
@@ -18,7 +21,6 @@ public abstract class MainTabFragment extends TabFragment {
     protected boolean inited() {
         return loaded;
     }
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         return inflater.inflate(R.layout.main_tab_fragment_container, container, false);

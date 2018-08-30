@@ -18,9 +18,7 @@ import butterknife.Unbinder;
 
 public abstract class TFragment extends Fragment {
     private static final Handler handler = new Handler();
-
     private int containerId;
-
     private boolean destroyed;
     Unbinder unbinder;
     protected final boolean isDestroyed() {

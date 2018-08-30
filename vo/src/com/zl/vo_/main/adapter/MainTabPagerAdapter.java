@@ -12,12 +12,10 @@ import com.zl.vo_.main.model.MainTab;
 import java.util.List;
 
 public class MainTabPagerAdapter extends SlidingTabPagerAdapter {
-
     @Override
     public int getCacheCount() {
         return MainTab.values().length;
     }
-
     public MainTabPagerAdapter(FragmentManager fm, Context context, ViewPager pager) {
         super(fm, MainTab.values().length, context.getApplicationContext(), pager);
         MainTab[] mainTabs = MainTab.values();
