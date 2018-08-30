@@ -132,7 +132,6 @@ public class HomeFragment extends TFragment implements OnPageChangeListener, Rem
 
         selectPage(pager.getCurrentItem());
     }
-
     private void selectPage(int page) {
         // TO PAGE
         if (scrollState == ViewPager.SCROLL_STATE_IDLE) {
