@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/skin_global_bg">
+
     <!--主界面 顶部 云信字样 title-->
     <include layout="@layout/layout_fragment_title"/>
     <android.support.design.widget.AppBarLayout
