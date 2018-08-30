@@ -14,13 +14,15 @@ import com.netease.nim.uikit.common.activity.UI;
 import com.netease.nim.uikit.common.util.log.LogUtil;
 import com.netease.nim.uikit.utils.StatusBarUtil;
 
+import butterknife.Unbinder;
+
 public abstract class TFragment extends Fragment {
     private static final Handler handler = new Handler();
 
     private int containerId;
 
     private boolean destroyed;
-
+    Unbinder unbinder;
     protected final boolean isDestroyed() {
         return destroyed;
     }
@@ -28,14 +30,11 @@ public abstract class TFragment extends Fragment {
     public int getContainerId() {
         return containerId;
     }
-
     public void setContainerId(int containerId) {
         this.containerId = containerId;
     }
-
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-
         LogUtil.ui("fragment: " + getClass().getSimpleName() + " onActivityCreated()");
         //实现状态栏 黑字白底 6.0以上
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
@@ -45,7 +44,6 @@ public abstract class TFragment extends Fragment {
             StatusBarUtil.transparencyBar(getActivity()); //设置状态栏全透明
             //StatusBarUtil.StatusBarLightMode(this); //设置白底黑字
         }
-
         destroyed = false;
     }
 

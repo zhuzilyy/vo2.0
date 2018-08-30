@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     android:id="@+id/ll_help"
     >
-    <include layout="@layout/layout_fragment_title"/>
     <!--扫一扫-->
     <RelativeLayout
         android:background="@color/white"

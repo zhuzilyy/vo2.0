@@ -215,4 +215,5 @@ public class ContactListFragment extends MainTabFragment {
             fragment.scrollToTop();
         }
     }
+
 }

@@ -16,5 +16,4 @@ public class FindFragment extends MainTabFragment {
         onCurrent();
     }
 
-
 }

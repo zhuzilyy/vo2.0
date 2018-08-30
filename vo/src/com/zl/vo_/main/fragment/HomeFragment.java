@@ -1,21 +1,17 @@
 package com.zl.vo_.main.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
-import com.zl.vo_.R;
-import com.zl.vo_.common.ui.viewpager.FadeInOutPageTransformer;
-import com.zl.vo_.common.ui.viewpager.PagerSlidingTabStrip;
-import com.zl.vo_.main.adapter.MainTabPagerAdapter;
-import com.zl.vo_.main.helper.SystemMessageUnreadManager;
-import com.zl.vo_.main.model.MainTab;
-import com.zl.vo_.main.reminder.ReminderItem;
-import com.zl.vo_.main.reminder.ReminderManager;
 import com.netease.nim.uikit.common.fragment.TFragment;
 import com.netease.nim.uikit.common.ui.drop.DropCover;
 import com.netease.nim.uikit.common.ui.drop.DropManager;
@@ -27,30 +23,58 @@ import com.netease.nimlib.sdk.msg.SystemMessageObserver;
 import com.netease.nimlib.sdk.msg.SystemMessageService;
 import com.netease.nimlib.sdk.msg.constant.SessionTypeEnum;
 import com.netease.nimlib.sdk.msg.model.RecentContact;
+import com.zl.vo_.R;
+import com.zl.vo_.common.ui.viewpager.FadeInOutPageTransformer;
+import com.zl.vo_.common.ui.viewpager.PagerSlidingTabStrip;
+import com.zl.vo_.main.adapter.MainTabPagerAdapter;
+import com.zl.vo_.main.helper.SystemMessageUnreadManager;
+import com.zl.vo_.main.model.MainTab;
+import com.zl.vo_.main.reminder.ReminderItem;
+import com.zl.vo_.main.reminder.ReminderManager;
+import com.zl.vo_.own.api.ApiConstant;
+import com.zl.vo_.own.dialog.CustomerDialog;
+import com.zl.vo_.own.dialog.JiamiDialog;
+import com.zl.vo_.own.dialog.LifeNotePwdDialog;
+import com.zl.vo_.own.dialog.LifeNotePwdSettingDialog;
+import com.zl.vo_.own.dialog.PrivateFriendsDialog;
+import com.zl.vo_.own.dialog.VipDialog;
+import com.zl.vo_.own.dialog.VipFunctionIntroduceDialog;
+import com.zl.vo_.own.ui.account.WebViweActivity;
+import com.zl.vo_.own.ui.mine.ui.CancleLifeNotePwdActivity;
+import com.zl.vo_.own.ui.mine.ui.ChangePrivateFriendsActivity;
+import com.zl.vo_.own.ui.mine.ui.FindLifeNotePwdActivity;
+import com.zl.vo_.own.ui.mine.ui.FixLifeNotePwdActivity;
+import com.zl.vo_.own.ui.mine.ui.LifeNoteActivity;
+import com.zl.vo_.own.ui.mine.ui.SetLifeNotePwdActivity;
+import com.zl.vo_.own.ui.mine.ui.SetPrivateFriendsActivity;
+import com.zl.vo_.own.ui.mine.ui.UserInfoActivity;
+import com.zl.vo_.own.ui.mine.ui.VipActivity;
+import com.zl.vo_.own.views.DetailsTypePopupWindow;
 import com.zl.vo_.own.views.NoScrollViewPager;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 /**
  * 云信主界面（导航页）
  */
 public class HomeFragment extends TFragment implements OnPageChangeListener, ReminderManager.UnreadNumChangedCallback {
-
+    private TextView tv_title;
     private PagerSlidingTabStrip tabs;
-
     private NoScrollViewPager pager;
-
     private int scrollState;
-
     private MainTabPagerAdapter adapter;
-
     private View rootView;
-
+    @BindView(R.id.iv_add)
+    ImageView iv_add;
     public HomeFragment() {
         setContainerId(R.id.welcome_container);
     }
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         rootView = inflater.inflate(R.layout.main, container, false);
+        ButterKnife.bind(this,rootView);
         return rootView;
     }
     @Override
@@ -78,21 +102,23 @@ public class HomeFragment extends TFragment implements OnPageChangeListener, Rem
 
     @Override
     public void onPageSelected(int position) {
-
-        // TO TABS
-        if(2 == position){
-            tabs.onPageSelected(position+1);
-            selectPage(position+1);
-            enableMsgNotification(false);
-        }else {
-            tabs.onPageSelected(position);
-            selectPage(position);
-            enableMsgNotification(false);
+        tabs.onPageSelected(position);
+        selectPage(position);
+        enableMsgNotification(false);
+        switch (position){
+            case 0:
+                tv_title.setText("消息");
+                break;
+            case 1:
+                tv_title.setText("通讯录");
+                break;
+            case 3:
+                tv_title.setText("发现");
+                break;
+            case 4:
+                tv_title.setText("我的");
+                break;
         }
-
-//        tabs.onPageSelected(position);
-//        selectPage(position);
-//        enableMsgNotification(false);
 
 
     }
@@ -125,6 +151,8 @@ public class HomeFragment extends TFragment implements OnPageChangeListener, Rem
     private void findViews() {
         tabs = findView(R.id.tabs);
         pager = findView(R.id.main_tab_pager);
+        tv_title=findView(R.id.tv_title);
+        tv_title.setText("消息");
     }
 
     @Override
@@ -132,14 +160,13 @@ public class HomeFragment extends TFragment implements OnPageChangeListener, Rem
         super.onResume();
         enableMsgNotification(false);
         //quitOtherActivities();
+        tv_title.setText("消息");
     }
-
     @Override
     public void onPause() {
         super.onPause();
         enableMsgNotification(true);
     }
-
     @Override
     public void onDestroy() {
         super.onDestroy();
@@ -178,17 +205,6 @@ public class HomeFragment extends TFragment implements OnPageChangeListener, Rem
         tabs.setOnCustomTabListener(new PagerSlidingTabStrip.OnCustomTabListener() {
             @Override
             public int getTabLayoutResId(int position) {
-               /* if(0 == position){
-                    return R.layout.tab_layout_main;
-                } else if (1 == position){
-                    return R.layout.tab_layout_main;
-                } else if (2 == position){
-                    return R.layout.tab_layout_main_empty;
-                } else if (3 == position){
-                    return R.layout.tab_layout_main;
-                } else if (4 == position){
-                    return R.layout.tab_layout_main;
-                }*/
                 return R.layout.tab_layout_main;
             }
 
@@ -295,4 +311,49 @@ public class HomeFragment extends TFragment implements OnPageChangeListener, Rem
                     }
                 });
     }
+    //添加的部分 点击事件
+    @OnClick({R.id.iv_add})
+    public void click(View view){
+        switch(view.getId()){
+            case R.id.iv_add:
+                showAddPw(iv_add);
+                break;
+        }
+    }
+
+    //显示右上角的添加按钮
+    private void showAddPw(View view) {
+        DetailsTypePopupWindow typePopupWindow = new DetailsTypePopupWindow(getActivity(), view, "", "");
+        typePopupWindow.setmItemsOnClick(new DetailsTypePopupWindow.ItemsOnClick() {
+            @Override
+            public void itemsOnClick(int position) {
+                switch (position) {
+                    case 0:
+                        Toast.makeText(getActivity(), "00000000000", Toast.LENGTH_SHORT).show();
+                        //startActivity(new Intent(getActivity(), GroupsActivity.class));
+                        break;
+                    //添加新的好友
+                    case 1:
+                        Toast.makeText(getActivity(), "111111111111", Toast.LENGTH_SHORT).show();
+                        //startActivity(new Intent(getActivity(), addFriendActivity_ContactsVo.class));
+                        break;
+                    //扫一扫
+                    case 2:
+                        Toast.makeText(getActivity(), "222222222222222", Toast.LENGTH_SHORT).show();
+                        //startActivity(new Intent(getActivity(), ScanCaptureActivity.class));
+                        break;
+                    //帮助及反馈
+                    case 3:
+                        Intent intent=new Intent(getActivity(),WebViweActivity.class);
+                        intent.putExtra("url", ApiConstant.FUNCTION_INTRODUCE);
+                        intent.putExtra("title","功能介绍");
+                        startActivity(intent);
+                        break;
+                }
+            }
+        });
+    }
+
+
+
 }
