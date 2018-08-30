@@ -7,7 +7,6 @@ public class MineFragment extends MainTabFragment {
     protected void onInit() {
 
     }
-
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
