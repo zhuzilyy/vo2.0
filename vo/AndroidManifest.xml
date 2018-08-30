@@ -72,6 +72,9 @@
         android:icon="@mipmap/logo"
         android:label="@string/app_name"
         android:theme="@style/MyAppTheme">
+        <activity android:name=".main.activity.TextActivity">
+
+        </activity>
 
         <!-- 如果IDE是Eclipse，此处可将build.gradle中的AMAP_KEY定义拷贝过来。 -->
         <meta-data
@@ -107,6 +110,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
                 <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER" />
             </intent-filter>
+
         </activity>
 
         <!-- 主界面 -->
