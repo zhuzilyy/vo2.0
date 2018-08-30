@@ -50,7 +50,7 @@
         app:pstsIndicatorHeight="0dp"
         android:layout_height="@dimen/pager_sliding_tab_strip_height"
         android:layout_alignParentBottom="true"
-        android:background="@drawable/skin_global_bg"/>
+        android:background="@color/white"/>
     <View
         android:id="@+id/view_temp"
         android:layout_width="match_parent"
