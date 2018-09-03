@@ -6,4 +6,10 @@
     android:layout_height="match_parent">
     <include layout="@layout/layout_title"/>
     <include layout="@layout/header_vip"/>
+    <ListView
+        android:dividerHeight="0.5dp"
+        android:divider="@color/common_line"
+        android:id="@+id/lv_vip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 </LinearLayout>

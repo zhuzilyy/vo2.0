@@ -38,23 +38,24 @@ import java.util.List;
  * Created by huangjun on 2015/9/7.
  */
 public class ContactListFragment extends MainTabFragment {
-
     private ContactsFragment fragment;
-
     public ContactListFragment() {
         setContainerId(MainTab.CONTACT.fragmentId);
     }
-
     /**
      * ******************************** 功能项定制 ***********************************
      */
     final static class FuncItem extends AbsContactItem {
-        static final FuncItem VERIFY = new FuncItem();
+      /*  static final FuncItem VERIFY = new FuncItem();
         static final FuncItem ROBOT = new FuncItem();
         static final FuncItem NORMAL_TEAM = new FuncItem();
         static final FuncItem ADVANCED_TEAM = new FuncItem();
         static final FuncItem BLACK_LIST = new FuncItem();
-        static final FuncItem MY_COMPUTER = new FuncItem();
+        static final FuncItem MY_COMPUTER = new FuncItem();*/
+        //修改的部分
+        static final FuncItem NEW_FRIEND = new FuncItem();
+        static final FuncItem MY_CONTACT = new FuncItem();
+        static final FuncItem GROUP_CONTACT = new FuncItem();
 
         @Override
         public int getItemType() {
@@ -82,7 +83,7 @@ public class ContactListFragment extends MainTabFragment {
 
             @Override
             public void refresh(ContactDataAdapter contactAdapter, int position, FuncItem item) {
-                if (item == VERIFY) {
+               /* if (item == VERIFY) {
                     funcName.setText("验证提醒");
                     image.setImageResource(R.drawable.icon_verify_remind);
                     image.setScaleType(ScaleType.FIT_XY);
@@ -119,6 +120,31 @@ public class ContactListFragment extends MainTabFragment {
                 if (item != VERIFY) {
                     image.setScaleType(ScaleType.FIT_XY);
                     unreadNum.setVisibility(View.GONE);
+                }*/
+               //薛金柱添加的部分 新的朋友
+                if (item==NEW_FRIEND){
+                    funcName.setText("新的朋友");
+                    image.setImageResource(R.mipmap.new_friend);
+                    image.setScaleType(ScaleType.CENTER_CROP);
+                    int unreadCount = SystemMessageUnreadManager.getInstance().getSysMsgUnreadCount();
+                    updateUnreadNum(unreadCount);
+
+                    ReminderManager.getInstance().registerUnreadNumChangedCallback(new ReminderManager.UnreadNumChangedCallback() {
+                        @Override
+                        public void onUnreadNumChanged(ReminderItem item) {
+                            if (item.getId() != ReminderId.CONTACT) {
+                                return;
+                            }
+
+                            updateUnreadNum(item.getUnread());
+                        }
+                    });
+                }else if(item == MY_CONTACT){
+                    funcName.setText("通讯录好友");
+                    image.setImageResource(R.mipmap.address_friend);
+                }else if(item == GROUP_CONTACT){
+                    funcName.setText("群聊");
+                    image.setImageResource(R.mipmap.group_chat_friend);
                 }
             }
 
@@ -135,18 +161,20 @@ public class ContactListFragment extends MainTabFragment {
 
         static List<AbsContactItem> provide() {
             List<AbsContactItem> items = new ArrayList<AbsContactItem>();
-            items.add(VERIFY);
+          /*  items.add(VERIFY);
             items.add(ROBOT);
             items.add(NORMAL_TEAM);
             items.add(ADVANCED_TEAM);
             items.add(BLACK_LIST);
-            items.add(MY_COMPUTER);
-
+            items.add(MY_COMPUTER);*/
+            items.add(NEW_FRIEND);
+            items.add(MY_CONTACT);
+            items.add(GROUP_CONTACT);
             return items;
         }
 
         static void handle(Context context, AbsContactItem item) {
-            if (item == VERIFY) {
+           /* if (item == VERIFY) {
                 SystemMessageActivity.start(context);
             } else if (item == ROBOT) {
                 RobotListActivity.start(context);
@@ -158,6 +186,14 @@ public class ContactListFragment extends MainTabFragment {
                 SessionHelper.startP2PSession(context, DemoCache.getAccount());
             } else if (item == BLACK_LIST) {
                 BlackListActivity.start(context);
+            }*/
+           //薛金柱添加的部分
+            if (item==NEW_FRIEND){
+                SystemMessageActivity.start(context);
+            }else if(item==MY_CONTACT){
+                TeamListActivity.start(context, ItemTypes.TEAMS.ADVANCED_TEAM);
+            }else if(item==GROUP_CONTACT){
+
             }
         }
     }
@@ -170,10 +206,8 @@ public class ContactListFragment extends MainTabFragment {
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-
         onCurrent(); // 触发onInit，提前加载
     }
-
     @Override
     protected void onInit() {
         addContactFragment();  // 集成通讯录页面

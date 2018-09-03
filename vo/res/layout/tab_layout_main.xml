@@ -42,15 +42,13 @@
     </RelativeLayout>
     <!--未读消息数-->
     <com.netease.nim.uikit.common.ui.drop.DropFake
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
         android:id="@+id/tab_new_msg_label"
         android:layout_marginTop="2dp"
         android:layout_width="22dp"
         android:layout_height="22dp"
         android:layout_gravity="center_vertical"
         android:gravity="center"
-        android:layout_marginLeft="3dp"
+        android:layout_marginLeft="45dp"
         android:textColor="@android:color/white"
         android:textSize="12sp"
         android:visibility="invisible"/>

@@ -46,14 +46,11 @@ public class LetterIndexView extends View {
         this.hit = false;
         this.normalColor = Color.GRAY;
         this.touchColor = Color.WHITE;
-
         hintDrawable = paramContext.getResources().getDrawable(R.drawable.nim_contact_letter_view_hit_point);
         hintDrawable.setBounds(0, 0, hintDrawable.getIntrinsicWidth(), hintDrawable.getIntrinsicHeight());
-
         mPaint.setAntiAlias(true);
         mPaint.setTextAlign(Paint.Align.CENTER);
         mPaint.setColor(normalColor);
-
         letters = paramContext.getResources().getStringArray(stringArrayId);
     }
 
@@ -94,7 +91,7 @@ public class LetterIndexView extends View {
         super.onDraw(canvas);
         float letterHeight = ((float) getHeight()) / letters.length;
         float width = getWidth();
-        float textSize = letterHeight * 5 / 6;
+        float textSize = letterHeight * 5 /8;
         mPaint.setTextSize(textSize);
         for (int i = 0; i < letters.length; ++i) {
             float halfWidth = width / 2;

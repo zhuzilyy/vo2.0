@@ -1,10 +1,10 @@
 <component name="libraryTable">
   <library name="com.huawei.android.hms:base-2.6.0.301">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/base-2.6.0.301.aar/2fafb85556d8fd3cdaf7b37062abde59/jars/libs/UpdateSdk_release_V2.0.1.303.jar!/" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/base-2.6.0.301.aar/2fafb85556d8fd3cdaf7b37062abde59/jars/classes.jar!/" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/base-2.6.0.301.aar/2fafb85556d8fd3cdaf7b37062abde59/jars/libs/hianalytics_v2.9.1.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/base-2.6.0.301.aar/2fafb85556d8fd3cdaf7b37062abde59/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/base-2.6.0.301.aar/df5b6b81c43edcc9379ac7f490a62138/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/base-2.6.0.301.aar/df5b6b81c43edcc9379ac7f490a62138/jars/libs/UpdateSdk_release_V2.0.1.303.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/base-2.6.0.301.aar/df5b6b81c43edcc9379ac7f490a62138/jars/libs/hianalytics_v2.9.1.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/base-2.6.0.301.aar/df5b6b81c43edcc9379ac7f490a62138/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

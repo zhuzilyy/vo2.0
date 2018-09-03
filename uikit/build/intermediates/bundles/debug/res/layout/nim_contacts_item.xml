@@ -2,13 +2,13 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/nim_contact_list_item_selecter"
-                android:minHeight="55dip">
-
+                >
     <RelativeLayout
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
         android:id="@+id/head_layout"
         android:layout_width="50dp"
-        android:layout_height="55dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:gravity="center">
 
@@ -71,9 +71,18 @@
     </LinearLayout>
 
     <View
+        android:visibility="gone"
         style="@style/horizontal_light_thin_divider"
         android:layout_alignLeft="@+id/contacts_item_name_layout"
         android:layout_alignParentBottom="true"
         android:layout_marginRight="10dp"/>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#ebebeb" />
 
 </RelativeLayout>

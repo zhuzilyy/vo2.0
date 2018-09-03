@@ -20,7 +20,6 @@ public class ChangePrivateFriendsActivity extends BaseActivity{
     protected void initViews() {
         tv_title.setText("修改加密好友");
     }
-
     @Override
     protected void initData() {
 

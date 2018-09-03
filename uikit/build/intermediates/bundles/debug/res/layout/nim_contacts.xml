@@ -11,7 +11,6 @@
         android:layout_height="fill_parent"
         android:orientation="horizontal"
         android:weightSum="10">
-
         <ListView
             android:id="@+id/contact_list_view"
             android:layout_width="fill_parent"
@@ -22,7 +21,6 @@
             android:dividerHeight="0dp"
             android:listSelector="@color/transparent"
             android:scrollbars="none"/>
-
         <ImageView
             android:id="@+id/img_hit_letter"
             android:layout_width="wrap_content"
@@ -33,7 +31,6 @@
             android:contentDescription="@string/empty"
             android:padding="40dip"
             android:visibility="invisible"/>
-
         <TextView
             android:id="@+id/tv_hit_letter"
             android:layout_width="wrap_content"
@@ -44,7 +41,6 @@
             android:textColor="@color/white"
             android:textSize="40.0dip"
             android:visibility="invisible"/>
-
         <com.netease.nim.uikit.common.ui.liv.LetterIndexView
             android:id="@+id/liv_index"
             android:layout_width="15dip"

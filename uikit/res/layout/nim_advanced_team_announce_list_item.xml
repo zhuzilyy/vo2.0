@@ -53,16 +53,13 @@
                 android:text="3月6日 10:13"
                 android:textColor="@color/color_grey_999999"
                 android:textSize="@dimen/text_size_13" />
-
         </RelativeLayout>
-
         <View
             android:layout_width="match_parent"
             android:layout_height="0.5px"
             android:layout_marginLeft="11dp"
             android:layout_marginRight="11dp"
             android:background="@color/color_split_line_cccccc" />
-
         <TextView
             android:id="@+id/announce_content"
             android:layout_width="match_parent"

@@ -3,10 +3,8 @@
     android:id="@+id/messages_fragment"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@drawable/skin_global_bg"
+    android:background="@color/white"
     android:orientation="vertical" >
     <include layout="@layout/network_status_bar" />
     <include layout="@layout/multiport_status_bar" />
-
-
 </LinearLayout>

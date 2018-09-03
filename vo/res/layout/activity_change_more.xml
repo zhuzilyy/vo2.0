@@ -13,7 +13,6 @@
         android:layout_height="48dp"
         android:background="@color/white"
         android:clickable="true" >
-
         <TextView
             android:id="@+id/tv_temp_fxid"
             android:layout_width="wrap_content"
@@ -85,7 +84,7 @@
     <!--个性签名-->
     <RelativeLayout
         android:layout_below="@+id/re_address"
-        android:id="@+id/re_sign"
+        android:id="@+id/rl_sign"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:background="@color/white"

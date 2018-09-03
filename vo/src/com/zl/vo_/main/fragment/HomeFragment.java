@@ -93,7 +93,6 @@ public class HomeFragment extends TFragment implements OnPageChangeListener, Rem
         // TO ADAPTER
         adapter.onPageScrolled(position);
     }
-
     @Override
     public void onPageSelected(int position) {
         tabs.onPageSelected(position);
@@ -113,10 +112,7 @@ public class HomeFragment extends TFragment implements OnPageChangeListener, Rem
                 tv_title.setText("我的");
                 break;
         }
-
-
     }
-
     @Override
     public void onPageScrollStateChanged(int state) {
         // TO TABS

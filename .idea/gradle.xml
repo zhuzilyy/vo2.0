@@ -11,9 +11,11 @@
             <option value="$PROJECT_DIR$/avchatkit" />
             <option value="$PROJECT_DIR$/faceunity" />
             <option value="$PROJECT_DIR$/jrmfRpWalletlib" />
+            <option value="$PROJECT_DIR$/pickerview" />
             <option value="$PROJECT_DIR$/rtskit" />
             <option value="$PROJECT_DIR$/uikit" />
             <option value="$PROJECT_DIR$/vo" />
+            <option value="$PROJECT_DIR$/wheelview" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

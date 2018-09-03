@@ -129,7 +129,6 @@ public class ContactDataAdapter extends BaseAdapter {
         AbsContactItem item = (AbsContactItem) obj;
         int type = item.getItemType();
         Integer[] types = viewHolderMap.keySet().toArray(new Integer[viewHolderMap.size()]);
-
         for (int i = 0; i < types.length; i++) {
             int itemType = types[i];
             if (itemType == type) {
@@ -138,12 +137,10 @@ public class ContactDataAdapter extends BaseAdapter {
         }
         return -1;
     }
-
     @Override
     public int getViewTypeCount() {
         return viewHolderMap.size();
     }
-
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         AbsContactItem item = (AbsContactItem) getItem(position);
@@ -164,13 +161,11 @@ public class ContactDataAdapter extends BaseAdapter {
         if (holder == null) {
             return null;
         }
-
         holder.refresh(this, position, item);
         convertView = holder.getView();
         if (convertView != null) {
             convertView.setTag(holder);
         }
-
         return convertView;
     }
 

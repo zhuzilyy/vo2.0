@@ -132,7 +132,6 @@ public class ContactsFragment extends TFragment {
                 loadingFrame.setVisibility(View.GONE);
                 int userCount = NimUIKit.getContactProvider().getMyFriendsCount();
                 countText.setText("共有好友" + userCount + "名");
-
                 onReloadCompleted();
             }
         };
@@ -152,7 +151,6 @@ public class ContactsFragment extends TFragment {
         View countLayout = View.inflate(getView().getContext(), R.layout.nim_contacts_count_item, null);
         countLayout.setClickable(false);
         countText = (TextView) countLayout.findViewById(R.id.contactCountText);
-
         // ListView
         listView = findView(R.id.contact_list_view);
         listView.addFooterView(countLayout); // 注意：addFooter要放在setAdapter之前，否则旧版本手机可能会add不上

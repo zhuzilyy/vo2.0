@@ -1,7 +1,9 @@
 package com.zl.vo_.own.dialog;
 
 import android.content.Context;
+import android.text.TextUtils;
 import android.view.View;
+import android.widget.Button;
 
 import com.zl.vo_.R;
 
@@ -14,16 +16,29 @@ import com.zl.vo_.R;
  */
 public class PhotoChioceDialog extends BaseDialog {
     private ClickCallback clickCallback;
+    private Button btn_album,btn_camera;
     public PhotoChioceDialog(Context context){
         super(context);
         dialog.setContentView(R.layout.dialog_pic_chioce);
-        dialog.findViewById(R.id.btn_album).setOnClickListener(this);
-        dialog.findViewById(R.id.btn_camera).setOnClickListener(this);
+        btn_album=dialog.findViewById(R.id.btn_album);
+        btn_camera=dialog.findViewById(R.id.btn_camera);
+        btn_album.setOnClickListener(this);
+        btn_camera.setOnClickListener(this);
         dialog.findViewById(R.id.btn_cancel).setOnClickListener(this);
         setDialogLocation(mContext, dialog);
     }
     public void setClickCallback(ClickCallback clickCallback) {
         this.clickCallback = clickCallback;
+    }
+    public void setSelectot1(String selector){
+        if (!TextUtils.isEmpty(selector)){
+            btn_album.setText(selector);
+        }
+    }
+    public void setSelectot2(String selector){
+        if (!TextUtils.isEmpty(selector)){
+            btn_camera.setText(selector);
+        }
     }
 
     public interface ClickCallback {

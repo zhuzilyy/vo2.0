@@ -22,8 +22,13 @@
             android:text="xxxxxxxxx"
             android:textColor="#666666"
             android:textSize="13sp" />
-
+       <!-- <View
+            android:id="@+id/bottomLine"
+            style="@style/horizontal_deep_thick_divider" />-->
         <View
+            android:background="#ebebeb"
+            android:layout_height="0.5dp"
+            android:layout_width="match_parent"
             android:id="@+id/bottomLine"
             style="@style/horizontal_deep_thick_divider" />
     </LinearLayout>

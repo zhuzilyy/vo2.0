@@ -8,6 +8,8 @@ import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.zl.vo_.R;
+import com.zl.vo_.config.preference.Preferences;
+import com.zl.vo_.login.LogoutHelper;
 import com.zl.vo_.own.dialog.CustomerDialog;
 import com.zl.vo_.own.dialog.JiamiDialog;
 import com.zl.vo_.own.dialog.LifeNotePwdDialog;
@@ -15,6 +17,7 @@ import com.zl.vo_.own.dialog.LifeNotePwdSettingDialog;
 import com.zl.vo_.own.dialog.PrivateFriendsDialog;
 import com.zl.vo_.own.dialog.VipDialog;
 import com.zl.vo_.own.dialog.VipFunctionIntroduceDialog;
+import com.zl.vo_.own.ui.account.LoginActivity;
 import com.zl.vo_.own.ui.mine.ui.CancleLifeNotePwdActivity;
 import com.zl.vo_.own.ui.mine.ui.ChangePrivateFriendsActivity;
 import com.zl.vo_.own.ui.mine.ui.FindLifeNotePwdActivity;
@@ -26,7 +29,8 @@ import com.zl.vo_.own.ui.mine.ui.UserInfoActivity;
 import com.zl.vo_.own.ui.mine.ui.VipActivity;
 
 public class MineFragment extends MainTabFragment implements View.OnClickListener {
-    private RelativeLayout rl_lifeNote,rl_setPrivacyFriends,rl_lifeNotePwdSetting,rl_infoTransmission,rl_deletePravcyFriends,rl_userInfo,rl_openVip;
+    private RelativeLayout rl_lifeNote,rl_setPrivacyFriends,rl_lifeNotePwdSetting,rl_infoTransmission,
+            rl_deletePravcyFriends,rl_userInfo,rl_openVip,rl_setting;
     private VipDialog vipDialog;
     @Override
     protected void onInit() {
@@ -45,6 +49,7 @@ public class MineFragment extends MainTabFragment implements View.OnClickListene
         rl_deletePravcyFriends=findView(R.id.rl_deletePravcyFriends);
         rl_userInfo=findView(R.id.rl_userInfo);
         rl_openVip=findView(R.id.rl_openVip);
+        rl_setting=findView(R.id.rl_setting);
 
         rl_lifeNote.setOnClickListener(this);
         rl_setPrivacyFriends.setOnClickListener(this);
@@ -53,14 +58,20 @@ public class MineFragment extends MainTabFragment implements View.OnClickListene
         rl_deletePravcyFriends.setOnClickListener(this);
         rl_userInfo.setOnClickListener(this);
         rl_openVip.setOnClickListener(this);
+        rl_setting.setOnClickListener(this);
     }
     @Override
     public void onClick(View view) {
         Intent intent=null;
         switch (view.getId()){
+            //人生笔记
             case R.id.rl_lifeNote:
                 intent=new Intent(getActivity(), LifeNoteActivity.class);
                 startActivity(intent);
+                break;
+            //通用设置(退出登录)
+            case R.id.rl_setting:
+                onLogout();
                 break;
             //隐私好友设置
             case R.id.rl_setPrivacyFriends:
@@ -84,11 +95,21 @@ public class MineFragment extends MainTabFragment implements View.OnClickListene
                 intent=new Intent(getActivity(),UserInfoActivity.class);
                 startActivity(intent);
                 break;
+             //开通vip
             case R.id.rl_openVip:
                 intent=new Intent(getActivity(), VipActivity.class);
                 startActivity(intent);
                 break;
         }
+    }
+    //退出登录
+    private void onLogout() {
+        Preferences.saveUserToken("");
+        // 清理缓存&注销监听
+        LogoutHelper.logout();
+        // 启动登录
+        Intent intent=new Intent(getActivity(), LoginActivity.class);
+        startActivity(intent);
     }
     //设置加密好友
     private void showPrivateFriendsDialog() {

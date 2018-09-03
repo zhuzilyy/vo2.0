@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="com.tbruyelle.rxpermissions2:rxpermissions-0.9.3">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/rxpermissions-0.9.3.aar/706bdaa3470762fb97c9dd0204992d5f/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/rxpermissions-0.9.3.aar/706bdaa3470762fb97c9dd0204992d5f/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/rxpermissions-0.9.3.aar/3a0ff7e3c85296b1a3d7fd3a10cd2ea2/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/rxpermissions-0.9.3.aar/3a0ff7e3c85296b1a3d7fd3a10cd2ea2/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

@@ -36,15 +36,12 @@ public class RecentContactAdapter extends BaseMultiItemQuickAdapter<RecentContac
     protected int getViewType(RecentContact item) {
         return item.getSessionType() == SessionTypeEnum.Team ? ViewType.VIEW_TYPE_TEAM : ViewType.VIEW_TYPE_COMMON;
     }
-
     @Override
     protected String getItemKey(RecentContact item) {
         StringBuilder sb = new StringBuilder();
         sb.append(item.getSessionType().getValue()).append("_").append(item.getContactId());
-
         return sb.toString();
     }
-
     public RecentContactsCallback getCallback() {
         return callback;
     }

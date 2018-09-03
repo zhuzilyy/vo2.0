@@ -62,4 +62,5 @@
     <color name="color_gray_bfc2c5">#bfc2c5</color>
 
     <color name="robot_link_element_text_blue">#248DFA</color>
+    <color name="common_line">#ebebeb</color>
 </resources>

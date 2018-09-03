@@ -5,10 +5,12 @@
       <module fileurl="file://$PROJECT_DIR$/avchatkit/avchatkit.iml" filepath="$PROJECT_DIR$/avchatkit/avchatkit.iml" />
       <module fileurl="file://$PROJECT_DIR$/faceunity/faceunity.iml" filepath="$PROJECT_DIR$/faceunity/faceunity.iml" />
       <module fileurl="file://$PROJECT_DIR$/jrmfRpWalletlib/jrmfRpWalletlib.iml" filepath="$PROJECT_DIR$/jrmfRpWalletlib/jrmfRpWalletlib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pickerview/pickerview.iml" filepath="$PROJECT_DIR$/pickerview/pickerview.iml" />
       <module fileurl="file://$PROJECT_DIR$/rtskit/rtskit.iml" filepath="$PROJECT_DIR$/rtskit/rtskit.iml" />
       <module fileurl="file://$PROJECT_DIR$/uikit/uikit.iml" filepath="$PROJECT_DIR$/uikit/uikit.iml" />
       <module fileurl="file://$PROJECT_DIR$/vo/vo.iml" filepath="$PROJECT_DIR$/vo/vo.iml" />
       <module fileurl="file://$PROJECT_DIR$/vo2.0.iml" filepath="$PROJECT_DIR$/vo2.0.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wheelview/wheelview.iml" filepath="$PROJECT_DIR$/wheelview/wheelview.iml" />
     </modules>
   </component>
 </project>

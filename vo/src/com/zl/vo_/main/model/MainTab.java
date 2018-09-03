@@ -23,9 +23,7 @@ public enum MainTab {
     FIND(3, ReminderId.INVALID, FindFragment.class, R.string.main_tab_find, R.layout.fragment_help),
     MINE(4, ReminderId.INVALID, MineFragment.class, R.string.main_tab_mine, R.layout.fragment_mine);
     public final int tabIndex;
-
     public final int reminderId;
-
     public final Class<? extends MainTabFragment> clazz;
 
     public final int resId;

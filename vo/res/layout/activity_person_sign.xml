@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    >
+    <include layout="@layout/layout_title"/>
+    <EditText
+        android:id="@+id/sign_ed"
+        android:layout_below="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@color/white"
+        android:layout_marginTop="10dp"
+        android:hint="我的个性签名"
+        android:gravity="top"
+        android:padding="5dp"
+        android:textSize="13sp"
+        android:maxLines="10"
+        />
+</LinearLayout>

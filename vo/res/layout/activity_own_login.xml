@@ -84,7 +84,7 @@
         <com.dd.CircularProgressButton
             android:id="@+id/login_submit"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="45dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:textColor="@color/white"

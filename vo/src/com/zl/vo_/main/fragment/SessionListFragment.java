@@ -61,14 +61,12 @@ public class SessionListFragment extends MainTabFragment {
         registerObservers(false);
         super.onDestroy();
     }
-
     @Override
     protected void onInit() {
         findViews();
         registerObservers(true);
         addRecentContactsFragment();
     }
-
     private void registerObservers(boolean register) {
         NIMClient.getService(AuthServiceObserver.class).observeOtherClients(clientsObserver, register);
         NIMClient.getService(AuthServiceObserver.class).observeOnlineStatus(userStatusObserver, register);

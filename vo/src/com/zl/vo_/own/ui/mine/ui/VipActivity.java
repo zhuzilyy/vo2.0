@@ -1,10 +1,12 @@
 package com.zl.vo_.own.ui.mine.ui;
 
 import android.view.View;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import com.zl.vo_.R;
 import com.zl.vo_.own.base.BaseActivity;
+import com.zl.vo_.own.ui.mine.adapter.VipAdapter;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -16,16 +18,17 @@ import butterknife.OnClick;
 public class VipActivity extends BaseActivity {
     @BindView(R.id.tv_title)
     TextView tv_title;
+    @BindView(R.id.lv_vip)
+    ListView lv_vip;
+    private VipAdapter vipAdapter;
     @Override
     protected void initViews() {
         tv_title.setText("VO会员");
     }
-
     @Override
     protected void initData() {
 
     }
-
     @Override
     protected void getResLayout() {
         setContentView(R.layout.activity_vip);

@@ -22,13 +22,13 @@ public final class R {
         public static int abc_action_bar_embed_tabs = 0x7f050001;
     }
     public static final class color {
-        public static int notification_action_color_filter = 0x7f060077;
-        public static int notification_icon_bg_color = 0x7f060078;
-        public static int notification_material_background_media_default_color = 0x7f060079;
-        public static int primary_text_default_material_dark = 0x7f06007f;
-        public static int ripple_material_light = 0x7f060085;
-        public static int secondary_text_default_material_dark = 0x7f060087;
-        public static int secondary_text_default_material_light = 0x7f060088;
+        public static int notification_action_color_filter = 0x7f060078;
+        public static int notification_icon_bg_color = 0x7f060079;
+        public static int notification_material_background_media_default_color = 0x7f06007a;
+        public static int primary_text_default_material_dark = 0x7f060080;
+        public static int ripple_material_light = 0x7f060086;
+        public static int secondary_text_default_material_dark = 0x7f060088;
+        public static int secondary_text_default_material_light = 0x7f060089;
     }
     public static final class dimen {
         public static int compat_button_inset_horizontal_material = 0x7f080066;
@@ -86,27 +86,27 @@ public final class R {
         public static int italic = 0x7f0c00a0;
         public static int line1 = 0x7f0c00ac;
         public static int line3 = 0x7f0c00ad;
-        public static int media_actions = 0x7f0c00ba;
-        public static int normal = 0x7f0c00ef;
-        public static int notification_background = 0x7f0c00f0;
-        public static int notification_main_column = 0x7f0c00f1;
-        public static int notification_main_column_container = 0x7f0c00f2;
-        public static int parent_matrix = 0x7f0c00f9;
-        public static int right_icon = 0x7f0c0123;
-        public static int right_side = 0x7f0c0124;
-        public static int save_image_matrix = 0x7f0c012b;
-        public static int save_non_transition_alpha = 0x7f0c012c;
-        public static int save_scale_type = 0x7f0c012d;
-        public static int status_bar_latest_event_content = 0x7f0c0153;
-        public static int text = 0x7f0c017f;
-        public static int text2 = 0x7f0c0180;
-        public static int time = 0x7f0c018b;
-        public static int title = 0x7f0c0190;
-        public static int transition_current_scene = 0x7f0c019b;
-        public static int transition_layout_save = 0x7f0c019c;
-        public static int transition_position = 0x7f0c019d;
-        public static int transition_scene_layoutid_cache = 0x7f0c019e;
-        public static int transition_transform = 0x7f0c019f;
+        public static int media_actions = 0x7f0c00bb;
+        public static int normal = 0x7f0c00f0;
+        public static int notification_background = 0x7f0c00f1;
+        public static int notification_main_column = 0x7f0c00f2;
+        public static int notification_main_column_container = 0x7f0c00f3;
+        public static int parent_matrix = 0x7f0c00fa;
+        public static int right_icon = 0x7f0c0124;
+        public static int right_side = 0x7f0c0125;
+        public static int save_image_matrix = 0x7f0c012c;
+        public static int save_non_transition_alpha = 0x7f0c012d;
+        public static int save_scale_type = 0x7f0c012e;
+        public static int status_bar_latest_event_content = 0x7f0c0154;
+        public static int text = 0x7f0c0180;
+        public static int text2 = 0x7f0c0181;
+        public static int time = 0x7f0c018c;
+        public static int title = 0x7f0c0191;
+        public static int transition_current_scene = 0x7f0c019c;
+        public static int transition_layout_save = 0x7f0c019d;
+        public static int transition_position = 0x7f0c019e;
+        public static int transition_scene_layoutid_cache = 0x7f0c019f;
+        public static int transition_transform = 0x7f0c01a0;
     }
     public static final class integer {
         public static int cancel_button_image_alpha = 0x7f0d0005;

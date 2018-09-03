@@ -153,6 +153,8 @@ dependencies {
     compile 'com.github.dmytrodanylyk.circular-progress-button:library:1.1.3'
     //圆形图片
     compile 'de.hdodenhof:circleimageview:2.2.0'
+    implementation project(':wheelview')
+    compile project(path: ':pickerview')
 }
 
 
