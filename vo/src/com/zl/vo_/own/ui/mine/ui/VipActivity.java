@@ -38,7 +38,6 @@ public class VipActivity extends BaseActivity {
     protected void initListener() {
 
     }
-
     @Override
     protected void setStatusBarColor() {
 
