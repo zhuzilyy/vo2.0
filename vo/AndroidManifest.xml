@@ -67,6 +67,7 @@
     <uses-permission android:name="com.zl.vo_.permission.C2D_MESSAGE"/>
 
     <application
+        tools:replace="android:theme"
         android:name=".NimApplication"
         android:allowBackup="true"
         android:icon="@mipmap/logo"
@@ -617,6 +618,14 @@
             />
         <!--个性签名-->
         <activity android:name=".own.ui.mine.ui.PersonSignActivity"
+            android:screenOrientation="portrait"
+            />
+        <!--选择支付方式-->
+        <activity android:name=".own.ui.mine.ui.PayMehtodActivity"
+            android:screenOrientation="portrait"
+            />
+        <!--记录人生笔记-->
+        <activity android:name=".own.ui.mine.ui.WriteNoteActivity"
             android:screenOrientation="portrait"
             />
     </application>

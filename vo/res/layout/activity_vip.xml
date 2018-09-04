@@ -1,15 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <include layout="@layout/layout_title"/>
-    <include layout="@layout/header_vip"/>
-    <ListView
-        android:dividerHeight="0.5dp"
-        android:divider="@color/common_line"
-        android:id="@+id/lv_vip"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-</LinearLayout>
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <include layout="@layout/layout_title" />
+        <ScrollView
+            android:layout_marginBottom="48dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <include layout="@layout/header_vip" />
+                <com.zl.vo_.own.views.MyListView
+                    android:id="@+id/lv_vip"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:divider="@color/common_line"
+                    android:dividerHeight="0.5dp"
+                    android:listSelector="@color/transparent" />
+                <include layout="@layout/footer_vip" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+    <!--支付-->
+    <LinearLayout
+        android:id="@+id/ll_pay"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/white"
+        >
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2.5"
+            android:paddingLeft="12dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="支付金额："
+                android:gravity="center"
+                android:textSize="14sp"
+                android:id="@+id/tv_payMoney" />
+            <TextView
+                android:id="@+id/vip_final_price"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="0.00"
+                android:textSize="14sp"
+                android:textColor="@color/vipcolor"
+                android:gravity="center"
+                />
+            <TextView
+                android:paddingLeft="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="元"
+                android:textSize="14sp"
+                android:gravity="center"
+                />
+            <TextView
+                android:id="@+id/vip_final_save"
+                android:layout_marginLeft="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="已省0.00元"
+                android:textSize="12sp"
+                android:gravity="center"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+            <Button
+                android:id="@+id/btn_submit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="立即付款"
+                android:textSize="16sp"
+                android:background="@color/vipYellow"
+                android:textColor="@color/white"
+                />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

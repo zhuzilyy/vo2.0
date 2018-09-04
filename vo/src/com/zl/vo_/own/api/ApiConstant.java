@@ -14,9 +14,12 @@ public class ApiConstant {
     public static final String FUNCTION_INTRODUCE = "http://api.ykhswl.net/vo_admin_system/list.php";
     //VO介绍
     public static final String VO_INTRODUCE = "http://api.ykhswl.net/vo_admin_system/view.php?id=10";
+    //VO会员用户协议
+    public static final String VO_VIP_AGREEMENT="http://api.ykhswl.net/vo_admin_system/view.php?id=4";
     //服务器地址
    // public static final String BASE_URL="http://47.104.73.127:8080/news-0.0.1/api/user/login";
     //登录
     public static final String BASE_URL="http://47.104.73.127:8080/news-0.0.1/api/user/login";
+
 
 }

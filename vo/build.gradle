@@ -155,6 +155,10 @@ dependencies {
     compile 'de.hdodenhof:circleimageview:2.2.0'
     implementation project(':wheelview')
     compile project(path: ':pickerview')
+    //带三角的pop窗体
+    compile 'com.cpiz.bubbleview:bubbleview:1.0.2'
+    implementation project(':picture_library')
+    implementation project(':ucrop')
 }
 
 
