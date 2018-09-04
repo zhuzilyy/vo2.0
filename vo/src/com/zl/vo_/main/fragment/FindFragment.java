@@ -23,12 +23,13 @@ import com.zl.vo_.main.model.MainTab;
 import com.zl.vo_.own.api.ApiConstant;
 import com.zl.vo_.own.ui.find.ui.AboutVoActivity;
 import com.zl.vo_.own.ui.find.ui.HelpAndFeedBackActivity;
+import com.zl.vo_.own.ui.find.ui.ScanCaptureActivity;
 import com.zl.vo_.own.util.WhiteBgBitmapUtil;
 
 import butterknife.OnClick;
 
 public class FindFragment extends MainTabFragment implements View.OnClickListener {
-    private RelativeLayout rl_share,rl_helpAndFeedback,rl_aboutVo;
+    private RelativeLayout rl_share,rl_helpAndFeedback,rl_aboutVo,rl_qrcode;
     private LinearLayout ll_help;
     private PopupWindow pw_share;
     private View view_share;
@@ -40,10 +41,12 @@ public class FindFragment extends MainTabFragment implements View.OnClickListene
         rl_share=findView(R.id.rl_share);
         rl_helpAndFeedback=findView(R.id.rl_helpAndFeedback);
         rl_aboutVo=findView(R.id.rl_aboutVo);
+        rl_qrcode=findView(R.id.rl_qrcode);
         ll_help=findView(R.id.ll_help);
         rl_share.setOnClickListener(this);
         rl_helpAndFeedback.setOnClickListener(this);
         rl_aboutVo.setOnClickListener(this);
+        rl_qrcode.setOnClickListener(this);
         view_share= LayoutInflater.from(getActivity()).inflate(R.layout.pw_share,null);
     }
     @Override
@@ -65,6 +68,10 @@ public class FindFragment extends MainTabFragment implements View.OnClickListene
                 break;
             case R.id.rl_aboutVo:
                 intent=new Intent(getActivity(), AboutVoActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.rl_qrcode:
+                intent=new Intent(getActivity(), ScanCaptureActivity.class);
                 startActivity(intent);
                 break;
         }

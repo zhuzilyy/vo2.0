@@ -1,4 +1,4 @@
-include ':uikit', ':pickerview', ':wheelview'
+include ':uikit', ':pickerview', ':wheelview', ':picture_library', ':ucrop'
 include ':vo'
 include ':faceunity' 
 include ':jrmfRpWalletlib'

@@ -4,6 +4,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.zl.vo_.R;
@@ -25,6 +26,7 @@ public class LifeNoteActivity extends BaseActivity implements View.OnClickListen
     ListView lv_lifeNote;
     private LifeNoteAdapter lifeNoteAdapter;
     private View view_header;
+    private RelativeLayout rl_writeLifeNote;
     @Override
     protected void initViews() {
         tv_title.setText("人生笔记");
@@ -35,6 +37,8 @@ public class LifeNoteActivity extends BaseActivity implements View.OnClickListen
         lifeNoteAdapter = new LifeNoteAdapter(this);
         lv_lifeNote.setAdapter(lifeNoteAdapter);
         lv_lifeNote.addHeaderView(view_header);
+
+
     }
     @Override
     protected void getResLayout() {
@@ -43,7 +47,9 @@ public class LifeNoteActivity extends BaseActivity implements View.OnClickListen
     @Override
     protected void initListener() {
         ImageView iv_changeBg=view_header.findViewById(R.id.iv_changeBg);
+        rl_writeLifeNote=view_header.findViewById(R.id.writeLifeNote_circle);
         iv_changeBg.setOnClickListener(this);
+        rl_writeLifeNote.setOnClickListener(this);
     }
     @Override
     protected void setStatusBarColor() {
@@ -59,6 +65,9 @@ public class LifeNoteActivity extends BaseActivity implements View.OnClickListen
                 break;
             case R.id.iv_back:
                 finish();
+                break;
+            case R.id.writeLifeNote_circle:
+                jumpActivity(this,WriteNoteActivity.class);
                 break;
         }
     }

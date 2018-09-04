@@ -14,6 +14,10 @@ import com.zl.vo_.R;
 
 public class VipAdapter extends BaseAdapter {
     private Context context;
+    public VipAdapter(Context context) {
+        this.context = context;
+    }
+
     @Override
     public int getCount() {
         return 3;

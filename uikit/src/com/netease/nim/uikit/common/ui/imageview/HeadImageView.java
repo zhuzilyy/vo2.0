@@ -20,7 +20,6 @@ import com.netease.nimlib.sdk.uinfo.model.UserInfo;
  * Created by huangjun on 2015/11/13.
  */
 public class HeadImageView extends CircleImageView {
-
     public static final int DEFAULT_AVATAR_THUMB_SIZE = (int) NimUIKit.getContext().getResources().getDimension(R.dimen.avatar_max_size);
     public static final int DEFAULT_AVATAR_NOTIFICATION_ICON_SIZE = (int) NimUIKit.getContext().getResources().getDimension(R.dimen.avatar_notification_size);
     private static final int DEFAULT_AVATAR_RES_ID = R.drawable.nim_avatar_default;

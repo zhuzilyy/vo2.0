@@ -1,10 +1,5 @@
 package com.zl.vo_.main.model;
 
-import android.content.Context;
-import android.view.LayoutInflater;
-import android.view.View;
-
-import com.zl.vo_.NimApplication;
 import com.zl.vo_.R;
 import com.zl.vo_.main.fragment.ChatRoomListFragment;
 import com.zl.vo_.main.fragment.ContactListFragment;
@@ -13,8 +8,6 @@ import com.zl.vo_.main.fragment.MainTabFragment;
 import com.zl.vo_.main.fragment.MineFragment;
 import com.zl.vo_.main.fragment.SessionListFragment;
 import com.zl.vo_.main.reminder.ReminderId;
-
-import butterknife.ButterKnife;
 
 public enum MainTab {
     RECENT_CONTACTS(0, ReminderId.SESSION, SessionListFragment.class, R.string.main_tab_session, R.layout.session_list),

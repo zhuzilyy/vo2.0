@@ -357,16 +357,13 @@ public class InputPanel implements IEmoticonSelectedListener, IAudioRecordCallba
     private void onTextMessageSendButtonPressed() {
         String text = messageEditText.getText().toString();
         IMMessage textMessage = createTextMessage(text);
-
         if (container.proxy.sendMessage(textMessage)) {
             restoreText(true);
         }
     }
-
     protected IMMessage createTextMessage(String text) {
         return MessageBuilder.createTextMessage(container.account, container.sessionType, text);
     }
-
     // 切换成音频，收起键盘，按钮切换成键盘
     private void switchToAudioLayout() {
         messageEditText.setVisibility(View.GONE);

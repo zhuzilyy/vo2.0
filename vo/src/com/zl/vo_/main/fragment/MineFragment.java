@@ -3,10 +3,15 @@ package com.zl.vo_.main.fragment;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
+import com.cpiz.android.bubbleview.BubblePopupWindow;
+import com.cpiz.android.bubbleview.BubbleTextView;
+import com.cpiz.android.bubbleview.RelativePos;
 import com.zl.vo_.R;
 import com.zl.vo_.config.preference.Preferences;
 import com.zl.vo_.login.LogoutHelper;
@@ -28,10 +33,13 @@ import com.zl.vo_.own.ui.mine.ui.SetPrivateFriendsActivity;
 import com.zl.vo_.own.ui.mine.ui.UserInfoActivity;
 import com.zl.vo_.own.ui.mine.ui.VipActivity;
 
+import static com.cpiz.android.bubbleview.Utils.dp2px;
+
 public class MineFragment extends MainTabFragment implements View.OnClickListener {
     private RelativeLayout rl_lifeNote,rl_setPrivacyFriends,rl_lifeNotePwdSetting,rl_infoTransmission,
             rl_deletePravcyFriends,rl_userInfo,rl_openVip,rl_setting;
     private VipDialog vipDialog;
+    private ImageView iv_guidePravcyFriends,iv_guideLifeNotePwd,iv_guideInfoTrans,iv_guideDeletePravcyFriends;
     @Override
     protected void onInit() {
         initViews();
@@ -42,6 +50,10 @@ public class MineFragment extends MainTabFragment implements View.OnClickListene
         onCurrent();
     }
     private void initViews() {
+        iv_guidePravcyFriends=findView(R.id.iv_guidePravcyFriends);
+        iv_guideLifeNotePwd=findView(R.id.iv_guideLifeNotePwd);
+        iv_guideInfoTrans=findView(R.id.iv_guideInfoTrans);
+        iv_guideDeletePravcyFriends=findView(R.id.iv_guideDeletePravcyFriends);
         rl_lifeNote=findView(R.id.rl_lifeNote);
         rl_setPrivacyFriends=findView(R.id.rl_setPrivacyFriends);
         rl_lifeNotePwdSetting=findView(R.id.rl_lifeNotePwdSetting);
@@ -59,6 +71,10 @@ public class MineFragment extends MainTabFragment implements View.OnClickListene
         rl_userInfo.setOnClickListener(this);
         rl_openVip.setOnClickListener(this);
         rl_setting.setOnClickListener(this);
+        iv_guidePravcyFriends.setOnClickListener(this);
+        iv_guideLifeNotePwd.setOnClickListener(this);
+        iv_guideInfoTrans.setOnClickListener(this);
+        iv_guideDeletePravcyFriends.setOnClickListener(this);
     }
     @Override
     public void onClick(View view) {
@@ -99,6 +115,18 @@ public class MineFragment extends MainTabFragment implements View.OnClickListene
             case R.id.rl_openVip:
                 intent=new Intent(getActivity(), VipActivity.class);
                 startActivity(intent);
+                break;
+            case R.id.iv_guidePravcyFriends:
+                showPop("一键开启专属人生笔记，您的私密空间为您永久保存", iv_guidePravcyFriends);
+                break;
+            case R.id.iv_guideLifeNotePwd:
+                showPop("一键隐藏好友，一摇隐藏好友，一键显示隐私好友", iv_guideLifeNotePwd);
+                break;
+            case R.id.iv_guideInfoTrans:
+                showPop("一键信息传输加密，2048位密码保护您的信息不被第三方窃取", iv_guideInfoTrans);
+                break;
+            case R.id.iv_guideDeletePravcyFriends:
+                showPop(" 一键解除加密隐私好友，不留任何信息", iv_guideDeletePravcyFriends);
                 break;
         }
     }
@@ -285,5 +313,21 @@ public class MineFragment extends MainTabFragment implements View.OnClickListene
             }
         });
         dialog.show();
+    }
+    //显示提示框
+    private void showPop(String tvStr, ImageView iv) {
+        View rootView = LayoutInflater.from(getActivity()).inflate(R.layout.simple_text_bubble, null);
+        BubbleTextView mBubbleTextView = rootView.findViewById(R.id.popup_bubble);
+        BubblePopupWindow mBubblePopupWindow = new BubblePopupWindow(rootView, mBubbleTextView);
+        mBubblePopupWindow.setPadding(dp2px(50));
+        mBubbleTextView.setText(tvStr);
+        RelativePos mRelativePos = new RelativePos(RelativePos.CENTER_HORIZONTAL, RelativePos.CENTER_VERTICAL);
+        mRelativePos.setHorizontalRelate(RelativePos.TO_LEFT_OF);
+        showPopupBubble(mBubblePopupWindow, mRelativePos, 0, 0, iv);
+    }
+    private void showPopupBubble(BubblePopupWindow mBubblePopupWindow, RelativePos mRelativePos, int mMarginH, int mMarginV, ImageView iv) {
+        if (getActivity().hasWindowFocus()) {
+            mBubblePopupWindow.showArrowTo(iv, mRelativePos, mMarginH, mMarginV);
+        }
     }
 }
