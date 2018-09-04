@@ -126,7 +126,6 @@ public class RecentContactsFragment extends TFragment {
     private void initMessageList() {
         items = new ArrayList<>();
         cached = new HashMap<>(3);
-
         // adapter
         adapter = new RecentContactAdapter(recyclerView, items);
         initCallBack();
@@ -163,7 +162,6 @@ public class RecentContactsFragment extends TFragment {
             public void onRecentContactsLoaded() {
 
             }
-
             @Override
             public void onUnreadCountChange(int unreadCount) {
 

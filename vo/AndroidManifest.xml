@@ -628,6 +628,10 @@
         <activity android:name=".own.ui.mine.ui.WriteNoteActivity"
             android:screenOrientation="portrait"
             />
+        <!--扫一扫-->
+        <activity android:name=".own.ui.find.ui.ScanCaptureActivity"
+            android:screenOrientation="portrait"
+            />
     </application>
 
 </manifest>

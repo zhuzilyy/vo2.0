@@ -41,33 +41,24 @@ import com.netease.nimlib.sdk.msg.model.MessageReceipt;
 import com.netease.nimlib.sdk.robot.model.NimRobotInfo;
 import com.netease.nimlib.sdk.robot.model.RobotAttachment;
 import com.netease.nimlib.sdk.robot.model.RobotMsgType;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-
 /**
  * 聊天界面基类
  * <p/>
  * Created by huangjun on 2015/2/1.
  */
 public class MessageFragment extends TFragment implements ModuleProxy {
-
     private View rootView;
-
     private SessionCustomization customization;
-
     protected static final String TAG = "MessageActivity";
-
     // 聊天对象
     protected String sessionId; // p2p对方Account或者群id
-
     protected SessionTypeEnum sessionType;
-
     // modules
     protected InputPanel inputPanel;
     protected MessageListPanelEx messageListPanel;
-
     protected AitManager aitManager;
 
     @Override
@@ -89,7 +80,6 @@ public class MessageFragment extends TFragment implements ModuleProxy {
     @Override
     public void onPause() {
         super.onPause();
-
         NIMClient.getService(MsgService.class).setChattingAccount(MsgService.MSG_CHATTING_ACCOUNT_NONE,
                 SessionTypeEnum.None);
         inputPanel.onPause();

@@ -128,14 +128,12 @@ public class ContactListFragment extends MainTabFragment {
                     image.setScaleType(ScaleType.CENTER_CROP);
                     int unreadCount = SystemMessageUnreadManager.getInstance().getSysMsgUnreadCount();
                     updateUnreadNum(unreadCount);
-
                     ReminderManager.getInstance().registerUnreadNumChangedCallback(new ReminderManager.UnreadNumChangedCallback() {
                         @Override
                         public void onUnreadNumChanged(ReminderItem item) {
                             if (item.getId() != ReminderId.CONTACT) {
                                 return;
                             }
-
                             updateUnreadNum(item.getUnread());
                         }
                     });
@@ -150,7 +148,7 @@ public class ContactListFragment extends MainTabFragment {
 
             private void updateUnreadNum(int unreadCount) {
                 // 2.*版本viewholder复用问题
-                if (unreadCount > 0 && funcName.getText().toString().equals("验证提醒")) {
+                if (unreadCount > 0 && funcName.getText().toString().equals("新的朋友")) {
                     unreadNum.setVisibility(View.VISIBLE);
                     unreadNum.setText("" + unreadCount);
                 } else {
@@ -193,7 +191,7 @@ public class ContactListFragment extends MainTabFragment {
             }else if(item==MY_CONTACT){
                 TeamListActivity.start(context, ItemTypes.TEAMS.ADVANCED_TEAM);
             }else if(item==GROUP_CONTACT){
-
+                TeamListActivity.start(context, ItemTypes.TEAMS.ADVANCED_TEAM);
             }
         }
     }

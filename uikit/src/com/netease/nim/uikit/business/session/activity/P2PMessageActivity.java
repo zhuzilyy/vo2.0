@@ -36,9 +36,7 @@ import java.util.Set;
  * Created by huangjun on 2015/2/1.
  */
 public class P2PMessageActivity extends BaseMessageActivity {
-
     private boolean isResume = false;
-
     public static void start(Context context, String contactId, SessionCustomization customization, IMMessage anchor) {
         Intent intent = new Intent();
         intent.putExtra(Extras.EXTRA_ACCOUNT, contactId);
@@ -48,21 +46,17 @@ public class P2PMessageActivity extends BaseMessageActivity {
         }
         intent.setClass(context, P2PMessageActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP | Intent.FLAG_ACTIVITY_CLEAR_TOP);
-
         context.startActivity(intent);
     }
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         // 单聊特例话数据，包括个人信息，
         requestBuddyInfo();
         displayOnlineState();
         registerObservers(true);
         registerOnlineStateChangeListener(true);
     }
-
     @Override
     protected void onDestroy() {
         super.onDestroy();
@@ -75,17 +69,14 @@ public class P2PMessageActivity extends BaseMessageActivity {
         super.onResume();
         isResume = true;
     }
-
     @Override
     protected void onStop() {
         super.onStop();
         isResume = false;
     }
-
     private void requestBuddyInfo() {
         setTitle(UserInfoHelper.getUserTitleName(sessionId, SessionTypeEnum.P2P));
     }
-
     private void registerObservers(boolean register) {
         if (register) {
             registerUserInfoObserver();
@@ -165,7 +156,6 @@ public class P2PMessageActivity extends BaseMessageActivity {
             NimUIKit.getUserInfoObservable().registerObserver(uinfoObserver, false);
         }
     }
-
     /**
      * 命令消息接收观察者
      */
@@ -178,12 +168,10 @@ public class P2PMessageActivity extends BaseMessageActivity {
             showCommandMessage(message);
         }
     };
-
     protected void showCommandMessage(CustomNotification message) {
         if (!isResume) {
             return;
         }
-
         String content = message.getContent();
         try {
             JSONObject json = JSON.parseObject(content);
@@ -199,7 +187,6 @@ public class P2PMessageActivity extends BaseMessageActivity {
 
         }
     }
-
     @Override
     protected MessageFragment fragment() {
         Bundle arguments = getIntent().getExtras();
