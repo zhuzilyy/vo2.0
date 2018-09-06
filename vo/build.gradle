@@ -159,6 +159,9 @@ dependencies {
     compile 'com.cpiz.bubbleview:bubbleview:1.0.2'
     implementation project(':picture_library')
     implementation project(':ucrop')
+    implementation project(':imagewatcher')
+    implementation project(':indexlib')
+    compile 'com.bartoszlipinski:recyclerviewheader2:2.0.1'
 }
 
 

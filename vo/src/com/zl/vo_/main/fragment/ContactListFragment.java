@@ -1,6 +1,7 @@
 package com.zl.vo_.main.fragment;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,6 +20,7 @@ import com.zl.vo_.main.model.MainTab;
 import com.zl.vo_.main.reminder.ReminderId;
 import com.zl.vo_.main.reminder.ReminderItem;
 import com.zl.vo_.main.reminder.ReminderManager;
+import com.zl.vo_.own.ui.friend.ui.AddressListFriendActivity;
 import com.zl.vo_.session.SessionHelper;
 import com.netease.nim.uikit.business.contact.ContactsFragment;
 import com.netease.nim.uikit.business.contact.core.item.AbsContactItem;
@@ -172,7 +174,7 @@ public class ContactListFragment extends MainTabFragment {
         }
 
         static void handle(Context context, AbsContactItem item) {
-           /* if (item == VERIFY) {
+         /*   if (item == VERIFY) {
                 SystemMessageActivity.start(context);
             } else if (item == ROBOT) {
                 RobotListActivity.start(context);
@@ -189,7 +191,11 @@ public class ContactListFragment extends MainTabFragment {
             if (item==NEW_FRIEND){
                 SystemMessageActivity.start(context);
             }else if(item==MY_CONTACT){
-                TeamListActivity.start(context, ItemTypes.TEAMS.ADVANCED_TEAM);
+                //TeamListActivity.start(context, ItemTypes.TEAMS.ADVANCED_TEAM);
+                Intent intent = new Intent();
+                intent.setClass(context, AddressListFriendActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                context.startActivity(intent);
             }else if(item==GROUP_CONTACT){
                 TeamListActivity.start(context, ItemTypes.TEAMS.ADVANCED_TEAM);
             }

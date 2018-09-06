@@ -82,4 +82,5 @@
     <color name="photoDialog">#ffffff</color>
     <color name="vipcolor">#e2b24f</color>
     <color name="color_f6">#f6f6f6</color>
+    <color name="partTranslucent">#39000000</color>
 </resources>
