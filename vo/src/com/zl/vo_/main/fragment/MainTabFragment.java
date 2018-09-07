@@ -44,7 +44,6 @@ public abstract class MainTabFragment extends TabFragment {
             onInit();
         }
     }
-
     private boolean loadRealLayout() {
         ViewGroup root = (ViewGroup) getView();
         if (root != null) {
