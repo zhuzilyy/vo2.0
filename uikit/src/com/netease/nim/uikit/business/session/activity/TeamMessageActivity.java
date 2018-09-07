@@ -130,7 +130,8 @@ public class TeamMessageActivity extends BaseMessageActivity {
         invalidTeamTipText.setText(team.getType() == TeamTypeEnum.Normal ? R.string.normal_team_invalid_tip : R.string.team_invalid_tip);
         invalidTeamTipView.setVisibility(team.isMyTeam() ? View.GONE : View.VISIBLE);
         String icon = team.getIcon();
-        Log.i("tag",icon);
+        Log.i("tag",icon+"========111111111111========");
+
     }
 
     /**
