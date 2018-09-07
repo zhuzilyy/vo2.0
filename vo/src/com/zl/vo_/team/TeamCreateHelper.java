@@ -5,6 +5,10 @@ import android.os.Handler;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.netease.nim.uikit.common.activity.UI;
+import com.netease.nimlib.sdk.team.constant.TeamBeInviteModeEnum;
+import com.netease.nimlib.sdk.team.constant.TeamInviteModeEnum;
+import com.netease.nimlib.sdk.team.constant.VerifyTypeEnum;
 import com.zl.vo_.DemoCache;
 import com.zl.vo_.main.activity.MainActivity;
 import com.zl.vo_.session.SessionHelper;
@@ -100,15 +104,18 @@ public class TeamCreateHelper {
      */
     public static void createAdvancedTeam(final Context context, List<String> memberAccounts) {
 
-        String teamName = "高级群";
+        String teamName = "群聊";
 
         DialogMaker.showProgressDialog(context, context.getString(com.netease.nim.uikit.R.string.empty), true);
         // 创建群
         TeamTypeEnum type = TeamTypeEnum.Advanced;
         HashMap<TeamFieldEnum, Serializable> fields = new HashMap<>();
         fields.put(TeamFieldEnum.Name, teamName);
-        NIMClient.getService(TeamService.class).createTeam(fields, type, "",
-                memberAccounts).setCallback(
+        fields.put(TeamFieldEnum.InviteMode, TeamInviteModeEnum.All); //群组邀请模式，所有人都可以邀请
+        fields.put(TeamFieldEnum.BeInviteMode, TeamBeInviteModeEnum.NoAuth);//被邀请人身份验证，不需要验证
+        fields.put(TeamFieldEnum.VerifyType, VerifyTypeEnum.Free);//申请加入群组的验证模式，不需要验证
+
+        NIMClient.getService(TeamService.class).createTeam(fields, type, "", memberAccounts).setCallback(
                 new RequestCallback<CreateTeamResult>() {
                     @Override
                     public void onSuccess(CreateTeamResult result) {
@@ -183,6 +190,7 @@ public class TeamCreateHelper {
         new Handler(context.getMainLooper()).postDelayed(new Runnable() {
             @Override
             public void run() {
+                UI.finishActivity(UI.activities);
                 SessionHelper.startTeamSession(context, team.getId()); // 进入创建的群
             }
         }, 50);

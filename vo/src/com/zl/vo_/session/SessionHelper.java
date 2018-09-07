@@ -218,7 +218,7 @@ public class SessionHelper {
             SessionCustomization.OptionsButton infoButton = new SessionCustomization.OptionsButton() {
                 @Override
                 public void onClick(Context context, View view, String sessionId) {
-
+                    //打开创建讨论组界面
                     MessageInfoActivity.startActivity(context, sessionId); //打开聊天信息
                 }
             };

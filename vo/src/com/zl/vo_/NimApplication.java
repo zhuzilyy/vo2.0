@@ -1,5 +1,6 @@
 package com.zl.vo_;
 
+import android.app.Activity;
 import android.app.Application;
 import android.content.Context;
 import android.support.multidex.MultiDex;
@@ -39,9 +40,13 @@ import com.netease.nimlib.sdk.mixpush.NIMPushClient;
 import com.netease.nimlib.sdk.uinfo.model.UserInfo;
 import com.netease.nimlib.sdk.util.NIMUtil;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import io.fabric.sdk.android.Fabric;
 
 public class NimApplication extends Application {
+
     private static NimApplication nimApplication;
     @Override
     protected void attachBaseContext(Context newBase) {

@@ -1,6 +1,7 @@
 package com.netease.nim.uikit.common.activity;
 
 import android.annotation.TargetApi;
+import android.app.Activity;
 import android.content.Context;
 import android.os.Build;
 import android.os.Bundle;
@@ -31,11 +32,23 @@ public abstract class UI extends AppCompatActivity {
     private static Handler handler;
 
     private Toolbar toolbar;
+    public static List<Activity> activities = new ArrayList<>();
+
+    public static void addActivity(Activity a){
+        activities.add(a);
+    }
+    public static void finishActivity(List<Activity> activities){
+        for (int i = 0; i <activities.size() ; i++) {
+            activities.get(i).finish();
+        }
+    }
+
 
     @Override
     protected void onStart() {
         super.onStart();
     }
+
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

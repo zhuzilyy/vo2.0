@@ -1,5 +1,6 @@
 package com.netease.nim.uikit.business.session.activity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -14,9 +15,11 @@ import com.netease.nim.uikit.R;
 import com.netease.nim.uikit.api.model.session.SessionCustomization;
 import com.netease.nim.uikit.business.session.constant.Extras;
 import com.netease.nim.uikit.business.session.fragment.MessageFragment;
+import com.netease.nim.uikit.common.activity.ListActivityBase;
 import com.netease.nim.uikit.common.activity.UI;
 import com.netease.nim.uikit.common.util.sys.ScreenUtil;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -35,6 +38,8 @@ public abstract class BaseMessageActivity extends UI {
     protected abstract int getContentViewId();
 
     protected abstract void initToolBar();
+
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -72,6 +77,7 @@ public abstract class BaseMessageActivity extends UI {
         customization = (SessionCustomization) getIntent().getSerializableExtra(Extras.EXTRA_CUSTOMIZATION);
 
         if (customization != null) {
+            //添加actionbar 右边的控件和事件
             addRightCustomViewOnActionBar(this, customization.buttons);
         }
     }

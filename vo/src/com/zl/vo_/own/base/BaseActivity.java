@@ -18,12 +18,14 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Toast;
 
 
+import com.netease.nim.uikit.utils.StatusBarUtil;
 import com.zl.vo_.main.activity.MainActivity;
 
 import java.util.ArrayList;
@@ -56,6 +58,14 @@ public abstract class BaseActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         initConfigure();
+        //实现状态栏 黑字白底 6.0以上
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            getWindow().getDecorView().setSystemUiVisibility( View.SYSTEM_UI_FLAG_IMMERSIVE |View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
+            StatusBarUtil.setStatusBarColor(this, com.netease.nim.uikit.R.color.white);
+        }else {
+            StatusBarUtil.transparencyBar(this); //设置状态栏全透明
+            //StatusBarUtil.StatusBarLightMode(this); //设置白底黑字
+        }
     }
     private void initConfigure() {
         //加载布局

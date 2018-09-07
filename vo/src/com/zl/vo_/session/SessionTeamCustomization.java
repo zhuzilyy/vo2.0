@@ -54,6 +54,7 @@ public class SessionTeamCustomization extends SessionCustomization{
             public void onClick(Context context, View view, String sessionId) {
                 Team team = NimUIKit.getTeamProvider().getTeamById(sessionId);
                 if (team != null && team.isMyTeam()) {
+                    //进入群详情
                     NimUIKit.startTeamInfo(context, sessionId);
                 } else {
                     Toast.makeText(context, R.string.team_invalid_tip, Toast.LENGTH_SHORT).show();

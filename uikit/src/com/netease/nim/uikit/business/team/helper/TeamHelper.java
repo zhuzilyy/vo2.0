@@ -203,6 +203,7 @@ public class TeamHelper {
         option.maxSelectedTip = NimUIKit.getContext().getString(R.string.reach_team_member_capacity, teamCapacity);
         option.allowSelectEmpty = true;
         option.alreadySelectedAccounts = memberAccounts;
+
         return option;
     }
 
