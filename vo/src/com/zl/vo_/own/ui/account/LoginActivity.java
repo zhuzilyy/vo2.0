@@ -79,7 +79,7 @@ public class LoginActivity extends BaseActivity {
                 login();
                 break;
             case R.id.login_forgetpwd_tv:
-
+                jumpActivity(this,ForgetPwdActivity.class);
                 break;
 
         }
