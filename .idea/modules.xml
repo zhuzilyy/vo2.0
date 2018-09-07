@@ -4,6 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/avchatkit/avchatkit.iml" filepath="$PROJECT_DIR$/avchatkit/avchatkit.iml" />
       <module fileurl="file://$PROJECT_DIR$/faceunity/faceunity.iml" filepath="$PROJECT_DIR$/faceunity/faceunity.iml" />
+      <module fileurl="file://$PROJECT_DIR$/imagewatcher/imagewatcher.iml" filepath="$PROJECT_DIR$/imagewatcher/imagewatcher.iml" />
+      <module fileurl="file://$PROJECT_DIR$/indexlib/indexlib.iml" filepath="$PROJECT_DIR$/indexlib/indexlib.iml" />
       <module fileurl="file://$PROJECT_DIR$/jrmfRpWalletlib/jrmfRpWalletlib.iml" filepath="$PROJECT_DIR$/jrmfRpWalletlib/jrmfRpWalletlib.iml" />
       <module fileurl="file://$PROJECT_DIR$/pickerview/pickerview.iml" filepath="$PROJECT_DIR$/pickerview/pickerview.iml" />
       <module fileurl="file://$PROJECT_DIR$/picture_library/picture_library.iml" filepath="$PROJECT_DIR$/picture_library/picture_library.iml" />

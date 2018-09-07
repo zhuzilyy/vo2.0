@@ -1,16 +1,37 @@
 package com.zl.vo_.own.ui.mine.ui;
 
+import android.app.Dialog;
+import android.content.Intent;
+import android.net.Uri;
+import android.support.v4.widget.SwipeRefreshLayout;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.util.Log;
+import android.util.SparseArray;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.github.ielse.imagewatcher.ImageWatcher;
+import com.github.ielse.imagewatcher.ImageWatcherHelper;
 import com.zl.vo_.R;
 import com.zl.vo_.own.base.BaseActivity;
 import com.zl.vo_.own.dialog.PhotoChioceDialog;
 import com.zl.vo_.own.ui.mine.adapter.LifeNoteAdapter;
+import com.zl.vo_.own.ui.mine.adapter.MessageAdapter;
+import com.zl.vo_.own.ui.mine.bean.LifeNoteBean;
+import com.zl.vo_.own.util.RecyclerViewUtil;
+import com.zl.vo_.own.util.WeiboDialogUtils;
+import com.zl.vo_.own.util.WindowUtils;
+import com.zl.vo_.own.views.CustomLoadingUIProvider;
+import com.zl.vo_.own.views.MessagePicturesLayout;
+import com.zl.vo_.own.views.SimpleLoader;
+
+import java.util.List;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -19,14 +40,20 @@ import butterknife.OnClick;
  * Created by Administrator on 2018/8/29.
  */
 
-public class LifeNoteActivity extends BaseActivity implements View.OnClickListener {
+public class LifeNoteActivity extends BaseActivity implements View.OnClickListener, MessagePicturesLayout.Callback {
     @BindView(R.id.tv_title)
     TextView tv_title;
-    @BindView(R.id.lv_lifeNote)
-    ListView lv_lifeNote;
-    private LifeNoteAdapter lifeNoteAdapter;
-    private View view_header;
+    @BindView(R.id.rv_lifeNote)
+    RecyclerView rv_lifeNote;
+    @BindView(R.id.swipe_refresh_layout)
+    SwipeRefreshLayout swipe_refresh_layout;
+    private MessageAdapter adapter;
+    private View view_header,view_footer;
+    private TextView tv_footer;
     private RelativeLayout rl_writeLifeNote;
+    private ImageWatcherHelper iwHelper;
+    boolean isTranslucentStatus;
+    private RecyclerViewUtil recyclerViewUtil;
     @Override
     protected void initViews() {
         tv_title.setText("人生笔记");
@@ -34,12 +61,43 @@ public class LifeNoteActivity extends BaseActivity implements View.OnClickListen
     @Override
     protected void initData() {
         view_header=LayoutInflater.from(this).inflate(R.layout.header_life_note,null);
-        lifeNoteAdapter = new LifeNoteAdapter(this);
-        lv_lifeNote.setAdapter(lifeNoteAdapter);
-        lv_lifeNote.addHeaderView(view_header);
-
-
+        view_footer=LayoutInflater.from(this).inflate(R.layout.footer_life_note,null);
+        rv_lifeNote.setLayoutManager(new LinearLayoutManager(this));
+        //vRecycler.addItemDecoration(new SpaceItemDecoration(this).setSpace(14).setSpaceColor(0xFFECECEC));
+        rv_lifeNote.setAdapter(adapter = new MessageAdapter(this).setPictureClickCallback(this));
+        adapter.set(LifeNoteBean.get());
+        adapter.setHeaderView(view_header);
+        //adapter.setFooterView(view_footer);
+        addView();
     }
+    private void addView() {
+        iwHelper = ImageWatcherHelper.with(LifeNoteActivity.this,new SimpleLoader()) // 一般来讲， ImageWatcher 需要占据全屏的位置
+                .setTranslucentStatus(!isTranslucentStatus ? WindowUtils.calcStatusBarHeight(this) : 0) // 如果不是透明状态栏，你需要给ImageWatcher标记 一个偏移值，以修正点击ImageView查看的启动动画的Y轴起点的不正确
+                .setErrorImageRes(R.mipmap.error_picture) // 配置error图标 如果不介意使用lib自带的图标，并不一定要调用这个API
+                .setOnPictureLongPressListener(new ImageWatcher.OnPictureLongPressListener() {
+                    @Override
+                    public void onPictureLongPress(ImageView v, Uri uri, int pos) {
+                        // 长按图片的回调，你可以显示一个框继续提供一些复制，发送等功能
+                        //Toast.makeText(v.getContext().getApplicationContext(), "长按了第" + (pos + 1) + "张图片", Toast.LENGTH_SHORT).show();
+                    }
+                })
+                .setOnStateChangedListener(new ImageWatcher.OnStateChangedListener() {
+                    @Override
+                    public void onStateChangeUpdate(ImageWatcher imageWatcher, ImageView clicked, int position, Uri uri, float animatedValue, int actionTag) {
+                        Log.e("IW", "onStateChangeUpdate [" + position + "][" + uri + "][" + animatedValue + "][" + actionTag + "]");
+                    }
+                    @Override
+                    public void onStateChanged(ImageWatcher imageWatcher, int position, Uri uri, int actionTag) {
+                        if (actionTag == ImageWatcher.STATE_ENTER_DISPLAYING) {
+                            Toast.makeText(getApplicationContext(), "点击了图片 [" + position + "]" + uri + "", Toast.LENGTH_SHORT).show();
+                        } else if (actionTag == ImageWatcher.STATE_EXIT_HIDING) {
+                            //Toast.makeText(getApplicationContext(), "退出了查看大图", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                })
+                .setLoadingUIProvider(new CustomLoadingUIProvider()); // 自定义LoadingUI
+    }
+
     @Override
     protected void getResLayout() {
         setContentView(R.layout.activity_life_note);
@@ -48,8 +106,19 @@ public class LifeNoteActivity extends BaseActivity implements View.OnClickListen
     protected void initListener() {
         ImageView iv_changeBg=view_header.findViewById(R.id.iv_changeBg);
         rl_writeLifeNote=view_header.findViewById(R.id.writeLifeNote_circle);
+        tv_footer=view_footer.findViewById(R.id.tv_footer);
         iv_changeBg.setOnClickListener(this);
         rl_writeLifeNote.setOnClickListener(this);
+        recyclerViewUtil=new RecyclerViewUtil(this,rv_lifeNote);
+        recyclerViewUtil.setOnLoadMoreListener(new RecyclerViewUtil.OnLoadMoreListener() {
+            @Override
+            public void onLoadMore() {
+                Dialog dialog = WeiboDialogUtils.createLoadingDialog(LifeNoteActivity.this, "加载中");
+                dialog.show();
+                //adapter.set(LifeNoteBean.get());
+                //Toast.makeText(LifeNoteActivity.this, "到底了。。。。。。。。。。", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
     @Override
     protected void setStatusBarColor() {
@@ -88,5 +157,24 @@ public class LifeNoteActivity extends BaseActivity implements View.OnClickListen
                 //takePhoto();
             }
         });
+    }
+
+
+    @Override
+    public void onThumbPictureClick(ImageView i, SparseArray<ImageView> imageGroupList, List<Uri> urlList) {
+        iwHelper.show(i, imageGroupList, urlList);
+    }
+    @Override
+    public void onBackPressed() {
+        if (!iwHelper.handleBackPressed()) {
+            super.onBackPressed();
+        }
+    }
+    public static boolean isSlideToBottom(RecyclerView recyclerView) {
+        if (recyclerView == null) return false;
+        if (recyclerView.computeVerticalScrollExtent() + recyclerView.computeVerticalScrollOffset()
+                >= recyclerView.computeVerticalScrollRange())
+            return true;
+        return false;
     }
 }

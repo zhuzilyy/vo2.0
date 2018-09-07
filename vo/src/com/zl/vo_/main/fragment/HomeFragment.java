@@ -30,14 +30,12 @@ import com.zl.vo_.R;
 import com.zl.vo_.common.ui.viewpager.FadeInOutPageTransformer;
 import com.zl.vo_.common.ui.viewpager.PagerSlidingTabStrip;
 import com.zl.vo_.contact.activity.AddFriendActivity;
-import com.zl.vo_.main.activity.MainActivity;
 import com.zl.vo_.main.adapter.MainTabPagerAdapter;
 import com.zl.vo_.main.helper.SystemMessageUnreadManager;
 import com.zl.vo_.main.model.MainTab;
 import com.zl.vo_.main.reminder.ReminderItem;
 import com.zl.vo_.main.reminder.ReminderManager;
-import com.zl.vo_.own.api.ApiConstant;
-import com.zl.vo_.own.ui.account.WebViweActivity;
+import com.zl.vo_.own.ui.SearchFriendsActivity;
 import com.zl.vo_.own.views.DetailsTypePopupWindow;
 import com.zl.vo_.own.views.NoScrollViewPager;
 import com.zl.vo_.team.TeamCreateHelper;
@@ -301,11 +299,15 @@ public class HomeFragment extends TFragment implements OnPageChangeListener, Rem
                 });
     }
     //添加的部分 点击事件
-    @OnClick({R.id.iv_add})
+    @OnClick({R.id.iv_add,R.id.iv_search})
     public void click(View view){
         switch(view.getId()){
             case R.id.iv_add:
                 showAddPw(iv_add);
+                break;
+            case R.id.iv_search:
+                Intent intent=new Intent(getActivity(), SearchFriendsActivity.class);
+                startActivity(intent);
                 break;
         }
     }

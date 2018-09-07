@@ -296,9 +296,7 @@ public class MainActivity extends UI {
                 TeamCreateHelper.createAdvancedTeam(MainActivity.this, selected);
             }
         }
-
     }
-
     // 注销
     private void onLogout() {
         Preferences.saveUserToken("");

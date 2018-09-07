@@ -5,19 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <include layout="@layout/layout_title"/>
-    <include
-        android:visibility="gone"
-        layout="@layout/header_life_note"/>
-    <com.zl.vo_.own.views.PullToRefreshView
-        android:orientation="vertical"
-        android:id="@+id/pulltorefreshView"
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh_layout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <ListView
-            android:divider="@null"
-            android:id="@+id/lv_lifeNote"
+        android:layout_height="match_parent"
+        >
+        <android.support.v7.widget.RecyclerView
+            android:background="@color/white"
+            android:id="@+id/rv_lifeNote"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
-    </com.zl.vo_.own.views.PullToRefreshView>
-
+    </android.support.v4.widget.SwipeRefreshLayout>
 </LinearLayout>
