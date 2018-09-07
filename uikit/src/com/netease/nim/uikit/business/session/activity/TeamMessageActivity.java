@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -34,10 +35,8 @@ import java.util.List;
  * Created by huangjun on 2015/3/5.
  */
 public class TeamMessageActivity extends BaseMessageActivity {
-
     // model
     private Team team;
-
     private View invalidTeamTipView;
 
     private TextView invalidTeamTipText;
@@ -125,14 +124,13 @@ public class TeamMessageActivity extends BaseMessageActivity {
         if (d == null) {
             return;
         }
-
         team = d;
         fragment.setTeam(team);
-
         setTitle(team == null ? sessionId : team.getName() + "(" + team.getMemberCount() + "人)");
-
         invalidTeamTipText.setText(team.getType() == TeamTypeEnum.Normal ? R.string.normal_team_invalid_tip : R.string.team_invalid_tip);
         invalidTeamTipView.setVisibility(team.isMyTeam() ? View.GONE : View.VISIBLE);
+        String icon = team.getIcon();
+        Log.i("tag",icon);
     }
 
     /**

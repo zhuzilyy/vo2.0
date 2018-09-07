@@ -494,7 +494,6 @@ public class RecentContactsFragment extends TFragment {
                     break;
                 }
             }
-
             if (index >= 0) {
                 items.remove(index);
             }
