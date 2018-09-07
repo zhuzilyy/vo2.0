@@ -41,10 +41,7 @@ public abstract class UI extends AppCompatActivity {
         for (int i = 0; i <activities.size() ; i++) {
             activities.get(i).finish();
         }
-
     }
-
-
     @Override
     protected void onStart() {
         super.onStart();
