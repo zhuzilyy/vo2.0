@@ -21,10 +21,8 @@ import com.zl.vo_.R;
 import com.zl.vo_.own.api.ApiConstant;
 import com.zl.vo_.own.base.BaseActivity;
 import com.zl.vo_.own.util.WhiteBgBitmapUtil;
-
 import butterknife.BindView;
 import butterknife.OnClick;
-
 /**
  * Created by Administrator on 2018/9/6.
  */
