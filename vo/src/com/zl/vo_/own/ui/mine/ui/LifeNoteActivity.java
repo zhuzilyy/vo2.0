@@ -54,6 +54,7 @@ public class LifeNoteActivity extends BaseActivity implements View.OnClickListen
     private ImageWatcherHelper iwHelper;
     boolean isTranslucentStatus;
     private RecyclerViewUtil recyclerViewUtil;
+    private LinearLayoutManager manager;
     @Override
     protected void initViews() {
         tv_title.setText("人生笔记");
@@ -62,7 +63,8 @@ public class LifeNoteActivity extends BaseActivity implements View.OnClickListen
     protected void initData() {
         view_header=LayoutInflater.from(this).inflate(R.layout.header_life_note,null);
         view_footer=LayoutInflater.from(this).inflate(R.layout.footer_life_note,null);
-        rv_lifeNote.setLayoutManager(new LinearLayoutManager(this));
+        manager = new LinearLayoutManager(this);
+        rv_lifeNote.setLayoutManager(manager);
         //vRecycler.addItemDecoration(new SpaceItemDecoration(this).setSpace(14).setSpaceColor(0xFFECECEC));
         rv_lifeNote.setAdapter(adapter = new MessageAdapter(this).setPictureClickCallback(this));
         adapter.set(LifeNoteBean.get());
@@ -119,6 +121,31 @@ public class LifeNoteActivity extends BaseActivity implements View.OnClickListen
                 //Toast.makeText(LifeNoteActivity.this, "到底了。。。。。。。。。。", Toast.LENGTH_SHORT).show();
             }
         });
+    /*  rv_lifeNote.addOnScrollListener(new RecyclerView.OnScrollListener() {
+          boolean isSlidingToLast = false;
+          @Override
+          public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
+              super.onScrollStateChanged(recyclerView, newState);
+              if (newState== RecyclerView.SCROLL_STATE_IDLE && isSlidingToLast){
+                  int lastVisibleItemPosition = manager.findLastVisibleItemPosition();
+                  int totalItemCount = manager.getItemCount();
+                  if (lastVisibleItemPosition==totalItemCount-1){
+                      Dialog dialog = WeiboDialogUtils.createLoadingDialog(LifeNoteActivity.this, "加载中");
+                      dialog.show();
+                  }
+              }
+          }
+          @Override
+          public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
+              super.onScrolled(recyclerView, dx, dy);
+              if (dy>0){
+                  isSlidingToLast = true;
+              }else{
+                  isSlidingToLast = false;
+              }
+          }
+      });
+*/
     }
     @Override
     protected void setStatusBarColor() {
