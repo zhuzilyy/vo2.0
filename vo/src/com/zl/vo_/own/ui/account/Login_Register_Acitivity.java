@@ -21,6 +21,8 @@ import com.netease.nim.uikit.support.permission.MPermission;
 import com.netease.nim.uikit.support.permission.annotation.OnMPermissionDenied;
 import com.netease.nim.uikit.support.permission.annotation.OnMPermissionGranted;
 import com.netease.nim.uikit.support.permission.annotation.OnMPermissionNeverAskAgain;
+import com.tencent.mm.sdk.modelmsg.SendAuth;
+import com.zl.vo_.NimApplication;
 import com.zl.vo_.R;
 
 import com.zl.vo_.own.base.BaseActivity;
@@ -257,7 +259,7 @@ public class Login_Register_Acitivity extends BaseActivity implements View.OnCli
         switch (v.getId()) {
             case R.id.ll_wx_login:
                 //微信登录
-
+                wechatLogin();
                 break;
             case R.id.ll_phone_login:
                 //手机号登录
@@ -270,6 +272,13 @@ public class Login_Register_Acitivity extends BaseActivity implements View.OnCli
             default:
                 break;
         }
+    }
+    //微信登录
+    private void wechatLogin() {
+        final SendAuth.Req req = new SendAuth.Req();
+        req.scope = "snsapi_userinfo";
+        req.state = "diandi_wx_login";
+        NimApplication.mWxApi.sendReq(req);
     }
 
 }

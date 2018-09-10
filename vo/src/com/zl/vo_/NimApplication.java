@@ -11,6 +11,8 @@ import com.netease.nim.avchatkit.AVChatKit;
 import com.netease.nim.avchatkit.config.AVChatOptions;
 import com.netease.nim.avchatkit.model.ITeamDataProvider;
 import com.netease.nim.avchatkit.model.IUserInfoProvider;
+import com.tencent.mm.sdk.openapi.IWXAPI;
+import com.tencent.mm.sdk.openapi.WXAPIFactory;
 import com.zl.vo_.chatroom.ChatRoomSessionHelper;
 import com.zl.vo_.common.util.LogHelper;
 import com.zl.vo_.common.util.crash.AppCrashHandler;
@@ -22,6 +24,7 @@ import com.zl.vo_.main.activity.MainActivity;
 import com.zl.vo_.main.activity.WelcomeActivity;
 import com.zl.vo_.mixpush.DemoMixPushMessageHandler;
 import com.zl.vo_.mixpush.DemoPushContentProvider;
+import com.zl.vo_.own.api.ApiConstant;
 import com.zl.vo_.redpacket.NIMRedPacketClient;
 import com.zl.vo_.rts.RTSHelper;
 import com.zl.vo_.session.NimDemoLocationProvider;
@@ -43,6 +46,7 @@ import io.fabric.sdk.android.Fabric;
 
 public class NimApplication extends Application {
     private static NimApplication nimApplication;
+    public static IWXAPI mWxApi;
     @Override
     protected void attachBaseContext(Context newBase) {
         super.attachBaseContext(newBase);
@@ -53,7 +57,8 @@ public class NimApplication extends Application {
         super.onCreate();
 
         DemoCache.setContext(this);
-
+        //注册到微信
+        registToWX();
         // 4.6.0 开始，第三方推送配置入口改为 SDKOption#mixPushConfig，旧版配置方式依旧支持。
         NIMClient.init(this, getLoginInfo(), NimSDKOptionConfig.getSDKOptions(this));
 
@@ -91,6 +96,15 @@ public class NimApplication extends Application {
         // Initialize Fabric with the debug-disabled crashlytics.
         // jar包里的
         Fabric.with(this, crashlyticsKit);
+    }
+    /***
+     * 注册微信
+     */
+    private void registToWX() {
+        //AppConst.WEIXIN.APP_ID是指你应用在微信开放平台上的AppID，记得替换。
+        mWxApi = WXAPIFactory.createWXAPI(this, ApiConstant.APP_ID, false);
+        // 将该app注册到微信
+        mWxApi.registerApp(ApiConstant.APP_ID);
     }
 
     private LoginInfo getLoginInfo() {

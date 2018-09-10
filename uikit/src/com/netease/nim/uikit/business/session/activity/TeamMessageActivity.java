@@ -131,7 +131,6 @@ public class TeamMessageActivity extends BaseMessageActivity {
         invalidTeamTipView.setVisibility(team.isMyTeam() ? View.GONE : View.VISIBLE);
         String icon = team.getIcon();
         Log.i("tag",icon+"========111111111111========");
-
     }
 
     /**

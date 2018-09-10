@@ -398,7 +398,6 @@ public class ContactsFragment extends TFragment {
         } else {
             needReload = true;
         }
-
         if (!needReload) {
             Log.d(UIKitLogTag.CONTACT, "no need to reload contact");
             return;

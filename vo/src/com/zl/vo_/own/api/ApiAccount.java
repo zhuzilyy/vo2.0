@@ -24,6 +24,11 @@ public class ApiAccount {
         Dialog dialog = WeiboDialogUtils.createLoadingDialog(context, "加载中");
         excutePost("http://47.104.73.127:8080/news-0.0.1/api/user/login", context, params,dialog, listener);
     }
+    /*获取验证码*/
+    public static void getConfirmCode(final Context context, Map<String,String> params, final OnRequestDataListener listener) {
+        Dialog dialog = WeiboDialogUtils.createLoadingDialog(context, "加载中");
+        excutePost("http://www.xfxhfgs.cn/index.php/user/VoUser/sendCode/2", context, params,dialog, listener);
+    }
     protected static void excutePost(String url, final Context context, Map<String,String> params,final Dialog dialog, final OnRequestDataListener listener) {
         OkHttpManager.getInstance().postRequest(url, params, new RequestCallBack<String>() {
             @Override

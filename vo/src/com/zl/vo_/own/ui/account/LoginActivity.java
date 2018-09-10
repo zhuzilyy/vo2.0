@@ -5,6 +5,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -23,9 +24,15 @@ import com.zl.vo_.DemoCache;
 import com.zl.vo_.R;
 import com.zl.vo_.config.preference.Preferences;
 import com.zl.vo_.config.preference.UserPreferences;
+import com.zl.vo_.own.api.ApiAccount;
 import com.zl.vo_.own.base.BaseActivity;
+import com.zl.vo_.own.listener.OnRequestDataListener;
 import com.zl.vo_.own.ui.MainActivity;
+import com.zl.vo_.own.util.StringToMD5;
 import com.zl.vo_.own.views.ClearEditText;
+
+import java.util.HashMap;
+import java.util.Map;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -76,7 +83,8 @@ public class LoginActivity extends BaseActivity {
                 finish();
                 break;
             case R.id.login_submit:
-                login();
+                //login();
+                testLogin();
                 break;
             case R.id.login_forgetpwd_tv:
                 jumpActivity(this,ForgetPwdActivity.class);
@@ -84,6 +92,25 @@ public class LoginActivity extends BaseActivity {
 
         }
 
+    }
+
+    private void testLogin() {
+        String md5Str = StringToMD5.stringToMD5("userVoUser2018-9-10vo_app");
+        Map<String,String> params = new HashMap<>();
+        params.put("tel","15524108397");
+        params.put("api_token",md5Str);
+        ApiAccount.getConfirmCode(this, params, new OnRequestDataListener() {
+            @Override
+            public void requestSuccess(String data) {
+                Log.i("tag",data);
+                Log.i("tag",data+"=========22222===");
+            }
+            @Override
+            public void requestFailure(int code, String msg) {
+                Log.i("tag",msg);
+                Log.i("tag",code+"========11111111=======");
+            }
+        });
     }
     /*
     登录
