@@ -35,6 +35,8 @@ import java.util.ArrayList;
 public class MessageInfoActivity extends UI {
     private final static String EXTRA_ACCOUNT = "EXTRA_ACCOUNT";
     private static final int REQUEST_CODE_NORMAL = 1;
+    private static final int REQUEST_CODE_ADVANCED = 2;
+
     // data
     private String account;
     // view
@@ -51,6 +53,7 @@ public class MessageInfoActivity extends UI {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.message_info_activity);
+        addActivity(this);
 
         ToolBarOptions options = new NimToolBarOptions();
         options.titleId = R.string.message_info;
@@ -79,12 +82,13 @@ public class MessageInfoActivity extends UI {
             }
         });
 
-        ((TextView) findViewById(R.id.create_team_layout).findViewById(R.id.textViewName)).setText(R.string.create_normal_team);
+        ((TextView) findViewById(R.id.create_team_layout).findViewById(R.id.textViewName)).setText(R.string.create_advanced_team);
         HeadImageView addImage = (HeadImageView) findViewById(R.id.create_team_layout).findViewById(R.id.imageViewHeader);
-        addImage.setBackgroundResource(com.netease.nim.uikit.R.drawable.nim_team_member_add_selector);
+        addImage.setBackgroundResource(com.netease.nim.uikit.R.drawable.nim_team_member_add_selector);//添加成员的加号
         addImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //创建讨论组
                 createTeamMsg();
             }
         });
@@ -147,7 +151,10 @@ public class MessageInfoActivity extends UI {
         ArrayList<String> memberAccounts = new ArrayList<>();
         memberAccounts.add(account);
         ContactSelectActivity.Option option = TeamHelper.getCreateContactSelectOption(memberAccounts, 50);
-        NimUIKit.startContactSelector(this, option, REQUEST_CODE_NORMAL);// 创建群
+        option.type = ContactSelectActivity.ContactSelectType.BUDDY;
+        option.allowSelectEmpty = true;
+        NimUIKit.startContactSelector(this, option, REQUEST_CODE_ADVANCED);// 创建群
+
     }
 
     @Override
@@ -176,7 +183,18 @@ public class MessageInfoActivity extends UI {
                 } else {
                     Toast.makeText(DemoCache.getContext(), "请选择至少一个联系人！", Toast.LENGTH_SHORT).show();
                 }
+            }else if(requestCode == REQUEST_CODE_ADVANCED){
+                //创建高级群
+                final ArrayList<String> selected = data.getStringArrayListExtra(ContactSelectActivity.RESULT_DATA);
+                if (selected != null && !selected.isEmpty()) {
+                    TeamCreateHelper.createAdvancedTeam(MessageInfoActivity.this,selected);
+                } else {
+                    Toast.makeText(DemoCache.getContext(), "请选择至少一个联系人！", Toast.LENGTH_SHORT).show();
+                }
+
+
             }
         }
+
     }
 }

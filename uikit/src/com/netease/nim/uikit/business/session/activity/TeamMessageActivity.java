@@ -45,6 +45,8 @@ public class TeamMessageActivity extends BaseMessageActivity {
 
     private Class<? extends Activity> backToClass;
 
+
+
     public static void start(Context context, String tid, SessionCustomization customization,
                              Class<? extends Activity> backToClass, IMMessage anchor) {
         Intent intent = new Intent();

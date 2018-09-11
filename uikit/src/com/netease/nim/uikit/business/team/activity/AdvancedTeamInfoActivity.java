@@ -438,6 +438,7 @@ public class AdvancedTeamInfoActivity extends UI implements
         layoutInviteeAuthen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //设置群组加人是否需要验证
                 showTeamInviteeAuthenMenu();
             }
         });
@@ -1096,6 +1097,7 @@ public class AdvancedTeamInfoActivity extends UI implements
             List<String> btnNames = TeamHelper.createTeamInviteeAuthenMenuStrings();
 
             int type = team.getTeamBeInviteMode().getValue();
+
             teamInviteeDialog = new MenuDialog(AdvancedTeamInfoActivity.this, btnNames, type, 2, new MenuDialog
                     .MenuDialogOnButtonClickListener() {
                 @Override
@@ -1299,6 +1301,8 @@ public class AdvancedTeamInfoActivity extends UI implements
         NIMClient.getService(TeamService.class).updateTeam(teamId, TeamFieldEnum.BeInviteMode, type).setCallback(new RequestCallback<Void>() {
             @Override
             public void onSuccess(Void param) {
+
+
                 DialogMaker.dismissProgressDialog();
                 updateBeInvitedText(type);
                 Toast.makeText(AdvancedTeamInfoActivity.this, R.string.update_success, Toast.LENGTH_SHORT).show();

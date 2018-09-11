@@ -1,6 +1,7 @@
 package com.netease.nim.uikit.common.activity;
 
 import android.annotation.TargetApi;
+import android.app.Activity;
 import android.content.Context;
 import android.os.Build;
 import android.os.Bundle;
@@ -15,9 +16,11 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 
+import com.netease.nim.uikit.R;
 import com.netease.nim.uikit.common.fragment.TFragment;
 import com.netease.nim.uikit.common.util.log.LogUtil;
 import com.netease.nim.uikit.common.util.sys.ReflectionUtil;
+import com.netease.nim.uikit.utils.StatusBarUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,16 +32,35 @@ public abstract class UI extends AppCompatActivity {
     private static Handler handler;
 
     private Toolbar toolbar;
+    public static List<Activity> activities = new ArrayList<>();
+
+    public static void addActivity(Activity a){
+        activities.add(a);
+    }
+    public static void finishActivity(List<Activity> activities){
+        for (int i = 0; i <activities.size() ; i++) {
+            activities.get(i).finish();
+        }
+    }
 
     @Override
     protected void onStart() {
         super.onStart();
     }
 
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         LogUtil.ui("activity: " + getClass().getSimpleName() + " onCreate()");
+        //实现状态栏 黑字白底 6.0以上
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            getWindow().getDecorView().setSystemUiVisibility( View.SYSTEM_UI_FLAG_IMMERSIVE |View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
+            StatusBarUtil.setStatusBarColor(this, R.color.white);
+        }else {
+            StatusBarUtil.transparencyBar(this); //设置状态栏全透明
+            //StatusBarUtil.StatusBarLightMode(this); //设置白底黑字
+        }
     }
 
     @Override

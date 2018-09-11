@@ -169,10 +169,11 @@ public class RecentContactsFragment extends TFragment {
 
             @Override
             public void onItemClick(RecentContact recent) {
+
                 if (recent.getSessionType() == SessionTypeEnum.Team) {
                     NimUIKit.startTeamSession(getActivity(), recent.getContactId());
                 } else if (recent.getSessionType() == SessionTypeEnum.P2P) {
-                    NimUIKit.startP2PSession(getActivity(), recent.getContactId());
+                   NimUIKit.startP2PSession(getActivity(), recent.getContactId());
                 }
             }
 
@@ -192,8 +193,10 @@ public class RecentContactsFragment extends TFragment {
         @Override
         public void onItemClick(RecentContactAdapter adapter, View view, int position) {
             if (callback != null) {
+                //
                 RecentContact recent = adapter.getItem(position);
                 callback.onItemClick(recent);
+
             }
         }
 

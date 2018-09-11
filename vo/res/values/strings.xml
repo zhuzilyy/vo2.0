@@ -88,6 +88,7 @@
     <!-- 群 -->
     <string name="add_buddy">添加好友</string>
     <string name="create_normal_team">创建讨论组</string>
+    <string name="create_advanced_team">创建群聊</string>
     <string name="team_apply_sending">发送中…</string>
     <string name="no_team">您还没有群</string>
     <string name="no_normal_team">您还没有讨论组</string>

@@ -38,6 +38,7 @@ import java.util.Set;
 public class P2PMessageActivity extends BaseMessageActivity {
     private boolean isResume = false;
     public static void start(Context context, String contactId, SessionCustomization customization, IMMessage anchor) {
+
         Intent intent = new Intent();
         intent.putExtra(Extras.EXTRA_ACCOUNT, contactId);
         intent.putExtra(Extras.EXTRA_CUSTOMIZATION, customization);
@@ -51,7 +52,9 @@ public class P2PMessageActivity extends BaseMessageActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        // 单聊特例话数据，包括个人信息，
+        //添加到集合了
+        addActivity(this);
+        //单聊特例话数据，包括个人信息，
         requestBuddyInfo();
         displayOnlineState();
         registerObservers(true);

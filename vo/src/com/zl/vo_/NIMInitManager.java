@@ -49,6 +49,7 @@ public class NIMInitManager {
         // 注册语言变化监听广播
         registerLocaleReceiver(register);
 
+
         // 注册全局云信sdk 观察者
         registerGlobalObservers(register);
 
