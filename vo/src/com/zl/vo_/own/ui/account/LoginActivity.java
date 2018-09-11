@@ -145,7 +145,6 @@ public class LoginActivity extends BaseActivity {
                 startActivity(new Intent(LoginActivity.this, com.zl.vo_.main.activity.MainActivity.class));
                 finish();
             }
-
             @Override
             public void onFailed(int code) {
                 onLoginDone();
