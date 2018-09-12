@@ -104,7 +104,7 @@ public class TeamCreateHelper {
      */
     public static void createAdvancedTeam(final Context context, List<String> memberAccounts) {
 
-        String teamName = "群聊";
+        String teamName = "群聊xzy";
 
         DialogMaker.showProgressDialog(context, context.getString(com.netease.nim.uikit.R.string.empty), true);
         // 创建群

@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -36,6 +37,7 @@ import com.zl.vo_.main.model.MainTab;
 import com.zl.vo_.main.reminder.ReminderItem;
 import com.zl.vo_.main.reminder.ReminderManager;
 import com.zl.vo_.own.ui.SearchFriendsActivity;
+import com.zl.vo_.own.util.PopupMenuUtil;
 import com.zl.vo_.own.views.DetailsTypePopupWindow;
 import com.zl.vo_.own.views.NoScrollViewPager;
 import com.zl.vo_.team.TeamCreateHelper;
@@ -59,8 +61,13 @@ public class HomeFragment extends TFragment implements OnPageChangeListener, Rem
     private View rootView;
     @BindView(R.id.iv_add)
     ImageView iv_add;
+    private ImageView ivImg;
     private static final int REQUEST_CODE_NORMAL = 1;
     private static final int REQUEST_CODE_ADVANCED = 2;
+
+    private RelativeLayout re_plus;
+
+
     public HomeFragment() {
         setContainerId(R.id.welcome_container);
     }
@@ -140,6 +147,14 @@ public class HomeFragment extends TFragment implements OnPageChangeListener, Rem
         pager = findView(R.id.main_tab_pager);
         tv_title=findView(R.id.tv_title);
         tv_title.setText("消息");
+        ivImg = findView(R.id.iv_img);
+        re_plus = findView(R.id.re_plus);
+        re_plus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                PopupMenuUtil.getInstance()._show(getActivity(), ivImg);
+            }
+        });
     }
 
     @Override

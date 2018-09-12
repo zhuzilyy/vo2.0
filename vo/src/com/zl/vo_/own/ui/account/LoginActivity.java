@@ -83,8 +83,8 @@ public class LoginActivity extends BaseActivity {
                 finish();
                 break;
             case R.id.login_submit:
-                //login();
-                testLogin();
+                login();
+               // testLogin();
                 break;
             case R.id.login_forgetpwd_tv:
                 jumpActivity(this,ForgetPwdActivity.class);
