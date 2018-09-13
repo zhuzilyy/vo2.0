@@ -347,76 +347,80 @@ int attr switchMinWidth 0x7f040146
 int attr switchPadding 0x7f040147
 int attr switchStyle 0x7f040148
 int attr switchTextAppearance 0x7f040149
-int attr tabBackground 0x7f04014a
-int attr tabContentStart 0x7f04014b
-int attr tabGravity 0x7f04014c
-int attr tabIndicatorColor 0x7f04014d
-int attr tabIndicatorHeight 0x7f04014e
-int attr tabMaxWidth 0x7f04014f
-int attr tabMinWidth 0x7f040150
-int attr tabMode 0x7f040151
-int attr tabPadding 0x7f040152
-int attr tabPaddingBottom 0x7f040153
-int attr tabPaddingEnd 0x7f040154
-int attr tabPaddingStart 0x7f040155
-int attr tabPaddingTop 0x7f040156
-int attr tabSelectedTextColor 0x7f040157
-int attr tabTextAppearance 0x7f040158
-int attr tabTextColor 0x7f040159
-int attr textAllCaps 0x7f04015a
-int attr textAppearanceLargePopupMenu 0x7f04015b
-int attr textAppearanceListItem 0x7f04015c
-int attr textAppearanceListItemSecondary 0x7f04015d
-int attr textAppearanceListItemSmall 0x7f04015e
-int attr textAppearancePopupMenuHeader 0x7f04015f
-int attr textAppearanceSearchResultSubtitle 0x7f040160
-int attr textAppearanceSearchResultTitle 0x7f040161
-int attr textAppearanceSmallPopupMenu 0x7f040162
-int attr textColorAlertDialogListItem 0x7f040163
-int attr textColorError 0x7f040164
-int attr textColorSearchUrl 0x7f040165
-int attr theme 0x7f040166
-int attr thickness 0x7f040167
-int attr thumbTextPadding 0x7f040168
-int attr thumbTint 0x7f040169
-int attr thumbTintMode 0x7f04016a
-int attr tickMark 0x7f04016b
-int attr tickMarkTint 0x7f04016c
-int attr tickMarkTintMode 0x7f04016d
-int attr tint 0x7f04016e
-int attr tintMode 0x7f04016f
-int attr title 0x7f040170
-int attr titleEnabled 0x7f040171
-int attr titleMargin 0x7f040172
-int attr titleMarginBottom 0x7f040173
-int attr titleMarginEnd 0x7f040174
-int attr titleMarginStart 0x7f040175
-int attr titleMarginTop 0x7f040176
-int attr titleMargins 0x7f040177
-int attr titleTextAppearance 0x7f040178
-int attr titleTextColor 0x7f040179
-int attr titleTextStyle 0x7f04017a
-int attr toolbarId 0x7f04017b
-int attr toolbarNavigationButtonStyle 0x7f04017c
-int attr toolbarStyle 0x7f04017d
-int attr tooltipForegroundColor 0x7f04017e
-int attr tooltipFrameBackground 0x7f04017f
-int attr tooltipText 0x7f040180
-int attr track 0x7f040181
-int attr trackTint 0x7f040182
-int attr trackTintMode 0x7f040183
-int attr useCompatPadding 0x7f040184
-int attr voiceIcon 0x7f040185
-int attr windowActionBar 0x7f040186
-int attr windowActionBarOverlay 0x7f040187
-int attr windowActionModeOverlay 0x7f040188
-int attr windowFixedHeightMajor 0x7f040189
-int attr windowFixedHeightMinor 0x7f04018a
-int attr windowFixedWidthMajor 0x7f04018b
-int attr windowFixedWidthMinor 0x7f04018c
-int attr windowMinWidthMajor 0x7f04018d
-int attr windowMinWidthMinor 0x7f04018e
-int attr windowNoTitle 0x7f04018f
+int attr synthesized_default_image 0x7f04014a
+int attr synthesized_image_bg 0x7f04014b
+int attr synthesized_image_gap 0x7f04014c
+int attr synthesized_image_size 0x7f04014d
+int attr tabBackground 0x7f04014e
+int attr tabContentStart 0x7f04014f
+int attr tabGravity 0x7f040150
+int attr tabIndicatorColor 0x7f040151
+int attr tabIndicatorHeight 0x7f040152
+int attr tabMaxWidth 0x7f040153
+int attr tabMinWidth 0x7f040154
+int attr tabMode 0x7f040155
+int attr tabPadding 0x7f040156
+int attr tabPaddingBottom 0x7f040157
+int attr tabPaddingEnd 0x7f040158
+int attr tabPaddingStart 0x7f040159
+int attr tabPaddingTop 0x7f04015a
+int attr tabSelectedTextColor 0x7f04015b
+int attr tabTextAppearance 0x7f04015c
+int attr tabTextColor 0x7f04015d
+int attr textAllCaps 0x7f04015e
+int attr textAppearanceLargePopupMenu 0x7f04015f
+int attr textAppearanceListItem 0x7f040160
+int attr textAppearanceListItemSecondary 0x7f040161
+int attr textAppearanceListItemSmall 0x7f040162
+int attr textAppearancePopupMenuHeader 0x7f040163
+int attr textAppearanceSearchResultSubtitle 0x7f040164
+int attr textAppearanceSearchResultTitle 0x7f040165
+int attr textAppearanceSmallPopupMenu 0x7f040166
+int attr textColorAlertDialogListItem 0x7f040167
+int attr textColorError 0x7f040168
+int attr textColorSearchUrl 0x7f040169
+int attr theme 0x7f04016a
+int attr thickness 0x7f04016b
+int attr thumbTextPadding 0x7f04016c
+int attr thumbTint 0x7f04016d
+int attr thumbTintMode 0x7f04016e
+int attr tickMark 0x7f04016f
+int attr tickMarkTint 0x7f040170
+int attr tickMarkTintMode 0x7f040171
+int attr tint 0x7f040172
+int attr tintMode 0x7f040173
+int attr title 0x7f040174
+int attr titleEnabled 0x7f040175
+int attr titleMargin 0x7f040176
+int attr titleMarginBottom 0x7f040177
+int attr titleMarginEnd 0x7f040178
+int attr titleMarginStart 0x7f040179
+int attr titleMarginTop 0x7f04017a
+int attr titleMargins 0x7f04017b
+int attr titleTextAppearance 0x7f04017c
+int attr titleTextColor 0x7f04017d
+int attr titleTextStyle 0x7f04017e
+int attr toolbarId 0x7f04017f
+int attr toolbarNavigationButtonStyle 0x7f040180
+int attr toolbarStyle 0x7f040181
+int attr tooltipForegroundColor 0x7f040182
+int attr tooltipFrameBackground 0x7f040183
+int attr tooltipText 0x7f040184
+int attr track 0x7f040185
+int attr trackTint 0x7f040186
+int attr trackTintMode 0x7f040187
+int attr useCompatPadding 0x7f040188
+int attr voiceIcon 0x7f040189
+int attr windowActionBar 0x7f04018a
+int attr windowActionBarOverlay 0x7f04018b
+int attr windowActionModeOverlay 0x7f04018c
+int attr windowFixedHeightMajor 0x7f04018d
+int attr windowFixedHeightMinor 0x7f04018e
+int attr windowFixedWidthMajor 0x7f04018f
+int attr windowFixedWidthMinor 0x7f040190
+int attr windowMinWidthMajor 0x7f040191
+int attr windowMinWidthMinor 0x7f040192
+int attr windowNoTitle 0x7f040193
 int bool abc_action_bar_embed_tabs 0x7f050001
 int bool abc_allow_stacked_button_bar 0x7f050002
 int bool abc_config_actionMenuItemAllCaps 0x7f050003
@@ -1477,92 +1481,93 @@ int id team_create_time 0x7f0c0164
 int id team_extension_layout 0x7f0c0165
 int id team_head_image 0x7f0c0166
 int id team_id 0x7f0c0167
-int id team_info_header 0x7f0c0168
-int id team_info_update_layout 0x7f0c0169
-int id team_introduce 0x7f0c016a
-int id team_introduce_layout 0x7f0c016b
-int id team_invite_layout 0x7f0c016c
-int id team_invitee_authen_layout 0x7f0c016d
-int id team_member_grid 0x7f0c016e
-int id team_member_grid_view 0x7f0c016f
-int id team_member_head_view 0x7f0c0170
-int id team_member_identity 0x7f0c0171
-int id team_member_identity_detail 0x7f0c0172
-int id team_member_name 0x7f0c0173
-int id team_members_grid_view 0x7f0c0174
-int id team_memeber_layout 0x7f0c0175
-int id team_mime_layout 0x7f0c0176
-int id team_name 0x7f0c0177
-int id team_name_layout 0x7f0c0178
-int id team_nickname 0x7f0c0179
-int id team_nickname_detail 0x7f0c017a
-int id team_notification_config_layout 0x7f0c017b
-int id team_notify_bar_panel 0x7f0c017c
-int id team_remove_member 0x7f0c017d
-int id temp_text_create 0x7f0c017e
-int id temp_text_with 0x7f0c017f
-int id text 0x7f0c0180
-int id text2 0x7f0c0181
-int id textMessageLayout 0x7f0c0182
-int id textSpacerNoButtons 0x7f0c0183
-int id textSpacerNoTitle 0x7f0c0184
-int id textView 0x7f0c0185
-int id textViewAlreadyRead 0x7f0c0186
-int id textViewName 0x7f0c0187
-int id textViewTime 0x7f0c0188
-int id text_input_password_toggle 0x7f0c0189
-int id textinput_counter 0x7f0c018a
-int id textinput_error 0x7f0c018b
-int id time 0x7f0c018c
-int id time_edit 0x7f0c018d
-int id timer 0x7f0c018e
-int id timer_tip 0x7f0c018f
-int id timer_tip_container 0x7f0c0190
-int id title 0x7f0c0191
-int id titleDividerNoCustom 0x7f0c0192
-int id title_template 0x7f0c0193
-int id toggle_layout 0x7f0c0194
-int id toolbar 0x7f0c0195
-int id top 0x7f0c0196
-int id topPanel 0x7f0c0197
-int id top_divider_line 0x7f0c0198
-int id top_line 0x7f0c0199
-int id touch_outside 0x7f0c019a
-int id trans_fail_icon 0x7f0c019b
-int id transition_current_scene 0x7f0c019c
-int id transition_layout_save 0x7f0c019d
-int id transition_position 0x7f0c019e
-int id transition_scene_layoutid_cache 0x7f0c019f
-int id transition_transform 0x7f0c01a0
-int id tv_date_time 0x7f0c01a1
-int id tv_hit_letter 0x7f0c01a2
-int id tv_label 0x7f0c01a3
-int id tv_message 0x7f0c01a4
-int id tv_nickname 0x7f0c01a5
-int id tv_online_state 0x7f0c01a6
-int id tv_prompt 0x7f0c01a7
-int id tv_robot_session_continue 0x7f0c01a8
-int id tv_robot_text 0x7f0c01a9
-int id uniform 0x7f0c01aa
-int id unread_number_explosion 0x7f0c01ab
-int id unread_number_tip 0x7f0c01ac
-int id up 0x7f0c01ad
-int id user_profile_title 0x7f0c01ae
-int id user_profile_toggle 0x7f0c01af
-int id videoIcon 0x7f0c01b0
-int id videoView 0x7f0c01b1
-int id viewPager 0x7f0c01b2
-int id viewPagerImage 0x7f0c01b3
-int id view_offset_helper 0x7f0c01b4
-int id view_pager_image 0x7f0c01b5
-int id visible 0x7f0c01b6
-int id voice_trans_layout 0x7f0c01b7
-int id voice_trans_text 0x7f0c01b8
-int id watch_image_view 0x7f0c01b9
-int id watch_picture_activity_layout 0x7f0c01ba
-int id wrap 0x7f0c01bb
-int id wrap_content 0x7f0c01bc
-int id yixin_profile_buddy_operations 0x7f0c01bd
+int id team_img_head 0x7f0c0168
+int id team_info_header 0x7f0c0169
+int id team_info_update_layout 0x7f0c016a
+int id team_introduce 0x7f0c016b
+int id team_introduce_layout 0x7f0c016c
+int id team_invite_layout 0x7f0c016d
+int id team_invitee_authen_layout 0x7f0c016e
+int id team_member_grid 0x7f0c016f
+int id team_member_grid_view 0x7f0c0170
+int id team_member_head_view 0x7f0c0171
+int id team_member_identity 0x7f0c0172
+int id team_member_identity_detail 0x7f0c0173
+int id team_member_name 0x7f0c0174
+int id team_members_grid_view 0x7f0c0175
+int id team_memeber_layout 0x7f0c0176
+int id team_mime_layout 0x7f0c0177
+int id team_name 0x7f0c0178
+int id team_name_layout 0x7f0c0179
+int id team_nickname 0x7f0c017a
+int id team_nickname_detail 0x7f0c017b
+int id team_notification_config_layout 0x7f0c017c
+int id team_notify_bar_panel 0x7f0c017d
+int id team_remove_member 0x7f0c017e
+int id temp_text_create 0x7f0c017f
+int id temp_text_with 0x7f0c0180
+int id text 0x7f0c0181
+int id text2 0x7f0c0182
+int id textMessageLayout 0x7f0c0183
+int id textSpacerNoButtons 0x7f0c0184
+int id textSpacerNoTitle 0x7f0c0185
+int id textView 0x7f0c0186
+int id textViewAlreadyRead 0x7f0c0187
+int id textViewName 0x7f0c0188
+int id textViewTime 0x7f0c0189
+int id text_input_password_toggle 0x7f0c018a
+int id textinput_counter 0x7f0c018b
+int id textinput_error 0x7f0c018c
+int id time 0x7f0c018d
+int id time_edit 0x7f0c018e
+int id timer 0x7f0c018f
+int id timer_tip 0x7f0c0190
+int id timer_tip_container 0x7f0c0191
+int id title 0x7f0c0192
+int id titleDividerNoCustom 0x7f0c0193
+int id title_template 0x7f0c0194
+int id toggle_layout 0x7f0c0195
+int id toolbar 0x7f0c0196
+int id top 0x7f0c0197
+int id topPanel 0x7f0c0198
+int id top_divider_line 0x7f0c0199
+int id top_line 0x7f0c019a
+int id touch_outside 0x7f0c019b
+int id trans_fail_icon 0x7f0c019c
+int id transition_current_scene 0x7f0c019d
+int id transition_layout_save 0x7f0c019e
+int id transition_position 0x7f0c019f
+int id transition_scene_layoutid_cache 0x7f0c01a0
+int id transition_transform 0x7f0c01a1
+int id tv_date_time 0x7f0c01a2
+int id tv_hit_letter 0x7f0c01a3
+int id tv_label 0x7f0c01a4
+int id tv_message 0x7f0c01a5
+int id tv_nickname 0x7f0c01a6
+int id tv_online_state 0x7f0c01a7
+int id tv_prompt 0x7f0c01a8
+int id tv_robot_session_continue 0x7f0c01a9
+int id tv_robot_text 0x7f0c01aa
+int id uniform 0x7f0c01ab
+int id unread_number_explosion 0x7f0c01ac
+int id unread_number_tip 0x7f0c01ad
+int id up 0x7f0c01ae
+int id user_profile_title 0x7f0c01af
+int id user_profile_toggle 0x7f0c01b0
+int id videoIcon 0x7f0c01b1
+int id videoView 0x7f0c01b2
+int id viewPager 0x7f0c01b3
+int id viewPagerImage 0x7f0c01b4
+int id view_offset_helper 0x7f0c01b5
+int id view_pager_image 0x7f0c01b6
+int id visible 0x7f0c01b7
+int id voice_trans_layout 0x7f0c01b8
+int id voice_trans_text 0x7f0c01b9
+int id watch_image_view 0x7f0c01ba
+int id watch_picture_activity_layout 0x7f0c01bb
+int id wrap 0x7f0c01bc
+int id wrap_content 0x7f0c01bd
+int id yixin_profile_buddy_operations 0x7f0c01be
 int integer abc_config_activityDefaultDur 0x7f0d0001
 int integer abc_config_activityShortDur 0x7f0d0002
 int integer app_bar_elevation_anim_duration 0x7f0d0003
@@ -1697,47 +1702,48 @@ int layout nim_preview_image_layout_zoom_control 0x7f0f0079
 int layout nim_pull_to_refresh_header_custom 0x7f0f007a
 int layout nim_read_recipt_layout 0x7f0f007b
 int layout nim_recent_contact_list_item 0x7f0f007c
-int layout nim_recent_contacts 0x7f0f007d
-int layout nim_round_loading_progress_bar 0x7f0f007e
-int layout nim_simple_load_more 0x7f0f007f
-int layout nim_sticker_picker_view 0x7f0f0080
-int layout nim_team_info_activity 0x7f0f0081
-int layout nim_team_info_divider_item 0x7f0f0082
-int layout nim_team_member_grid_layout 0x7f0f0083
-int layout nim_team_member_item 0x7f0f0084
-int layout nim_team_member_list_item 0x7f0f0085
-int layout nim_team_member_list_layout 0x7f0f0086
-int layout nim_team_message_activity 0x7f0f0087
-int layout nim_team_name_activity 0x7f0f0088
-int layout nim_time_text_view_layout 0x7f0f0089
-int layout nim_user_profile_toggle_item 0x7f0f008a
-int layout nim_voice_trans_layout 0x7f0f008b
-int layout nim_watch_media_download_progress_layout 0x7f0f008c
-int layout nim_watch_pic_video_menu_activity 0x7f0f008d
-int layout nim_watch_picture_activity 0x7f0f008e
-int layout nim_watch_snapchat_activity 0x7f0f008f
-int layout nim_watch_video_activity 0x7f0f0090
-int layout nim_zbra_loading_progress_bar 0x7f0f0091
-int layout notification_action 0x7f0f0092
-int layout notification_action_tombstone 0x7f0f0093
-int layout notification_media_action 0x7f0f0094
-int layout notification_media_cancel_action 0x7f0f0095
-int layout notification_template_big_media 0x7f0f0096
-int layout notification_template_big_media_custom 0x7f0f0097
-int layout notification_template_big_media_narrow 0x7f0f0098
-int layout notification_template_big_media_narrow_custom 0x7f0f0099
-int layout notification_template_custom_big 0x7f0f009a
-int layout notification_template_icon_group 0x7f0f009b
-int layout notification_template_lines_media 0x7f0f009c
-int layout notification_template_media 0x7f0f009d
-int layout notification_template_media_custom 0x7f0f009e
-int layout notification_template_part_chronometer 0x7f0f009f
-int layout notification_template_part_time 0x7f0f00a0
-int layout select_dialog_item_material 0x7f0f00a1
-int layout select_dialog_multichoice_material 0x7f0f00a2
-int layout select_dialog_singlechoice_material 0x7f0f00a3
-int layout support_simple_spinner_dropdown_item 0x7f0f00a4
-int layout tooltip 0x7f0f00a5
+int layout nim_recent_contact_list_item_team 0x7f0f007d
+int layout nim_recent_contacts 0x7f0f007e
+int layout nim_round_loading_progress_bar 0x7f0f007f
+int layout nim_simple_load_more 0x7f0f0080
+int layout nim_sticker_picker_view 0x7f0f0081
+int layout nim_team_info_activity 0x7f0f0082
+int layout nim_team_info_divider_item 0x7f0f0083
+int layout nim_team_member_grid_layout 0x7f0f0084
+int layout nim_team_member_item 0x7f0f0085
+int layout nim_team_member_list_item 0x7f0f0086
+int layout nim_team_member_list_layout 0x7f0f0087
+int layout nim_team_message_activity 0x7f0f0088
+int layout nim_team_name_activity 0x7f0f0089
+int layout nim_time_text_view_layout 0x7f0f008a
+int layout nim_user_profile_toggle_item 0x7f0f008b
+int layout nim_voice_trans_layout 0x7f0f008c
+int layout nim_watch_media_download_progress_layout 0x7f0f008d
+int layout nim_watch_pic_video_menu_activity 0x7f0f008e
+int layout nim_watch_picture_activity 0x7f0f008f
+int layout nim_watch_snapchat_activity 0x7f0f0090
+int layout nim_watch_video_activity 0x7f0f0091
+int layout nim_zbra_loading_progress_bar 0x7f0f0092
+int layout notification_action 0x7f0f0093
+int layout notification_action_tombstone 0x7f0f0094
+int layout notification_media_action 0x7f0f0095
+int layout notification_media_cancel_action 0x7f0f0096
+int layout notification_template_big_media 0x7f0f0097
+int layout notification_template_big_media_custom 0x7f0f0098
+int layout notification_template_big_media_narrow 0x7f0f0099
+int layout notification_template_big_media_narrow_custom 0x7f0f009a
+int layout notification_template_custom_big 0x7f0f009b
+int layout notification_template_icon_group 0x7f0f009c
+int layout notification_template_lines_media 0x7f0f009d
+int layout notification_template_media 0x7f0f009e
+int layout notification_template_media_custom 0x7f0f009f
+int layout notification_template_part_chronometer 0x7f0f00a0
+int layout notification_template_part_time 0x7f0f00a1
+int layout select_dialog_item_material 0x7f0f00a2
+int layout select_dialog_multichoice_material 0x7f0f00a3
+int layout select_dialog_singlechoice_material 0x7f0f00a4
+int layout support_simple_spinner_dropdown_item 0x7f0f00a5
+int layout tooltip 0x7f0f00a6
 int menu nim_contacts_search_menu 0x7f100001
 int raw audio_end_tip 0x7f140001
 int string abc_action_bar_home_description 0x7f150001
@@ -2405,7 +2411,7 @@ int style myToolbarNavigationButtonStyle 0x7f16019e
 int style recycler_view 0x7f16019f
 int style scroll_view 0x7f1601a0
 int style sdk_share_dialog 0x7f1601a1
-int[] styleable ActionBar { 0x7f040033, 0x7f040034, 0x7f040035, 0x7f040067, 0x7f040068, 0x7f040069, 0x7f04006a, 0x7f04006b, 0x7f04006c, 0x7f040073, 0x7f040077, 0x7f040078, 0x7f040083, 0x7f0400a3, 0x7f0400a4, 0x7f0400a8, 0x7f0400a9, 0x7f0400aa, 0x7f0400af, 0x7f0400b5, 0x7f0400fc, 0x7f040105, 0x7f040116, 0x7f04011a, 0x7f04011b, 0x7f040141, 0x7f040144, 0x7f040170, 0x7f04017a }
+int[] styleable ActionBar { 0x7f040033, 0x7f040034, 0x7f040035, 0x7f040067, 0x7f040068, 0x7f040069, 0x7f04006a, 0x7f04006b, 0x7f04006c, 0x7f040073, 0x7f040077, 0x7f040078, 0x7f040083, 0x7f0400a3, 0x7f0400a4, 0x7f0400a8, 0x7f0400a9, 0x7f0400aa, 0x7f0400af, 0x7f0400b5, 0x7f0400fc, 0x7f040105, 0x7f040116, 0x7f04011a, 0x7f04011b, 0x7f040141, 0x7f040144, 0x7f040174, 0x7f04017e }
 int styleable ActionBar_background 0
 int styleable ActionBar_backgroundSplit 1
 int styleable ActionBar_backgroundStacked 2
@@ -2439,7 +2445,7 @@ int[] styleable ActionBarLayout { 0x010100b3 }
 int styleable ActionBarLayout_android_layout_gravity 0
 int[] styleable ActionMenuItemView { 0x0101013f }
 int styleable ActionMenuItemView_android_minWidth 0
-int[] styleable ActionMode { 0x7f040033, 0x7f040034, 0x7f040054, 0x7f0400a3, 0x7f040144, 0x7f04017a }
+int[] styleable ActionMode { 0x7f040033, 0x7f040034, 0x7f040054, 0x7f0400a3, 0x7f040144, 0x7f04017e }
 int styleable ActionMode_background 0
 int styleable ActionMode_backgroundSplit 1
 int styleable ActionMode_closeItemLayout 2
@@ -2469,12 +2475,12 @@ int styleable AppBarLayoutStates_state_collapsible 1
 int[] styleable AppBarLayout_Layout { 0x7f0400ee, 0x7f0400ef }
 int styleable AppBarLayout_Layout_layout_scrollFlags 0
 int styleable AppBarLayout_Layout_layout_scrollInterpolator 1
-int[] styleable AppCompatImageView { 0x01010119, 0x7f040138, 0x7f04016e, 0x7f04016f }
+int[] styleable AppCompatImageView { 0x01010119, 0x7f040138, 0x7f040172, 0x7f040173 }
 int styleable AppCompatImageView_android_src 0
 int styleable AppCompatImageView_srcCompat 1
 int styleable AppCompatImageView_tint 2
 int styleable AppCompatImageView_tintMode 3
-int[] styleable AppCompatSeekBar { 0x01010142, 0x7f04016b, 0x7f04016c, 0x7f04016d }
+int[] styleable AppCompatSeekBar { 0x01010142, 0x7f04016f, 0x7f040170, 0x7f040171 }
 int styleable AppCompatSeekBar_android_thumb 0
 int styleable AppCompatSeekBar_tickMark 1
 int styleable AppCompatSeekBar_tickMarkTint 2
@@ -2487,7 +2493,7 @@ int styleable AppCompatTextHelper_android_drawableRight 3
 int styleable AppCompatTextHelper_android_drawableStart 4
 int styleable AppCompatTextHelper_android_drawableTop 5
 int styleable AppCompatTextHelper_android_textAppearance 6
-int[] styleable AppCompatTextView { 0x01010034, 0x7f04002e, 0x7f04002f, 0x7f040030, 0x7f040031, 0x7f040032, 0x7f040096, 0x7f04015a }
+int[] styleable AppCompatTextView { 0x01010034, 0x7f04002e, 0x7f04002f, 0x7f040030, 0x7f040031, 0x7f040032, 0x7f040096, 0x7f04015e }
 int styleable AppCompatTextView_android_textAppearance 0
 int styleable AppCompatTextView_autoSizeMaxTextSize 1
 int styleable AppCompatTextView_autoSizeMinTextSize 2
@@ -2496,7 +2502,7 @@ int styleable AppCompatTextView_autoSizeStepGranularity 4
 int styleable AppCompatTextView_autoSizeTextType 5
 int styleable AppCompatTextView_fontFamily 6
 int styleable AppCompatTextView_textAllCaps 7
-int[] styleable AppCompatTheme { 0x7f040001, 0x7f040002, 0x7f040003, 0x7f040004, 0x7f040005, 0x7f040006, 0x7f040007, 0x7f040008, 0x7f040009, 0x7f04000a, 0x7f04000b, 0x7f04000c, 0x7f04000d, 0x7f04000f, 0x7f040010, 0x7f040011, 0x7f040012, 0x7f040013, 0x7f040014, 0x7f040015, 0x7f040016, 0x7f040017, 0x7f040018, 0x7f040019, 0x7f04001a, 0x7f04001b, 0x7f04001c, 0x7f04001d, 0x7f04001e, 0x7f04001f, 0x7f040022, 0x7f040023, 0x7f040024, 0x7f040025, 0x7f040026, 0x010100ae, 0x01010057, 0x7f04002d, 0x7f04003f, 0x7f040042, 0x7f040043, 0x7f040044, 0x7f040045, 0x7f040046, 0x7f040049, 0x7f04004a, 0x7f04004d, 0x7f04004e, 0x7f04005a, 0x7f04005b, 0x7f04005c, 0x7f04005d, 0x7f04005e, 0x7f04005f, 0x7f040060, 0x7f040061, 0x7f040062, 0x7f040063, 0x7f04006e, 0x7f040075, 0x7f040076, 0x7f040079, 0x7f04007b, 0x7f04007e, 0x7f04007f, 0x7f040080, 0x7f040081, 0x7f040082, 0x7f0400a8, 0x7f0400ae, 0x7f0400f1, 0x7f0400f2, 0x7f0400f5, 0x7f0400f6, 0x7f0400f7, 0x7f0400f8, 0x7f0400f9, 0x7f0400fa, 0x7f0400fb, 0x7f04010d, 0x7f04010e, 0x7f04010f, 0x7f040115, 0x7f040117, 0x7f04011e, 0x7f040120, 0x7f040121, 0x7f040122, 0x7f04012a, 0x7f04012b, 0x7f04012c, 0x7f04012d, 0x7f040135, 0x7f040136, 0x7f040148, 0x7f04015b, 0x7f04015c, 0x7f04015d, 0x7f04015e, 0x7f04015f, 0x7f040160, 0x7f040161, 0x7f040162, 0x7f040163, 0x7f040165, 0x7f04017c, 0x7f04017d, 0x7f04017e, 0x7f04017f, 0x7f040186, 0x7f040187, 0x7f040188, 0x7f040189, 0x7f04018a, 0x7f04018b, 0x7f04018c, 0x7f04018d, 0x7f04018e, 0x7f04018f }
+int[] styleable AppCompatTheme { 0x7f040001, 0x7f040002, 0x7f040003, 0x7f040004, 0x7f040005, 0x7f040006, 0x7f040007, 0x7f040008, 0x7f040009, 0x7f04000a, 0x7f04000b, 0x7f04000c, 0x7f04000d, 0x7f04000f, 0x7f040010, 0x7f040011, 0x7f040012, 0x7f040013, 0x7f040014, 0x7f040015, 0x7f040016, 0x7f040017, 0x7f040018, 0x7f040019, 0x7f04001a, 0x7f04001b, 0x7f04001c, 0x7f04001d, 0x7f04001e, 0x7f04001f, 0x7f040022, 0x7f040023, 0x7f040024, 0x7f040025, 0x7f040026, 0x010100ae, 0x01010057, 0x7f04002d, 0x7f04003f, 0x7f040042, 0x7f040043, 0x7f040044, 0x7f040045, 0x7f040046, 0x7f040049, 0x7f04004a, 0x7f04004d, 0x7f04004e, 0x7f04005a, 0x7f04005b, 0x7f04005c, 0x7f04005d, 0x7f04005e, 0x7f04005f, 0x7f040060, 0x7f040061, 0x7f040062, 0x7f040063, 0x7f04006e, 0x7f040075, 0x7f040076, 0x7f040079, 0x7f04007b, 0x7f04007e, 0x7f04007f, 0x7f040080, 0x7f040081, 0x7f040082, 0x7f0400a8, 0x7f0400ae, 0x7f0400f1, 0x7f0400f2, 0x7f0400f5, 0x7f0400f6, 0x7f0400f7, 0x7f0400f8, 0x7f0400f9, 0x7f0400fa, 0x7f0400fb, 0x7f04010d, 0x7f04010e, 0x7f04010f, 0x7f040115, 0x7f040117, 0x7f04011e, 0x7f040120, 0x7f040121, 0x7f040122, 0x7f04012a, 0x7f04012b, 0x7f04012c, 0x7f04012d, 0x7f040135, 0x7f040136, 0x7f040148, 0x7f04015f, 0x7f040160, 0x7f040161, 0x7f040162, 0x7f040163, 0x7f040164, 0x7f040165, 0x7f040166, 0x7f040167, 0x7f040169, 0x7f040180, 0x7f040181, 0x7f040182, 0x7f040183, 0x7f04018a, 0x7f04018b, 0x7f04018c, 0x7f04018d, 0x7f04018e, 0x7f04018f, 0x7f040190, 0x7f040191, 0x7f040192, 0x7f040193 }
 int styleable AppCompatTheme_actionBarDivider 0
 int styleable AppCompatTheme_actionBarItemBackground 1
 int styleable AppCompatTheme_actionBarPopupTheme 2
@@ -2633,7 +2639,7 @@ int styleable CircleImageView_civ_border_color 0
 int styleable CircleImageView_civ_border_overlay 1
 int styleable CircleImageView_civ_border_width 2
 int styleable CircleImageView_civ_fill_color 3
-int[] styleable CollapsingToolbarLayout { 0x7f040057, 0x7f040058, 0x7f04006d, 0x7f040088, 0x7f040089, 0x7f04008a, 0x7f04008b, 0x7f04008c, 0x7f04008d, 0x7f04008e, 0x7f040126, 0x7f040127, 0x7f04013e, 0x7f040170, 0x7f040171, 0x7f04017b }
+int[] styleable CollapsingToolbarLayout { 0x7f040057, 0x7f040058, 0x7f04006d, 0x7f040088, 0x7f040089, 0x7f04008a, 0x7f04008b, 0x7f04008c, 0x7f04008d, 0x7f04008e, 0x7f040126, 0x7f040127, 0x7f04013e, 0x7f040174, 0x7f040175, 0x7f04017f }
 int styleable CollapsingToolbarLayout_collapsedTitleGravity 0
 int styleable CollapsingToolbarLayout_collapsedTitleTextAppearance 1
 int styleable CollapsingToolbarLayout_contentScrim 2
@@ -2787,11 +2793,11 @@ int styleable CoordinatorLayout_Layout_layout_behavior 3
 int styleable CoordinatorLayout_Layout_layout_dodgeInsetEdges 4
 int styleable CoordinatorLayout_Layout_layout_insetEdge 5
 int styleable CoordinatorLayout_Layout_layout_keyline 6
-int[] styleable DesignTheme { 0x7f040040, 0x7f040041, 0x7f040164 }
+int[] styleable DesignTheme { 0x7f040040, 0x7f040041, 0x7f040168 }
 int styleable DesignTheme_bottomSheetDialogTheme 0
 int styleable DesignTheme_bottomSheetStyle 1
 int styleable DesignTheme_textColorError 2
-int[] styleable DrawerArrowToggle { 0x7f04002b, 0x7f04002c, 0x7f040038, 0x7f040059, 0x7f04007c, 0x7f0400a0, 0x7f040134, 0x7f040167 }
+int[] styleable DrawerArrowToggle { 0x7f04002b, 0x7f04002c, 0x7f040038, 0x7f040059, 0x7f04007c, 0x7f0400a0, 0x7f040134, 0x7f04016b }
 int styleable DrawerArrowToggle_arrowHeadLength 0
 int styleable DrawerArrowToggle_arrowShaftLength 1
 int styleable DrawerArrowToggle_barLength 2
@@ -2800,7 +2806,7 @@ int styleable DrawerArrowToggle_drawableSize 4
 int styleable DrawerArrowToggle_gapBetweenBars 5
 int styleable DrawerArrowToggle_spinBars 6
 int styleable DrawerArrowToggle_thickness 7
-int[] styleable FloatingActionButton { 0x7f040036, 0x7f040037, 0x7f04003e, 0x7f040083, 0x7f04008f, 0x7f040119, 0x7f040125, 0x7f040184 }
+int[] styleable FloatingActionButton { 0x7f040036, 0x7f040037, 0x7f04003e, 0x7f040083, 0x7f04008f, 0x7f040119, 0x7f040125, 0x7f040188 }
 int styleable FloatingActionButton_backgroundTint 0
 int styleable FloatingActionButton_backgroundTintMode 1
 int styleable FloatingActionButton_borderWidth 2
@@ -2859,7 +2865,7 @@ int styleable MenuGroup_android_id 2
 int styleable MenuGroup_android_menuCategory 3
 int styleable MenuGroup_android_orderInCategory 4
 int styleable MenuGroup_android_visible 5
-int[] styleable MenuItem { 0x7f04000e, 0x7f040020, 0x7f040021, 0x7f040029, 0x010101e3, 0x010101e5, 0x01010106, 0x0101000e, 0x01010002, 0x010100d0, 0x010101de, 0x010101e4, 0x0101026f, 0x010101df, 0x010101e1, 0x010101e2, 0x01010194, 0x7f040066, 0x7f0400ab, 0x7f0400ac, 0x7f040107, 0x7f04012e, 0x7f040180 }
+int[] styleable MenuItem { 0x7f04000e, 0x7f040020, 0x7f040021, 0x7f040029, 0x010101e3, 0x010101e5, 0x01010106, 0x0101000e, 0x01010002, 0x010100d0, 0x010101de, 0x010101e4, 0x0101026f, 0x010101df, 0x010101e1, 0x010101e2, 0x01010194, 0x7f040066, 0x7f0400ab, 0x7f0400ac, 0x7f040107, 0x7f04012e, 0x7f040184 }
 int styleable MenuItem_actionLayout 0
 int styleable MenuItem_actionProviderClass 1
 int styleable MenuItem_actionViewClass 2
@@ -2929,7 +2935,7 @@ int[] styleable ScrimInsetsFrameLayout { 0x7f0400b1 }
 int styleable ScrimInsetsFrameLayout_insetForeground 0
 int[] styleable ScrollingViewBehavior_Layout { 0x7f04003b }
 int styleable ScrollingViewBehavior_Layout_behavior_overlapTop 0
-int[] styleable SearchView { 0x010100da, 0x01010264, 0x01010220, 0x0101011f, 0x7f040053, 0x7f040064, 0x7f040074, 0x7f0400a1, 0x7f0400ad, 0x7f0400b9, 0x7f04011c, 0x7f04011d, 0x7f040128, 0x7f040129, 0x7f040140, 0x7f040145, 0x7f040185 }
+int[] styleable SearchView { 0x010100da, 0x01010264, 0x01010220, 0x0101011f, 0x7f040053, 0x7f040064, 0x7f040074, 0x7f0400a1, 0x7f0400ad, 0x7f0400b9, 0x7f04011c, 0x7f04011d, 0x7f040128, 0x7f040129, 0x7f040140, 0x7f040145, 0x7f040189 }
 int styleable SearchView_android_focusable 0
 int styleable SearchView_android_imeOptions 1
 int styleable SearchView_android_inputType 2
@@ -2957,7 +2963,7 @@ int styleable Spinner_android_entries 1
 int styleable Spinner_android_popupBackground 2
 int styleable Spinner_android_prompt 3
 int styleable Spinner_popupTheme 4
-int[] styleable SwitchCompat { 0x01010125, 0x01010124, 0x01010142, 0x7f040130, 0x7f040137, 0x7f040146, 0x7f040147, 0x7f040149, 0x7f040168, 0x7f040169, 0x7f04016a, 0x7f040181, 0x7f040182, 0x7f040183 }
+int[] styleable SwitchCompat { 0x01010125, 0x01010124, 0x01010142, 0x7f040130, 0x7f040137, 0x7f040146, 0x7f040147, 0x7f040149, 0x7f04016c, 0x7f04016d, 0x7f04016e, 0x7f040185, 0x7f040186, 0x7f040187 }
 int styleable SwitchCompat_android_textOff 0
 int styleable SwitchCompat_android_textOn 1
 int styleable SwitchCompat_android_thumb 2
@@ -2972,11 +2978,16 @@ int styleable SwitchCompat_thumbTintMode 10
 int styleable SwitchCompat_track 11
 int styleable SwitchCompat_trackTint 12
 int styleable SwitchCompat_trackTintMode 13
+int[] styleable SynthesizedImageView { 0x7f04014a, 0x7f04014b, 0x7f04014c, 0x7f04014d }
+int styleable SynthesizedImageView_synthesized_default_image 0
+int styleable SynthesizedImageView_synthesized_image_bg 1
+int styleable SynthesizedImageView_synthesized_image_gap 2
+int styleable SynthesizedImageView_synthesized_image_size 3
 int[] styleable TabItem { 0x01010002, 0x010100f2, 0x0101014f }
 int styleable TabItem_android_icon 0
 int styleable TabItem_android_layout 1
 int styleable TabItem_android_text 2
-int[] styleable TabLayout { 0x7f04014a, 0x7f04014b, 0x7f04014c, 0x7f04014d, 0x7f04014e, 0x7f04014f, 0x7f040150, 0x7f040151, 0x7f040152, 0x7f040153, 0x7f040154, 0x7f040155, 0x7f040156, 0x7f040157, 0x7f040158, 0x7f040159 }
+int[] styleable TabLayout { 0x7f04014e, 0x7f04014f, 0x7f040150, 0x7f040151, 0x7f040152, 0x7f040153, 0x7f040154, 0x7f040155, 0x7f040156, 0x7f040157, 0x7f040158, 0x7f040159, 0x7f04015a, 0x7f04015b, 0x7f04015c, 0x7f04015d }
 int styleable TabLayout_tabBackground 0
 int styleable TabLayout_tabContentStart 1
 int styleable TabLayout_tabGravity 2
@@ -2993,7 +3004,7 @@ int styleable TabLayout_tabPaddingTop 12
 int styleable TabLayout_tabSelectedTextColor 13
 int styleable TabLayout_tabTextAppearance 14
 int styleable TabLayout_tabTextColor 15
-int[] styleable TextAppearance { 0x010103ac, 0x01010161, 0x01010162, 0x01010163, 0x01010164, 0x01010098, 0x0101009a, 0x0101009b, 0x01010095, 0x01010097, 0x01010096, 0x7f040096, 0x7f04015a }
+int[] styleable TextAppearance { 0x010103ac, 0x01010161, 0x01010162, 0x01010163, 0x01010164, 0x01010098, 0x0101009a, 0x0101009b, 0x01010095, 0x01010097, 0x01010096, 0x7f040096, 0x7f04015e }
 int styleable TextAppearance_android_fontFamily 0
 int styleable TextAppearance_android_shadowColor 1
 int styleable TextAppearance_android_shadowDx 2
@@ -3024,7 +3035,7 @@ int styleable TextInputLayout_passwordToggleDrawable 12
 int styleable TextInputLayout_passwordToggleEnabled 13
 int styleable TextInputLayout_passwordToggleTint 14
 int styleable TextInputLayout_passwordToggleTintMode 15
-int[] styleable Toolbar { 0x010100af, 0x01010140, 0x7f040047, 0x7f040055, 0x7f040056, 0x7f040067, 0x7f040068, 0x7f040069, 0x7f04006a, 0x7f04006b, 0x7f04006c, 0x7f0400fc, 0x7f0400fd, 0x7f0400ff, 0x7f040103, 0x7f040104, 0x7f040116, 0x7f040141, 0x7f040142, 0x7f040143, 0x7f040170, 0x7f040172, 0x7f040173, 0x7f040174, 0x7f040175, 0x7f040176, 0x7f040177, 0x7f040178, 0x7f040179 }
+int[] styleable Toolbar { 0x010100af, 0x01010140, 0x7f040047, 0x7f040055, 0x7f040056, 0x7f040067, 0x7f040068, 0x7f040069, 0x7f04006a, 0x7f04006b, 0x7f04006c, 0x7f0400fc, 0x7f0400fd, 0x7f0400ff, 0x7f040103, 0x7f040104, 0x7f040116, 0x7f040141, 0x7f040142, 0x7f040143, 0x7f040174, 0x7f040176, 0x7f040177, 0x7f040178, 0x7f040179, 0x7f04017a, 0x7f04017b, 0x7f04017c, 0x7f04017d }
 int styleable Toolbar_android_gravity 0
 int styleable Toolbar_android_minHeight 1
 int styleable Toolbar_buttonGravity 2
@@ -3054,7 +3065,7 @@ int styleable Toolbar_titleMarginTop 25
 int styleable Toolbar_titleMargins 26
 int styleable Toolbar_titleTextAppearance 27
 int styleable Toolbar_titleTextColor 28
-int[] styleable View { 0x010100da, 0x01010000, 0x7f04010a, 0x7f04010b, 0x7f040166 }
+int[] styleable View { 0x010100da, 0x01010000, 0x7f04010a, 0x7f04010b, 0x7f04016a }
 int styleable View_android_focusable 0
 int styleable View_android_theme 1
 int styleable View_paddingEnd 2

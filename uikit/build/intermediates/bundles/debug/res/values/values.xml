@@ -117,6 +117,7 @@
     <color name="white">#FFFFFF</color>
     <declare-styleable name="CircleImageView"><attr format="dimension" name="civ_border_width"/><attr format="color" name="civ_border_color"/><attr format="boolean" name="civ_border_overlay"/><attr format="color" name="civ_fill_color"/></declare-styleable>
     <declare-styleable name="LoadingView"><attr format="float|reference" name="radius"/><attr format="color|reference" name="left_ball_color"/><attr format="color|reference" name="right_ball_color"/><attr format="float|reference" name="animation_speed"/><attr format="boolean|reference" name="need_animation"/></declare-styleable>
+    <declare-styleable name="SynthesizedImageView"><attr format="color" name="synthesized_image_bg"/><attr format="reference" name="synthesized_default_image"/><attr format="dimension" name="synthesized_image_size"/><attr format="dimension" name="synthesized_image_gap"/></declare-styleable>
     <dimen name="action_bar_height">48dip</dimen>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>

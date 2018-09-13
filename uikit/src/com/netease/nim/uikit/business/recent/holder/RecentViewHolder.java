@@ -1,5 +1,6 @@
 package com.netease.nim.uikit.business.recent.holder;
 
+import android.content.Context;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Handler;
 import android.text.TextUtils;
@@ -21,12 +22,21 @@ import com.netease.nim.uikit.common.ui.imageview.HeadImageView;
 import com.netease.nim.uikit.common.ui.recyclerview.adapter.BaseQuickAdapter;
 import com.netease.nim.uikit.common.ui.recyclerview.holder.BaseViewHolder;
 import com.netease.nim.uikit.common.ui.recyclerview.holder.RecyclerViewHolder;
+import com.netease.nim.uikit.common.ui.teamavatar.utils.DensityUtils;
+import com.netease.nim.uikit.common.ui.teamavatar.view.SynthesizedImageView;
 import com.netease.nim.uikit.common.util.sys.ScreenUtil;
 import com.netease.nim.uikit.common.util.sys.TimeUtil;
+import com.netease.nimlib.sdk.InvocationFuture;
+import com.netease.nimlib.sdk.NIMClient;
 import com.netease.nimlib.sdk.msg.constant.MsgStatusEnum;
 import com.netease.nimlib.sdk.msg.constant.SessionTypeEnum;
 import com.netease.nimlib.sdk.msg.model.RecentContact;
+import com.netease.nimlib.sdk.team.TeamService;
 import com.netease.nimlib.sdk.team.model.Team;
+import com.netease.nimlib.sdk.team.model.TeamMember;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public abstract class RecentViewHolder extends RecyclerViewHolder<BaseQuickAdapter, BaseViewHolder, RecentContact> {
 
@@ -39,6 +49,8 @@ public abstract class RecentViewHolder extends RecyclerViewHolder<BaseQuickAdapt
     protected FrameLayout portraitPanel;
 
     protected HeadImageView imgHead;
+    //xzy:群组合成头像
+    protected SynthesizedImageView teamImageView;
 
     protected TextView tvNickname;
 
@@ -70,18 +82,52 @@ public abstract class RecentViewHolder extends RecyclerViewHolder<BaseQuickAdapt
     }
 
     public void inflate(BaseViewHolder holder, final RecentContact recent) {
-        this.portraitPanel = holder.getView(R.id.portrait_panel);
-        this.imgHead = holder.getView(R.id.img_head);
-        this.tvNickname = holder.getView(R.id.tv_nickname);
-        this.tvMessage = holder.getView(R.id.tv_message);
-        this.tvUnread = holder.getView(R.id.unread_number_tip);
-        this.imgUnreadExplosion = holder.getView(R.id.unread_number_explosion);
-        this.tvDatetime = holder.getView(R.id.tv_date_time);
-        this.imgMsgStatus = holder.getView(R.id.img_msg_status);
-        this.bottomLine = holder.getView(R.id.bottom_line);
-        this.topLine = holder.getView(R.id.top_line);
-        this.tvOnlineState = holder.getView(R.id.tv_online_state);
-        holder.addOnClickListener(R.id.unread_number_tip);
+        SessionTypeEnum typeEnum =recent.getSessionType();
+        if(SessionTypeEnum.P2P== typeEnum){
+            //xzy:单聊类型
+            this.portraitPanel = holder.getView(R.id.portrait_panel);
+            this.imgHead = holder.getView(R.id.img_head);
+            this.tvNickname = holder.getView(R.id.tv_nickname);
+            this.tvMessage = holder.getView(R.id.tv_message);
+            this.tvUnread = holder.getView(R.id.unread_number_tip);
+            this.imgUnreadExplosion = holder.getView(R.id.unread_number_explosion);
+            this.tvDatetime = holder.getView(R.id.tv_date_time);
+            this.imgMsgStatus = holder.getView(R.id.img_msg_status);
+            this.bottomLine = holder.getView(R.id.bottom_line);
+            this.topLine = holder.getView(R.id.top_line);
+            this.tvOnlineState = holder.getView(R.id.tv_online_state);
+            holder.addOnClickListener(R.id.unread_number_tip);
+
+        }else if(SessionTypeEnum.Team== typeEnum){
+            //xzy:群聊类型
+            this.portraitPanel = holder.getView(R.id.portrait_panel);
+          //  this.imgHead = holder.getView(R.id.img_head);
+            this.teamImageView = holder.getView(R.id.team_img_head);
+            this.tvNickname = holder.getView(R.id.tv_nickname);
+            this.tvMessage = holder.getView(R.id.tv_message);
+            this.tvUnread = holder.getView(R.id.unread_number_tip);
+            this.imgUnreadExplosion = holder.getView(R.id.unread_number_explosion);
+            this.tvDatetime = holder.getView(R.id.tv_date_time);
+            this.imgMsgStatus = holder.getView(R.id.img_msg_status);
+            this.bottomLine = holder.getView(R.id.bottom_line);
+            this.topLine = holder.getView(R.id.top_line);
+            this.tvOnlineState = holder.getView(R.id.tv_online_state);
+            holder.addOnClickListener(R.id.unread_number_tip);
+        }else {
+            //xzy:其他类型
+            this.portraitPanel = holder.getView(R.id.portrait_panel);
+            this.imgHead = holder.getView(R.id.img_head);
+            this.tvNickname = holder.getView(R.id.tv_nickname);
+            this.tvMessage = holder.getView(R.id.tv_message);
+            this.tvUnread = holder.getView(R.id.unread_number_tip);
+            this.imgUnreadExplosion = holder.getView(R.id.unread_number_explosion);
+            this.tvDatetime = holder.getView(R.id.tv_date_time);
+            this.imgMsgStatus = holder.getView(R.id.img_msg_status);
+            this.bottomLine = holder.getView(R.id.bottom_line);
+            this.topLine = holder.getView(R.id.top_line);
+            this.tvOnlineState = holder.getView(R.id.tv_online_state);
+            holder.addOnClickListener(R.id.unread_number_tip);
+        }
 
         this.tvUnread.setTouchListener(new DropFake.ITouchListener() {
             @Override
@@ -147,15 +193,31 @@ public abstract class RecentViewHolder extends RecyclerViewHolder<BaseQuickAdapt
             holder.getConvertView().setBackgroundResource(R.drawable.nim_recent_contact_sticky_selecter);
         }
     }
-
+    /***
+     * 设置头像
+     */
     protected void loadPortrait(RecentContact recent) {
-        // 设置头像
-        if (recent.getSessionType() == SessionTypeEnum.P2P) {
+        // 设置头像  xzy:子类实现
+      /*  if (recent.getSessionType() == SessionTypeEnum.P2P) {
             imgHead.loadBuddyAvatar(recent.getContactId());
         } else if (recent.getSessionType() == SessionTypeEnum.Team) {
             Team team = NimUIKit.getTeamProvider().getTeamById(recent.getContactId());
-            imgHead.loadTeamIconByTeam(team);
-        }
+
+            int imageSize = DensityUtils.dp2px(NimUIKit.getContext(), 55);
+            List<String> imageUrls = new ArrayList<>();
+            imageUrls.add("http://www.zhlzw.com/UploadFiles/Article_UploadFiles/201204/20120412123914329.jpg");
+            imageUrls.add("http://pic.58pic.com/58pic/15/14/14/18e58PICMwt_1024.jpg");
+           imageUrls.add("http://dynamic-image.yesky.com/740x-/uploadImages/2014/289/01/IGS09651F94M.jpg");
+            *//*  imageUrls.add("http://pic.58pic.com/58pic/13/61/00/61a58PICtPr_1024.jpg");
+            imageUrls.add("http://www.bz55.com/uploads/allimg/150701/140-150F1142638.jpg");
+            imageUrls.add("http://pic.58pic.com/58pic/15/36/00/73b58PICgvY_1024.jpg");
+            imageUrls.add("http://pic.58pic.com/58pic/15/35/96/97j58PICUhD_1024.jpg");*//*
+            this.teamImageView.displayImage(imageUrls)
+                    .synthesizedWidthHeight(imageSize, imageSize)
+                    .defaultImage(R.drawable.nim_image_default)
+                    .load();
+
+        }*/
     }
 
     private void updateNewIndicator(RecentContact recent) {
