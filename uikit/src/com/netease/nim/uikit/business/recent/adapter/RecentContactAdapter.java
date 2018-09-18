@@ -29,7 +29,7 @@ public class RecentContactAdapter extends BaseMultiItemQuickAdapter<RecentContac
     public RecentContactAdapter(RecyclerView recyclerView, List<RecentContact> data) {
         super(recyclerView, data);
         addItemType(ViewType.VIEW_TYPE_COMMON, R.layout.nim_recent_contact_list_item, CommonRecentViewHolder.class);
-        addItemType(ViewType.VIEW_TYPE_TEAM, R.layout.nim_recent_contact_list_item, TeamRecentViewHolder.class);
+        addItemType(ViewType.VIEW_TYPE_TEAM, R.layout.nim_recent_contact_list_item_team, TeamRecentViewHolder.class);
     }
 
     @Override

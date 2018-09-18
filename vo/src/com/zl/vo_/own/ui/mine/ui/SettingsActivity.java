@@ -1,0 +1,124 @@
+package com.zl.vo_.own.ui.mine.ui;
+
+import android.app.Dialog;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.zl.vo_.R;
+import com.zl.vo_.config.preference.Preferences;
+import com.zl.vo_.login.LogoutHelper;
+import com.zl.vo_.own.base.BaseActivity;
+import com.zl.vo_.own.ui.account.Login_Register_Acitivity;
+
+import butterknife.BindView;
+import butterknife.OnClick;
+
+public class SettingsActivity extends BaseActivity implements View.OnClickListener{
+    @BindView(R.id.re_newmsgNotify)
+    RelativeLayout re_newmsgNotify;
+    @BindView(R.id.re_do_not_disturb_mode)
+    RelativeLayout re_do_not_disturb_mode;
+    @BindView(R.id.re_chat)
+    RelativeLayout re_chat;
+    @BindView(R.id.re_currency)
+    RelativeLayout re_currency;
+    @BindView(R.id.re_quite)
+    RelativeLayout re_quite;
+    @BindView(R.id.iv_back)
+    ImageView back;
+    @BindView(R.id.tv_title)
+    TextView title;
+
+    @Override
+    protected void initViews() {
+        back.setOnClickListener(this);
+        title.setText("设置");
+    }
+
+    @Override
+    protected void initData() {
+
+    }
+
+    @Override
+    protected void getResLayout() {
+        setContentView(R.layout.activity_settings);
+    }
+
+    @Override
+    protected void initListener() {
+
+    }
+
+    @Override
+    protected void setStatusBarColor() {
+
+    }
+    @OnClick({R.id.re_newmsgNotify,R.id.re_do_not_disturb_mode,R.id.re_chat,
+            R.id.re_currency, R.id.re_quite,R.id.iv_back})
+    @Override
+    public void onClick(View view) {
+         switch (view.getId()){
+             case R.id.iv_back:
+                 finish();
+                 break;
+             case R.id.re_newmsgNotify:
+                 Toast.makeText(this, "000", Toast.LENGTH_SHORT).show();
+                 break;
+             case R.id.re_do_not_disturb_mode:
+                 Toast.makeText(this, "111", Toast.LENGTH_SHORT).show();
+                 break;
+             case R.id.re_chat:
+                 Toast.makeText(this, "222", Toast.LENGTH_SHORT).show();
+                 break;
+             case R.id.re_currency:
+                 Toast.makeText(this, "333", Toast.LENGTH_SHORT).show();
+                 break;
+             case R.id.re_quite:
+                 //退出登录
+                 logout();
+                 break;
+                 }
+    }
+
+    /**
+     * 退出登录
+     */
+    private void logout() {
+        final Dialog dialog = new Dialog(SettingsActivity.this);
+        View vv = LayoutInflater.from(SettingsActivity.this).inflate(R.layout.dia_logout,null);
+        dialog.setContentView(vv);
+        LinearLayout ll_quite_login =vv.findViewById(R.id.ll_quite_login);
+        LinearLayout ll_quite_vo =vv.findViewById(R.id.ll_quite_vo);
+        ll_quite_vo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+              dialog.dismiss();
+            }
+        });
+
+        ll_quite_login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Preferences.saveUserToken("");
+                // 清理缓存&注销监听
+                LogoutHelper.logout();
+
+                // 启动登录
+                Login_Register_Acitivity.start(SettingsActivity.this);
+                finish();
+                dialog.dismiss();
+            }
+        });
+        dialog.show();
+
+
+
+    }
+}

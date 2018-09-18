@@ -261,6 +261,9 @@
             android:screenOrientation="portrait"
             android:theme="@style/global_search_bg"
             android:windowSoftInputMode="stateUnspecified" />
+        <activity android:name=".own.ui.mine.ui.SettingsActivity"
+            android:screenOrientation="portrait"
+            />
 
         <activity
             android:name=".main.activity.GlobalSearchDetailActivity"

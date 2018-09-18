@@ -30,6 +30,7 @@ import com.zl.vo_.own.ui.mine.ui.FixLifeNotePwdActivity;
 import com.zl.vo_.own.ui.mine.ui.LifeNoteActivity;
 import com.zl.vo_.own.ui.mine.ui.SetLifeNotePwdActivity;
 import com.zl.vo_.own.ui.mine.ui.SetPrivateFriendsActivity;
+import com.zl.vo_.own.ui.mine.ui.SettingsActivity;
 import com.zl.vo_.own.ui.mine.ui.UserInfoActivity;
 import com.zl.vo_.own.ui.mine.ui.VipActivity;
 
@@ -85,9 +86,11 @@ public class MineFragment extends MainTabFragment implements View.OnClickListene
                 intent=new Intent(getActivity(), LifeNoteActivity.class);
                 startActivity(intent);
                 break;
-            //通用设置(退出登录)
+            //通用设置(进入设置界面)
             case R.id.rl_setting:
-                onLogout();
+               // onLogout();
+                intent=new Intent(getActivity(), SettingsActivity.class);
+                startActivity(intent);
                 break;
             //隐私好友设置
             case R.id.rl_setPrivacyFriends:
