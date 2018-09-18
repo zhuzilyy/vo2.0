@@ -69,7 +69,6 @@ public class LoginActivity extends BaseActivity {
     protected void initListener() {
 
     }
-
     @Override
     protected void setStatusBarColor() {
 
