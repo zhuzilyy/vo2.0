@@ -2,11 +2,15 @@ package com.zl.vo_.main.activity;
 
 import android.Manifest;
 import android.app.Activity;
+import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.support.annotation.NonNull;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -15,12 +19,15 @@ import android.widget.Toast;
 import com.netease.nim.avchatkit.AVChatProfile;
 import com.netease.nim.avchatkit.activity.AVChatActivity;
 import com.netease.nim.avchatkit.constant.AVChatExtras;
+import com.netease.nimlib.sdk.msg.SystemMessageObserver;
+import com.zl.vo_.DemoCache;
 import com.zl.vo_.R;
 import com.zl.vo_.config.preference.Preferences;
 import com.zl.vo_.contact.activity.AddFriendActivity;
 import com.zl.vo_.login.LoginActivity;
 import com.zl.vo_.login.LogoutHelper;
 import com.zl.vo_.main.fragment.HomeFragment;
+import com.zl.vo_.own.util.XCommUtils;
 import com.zl.vo_.session.SessionHelper;
 import com.zl.vo_.team.TeamCreateHelper;
 import com.zl.vo_.team.activity.AdvancedTeamSearchActivity;
@@ -49,6 +56,21 @@ import java.util.ArrayList;
  * Created by huangjun on 2015/3/25.
  */
 public class MainActivity extends UI {
+    /**
+     * 库 phone表字段
+     **/
+    private static final String[] PHONES_PROJECTION = new String[]{
+            ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME, ContactsContract.CommonDataKinds.Phone.NUMBER, ContactsContract.Contacts.Photo.PHOTO_ID, ContactsContract.CommonDataKinds.Phone.CONTACT_ID};
+    /**
+     * 电话号码
+     **/
+    private static final int PHONES_NUMBER_INDEX = 1;
+
+    /**
+     * 联系人显示名称
+     **/
+    private static final int PHONES_DISPLAY_NAME_INDEX = 0;
+
 
     private static final String EXTRA_APP_QUIT = "APP_QUIT";
     private static final int REQUEST_CODE_NORMAL = 1;
@@ -90,6 +112,11 @@ public class MainActivity extends UI {
         setContentView(R.layout.activity_main_tab);
         requestBasicPermission();
         onParseIntent();
+        //存储通讯录到DemoCache
+        DemoCache.setPhone_contacts(getContactsRes());
+
+
+
 
     // 等待同步数据完成
     boolean syncCompleted = LoginSyncDataStatusObserver.getInstance().observeSyncDataCompletedEvent(new Observer<Void>() {
@@ -108,6 +135,27 @@ public class MainActivity extends UI {
 }
 
     /**
+     * 获取通讯录
+     */
+    private String getContactsRes() {
+        StringBuilder stringBuilder = new StringBuilder();
+        ContentResolver resolver = this.getContentResolver();
+        Cursor cursor = resolver.query(ContactsContract.CommonDataKinds.Phone.CONTENT_URI, PHONES_PROJECTION, null, null, null);
+        if (cursor != null) {
+            while (cursor.moveToNext()) {
+                String phoneNum = cursor.getString(PHONES_NUMBER_INDEX).replace("", "");
+                if (phoneNum == null || phoneNum == "")
+                    continue;
+                String phoneName = cursor.getString(PHONES_DISPLAY_NAME_INDEX);
+                phoneNum = XCommUtils.replaceBlank(phoneNum);
+                stringBuilder.append(phoneName + "-" + phoneNum + ",");
+
+            }
+        }
+        return stringBuilder.toString().trim();
+    }
+
+    /**
      * 基本权限管理
      */
     private final String[] BASIC_PERMISSIONS = new String[]{
@@ -117,7 +165,10 @@ public class MainActivity extends UI {
             Manifest.permission.READ_PHONE_STATE,
             Manifest.permission.RECORD_AUDIO,
             Manifest.permission.ACCESS_COARSE_LOCATION,
-            Manifest.permission.ACCESS_FINE_LOCATION
+            Manifest.permission.ACCESS_FINE_LOCATION,
+            Manifest.permission.READ_CONTACTS,
+            Manifest.permission.WRITE_CONTACTS
+
     };
 
     private void requestBasicPermission() {

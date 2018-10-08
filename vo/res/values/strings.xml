@@ -62,6 +62,8 @@
     <string name="edit">编辑</string>
 
     <!-- session -->
+    <!--xzy:名片-->
+    <string name="input_panel_card">名 片</string>
     <string name="input_panel_guess">猜 拳</string>
     <string name="input_panel_audio_call">语音通话</string>
     <string name="input_panel_video_call">视频通话</string>

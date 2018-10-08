@@ -12,6 +12,7 @@ import com.zl.vo_.DemoCache;
 import com.zl.vo_.R;
 import com.zl.vo_.contact.activity.RobotProfileActivity;
 import com.zl.vo_.contact.activity.UserProfileActivity;
+import com.zl.vo_.main.viewholder.MsgViewHolderVoCard;
 import com.zl.vo_.redpacket.NIMRedPacketClient;
 import com.zl.vo_.session.action.AVChatAction;
 import com.zl.vo_.session.action.AckMessageAction;
@@ -22,6 +23,7 @@ import com.zl.vo_.session.action.RedPacketAction;
 import com.zl.vo_.session.action.SnapChatAction;
 import com.zl.vo_.session.action.TeamAVChatAction;
 import com.zl.vo_.session.action.TipAction;
+import com.zl.vo_.session.action.VoCardAction;
 import com.zl.vo_.session.activity.AckMsgInfoActivity;
 import com.zl.vo_.session.activity.MessageHistoryActivity;
 import com.zl.vo_.session.activity.MessageInfoActivity;
@@ -33,6 +35,7 @@ import com.zl.vo_.session.extension.RedPacketAttachment;
 import com.zl.vo_.session.extension.RedPacketOpenedAttachment;
 import com.zl.vo_.session.extension.SnapChatAttachment;
 import com.zl.vo_.session.extension.StickerAttachment;
+import com.zl.vo_.session.extension.VoCardAttachment;
 import com.zl.vo_.session.search.SearchMessageActivity;
 import com.zl.vo_.session.viewholder.MsgViewHolderAVChat;
 import com.zl.vo_.session.viewholder.MsgViewHolderDefCustom;
@@ -107,6 +110,8 @@ public class SessionHelper {
 
 
     public static void init() {
+
+
         // 注册自定义消息附件解析器
         NIMClient.getService(MsgService.class).registerCustomAttachmentParser(new CustomAttachParser());
         // 注册各种扩展消息类型的显示ViewHolder
@@ -198,7 +203,10 @@ public class SessionHelper {
             actions.add(new SnapChatAction());
             actions.add(new GuessAction());
             actions.add(new FileAction());
+            //xzy:添加发送名片
+            actions.add(new VoCardAction());
             actions.add(new TipAction());
+
             if (NIMRedPacketClient.isEnable()) {
                 actions.add(new RedPacketAction());
             }
@@ -273,6 +281,8 @@ public class SessionHelper {
             actions.add(new SnapChatAction());
             actions.add(new GuessAction());
             actions.add(new FileAction());
+            //xzy:添加发送名片
+            actions.add(new VoCardAction());
             myP2pCustomization.actions = actions;
             myP2pCustomization.withSticker = true;
             // 定制ActionBar右边的按钮，可以加多个
@@ -415,6 +425,9 @@ public class SessionHelper {
             actions.add(avChatAction);
             actions.add(new GuessAction());
             actions.add(new FileAction());
+            //xzy:添加发送名片
+            actions.add(new VoCardAction());
+
             if (NIMRedPacketClient.isEnable()) {
                 actions.add(new RedPacketAction());
             }
@@ -457,6 +470,8 @@ public class SessionHelper {
             actions.add(new GuessAction());
             actions.add(new FileAction());
             actions.add(new AckMessageAction());
+            //xzy:添加发送名片
+            actions.add(new VoCardAction());
             if (NIMRedPacketClient.isEnable()) {
                 actions.add(new RedPacketAction());
             }
@@ -510,6 +525,9 @@ public class SessionHelper {
         NimUIKit.registerMsgItemViewHolder(StickerAttachment.class, MsgViewHolderSticker.class);
         NimUIKit.registerMsgItemViewHolder(SnapChatAttachment.class, MsgViewHolderSnapChat.class);
         NimUIKit.registerMsgItemViewHolder(RTSAttachment.class, MsgViewHolderRTS.class);
+        //
+        // 注册图文类型消息
+        NimUIKit.registerMsgItemViewHolder(VoCardAttachment.class, MsgViewHolderVoCard.class);
         NimUIKit.registerTipMsgViewHolder(MsgViewHolderTip.class);
         registerRedPacketViewHolder();
     }
@@ -570,7 +588,10 @@ public class SessionHelper {
                 } else if (message.getMsgType() == MsgTypeEnum.custom && message.getAttachment() != null
                         && (message.getAttachment() instanceof SnapChatAttachment
                         || message.getAttachment() instanceof RTSAttachment
-                        || message.getAttachment() instanceof RedPacketAttachment)) {
+                        || message.getAttachment() instanceof RedPacketAttachment)
+                        //xzy:添加判断
+                       // ||message.getAttachment() instanceof VoCardAttachment
+                        ) {
                     // 白板消息和阅后即焚消息，红包消息 不允许转发
                     return true;
                 } else if (message.getMsgType() == MsgTypeEnum.robot && message.getAttachment() != null && ((RobotAttachment) message.getAttachment()).isRobotSend()) {
@@ -635,7 +656,6 @@ public class SessionHelper {
                         public void doCancelAction() {
 
                         }
-
                         @Override
                         public void doOkAction() {
                             NIMClient.getService(MsgService.class).clearChattingHistory(item.getSessionId(), item.getSessionTypeEnum());
