@@ -2,6 +2,15 @@
 
 buildscript {
     apply from: 'script.gradle', to: buildscript
+  /*  repositories {
+        maven {
+            url 'http://maven.aliyun.com/nexus/content/repositories/releases/'
+        }
+    }
+    dependencies {
+        // 添加emas-services插件
+        classpath 'com.aliyun.ams:emas-services:1.0.1'
+    }*/
 }
 
 allprojects {
@@ -11,6 +20,7 @@ allprojects {
         mavenCentral()
         maven {url 'http://developer.huawei.com/repo'}
         maven { url 'https://fabric-artifacts.s3.amazonaws.com/public' }
+        maven { url "http://maven.aliyun.com/nexus/content/repositories/releases"}
     }
 }
 
@@ -21,7 +31,7 @@ ext {
     targetSdkVersion = 26
     appTargetSdkVersion = 26
     versionCode = 52
-    versionName = '5.5.0'
+    versionName = '1.0.1'
     sdkSourceCompatibility = 1.7
     sdkTargetCompatibility = 1.7
     appSourceCompatibility = 1.7

@@ -4,6 +4,8 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
+import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -20,9 +22,16 @@ import com.zl.vo_.R;
 import com.zl.vo_.config.preference.Preferences;
 import com.zl.vo_.config.preference.UserPreferences;
 import com.zl.vo_.contact.ContactHttpClient;
+import com.zl.vo_.own.api.ApiAccount;
 import com.zl.vo_.own.base.BaseActivity;
+import com.zl.vo_.own.listener.OnRequestDataListener;
 import com.zl.vo_.own.ui.MainActivity;
+import com.zl.vo_.own.util.MobileNumberUtil;
 import com.zl.vo_.own.util.WeiboDialogUtils;
+import com.zl.vo_.own.views.ClearEditText;
+
+import java.util.HashMap;
+import java.util.Map;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -36,6 +45,14 @@ public class RegisterActivity extends BaseActivity{
     @BindView(R.id.tv_title)
     TextView title;
 
+    @BindView(R.id.register_nick)
+    ClearEditText register_nick;
+    @BindView(R.id.register_phone)
+    ClearEditText register_phone;
+    @BindView(R.id.register_code)
+    ClearEditText register_code;
+    @BindView(R.id.register_pwd)
+    ClearEditText register_pwd;
     @Override
     protected void initViews() {
         dialog = WeiboDialogUtils.createLoadingDialog(RegisterActivity.this, "加载中");
@@ -65,23 +82,76 @@ public class RegisterActivity extends BaseActivity{
                 finish();
                 break;
             case R.id.register_submit:
-               login();
+                String nickName = register_nick.getText().toString();
+                String phone = register_phone.getText().toString();
+                String confirmCode = register_code.getText().toString();
+                String pwd= register_pwd.getText().toString();
+                if (checkParamsIsLegal(nickName,phone,confirmCode,pwd)){
+                    doRegister(phone,nickName,pwd);
+                }
                 break;
         }
     }
+    //检查注册的参数是不是空
+    private boolean checkParamsIsLegal(String nickName, String phone, String confirmCode, String pwd) {
+        if (TextUtils.isEmpty(nickName)){
+            Toast.makeText(this, "请输入昵称", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+        if (TextUtils.isEmpty(phone)){
+            Toast.makeText(this, "请输入手机号码", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+        //判断手机号码是不是合法
+        if (!MobileNumberUtil.isMobileNO(phone)){
+            Toast.makeText(this, "对不起手机号码格式有误", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+        if (TextUtils.isEmpty(confirmCode)){
+            Toast.makeText(this, "请输入验证码", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+        if (TextUtils.isEmpty(pwd)){
+            Toast.makeText(this, "请输入密码", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+        if (pwd.length()<6){
+            Toast.makeText(this, "密码长度不能小于6位", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+        return true;
+    }
     //注册
-    private void register() {
-        ContactHttpClient.getInstance().register("199319xjz1", "199319xjz1", "chenpengfei1", new ContactHttpClient.ContactHttpCallback<Void>() {
+    private void register(final String account,final String nickName,final String pwd) {
+       /* ContactHttpClient.getInstance().register(account, nickName, pwd, new ContactHttpClient.ContactHttpCallback<Void>() {
             @Override
             public void onSuccess(Void aVoid) {
                 Toast.makeText(RegisterActivity.this, R.string.register_success, Toast.LENGTH_SHORT).show();
                 DialogMaker.dismissProgressDialog();
+
             }
             @Override
             public void onFailed(int code, String errorMsg) {
                         Toast.makeText(RegisterActivity.this, getString(R.string.register_failed, String.valueOf(code), errorMsg), Toast.LENGTH_SHORT)
                         .show();
                 DialogMaker.dismissProgressDialog();
+            }
+        });*/
+    }
+    //自己服务器的注册接口
+    private void doRegister(String account, String nickName, String password) {
+        Map<String,String> params = new HashMap<>();
+        params.put("mobile",account);
+        params.put("password",password);
+        params.put("captcha","000000");
+        ApiAccount.doRegister(this, params, new OnRequestDataListener() {
+            @Override
+            public void requestSuccess(String data) {
+                Log.i("tag",data);
+            }
+            @Override
+            public void requestFailure(int code, String msg) {
+                Log.i("tag",code+"============="+msg);
             }
         });
     }

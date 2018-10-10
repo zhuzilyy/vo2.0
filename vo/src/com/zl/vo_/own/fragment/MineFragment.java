@@ -1,6 +1,5 @@
 package com.zl.vo_.own.fragment;
 
-import android.app.Dialog;
 import android.content.Intent;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
@@ -10,7 +9,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.bumptech.glide.Glide;
 import com.zl.vo_.R;
 import com.zl.vo_.own.api.ApiConstant;
 import com.zl.vo_.own.base.BaseFragment;

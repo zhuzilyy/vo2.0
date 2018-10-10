@@ -36,7 +36,7 @@
                 android:layout_marginTop="12dp"
                 android:ellipsize="end"
                 android:singleLine="true"
-                android:text="昵称"
+                android:text="昵称111"
                 android:textColor="@color/tipcolor"
                 android:textSize="16sp" />
             <TextView

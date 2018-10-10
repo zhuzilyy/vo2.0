@@ -18,8 +18,6 @@ public class ApiConstant {
     public static final String VO_VIP_AGREEMENT="http://api.ykhswl.net/vo_admin_system/view.php?id=4";
     //服务器地址
    // public static final String BASE_URL="http://47.104.73.127:8080/news-0.0.1/api/user/login";
-    //登录
-    public static final String BASE_URL="http://47.104.73.127:8080/news-0.0.1/api/user/login";
-
-
+    public static final String BASE_URL="http://47.92.132.120";
+    public static final String REGISTER=BASE_URL+"/api/v1/register";
 }

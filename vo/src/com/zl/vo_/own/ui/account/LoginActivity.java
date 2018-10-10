@@ -7,14 +7,11 @@ import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.util.Log;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.netease.nim.uikit.api.NimUIKit;
 import com.netease.nim.uikit.common.ui.dialog.DialogMaker;
 import com.netease.nim.uikit.common.util.log.LogUtil;
-import com.netease.nim.uikit.common.util.string.MD5;
 import com.netease.nimlib.sdk.AbortableFuture;
 import com.netease.nimlib.sdk.NIMClient;
 import com.netease.nimlib.sdk.RequestCallback;
@@ -27,7 +24,6 @@ import com.zl.vo_.config.preference.UserPreferences;
 import com.zl.vo_.own.api.ApiAccount;
 import com.zl.vo_.own.base.BaseActivity;
 import com.zl.vo_.own.listener.OnRequestDataListener;
-import com.zl.vo_.own.ui.MainActivity;
 import com.zl.vo_.own.util.StringToMD5;
 import com.zl.vo_.own.views.ClearEditText;
 
@@ -168,7 +164,6 @@ public class LoginActivity extends BaseActivity {
         Preferences.saveUserAccount(account);
         Preferences.saveUserToken(token);
     }
-
     /*
     初始化消息提醒配置
      */

@@ -22,7 +22,7 @@ public class ApiAccount {
     /*注册的方法*/
     public static void doRegister(final Context context, Map<String,String> params, final OnRequestDataListener listener) {
         Dialog dialog = WeiboDialogUtils.createLoadingDialog(context, "加载中");
-        excutePost("http://47.104.73.127:8080/news-0.0.1/api/user/login", context, params,dialog, listener);
+        excutePost(ApiConstant.REGISTER, context, params,dialog, listener);
     }
     /*获取验证码*/
     public static void getConfirmCode(final Context context, Map<String,String> params, final OnRequestDataListener listener) {

@@ -243,7 +243,6 @@ public class OkHttpManager {
             public void onFailure(Call call, IOException e) {
                 callBack.onFailure(call, e);
             }
-
             @Override
             public void onResponse(Call call, Response response) throws IOException {
                 callBack.onResponse(response);
@@ -277,9 +276,9 @@ public class OkHttpManager {
 
     //创建 Request对象
     private Request buildRequest(String url, Map<String, String> params, HttpMethodType methodType) {
-
         Request.Builder builder = new Request.Builder();
         builder.url(url);
+        builder.addHeader("version","1.0.0");
         if (methodType == HttpMethodType.GET) {
             builder.get();
         } else if (methodType == HttpMethodType.POST) {
