@@ -11,6 +11,7 @@ apply plugin: 'com.android.application'
 apply plugin: 'io.fabric'
 
 def static getGitVersion() {
+
     try {
         return 'git rev-parse --short HEAD'.execute().text.trim()
     } catch (Throwable th) {
@@ -43,13 +44,13 @@ android {
 
     signingConfigs {
         debug {
-            storeFile file('C:/Program Files/Java/jre1.8.0_131/bin/android.keystore')
+            storeFile file('D:/AndroidContent/keystory/android.keystore')
             keyAlias 'android.keystore'
             keyPassword '031424'
             storePassword '031424'
         }
         release {
-            storeFile file('C:/Program Files/Java/jre1.8.0_131/bin/android.keystore')
+            storeFile file('D:/AndroidContent/keystory/android.keystore')
             storePassword '031424'
             keyAlias 'android.keystore'
             keyPassword '031424'
@@ -164,7 +165,6 @@ dependencies {
     implementation project(':imagewatcher')
     implementation project(':indexlib')
     compile 'com.bartoszlipinski:recyclerviewheader2:2.0.1'
-
     /*阿里热更新*/
     compile 'com.aliyun.ams:alicloud-android-hotfix:3.2.4'
 }

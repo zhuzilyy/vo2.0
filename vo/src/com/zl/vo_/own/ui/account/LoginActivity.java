@@ -60,12 +60,10 @@ public class LoginActivity extends BaseActivity {
     protected void initViews() {
         tv_title.setText("登录");
     }
-
     @Override
     protected void initData() {
 
     }
-
     @Override
     protected void getResLayout() {
         setContentView(R.layout.activity_own_login);

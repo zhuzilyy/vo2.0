@@ -65,7 +65,6 @@ public class MainActivity extends UI {
      * 电话号码
      **/
     private static final int PHONES_NUMBER_INDEX = 1;
-
     /**
      * 联系人显示名称
      **/
@@ -166,8 +165,8 @@ public class MainActivity extends UI {
             Manifest.permission.RECORD_AUDIO,
             Manifest.permission.ACCESS_COARSE_LOCATION,
             Manifest.permission.ACCESS_FINE_LOCATION,
-            Manifest.permission.READ_CONTACTS,
-            Manifest.permission.WRITE_CONTACTS
+//            Manifest.permission.READ_CONTACTS,
+//            Manifest.permission.WRITE_CONTACTS
 
     };
 
@@ -182,6 +181,7 @@ public class MainActivity extends UI {
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         MPermission.onRequestPermissionsResult(this, requestCode, permissions, grantResults);
+
     }
 
     @OnMPermissionGranted(BASIC_PERMISSION_REQUEST_CODE)
@@ -343,6 +343,7 @@ public class MainActivity extends UI {
                     Toast.makeText(MainActivity.this, "请选择至少一个联系人！", Toast.LENGTH_SHORT).show();
                 }
             } else if (requestCode == REQUEST_CODE_ADVANCED) {
+
                 final ArrayList<String> selected = data.getStringArrayListExtra(ContactSelectActivity.RESULT_DATA);
                 TeamCreateHelper.createAdvancedTeam(MainActivity.this, selected);
             }
