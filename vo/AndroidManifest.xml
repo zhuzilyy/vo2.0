@@ -77,6 +77,17 @@
         android:icon="@mipmap/logo"
         android:label="@string/app_name"
         android:theme="@style/MyAppTheme">
+        <!--阿里移动热修复-->
+        <meta-data
+            android:name="com.taobao.android.hotfix.IDSECRET"
+            android:value="25102892-1" />
+        <meta-data
+            android:name="com.taobao.android.hotfix.APPSECRET"
+            android:value="bf7bd4df4ec98b5ae39120f94012aaa5" />
+        <meta-data
+            android:name="com.taobao.android.hotfix.RSASECRET"
+            android:value="MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCftO5u6B94v27t5q93sse2gR/vncSJKS7lekHgOlFPFjwA1/1bEecXORkVifvuCboT9EzQ1d7FZ+AWqfunx9agp2dd/Mc/aMPY2m0wEu1NNEuytNPqMSjdh1TgKLD4+vEo8Qj8Kwa9uuz8Xi6hZGN+OnGxQg5oS/Y+Urtq7mFRx8CjQb4JpbPH/sI9ZSXjA4k8YUtANI6c6xHq/n+NmBOR7wyoPKPTU4xpTJJ2Bc9IggX/kYkg4mzHiTHG6rK35yGJy+lU2WukrprKYCTw3AVaD03QhqMvs+2/henVG/co6oWA9lBjp8PMN0WSGmIVYWC+89PVG3btlGSgqw7dTEK1AgMBAAECggEAMJi3rNvJJ87ojE+TuRKXnrsv4pPZR/tWH9HR1c8pCq2zWHZgy6No9DIVpe400Lv4+TVvYmSRwvPWxk63Gti+QGhwFbNjVbIlVgkxDF3WA5YUKq7HhQ2sZ6xUcVkwcLK7Sz/9Ae59wKHuluR5v/ZyJ+jUy6FUDPyAU3qNOP6Mcnugagzr3Epbje0eIH+KiReLDwpE9Q8ORUI5oOb3Yklyfto3urXnwpQe9OtclffBc1R6CypbyDNDsnh94xyE4j2tJiGqM0wCPmodtJqtiOI93ad5+NvaMHBTDFJk2jesmBvVUgYEQxXBaL4h5ZtkLeS0nTJU7DbrpciDw+9/lIdviQKBgQDcVyWUeVV/6oDb5mHfDirJS47FucQxfDVKTEEOKVwbl5VZIchTjkfQUJ7HENqSWe0wnwbJP9q/dx3a9A6z0DjXyQJaQq6vztKaf9c8XtjGNidOiMFz8T75TMPYxI4qRh32KSxtOVJajROPRcb4SSKRUTrJ1PNDAcB543RxITdtrwKBgQC5jbDr2jotCDsr0eUfIW687edyQJQcebeQymeVeUbRpGIW35nKzsPgvwUEWYizVB/yHIZzIYLC/J2NxahQJ6eEk2JrmiluI5jV0PysPbNdIR29FlljxSoEibFJQhlODpGKrAj3QRtNsQmKp6i04Q5Uk9znnZGzb+u5FDU11G7y2wKBgACMSvCimJ7X03g4i3fFjj+v62v8eUtyNqO3qtXBLpR2/Q0as2fZy73t5WczWIfSp29eheLMQNwHDND1mG/EDdAjlNjqn4qaZhWySbPBvKJJkjF0z55dND3kffw1CPF7+Skakxy2bskA3tKVZthJPkfEPvQvjmdVQshK04hQf9XLAoGAaqjwEiMXXdtlaAL3WbW2GhQG/r3wZY3x3uD6OgnEk62SVOOjW9kO75neIGn3El5BHsMW5gdVSxA64MvFvI2O1b6CzKeJOS5tJDtFgxzUhawLlC3MpHUpegJMTngYY64sKzJI1RgvwbEKcxF9ALx9qFB2ow0IO8USEwlyrMa4IBECgYEAzAYjZkna4AzXNJaRf9jzDpRCw09qd2VgbjW6maEWABNq9/n/0VjuY7gLyfHUGJwXTAifFRYWYHWD0VSC8jRNOV3b3fbT8cfygcD+OCzuwWn/R1R1M7cmOCzYYakhDLdQNu4yJVpTvlshotAPIDUii8i66MIxdlVFOhNVi4o6EqE=" />
+        <!--阿里移动热修复-->
         <activity android:name=".main.activity.TextActivity">
 
         </activity>
