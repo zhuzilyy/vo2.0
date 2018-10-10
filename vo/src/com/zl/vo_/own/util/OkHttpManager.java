@@ -6,6 +6,8 @@ import android.util.Log;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonParseException;
+import com.zl.vo_.NimApplication;
+import com.zl.vo_.own.api.ApiConstant;
 import com.zl.vo_.own.callback.BaseCallBack;
 import com.zl.vo_.own.callback.RequestCallBack;
 
@@ -278,7 +280,13 @@ public class OkHttpManager {
     private Request buildRequest(String url, Map<String, String> params, HttpMethodType methodType) {
         Request.Builder builder = new Request.Builder();
         builder.url(url);
-        builder.addHeader("version","1.0.0");
+        if (url.equals(ApiConstant.LOGIN)||url.equals(ApiConstant.REGISTER)){
+            builder.addHeader("version","1.0.0");
+        }else if(url.equals(ApiConstant.GET_USERINFO)){
+            String cloudToken= (String) SPUtils.get(NimApplication.getAppliaction(),"cloudToken","");
+            builder.addHeader("version","1.0.0");
+            builder.addHeader("Authorization",cloudToken);
+        }
         if (methodType == HttpMethodType.GET) {
             builder.get();
         } else if (methodType == HttpMethodType.POST) {
