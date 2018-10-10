@@ -33,6 +33,7 @@ import com.netease.nimlib.sdk.msg.MsgService;
 import com.netease.nimlib.sdk.msg.attachment.MsgAttachment;
 import com.netease.nimlib.sdk.msg.model.IMMessage;
 import com.netease.nimlib.sdk.msg.model.RecentContact;
+import com.zl.vo_.session.extension.VoCardAttachment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -219,6 +220,8 @@ public class SessionListFragment extends MainTabFragment {
                     return "[红包]";
                 } else if (attachment instanceof RedPacketOpenedAttachment) {
                     return ((RedPacketOpenedAttachment) attachment).getDesc(recentContact.getSessionType(), recentContact.getContactId());
+                }else if(attachment instanceof VoCardAttachment){
+                    return "[名片]";
                 }
 
                 return null;

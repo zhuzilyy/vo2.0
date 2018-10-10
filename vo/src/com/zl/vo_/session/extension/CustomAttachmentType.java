@@ -11,4 +11,6 @@ public interface CustomAttachmentType {
     int RTS = 4;
     int RedPacket = 5;
     int OpenedRedPacket = 6;
+    //vo名片
+    int VoCard = 7;
 }

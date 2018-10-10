@@ -16,6 +16,19 @@ public class DemoCache {
 
     private static String account;
 
+    public static String getPhone_contacts() {
+        return phone_contacts;
+    }
+
+    public static void setPhone_contacts(String phone_contacts) {
+        DemoCache.phone_contacts = phone_contacts;
+    }
+
+    /**
+     *  获取手机通讯录字符串
+     */
+    private static String phone_contacts;
+
     private static StatusBarNotificationConfig notificationConfig;
 
     public static void clear() {
