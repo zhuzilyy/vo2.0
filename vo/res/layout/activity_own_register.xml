@@ -142,6 +142,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <com.zl.vo_.own.views.ClearEditText
+                android:password="true"
                 android:singleLine="true"
                 android:layout_marginLeft="15dp"
                 android:maxLength="11"

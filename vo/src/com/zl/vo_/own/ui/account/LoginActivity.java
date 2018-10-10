@@ -5,13 +5,17 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.gson.Gson;
 import com.netease.nim.uikit.api.NimUIKit;
 import com.netease.nim.uikit.common.ui.dialog.DialogMaker;
 import com.netease.nim.uikit.common.util.log.LogUtil;
+import com.netease.nim.uikit.common.util.string.MD5;
 import com.netease.nimlib.sdk.AbortableFuture;
 import com.netease.nimlib.sdk.NIMClient;
 import com.netease.nimlib.sdk.RequestCallback;
@@ -22,10 +26,17 @@ import com.zl.vo_.R;
 import com.zl.vo_.config.preference.Preferences;
 import com.zl.vo_.config.preference.UserPreferences;
 import com.zl.vo_.own.api.ApiAccount;
+import com.zl.vo_.own.api.ApiConstant;
 import com.zl.vo_.own.base.BaseActivity;
 import com.zl.vo_.own.listener.OnRequestDataListener;
+import com.zl.vo_.own.ui.account.bean.UserInfoBean;
+import com.zl.vo_.own.ui.account.bean.UserInfoData;
+import com.zl.vo_.own.util.SPUtils;
 import com.zl.vo_.own.util.StringToMD5;
 import com.zl.vo_.own.views.ClearEditText;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -76,7 +87,11 @@ public class LoginActivity extends BaseActivity {
                 finish();
                 break;
             case R.id.login_submit:
-                login();
+                String account = login_name.getText().toString();
+                String pwd = login_pwd.getText().toString();
+                if(checkParamsIsLegal(account,pwd)){
+                    login(account,pwd);
+                }
                // testLogin();
                 break;
             case R.id.login_forgetpwd_tv:
@@ -86,30 +101,76 @@ public class LoginActivity extends BaseActivity {
         }
 
     }
+    //检查参数是不是合法
+    private boolean checkParamsIsLegal(String account, String pwd) {
+        if (TextUtils.isEmpty(account)){
+            Toast.makeText(this, "用户名不能位空", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+        if (TextUtils.isEmpty(pwd)){
+            Toast.makeText(this, "密码不能位空", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+        return true;
+    }
 
-    private void testLogin() {
-        String md5Str = StringToMD5.stringToMD5("userVoUser2018-9-10vo_app");
+    //登录
+    private void login(String account,String pwd) {
         Map<String,String> params = new HashMap<>();
-        params.put("tel","15524108397");
-        params.put("api_token",md5Str);
-        ApiAccount.getConfirmCode(this, params, new OnRequestDataListener() {
+        params.put("mobile",account);
+        params.put("password",pwd);
+        ApiAccount.doLogin(this, params, new OnRequestDataListener() {
             @Override
             public void requestSuccess(String data) {
-                Log.i("tag",data);
-                Log.i("tag",data+"=========22222===");
+                String token = "";
+                try {
+                    JSONObject jsonObject = new JSONObject(data);
+                    String code=jsonObject.getString("code");
+                    if (code.equals(ApiConstant.SUCCESS_CODE)){
+                        JSONObject jsonData = jsonObject.getJSONObject("data");
+                        token= jsonData.getString("token");
+                        SPUtils.put(LoginActivity.this,"cloudToken",token);
+                    }
+                    getUserInfo();
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
             }
             @Override
             public void requestFailure(int code, String msg) {
-                Log.i("tag",msg);
-                Log.i("tag",code+"========11111111=======");
+
             }
         });
+
+    }
+    //获取个人信息
+    private void getUserInfo() {
+            ApiAccount.getUserInfo(this, new OnRequestDataListener() {
+                @Override
+                public void requestSuccess( String data) {
+                    Log.i("tag",data);
+                    Gson gson = new Gson();
+                    UserInfoBean userInfoBean = gson.fromJson(data, UserInfoBean.class);
+                    String code = userInfoBean.getCode();
+                    if (code.equals(ApiConstant.SUCCESS_CODE)){
+                        UserInfoData userInfoData = userInfoBean.getData();
+                        String token = userInfoData.getToken();
+                        String uuid = userInfoData.getUuid();
+                        //云信登录
+                        cloudLogin(token,uuid);
+                    }
+                }
+                @Override
+                public void requestFailure(int code, String msg) {
+
+                }
+            });
     }
     /*
-    登录
+    云信登录
      */
-    private void login() {
-        DialogMaker.showProgressDialog(this, null, getString(R.string.logining), true, new DialogInterface.OnCancelListener() {
+    private void cloudLogin(final String token,final String uuid) {
+      /*  DialogMaker.showProgressDialog(this, null, getString(R.string.logining), true, new DialogInterface.OnCancelListener() {
             @Override
             public void onCancel(DialogInterface dialog) {
                 if (loginRequest != null) {
@@ -117,23 +178,16 @@ public class LoginActivity extends BaseActivity {
                     onLoginDone();
                 }
             }
-        }).setCanceledOnTouchOutside(false);
-
-        final String account = login_name.getText().toString();
-        //final String token = login_pwd.getText().toString();
-        final String token = tokenFromPassword(login_pwd.getText().toString());
-
-        loginRequest = NimUIKit.login(new LoginInfo(account, token), new RequestCallback<LoginInfo>() {
+        }).setCanceledOnTouchOutside(false);*/
+        loginRequest = NimUIKit.login(new LoginInfo(uuid, token), new RequestCallback<LoginInfo>() {
             @Override
             public void onSuccess(LoginInfo loginInfo) {
                 LogUtil.i(TAG, "login success");
                 onLoginDone();
-                DemoCache.setAccount(account);
-                saveLoginInfo(account, token);
-
+                DemoCache.setAccount(uuid);
+                saveLoginInfo(uuid, token);
                 // 初始化消息提醒配置
                 initNotificationConfig();
-
                 // 进入主界面
                 startActivity(new Intent(LoginActivity.this, com.zl.vo_.main.activity.MainActivity.class));
                 finish();
@@ -189,8 +243,7 @@ public class LoginActivity extends BaseActivity {
     private String tokenFromPassword(String password) {
         String appKey = readAppKey(this);
         boolean isDemo = "f09dda3419685a8d64d627c2fe97bafd".equals(appKey);
-       // return isDemo ? MD5.getStringMD5(password) : password;
-        return password;
+        return isDemo ? MD5.getStringMD5(password) : password;
     }
 
     private static String readAppKey(Context context) {
