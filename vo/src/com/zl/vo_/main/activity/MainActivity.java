@@ -165,8 +165,8 @@ public class MainActivity extends UI {
             Manifest.permission.RECORD_AUDIO,
             Manifest.permission.ACCESS_COARSE_LOCATION,
             Manifest.permission.ACCESS_FINE_LOCATION,
-            Manifest.permission.READ_CONTACTS,
-            Manifest.permission.WRITE_CONTACTS
+//            Manifest.permission.READ_CONTACTS,
+//            Manifest.permission.WRITE_CONTACTS
 
     };
 
