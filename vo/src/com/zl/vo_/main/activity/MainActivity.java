@@ -181,6 +181,7 @@ public class MainActivity extends UI {
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         MPermission.onRequestPermissionsResult(this, requestCode, permissions, grantResults);
+
     }
 
     @OnMPermissionGranted(BASIC_PERMISSION_REQUEST_CODE)
