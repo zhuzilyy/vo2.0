@@ -112,7 +112,7 @@ public class MainActivity extends UI {
         requestBasicPermission();
         onParseIntent();
         //存储通讯录到DemoCache
-        DemoCache.setPhone_contacts(getContactsRes());
+        //DemoCache.setPhone_contacts(getContactsRes());
 
 
 
