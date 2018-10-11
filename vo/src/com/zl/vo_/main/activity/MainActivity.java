@@ -117,6 +117,7 @@ public class MainActivity extends UI {
 
 
 
+
     // 等待同步数据完成
     boolean syncCompleted = LoginSyncDataStatusObserver.getInstance().observeSyncDataCompletedEvent(new Observer<Void>() {
         @Override
@@ -165,8 +166,8 @@ public class MainActivity extends UI {
             Manifest.permission.RECORD_AUDIO,
             Manifest.permission.ACCESS_COARSE_LOCATION,
             Manifest.permission.ACCESS_FINE_LOCATION,
-//            Manifest.permission.READ_CONTACTS,
-//            Manifest.permission.WRITE_CONTACTS
+            Manifest.permission.READ_CONTACTS,
+            Manifest.permission.WRITE_CONTACTS
 
     };
 
@@ -188,6 +189,8 @@ public class MainActivity extends UI {
     public void onBasicPermissionSuccess() {
         try {
             Toast.makeText(this, "授权成功", Toast.LENGTH_SHORT).show();
+            //存储通讯录到DemoCache
+            DemoCache.setPhone_contacts(getContactsRes());
         } catch (Exception e) {
             e.printStackTrace();
         }
