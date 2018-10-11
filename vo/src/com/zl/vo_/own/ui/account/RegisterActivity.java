@@ -23,12 +23,16 @@ import com.zl.vo_.config.preference.Preferences;
 import com.zl.vo_.config.preference.UserPreferences;
 import com.zl.vo_.contact.ContactHttpClient;
 import com.zl.vo_.own.api.ApiAccount;
+import com.zl.vo_.own.api.ApiConstant;
 import com.zl.vo_.own.base.BaseActivity;
 import com.zl.vo_.own.listener.OnRequestDataListener;
 import com.zl.vo_.own.ui.MainActivity;
 import com.zl.vo_.own.util.MobileNumberUtil;
 import com.zl.vo_.own.util.WeiboDialogUtils;
 import com.zl.vo_.own.views.ClearEditText;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -147,11 +151,19 @@ public class RegisterActivity extends BaseActivity{
         ApiAccount.doRegister(this, params, new OnRequestDataListener() {
             @Override
             public void requestSuccess(String data) {
-                Log.i("tag",data);
+                try {
+                    JSONObject jsonObject = new JSONObject(data);
+                    String code = jsonObject.getString("code");
+                    if (code.equals(ApiConstant.SUCCESS_CODE)){
+                        finish();
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
             }
             @Override
             public void requestFailure(int code, String msg) {
-                Log.i("tag",code+"============="+msg);
+                Toast.makeText(RegisterActivity.this, "注册失败", Toast.LENGTH_SHORT).show();
             }
         });
     }
