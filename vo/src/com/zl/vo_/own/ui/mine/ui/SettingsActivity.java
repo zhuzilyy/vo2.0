@@ -1,6 +1,7 @@
 package com.zl.vo_.own.ui.mine.ui;
 
 import android.app.Dialog;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
@@ -68,16 +69,20 @@ public class SettingsActivity extends BaseActivity implements View.OnClickListen
                  finish();
                  break;
              case R.id.re_newmsgNotify:
-                 Toast.makeText(this, "000", Toast.LENGTH_SHORT).show();
+                 /*新消息提醒*/
+                 startActivity(new Intent(SettingsActivity.this,NewMsgSettingsActivity.class));
                  break;
              case R.id.re_do_not_disturb_mode:
-                 Toast.makeText(this, "111", Toast.LENGTH_SHORT).show();
+                /*勿扰模式*/
+                startActivity(new Intent(SettingsActivity.this,DonotDisturbModeActivity.class));
                  break;
              case R.id.re_chat:
-                 Toast.makeText(this, "222", Toast.LENGTH_SHORT).show();
+                 /*聊天设置*/
+                 startActivity(new Intent(SettingsActivity.this,ChatSettingActivity.class));
                  break;
              case R.id.re_currency:
-                 Toast.makeText(this, "333", Toast.LENGTH_SHORT).show();
+                 /*通用设置*/
+                 startActivity(new Intent(SettingsActivity.this,CurrencySettingActivity.class));
                  break;
              case R.id.re_quite:
                  //退出登录
