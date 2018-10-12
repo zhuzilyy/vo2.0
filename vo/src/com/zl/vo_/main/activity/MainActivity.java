@@ -113,11 +113,6 @@ public class MainActivity extends UI {
         onParseIntent();
         //存储通讯录到DemoCache
         //DemoCache.setPhone_contacts(getContactsRes());
-
-
-
-
-
     // 等待同步数据完成
     boolean syncCompleted = LoginSyncDataStatusObserver.getInstance().observeSyncDataCompletedEvent(new Observer<Void>() {
         @Override
