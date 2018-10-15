@@ -8,6 +8,7 @@ import com.zl.vo_.own.util.WeiboDialogUtils;
 
 import java.util.Map;
 
+import static com.zl.vo_.own.api.ApiAccount.excuteGet;
 import static com.zl.vo_.own.api.ApiAccount.excutePost;
 
 /**
@@ -20,9 +21,11 @@ public class ApiMine {
         Dialog dialog = WeiboDialogUtils.createLoadingDialog(context, "加载中");
         excutePost(ApiConstant.CHANGE_VO_CODE,"two", context, params,dialog, listener);
     }
-
-
-
+    /*获取用户二维码*/
+    public static void getQrCode(final Context context,final OnRequestDataListener listener) {
+        Dialog dialog = WeiboDialogUtils.createLoadingDialog(context, "加载中");
+        excuteGet(ApiConstant.GET_ERWEIMA,"two", context,dialog, listener);
+    }
 
 
 

@@ -2,14 +2,21 @@ package com.zl.vo_.own.api;
 
 import android.app.Dialog;
 import android.content.Context;
+import android.content.Intent;
 import android.text.TextUtils;
 import android.widget.Toast;
 
+import com.google.gson.Gson;
 import com.zl.vo_.own.callback.RequestCallBack;
 import com.zl.vo_.own.listener.OnRequestDataListener;
+import com.zl.vo_.own.ui.account.LoginActivity;
 import com.zl.vo_.own.util.InternetUtil;
 import com.zl.vo_.own.util.OkHttpManager;
 import com.zl.vo_.own.util.WeiboDialogUtils;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.Map;
 
 import okhttp3.Call;
@@ -54,6 +61,16 @@ public class ApiAccount {
                         dialog.dismiss();
                     if (!TextUtils.isEmpty(s)) {
                         listener.requestSuccess(s);
+                        try {
+                            JSONObject jsonObject = new JSONObject(s);
+                            String code = jsonObject.getString("code");
+                            if (code.equals(ApiConstant.OVERDUE_CODE)){
+                                Intent intent = new Intent(context, LoginActivity.class);
+                                context.startActivity(intent);
+                            }
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
                     }
                 }
             }
