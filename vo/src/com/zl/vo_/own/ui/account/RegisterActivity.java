@@ -148,6 +148,7 @@ public class RegisterActivity extends BaseActivity{
         params.put("mobile",account);
         params.put("password",password);
         params.put("captcha","000000");
+        params.put("name",nickName);
         ApiAccount.doRegister(this, params, new OnRequestDataListener() {
             @Override
             public void requestSuccess(String data) {

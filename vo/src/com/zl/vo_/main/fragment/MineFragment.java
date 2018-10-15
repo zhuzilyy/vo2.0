@@ -7,8 +7,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.cpiz.android.bubbleview.BubblePopupWindow;
 import com.cpiz.android.bubbleview.BubbleTextView;
 import com.cpiz.android.bubbleview.RelativePos;
@@ -33,6 +35,9 @@ import com.zl.vo_.own.ui.mine.ui.SetPrivateFriendsActivity;
 import com.zl.vo_.own.ui.mine.ui.SettingsActivity;
 import com.zl.vo_.own.ui.mine.ui.UserInfoActivity;
 import com.zl.vo_.own.ui.mine.ui.VipActivity;
+import com.zl.vo_.own.util.SPUtils;
+
+import de.hdodenhof.circleimageview.CircleImageView;
 
 import static com.cpiz.android.bubbleview.Utils.dp2px;
 
@@ -41,6 +46,8 @@ public class MineFragment extends MainTabFragment implements View.OnClickListene
             rl_deletePravcyFriends,rl_userInfo,rl_openVip,rl_setting;
     private VipDialog vipDialog;
     private ImageView iv_guidePravcyFriends,iv_guideLifeNotePwd,iv_guideInfoTrans,iv_guideDeletePravcyFriends;
+    private CircleImageView iv_avatar;
+    private TextView tv_nickName,tv_voNum;
     @Override
     protected void onInit() {
         initViews();
@@ -63,6 +70,9 @@ public class MineFragment extends MainTabFragment implements View.OnClickListene
         rl_userInfo=findView(R.id.rl_userInfo);
         rl_openVip=findView(R.id.rl_openVip);
         rl_setting=findView(R.id.rl_setting);
+        iv_avatar=findView(R.id.iv_avatar);
+        tv_nickName=findView(R.id.tv_name);
+        tv_voNum=findView(R.id.tv_voId);
 
         rl_lifeNote.setOnClickListener(this);
         rl_setPrivacyFriends.setOnClickListener(this);
@@ -76,6 +86,17 @@ public class MineFragment extends MainTabFragment implements View.OnClickListene
         iv_guideLifeNotePwd.setOnClickListener(this);
         iv_guideInfoTrans.setOnClickListener(this);
         iv_guideDeletePravcyFriends.setOnClickListener(this);
+        setDefaultValue();
+    }
+    //设置初始化的数据
+    private void setDefaultValue() {
+        String avatar = (String) SPUtils.get(getActivity(), "avatar", "");
+        String vo_code = (String) SPUtils.get(getActivity(), "vo_code", "");
+        String nickName = (String) SPUtils.get(getActivity(), "nickName", "");
+        Glide.with(getActivity()).load(avatar).into(iv_avatar);
+        tv_nickName.setText("昵称:"+nickName);
+        tv_voNum.setText("vo号:"+vo_code);
+
     }
     @Override
     public void onClick(View view) {

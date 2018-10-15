@@ -32,7 +32,7 @@
                 android:hint="手机号/VO号"
                 android:paddingLeft="15dp"
                 android:paddingRight="15dp"
-                android:text="test001"
+                android:text="15524108397"
                 android:textColor="@color/black"
                 android:textColorHint="@color/gray"
                 android:textSize="14sp"/>

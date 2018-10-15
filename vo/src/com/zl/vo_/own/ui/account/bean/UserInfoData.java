@@ -8,6 +8,8 @@ public class UserInfoData {
     private String id;
     private String Uuid;
     private String vo_code;
+    private String vo_code_can;
+    private String signature;
     private String token;
     private String mobile;
     private String name;
@@ -102,5 +104,20 @@ public class UserInfoData {
 
     public void setCountry(String country) {
         this.country = country;
+    }
+    public String getVo_code_can() {
+        return vo_code_can;
+    }
+
+    public void setVo_code_can(String vo_code_can) {
+        this.vo_code_can = vo_code_can;
+    }
+
+    public String getSignature() {
+        return signature;
+    }
+
+    public void setSignature(String signature) {
+        this.signature = signature;
     }
 }
