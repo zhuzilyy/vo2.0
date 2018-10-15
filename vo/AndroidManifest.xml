@@ -138,6 +138,20 @@
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="adjustPan" />
+        <!--新消息设置界面-->
+        <activity android:name=".own.ui.mine.ui.NewMsgSettingsActivity"
+            android:screenOrientation="portrait"
+            />
+        <!--勿扰模式界面-->
+        <activity android:name=".own.ui.mine.ui.DonotDisturbModeActivity"
+            android:screenOrientation="portrait"/>
+        <!--聊天设置-->
+        <activity android:name=".own.ui.mine.ui.ChatSettingActivity"
+            android:screenOrientation="portrait"
+            />
+        <!--通用设置-->
+        <activity android:name=".own.ui.mine.ui.CurrencySettingActivity"
+            android:screenOrientation="portrait"/>
 
         <!-- 多端登录管理 -->
         <activity

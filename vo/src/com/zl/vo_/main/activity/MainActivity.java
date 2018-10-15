@@ -101,7 +101,7 @@ public class MainActivity extends UI {
     }
 
     @Override
-    protected boolean displayHomeAsUpEnabled() {
+    protected boolean displayHomeAsUpEnabled(){
         return false;
     }
 
