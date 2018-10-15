@@ -1,6 +1,7 @@
 package com.zl.vo_.own.ui.mine.ui;
 
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
@@ -21,14 +22,22 @@ public class QrCodeActivity extends BaseActivity {
     TextView tv_title;
     @BindView(R.id.iv__head)
     CircleImageView iv__head;
+    @BindView(R.id.iv_sex)
+    ImageView iv_sex;
     @Override
     protected void initViews() {
         tv_title.setText("我的二维码");
         //设置默认值
         String avatar= (String) SPUtils.get(this,"avatar","");
+        String sex= (String) SPUtils.get(this,"sex","");
         Glide.with(this).load(avatar).into(iv__head);
-    }
+        if (sex.equals("1")){
+            iv_sex.setImageResource(R.mipmap.nan);
+        }else{
+            iv_sex.setImageResource(R.mipmap.nv);
+        }
 
+    }
     @Override
     protected void initData() {
 
