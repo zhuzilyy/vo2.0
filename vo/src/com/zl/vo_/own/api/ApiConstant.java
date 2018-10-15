@@ -19,6 +19,7 @@ public class ApiConstant {
     //服务器地址
    // public static final String BASE_URL="http://47.104.73.127:8080/news-0.0.1/api/user/login";
     public static final String SUCCESS_CODE="200000";
+    public static final String OVERDUE_CODE="401002";
     public static final String BASE_URL="http://47.92.132.120";
     //注册
     public static final String REGISTER=BASE_URL+"/api/v1/register";
@@ -28,6 +29,8 @@ public class ApiConstant {
     public static final String GET_USERINFO=BASE_URL+"/api/v1/user/profile";
     //修改vo号
     public static final String CHANGE_VO_CODE=BASE_URL+"/api/v1/user/vo_code";
+    //获取验证码
+    public static final String GET_ERWEIMA=BASE_URL+"/api/v1/user/qrcode";
 
 
 
