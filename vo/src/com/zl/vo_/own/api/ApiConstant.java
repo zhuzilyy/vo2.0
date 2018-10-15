@@ -26,6 +26,8 @@ public class ApiConstant {
     public static final String LOGIN=BASE_URL+"/api/v1/login";
     //获取个人信息
     public static final String GET_USERINFO=BASE_URL+"/api/v1/user/profile";
+    //修改vo号
+    public static final String CHANGE_VO_CODE=BASE_URL+"/api/v1/user/vo_code";
 
 
 

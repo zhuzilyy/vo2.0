@@ -64,13 +64,13 @@ public class OkHttpManager {
      * 对外公布的可调方法
      ************************/
 
-    public void getRequest(String url, final BaseCallBack callBack) {
-        Request request = buildRequest(url, null, HttpMethodType.GET);
+    public void getRequest(String url, String typeHeader,final BaseCallBack callBack) {
+        Request request = buildRequest(url, null,typeHeader, HttpMethodType.GET);
         doRequest(request, callBack);
     }
 
-    public void postRequest(String url, Map<String, String> params,final RequestCallBack<String> callBack) {
-        Request request = buildRequest(url, params, HttpMethodType.POST);
+    public void postRequest(String url, Map<String, String> params,String typeHeader,final RequestCallBack<String> callBack) {
+        Request request = buildRequest(url, params,typeHeader,HttpMethodType.POST);
         doRequest(request, callBack);
     }
 
@@ -118,7 +118,7 @@ public class OkHttpManager {
     }
 
     //异步下载文件
-    public void asynDownloadFile(final String url, final String destFileDir, final BaseCallBack callBack) {
+   /* public void asynDownloadFile(final String url,String ty final String destFileDir, final BaseCallBack callBack) {
         final Request request = buildRequest(url, null, HttpMethodType.GET);
         callBack.OnRequestBefore(request);  //提示加载框
         mOkHttpClient.newCall(request).enqueue(new Callback() {
@@ -167,7 +167,7 @@ public class OkHttpManager {
                 }
             }
         });
-    }
+    }*/
     //构造上传图片 Request
     private Request buildMultipartFormRequest(String url, File[] files, String[] fileKeys, Param[] params) {
         params = validateParam(params);
@@ -277,12 +277,12 @@ public class OkHttpManager {
     }
 
     //创建 Request对象
-    private Request buildRequest(String url, Map<String, String> params, HttpMethodType methodType) {
+    private Request buildRequest(String url, Map<String, String> params,String typeHeader,HttpMethodType methodType) {
         Request.Builder builder = new Request.Builder();
         builder.url(url);
-        if (url.equals(ApiConstant.LOGIN)||url.equals(ApiConstant.REGISTER)){
+        if (typeHeader.equals("one")){
             builder.addHeader("version","1.0.0");
-        }else if(url.equals(ApiConstant.GET_USERINFO)){
+        }else if(typeHeader.equals("two")){
             String cloudToken= (String) SPUtils.get(NimApplication.getAppliaction(),"cloudToken","");
             builder.addHeader("version","1.0.0");
             builder.addHeader("Authorization",cloudToken);

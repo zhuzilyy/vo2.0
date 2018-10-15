@@ -23,30 +23,30 @@ public class ApiAccount {
     /*注册的方法*/
     public static void doRegister(final Context context, Map<String,String> params, final OnRequestDataListener listener) {
         Dialog dialog = WeiboDialogUtils.createLoadingDialog(context, "加载中");
-        excutePost(ApiConstant.REGISTER, context, params,dialog, listener);
+        excutePost(ApiConstant.REGISTER,"one", context, params,dialog, listener);
     }
     /*登录的方法*/
     public static void doLogin(final Context context, Map<String,String> params, final OnRequestDataListener listener) {
         Dialog dialog = WeiboDialogUtils.createLoadingDialog(context, "加载中");
-        excutePost(ApiConstant.LOGIN, context, params,dialog, listener);
+        excutePost(ApiConstant.LOGIN, "one",context, params,dialog, listener);
     }
     /*获取个人信息*/
     public static void getUserInfo(final Context context, final OnRequestDataListener listener) {
         Dialog dialog = WeiboDialogUtils.createLoadingDialog(context, "加载中");
-        excuteGet(ApiConstant.GET_USERINFO, context,dialog, listener);
+        excuteGet(ApiConstant.GET_USERINFO,"two" ,context,dialog, listener);
     }
     /*获取验证码*/
     public static void getConfirmCode(final Context context, Map<String,String> params, final OnRequestDataListener listener) {
         Dialog dialog = WeiboDialogUtils.createLoadingDialog(context, "加载中");
-        excutePost("http://www.xfxhfgs.cn/index.php/user/VoUser/sendCode/2", context, params,dialog, listener);
+        //excutePost("http://www.xfxhfgs.cn/index.php/user/VoUser/sendCode/2", context, params,dialog, listener);
     }
-    protected static void excutePost(String url, final Context context, Map<String,String> params,final Dialog dialog, final OnRequestDataListener listener) {
+    protected static void excutePost(String url,String typeHeader,final Context context, Map<String,String> params,final Dialog dialog, final OnRequestDataListener listener) {
         if (!InternetUtil.hasInternet()){
             Toast.makeText(context, "没有网，请检查网络", Toast.LENGTH_SHORT).show();
             return;
         }
         dialog.show();
-        OkHttpManager.getInstance().postRequest(url, params, new RequestCallBack<String>() {
+        OkHttpManager.getInstance().postRequest(url, params, typeHeader,new RequestCallBack<String>() {
             @Override
             public void onSuccess(Call call, Response response, final String s) {
                 if(null != context){
@@ -71,13 +71,13 @@ public class ApiAccount {
     }
 
 
-    protected static void excuteGet(String url, final Context context,final Dialog dialog, final OnRequestDataListener listener) {
+    protected static void excuteGet(String url, String typeHeader,final Context context,final Dialog dialog, final OnRequestDataListener listener) {
         if (!InternetUtil.hasInternet()){
             Toast.makeText(context, "没有网，请检查网络", Toast.LENGTH_SHORT).show();
             return;
         }
         dialog.show();
-        OkHttpManager.getInstance().getRequest(url, new RequestCallBack<String>() {
+        OkHttpManager.getInstance().getRequest(url,typeHeader, new RequestCallBack<String>() {
             @Override
             public void onSuccess(Call call, Response response, final String s) {
                 if(null != context){

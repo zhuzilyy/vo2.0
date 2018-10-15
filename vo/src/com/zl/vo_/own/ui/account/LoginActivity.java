@@ -167,6 +167,7 @@ public class LoginActivity extends BaseActivity {
                         String id = userInfoData.getId();
                         String vo_code_can = userInfoData.getVo_code_can();
                         String signature = userInfoData.getSignature();
+                        SPUtils.put(LoginActivity.this,"token",token);
                         SPUtils.put(LoginActivity.this,"avatar",avatar);
                         SPUtils.put(LoginActivity.this,"vo_code",vo_code);
                         SPUtils.put(LoginActivity.this,"nickName",nickName);

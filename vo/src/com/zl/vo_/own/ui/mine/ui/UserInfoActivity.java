@@ -1,5 +1,9 @@
 package com.zl.vo_.own.ui.mine.ui;
 
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
 import android.view.View;
 import android.widget.TextView;
 
@@ -25,11 +29,16 @@ public class UserInfoActivity extends BaseActivity {
     TextView tv_voNum;
     @BindView(R.id.iv_avatar)
     CircleImageView iv_avatar;
+    private MyReceiver myReceiver;
     @Override
     protected void initViews() {
         tv_title.setText("个人信息");
+        myReceiver = new MyReceiver();
+        //修改vo号的广播
+        IntentFilter changeVoCodeFilter = new IntentFilter();
+        changeVoCodeFilter.addAction("com.action.changeVoCode");
+        registerReceiver(myReceiver,changeVoCodeFilter);
     }
-
     @Override
     protected void initData() {
         setDefaultValue();
@@ -43,17 +52,14 @@ public class UserInfoActivity extends BaseActivity {
         tv_nickName.setText("昵称:"+nickName);
         tv_voNum.setText("vo号:"+vo_code);
     }
-
     @Override
     protected void getResLayout() {
         setContentView(R.layout.activity_useinfo);
     }
-
     @Override
     protected void initListener() {
 
     }
-
     @Override
     protected void setStatusBarColor() {
 
@@ -83,6 +89,24 @@ public class UserInfoActivity extends BaseActivity {
             case R.id.rl_more:
                 jumpActivity(UserInfoActivity.this,ChangeMoreActivity.class);
                 break;
+        }
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (myReceiver!=null){
+            unregisterReceiver(myReceiver);
+        }
+    }
+    class  MyReceiver extends BroadcastReceiver{
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            String action = intent.getAction();
+            if (action.equals("com.action.changeVoCode")){
+                String voCode=intent.getStringExtra("voCode");
+                tv_voNum.setText(voCode);
+            }
         }
     }
 }
