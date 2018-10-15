@@ -3,11 +3,14 @@ package com.zl.vo_.own.ui.mine.ui;
 import android.view.View;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.zl.vo_.R;
 import com.zl.vo_.own.base.BaseActivity;
+import com.zl.vo_.own.util.SPUtils;
 
 import butterknife.BindView;
 import butterknife.OnClick;
+import de.hdodenhof.circleimageview.CircleImageView;
 
 /**
  * Created by Administrator on 2018/8/27.
@@ -16,6 +19,12 @@ import butterknife.OnClick;
 public class UserInfoActivity extends BaseActivity {
     @BindView(R.id.tv_title)
     TextView tv_title;
+    @BindView(R.id.tv_name)
+    TextView tv_nickName;
+    @BindView(R.id.tv_voId)
+    TextView tv_voNum;
+    @BindView(R.id.iv_avatar)
+    CircleImageView iv_avatar;
     @Override
     protected void initViews() {
         tv_title.setText("个人信息");
@@ -23,7 +32,16 @@ public class UserInfoActivity extends BaseActivity {
 
     @Override
     protected void initData() {
-
+        setDefaultValue();
+    }
+    //设置初始化的数据
+    private void setDefaultValue() {
+        String avatar = (String) SPUtils.get(this, "avatar", "");
+        String vo_code = (String) SPUtils.get(this, "vo_code", "");
+        String nickName = (String) SPUtils.get(this, "nickName", "");
+        Glide.with(this).load(avatar).into(iv_avatar);
+        tv_nickName.setText("昵称:"+nickName);
+        tv_voNum.setText("vo号:"+vo_code);
     }
 
     @Override

@@ -122,6 +122,7 @@ public class LoginActivity extends BaseActivity {
         ApiAccount.doLogin(this, params, new OnRequestDataListener() {
             @Override
             public void requestSuccess(String data) {
+                Log.i("tag",data);
                 String token = "";
                 try {
                     JSONObject jsonObject = new JSONObject(data);
@@ -130,8 +131,8 @@ public class LoginActivity extends BaseActivity {
                         JSONObject jsonData = jsonObject.getJSONObject("data");
                         token= jsonData.getString("token");
                         SPUtils.put(LoginActivity.this,"cloudToken",token);
+                        getUserInfo();
                     }
-                    getUserInfo();
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
@@ -156,6 +157,26 @@ public class LoginActivity extends BaseActivity {
                         UserInfoData userInfoData = userInfoBean.getData();
                         String token = userInfoData.getToken();
                         String uuid = userInfoData.getUuid();
+                        String avatar = userInfoData.getAvatar();
+                        String vo_code = userInfoData.getVo_code();
+                        String nickName = userInfoData.getName();
+                        String sex = userInfoData.getSex();
+                        String country = userInfoData.getCountry();
+                        String city = userInfoData.getCity();
+                        String province = userInfoData.getProvince();
+                        String id = userInfoData.getId();
+                        String vo_code_can = userInfoData.getVo_code_can();
+                        String signature = userInfoData.getSignature();
+                        SPUtils.put(LoginActivity.this,"avatar",avatar);
+                        SPUtils.put(LoginActivity.this,"vo_code",vo_code);
+                        SPUtils.put(LoginActivity.this,"nickName",nickName);
+                        SPUtils.put(LoginActivity.this,"sex",sex);
+                        SPUtils.put(LoginActivity.this,"country",country);
+                        SPUtils.put(LoginActivity.this,"city",city);
+                        SPUtils.put(LoginActivity.this,"province",province);
+                        SPUtils.put(LoginActivity.this,"id",id);
+                        SPUtils.put(LoginActivity.this,"vo_code_can",vo_code_can);
+                        SPUtils.put(LoginActivity.this,"signature",signature);
                         //云信登录
                         cloudLogin(token,uuid);
                     }
