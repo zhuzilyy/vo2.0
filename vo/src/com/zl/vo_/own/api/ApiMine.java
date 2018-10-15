@@ -117,6 +117,6 @@ public class ApiMine {
     //设置签名
     public static void setSignature(final Context context, Map<String,String> params, final OnRequestDataListener listener) {
         Dialog dialog = WeiboDialogUtils.createLoadingDialog(context, "加载中");
-        excutePost(ApiConstant.REGISTER,"one",context, params,dialog, listener);
+        excutePost(ApiConstant.SET_SIGNATURE,"two",context, params,dialog, listener);
     }
 }
