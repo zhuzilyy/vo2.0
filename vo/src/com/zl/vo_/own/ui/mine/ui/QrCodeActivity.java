@@ -3,8 +3,11 @@ package com.zl.vo_.own.ui.mine.ui;
 import android.view.View;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+import com.netease.nim.rtskit.common.imageview.CircleImageView;
 import com.zl.vo_.R;
 import com.zl.vo_.own.base.BaseActivity;
+import com.zl.vo_.own.util.SPUtils;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -16,9 +19,14 @@ import butterknife.OnClick;
 public class QrCodeActivity extends BaseActivity {
     @BindView(R.id.tv_title)
     TextView tv_title;
+    @BindView(R.id.iv__head)
+    CircleImageView iv__head;
     @Override
     protected void initViews() {
         tv_title.setText("我的二维码");
+        //设置默认值
+        String avatar= (String) SPUtils.get(this,"avatar","");
+        Glide.with(this).load(avatar).into(iv__head);
     }
 
     @Override
