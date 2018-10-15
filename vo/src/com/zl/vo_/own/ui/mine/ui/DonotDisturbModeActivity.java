@@ -1,6 +1,7 @@
 package com.zl.vo_.own.ui.mine.ui;
 
 
+import android.support.v4.app.NotificationCompat;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -8,8 +9,12 @@ import android.widget.TextView;
 import com.zl.vo_.R;
 import com.zl.vo_.own.base.BaseActivity;
 
+import butterknife.BindView;
+
 public class DonotDisturbModeActivity extends BaseActivity {
+    @BindView(R.id.tv_title)
     TextView title;
+    @BindView(R.id.iv_back)
     ImageView back;
     @Override
     protected void initViews() {
