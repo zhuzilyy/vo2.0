@@ -1,5 +1,7 @@
 package com.zl.vo_.own.ui.mine.ui;
 
+import android.net.Uri;
+import android.os.Environment;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
@@ -17,6 +19,8 @@ import com.zl.vo_.own.util.SPUtils;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.io.File;
 
 import butterknife.BindView;
 import butterknife.OnClick;

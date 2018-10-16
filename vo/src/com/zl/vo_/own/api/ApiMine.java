@@ -26,6 +26,11 @@ public class ApiMine {
         Dialog dialog = WeiboDialogUtils.createLoadingDialog(context, "加载中");
         excuteGet(ApiConstant.GET_ERWEIMA,"two", context,dialog, listener);
     }
+    /*修改头像*/
+    public static void changeAvatar(final Context context, Map<String,String> params, final OnRequestDataListener listener) {
+        Dialog dialog = WeiboDialogUtils.createLoadingDialog(context, "加载中");
+        excutePost(ApiConstant.CHANGE_AVATAR,"two", context, params,dialog, listener);
+    }
 
 
 
