@@ -108,6 +108,12 @@ public class ApiConstant {
 
     //设置签名
     public static final String SET_SIGNATURE=BASE_URL+"/api/v1/user/signature";
+    //设置地址
+    public static final String SET_ADDRESS=BASE_URL+"/api/v1/user/address";
+    //设置性别
+    public static final String SET_SEX=BASE_URL+"/api/v1/user/sex";
+    //设置昵称
+    public static final String SET_NICK=BASE_URL+"/api/v1/user/name";
 
 
 

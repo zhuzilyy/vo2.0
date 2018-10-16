@@ -21,7 +21,6 @@ def static getGitVersion() {
 
 
 
-
 }
 
 android {

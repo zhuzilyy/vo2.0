@@ -91,6 +91,7 @@
         android:clickable="true" >
 
         <TextView
+            android:id="@+id/tv_word_signature"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
@@ -102,6 +103,8 @@
 
 
         <TextView
+            android:layout_marginLeft="@dimen/dp15"
+            android:layout_toRightOf="@+id/tv_word_signature"
             android:paddingLeft="12dp"
             android:id="@+id/tv_sign"
             android:layout_width="match_parent"
@@ -112,7 +115,7 @@
             android:ellipsize="end"
             android:gravity="right"
             android:singleLine="true"
-            android:text="我爱祖国"
+            android:text=""
             android:textColor="#AAAAAA"
             android:textSize="14sp" />
     </RelativeLayout>

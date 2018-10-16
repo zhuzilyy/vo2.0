@@ -47,7 +47,7 @@ public class PersonSignActivity extends BaseActivity {
 
        String signature = (String) SPUtils.get(PersonSignActivity.this,"signature","");
        if(!TextUtils.isEmpty(signature)){
-           tv_right.setText(signature);
+           sign_ed.setText(signature);
        }
 
     }
@@ -75,16 +75,12 @@ public class PersonSignActivity extends BaseActivity {
             case R.id.tv_right:
                 //点击保存签名
                 String signature = sign_ed.getText().toString();
-                if(!TextUtils.isEmpty(signature)){
-                    saveSignature(signature);
-                }else {
-                    Toast.makeText(this, "签名不能为空", Toast.LENGTH_SHORT).show();
-                }
+                saveSignature(signature);
                 break;
         }
     }
 
-    /**
+    /*
      * 保存签名
      * @param signature
      */
@@ -125,9 +121,8 @@ public class PersonSignActivity extends BaseActivity {
                     SPUtils.put(PersonSignActivity.this,"vo_code_can",vo_code_can);
                     SPUtils.put(PersonSignActivity.this,"signature",signature);
                     Intent intent = new Intent();
-                    intent.putExtra("voCode",vo_code);
-                    intent.setAction("com.action.changeVoCode");
-                    sendBroadcast(intent);
+                    intent.putExtra("signature",signature);
+                    setResult(201,intent);
                     finish();
                 }
 

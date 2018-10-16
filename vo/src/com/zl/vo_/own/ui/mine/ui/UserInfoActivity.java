@@ -75,7 +75,7 @@ public class UserInfoActivity extends BaseActivity {
                 break;
             //修改昵称
             case R.id.rl_nickName:
-                jumpActivity(UserInfoActivity.this,ChangeNickNameActivity.class);
+                jumpActivity(UserInfoActivity.this,ChangeNickNameActivity.class,102);
                 break;
             //修改vo号
             case R.id.rl_voId:
@@ -107,6 +107,14 @@ public class UserInfoActivity extends BaseActivity {
                 String voCode=intent.getStringExtra("voCode");
                 tv_voNum.setText(voCode);
             }
+        }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(202 == resultCode){
+            tv_nickName.setText((String)SPUtils.get(UserInfoActivity.this,"nickName",""));
         }
     }
 }

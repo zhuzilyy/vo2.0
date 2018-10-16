@@ -1,6 +1,12 @@
 package com.zl.vo_.own.fragment;
 
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
+import android.os.Bundle;
+import android.provider.ContactsContract;
+import android.support.annotation.Nullable;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -29,6 +35,7 @@ import com.zl.vo_.own.ui.mine.ui.SetLifeNotePwdActivity;
 import com.zl.vo_.own.ui.mine.ui.SetPrivateFriendsActivity;
 import com.zl.vo_.own.ui.mine.ui.UserInfoActivity;
 import com.zl.vo_.own.ui.mine.ui.VipActivity;
+import com.zl.vo_.own.util.SPUtils;
 import com.zl.vo_.own.views.DetailsTypePopupWindow;
 
 import butterknife.BindView;
@@ -44,15 +51,30 @@ public class MineFragment extends BaseFragment{
     @BindView(R.id.iv_add)
     ImageView iv_add;
     private VipDialog vipDialog;
+    private TextView tv_nickName;
+    private MyReceiver myReceiver = null;
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+    }
+
     @Override
     protected View getResLayout(LayoutInflater inflater, ViewGroup container) {
         View view_mine=inflater.inflate(R.layout.fragment_mine,null);
+        tv_nickName = view_mine.findViewById(R.id.tv_name);
         return view_mine;
     }
 
     @Override
     protected void initViews() {
+        myReceiver =  new MyReceiver();
+        IntentFilter filter01 = new IntentFilter("nick_success");
+        getActivity().registerReceiver(myReceiver,filter01);
+        //-------------------------
         tv_title.setText("我的");
+
     }
 
     @Override
@@ -313,4 +335,16 @@ public class MineFragment extends BaseFragment{
         });
         dialog.show();
     }
+
+    public class MyReceiver extends BroadcastReceiver{
+
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            String action = intent.getAction();
+            if("nick_success".equals(action)){
+                tv_nickName.setText((String)SPUtils.get(getActivity(),"nickName",""));
+            }
+        }
+    }
+
 }

@@ -97,6 +97,12 @@ public abstract class BaseActivity extends AppCompatActivity {
         Intent intent=new Intent(context,targetActivity);
         startActivity(intent);
     }
+    //跳转的方法2:ForResult
+    public void jumpActivity(Context context,Class<?> targetActivity,int requestCode){
+        Intent intent=new Intent(context,targetActivity);
+        startActivityForResult(intent,requestCode);
+    }
+
 
     @Override
     protected void onDestroy() {

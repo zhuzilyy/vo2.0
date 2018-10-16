@@ -122,4 +122,23 @@ public class ApiMine {
         Dialog dialog = WeiboDialogUtils.createLoadingDialog(context, "加载中");
         excutePost(ApiConstant.SET_SIGNATURE,"two",context, params,dialog, listener);
     }
+
+
+    //设置地址
+    public static void setAddress(final Context context, Map<String,String> params, final OnRequestDataListener listener) {
+        Dialog dialog = WeiboDialogUtils.createLoadingDialog(context, "加载中");
+        excutePost(ApiConstant.SET_ADDRESS,"two",context, params,dialog, listener);
+    }
+    //设置性别
+    public static void setSex(final Context context, Map<String,String> params, final OnRequestDataListener listener) {
+        Dialog dialog = WeiboDialogUtils.createLoadingDialog(context, "加载中");
+        excutePost(ApiConstant.SET_SEX,"two",context, params,dialog, listener);
+    }
+    //设置昵称
+    public static void setNick(final Context context, Map<String,String> params, final OnRequestDataListener listener) {
+        Dialog dialog = WeiboDialogUtils.createLoadingDialog(context, "加载中");
+        excutePost(ApiConstant.SET_NICK,"two",context, params,dialog, listener);
+    }
+
+
 }
