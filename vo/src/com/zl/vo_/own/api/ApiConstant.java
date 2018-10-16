@@ -108,6 +108,8 @@ public class ApiConstant {
      * xzy:接口常量
      */
 
+    //设置签名
+    public static final String SET_SIGNATURE=BASE_URL+"/api/v1/user/signature";
 
 
 
