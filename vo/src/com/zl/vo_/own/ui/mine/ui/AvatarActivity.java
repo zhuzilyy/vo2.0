@@ -37,6 +37,7 @@ import de.hdodenhof.circleimageview.CircleImageView;
  */
 
 public class AvatarActivity extends BaseActivity {
+    //测试苹果电脑
     @BindView(R.id.tv_title)
     TextView tv_title;
     @BindView(R.id.tv_right)
