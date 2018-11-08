@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -27,6 +28,8 @@ import com.netease.nimlib.sdk.mixpush.MixPushService;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import butterknife.BindView;
 
 /**
  * Created by hzxuwen on 2015/7/3.
@@ -56,6 +59,12 @@ public class NoDisturbActivity extends UI implements SettingsAdapter.SwitchChang
 
     private SettingTemplate noDisturbItem;
 
+
+
+    TextView title;
+
+    ImageView back;
+
     public static void startActivityForResult(Activity activity, StatusBarNotificationConfig config, String time, int reqcode) {
         Intent intent = new Intent();
         intent.putExtra(EXTRA_TIME, time);
@@ -74,12 +83,25 @@ public class NoDisturbActivity extends UI implements SettingsAdapter.SwitchChang
 
         parseIntentData();
         findViews();
+
+        //自定义标题栏
+        title.setText("勿扰模式");
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
+
     }
 
     private void findViews() {
         initItems();
         noDisturbList = (ListView) findViewById(R.id.no_disturb_list);
         initFooter();
+
+        title = findView(R.id.tv_title);
+        back = findView(R.id.iv_back);
 
         adapter = new SettingsAdapter(this, this, items);
         noDisturbList.setAdapter(adapter);
@@ -104,7 +126,12 @@ public class NoDisturbActivity extends UI implements SettingsAdapter.SwitchChang
 
     private void initItems() {
         items.clear();
+        //settingTemplete(id ,title,type,checked)
         noDisturbItem = new SettingTemplate(TAG_NO_DISTURB, getString(R.string.no_disturb), SettingType.TYPE_TOGGLE, UserPreferences.getDownTimeToggle());
+
+
+
+
         items.add(noDisturbItem);
         items.add(SettingTemplate.addLine());
     }
@@ -234,6 +261,8 @@ public class NoDisturbActivity extends UI implements SettingsAdapter.SwitchChang
             case R.id.end_time_layout:
                 openFromTimePicker(false, endText.getText().toString());
                 break;
+
+
             default:
                 break;
         }

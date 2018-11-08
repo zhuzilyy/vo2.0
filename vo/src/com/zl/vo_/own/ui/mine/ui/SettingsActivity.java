@@ -13,6 +13,7 @@ import android.widget.Toast;
 import com.zl.vo_.R;
 import com.zl.vo_.config.preference.Preferences;
 import com.zl.vo_.login.LogoutHelper;
+import com.zl.vo_.main.activity.NoDisturbActivity;
 import com.zl.vo_.own.base.BaseActivity;
 import com.zl.vo_.own.ui.account.Login_Register_Acitivity;
 
@@ -74,7 +75,8 @@ public class SettingsActivity extends BaseActivity implements View.OnClickListen
                  break;
              case R.id.re_do_not_disturb_mode:
                 /*勿扰模式*/
-                startActivity(new Intent(SettingsActivity.this,DonotDisturbModeActivity.class));
+                //startActivity(new Intent(SettingsActivity.this,DonotDisturbModeActivity.class));
+                 startActivity(new Intent(SettingsActivity.this,NoDisturbActivity.class));
                  break;
              case R.id.re_chat:
                  /*聊天设置*/

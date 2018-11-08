@@ -29,9 +29,9 @@ public class SwitchButton extends View implements OnTouchListener {
 
     private boolean onSlip = false;// 记录用户是否在滑动的变量
 
-    private float down_x, now_x;// 按下时的x,当前的x
+    private float down_x, now_x;// 按下时的x,当H前的x
 
-    private Rect btn_off, btn_on;// 打开和关闭状态下,游标的Rect .
+    private Rect btn_off, btn_on;// 打开和关闭状态下,游标的Rect.
 
     private boolean isChangeOn = false;
 
@@ -57,9 +57,14 @@ public class SwitchButton extends View implements OnTouchListener {
     }
 
     private void init() {// 初始化
+       // bg_on = BitmapFactory.decodeResource(getResources(), R.drawable.openversion);
+       // bg_off = BitmapFactory.decodeResource(getResources(), R.drawable.closeversion);
+        //slip_btn = BitmapFactory.decodeResource(getResources(), R.drawable.icon_trans);
+
         bg_on = BitmapFactory.decodeResource(getResources(), R.drawable.nim_slide_toggle_on);
         bg_off = BitmapFactory.decodeResource(getResources(), R.drawable.nim_slide_toggle_off);
         slip_btn = BitmapFactory.decodeResource(getResources(), R.drawable.nim_slide_toggle);
+
         btn_off = new Rect(0, 0, slip_btn.getWidth(), slip_btn.getHeight());
         btn_on = new Rect(bg_off.getWidth() - slip_btn.getWidth(), 0, bg_off.getWidth(), slip_btn.getHeight());
         setOnTouchListener(this);// 设置监听器,也可以直接复写OnTouchEvent

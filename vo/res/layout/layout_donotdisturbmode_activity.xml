@@ -1,23 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-<include layout="@layout/layout_title"/>
+
+    <include layout="@layout/layout_title" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_below="@+id/ll_title"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/ll_title"
+        android:orientation="vertical">
         <!--新消息提醒-->
         <RelativeLayout
             android:id="@+id/re_void"
             android:layout_width="match_parent"
             android:layout_height="@dimen/dp50"
             android:background="@color/white"
-            android:clickable="true" >
+            android:clickable="true">
 
             <TextView
                 android:id="@+id/tv_temp_fxid"
@@ -31,61 +32,30 @@
                 android:textSize="16sp" />
 
             <com.zl.vo_.own.views.EaseSwitchButton
+                android:id="@+id/switch_disrupt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/switch_disrupt"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
-                android:layout_marginRight="@dimen/dp15"
-                />
+                android:layout_marginRight="@dimen/dp15" />
 
         </RelativeLayout>
+
         <TextView
-            android:background="@color/white"
-            android:paddingLeft="@dimen/dp15"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="@dimen/dp12"
-            android:textColor="@color/gray"
+            android:background="@color/white"
             android:paddingBottom="@dimen/dp10"
+            android:paddingLeft="@dimen/dp15"
             android:text="开启后，在设定的时间内接到新消息不会有声音提示"
-            />
+            android:textColor="@color/gray"
+            android:textSize="@dimen/dp12" />
 
-        <View
+        <LinearLayout
+            android:id="@+id/ll_set_time"
             android:layout_width="match_parent"
-            android:layout_height="0.1dp"
-            android:layout_alignParentBottom="true"
-            android:layout_marginLeft="12dp"
-            android:layout_marginRight="12dp"
-            android:background="#dadada" />
-
-        <RelativeLayout
-            android:id="@+id/re_disturb_starttime"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/dp50"
-            android:background="@color/white"
-            android:clickable="true" >
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="20dp"
-                android:text="开始时间"
-                android:textColor="#353535"
-                android:textSize="16sp" />
-
-            <TextView
-                android:id="@+id/disturb_startTime_tv"
-                android:layout_marginRight="@dimen/dp10"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:switchMinWidth="40dp"
-                android:text="23:00"
-                />
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
             <View
                 android:layout_width="match_parent"
@@ -94,45 +64,79 @@
                 android:layout_marginLeft="12dp"
                 android:layout_marginRight="12dp"
                 android:background="#dadada" />
-        </RelativeLayout>
 
-        <RelativeLayout
-            android:id="@+id/re_disturb_endtime"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/dp50"
-            android:background="@color/white"
-            android:clickable="true" >
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="20dp"
-                android:text="结束时间"
-                android:textColor="#353535"
-                android:textSize="16sp" />
-
-            <TextView
-                android:id="@+id/disturb_endTime_tv"
-                android:layout_marginRight="@dimen/dp10"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:switchMinWidth="40dp"
-                android:text="24:00"
-                />
-
-            <View
+            <RelativeLayout
+                android:id="@+id/re_disturb_starttime"
                 android:layout_width="match_parent"
-                android:layout_height="0.1dp"
-                android:layout_alignParentBottom="true"
-                android:layout_marginLeft="12dp"
-                android:layout_marginRight="12dp"
-                android:background="#dadada" />
-        </RelativeLayout>
+                android:layout_height="@dimen/dp50"
+                android:background="@color/white"
+                android:clickable="true">
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:text="开始时间"
+                    android:textColor="#353535"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/disturb_startTime_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/dp10"
+                    android:switchMinWidth="40dp"
+                    android:text="23:00" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:background="#dadada" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/re_disturb_endtime"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp50"
+                android:background="@color/white"
+                android:clickable="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:text="结束时间"
+                    android:textColor="#353535"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/disturb_endTime_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/dp10"
+                    android:switchMinWidth="40dp"
+                    android:text="24:00" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:background="#dadada" />
+            </RelativeLayout>
+        </LinearLayout>
 
 
     </LinearLayout>
