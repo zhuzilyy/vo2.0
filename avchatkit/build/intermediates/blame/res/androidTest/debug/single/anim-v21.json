@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/tianou/vo2.0/vo2.0/avchatkit/build/intermediates/res/merged/androidTest/debug/anim-v21/design_bottom_sheet_slide_in.xml",
+        "source": "/Users/tianou/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/2dabd34852044fb48f3bc09bd818b78f/res/anim-v21/design_bottom_sheet_slide_in.xml"
+    },
+    {
+        "merged": "/Users/tianou/vo2.0/vo2.0/avchatkit/build/intermediates/res/merged/androidTest/debug/anim-v21/design_bottom_sheet_slide_out.xml",
+        "source": "/Users/tianou/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/2dabd34852044fb48f3bc09bd818b78f/res/anim-v21/design_bottom_sheet_slide_out.xml"
+    }
+]

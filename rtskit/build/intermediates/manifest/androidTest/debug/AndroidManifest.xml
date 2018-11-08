@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.netease.nim.rtskit.test" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="26" />
+
+    <instrumentation
+        android:name="android.test.InstrumentationTestRunner"
+        android:functionalTest="false"
+        android:handleProfiling="false"
+        android:label="Tests for com.netease.nim.rtskit.test"
+        android:targetPackage="com.netease.nim.rtskit.test" />
+
+    <application android:debuggable="true" >
+        <uses-library android:name="android.test.runner" />
+        <!-- 白板 -->
+        <activity
+            android:name="com.netease.nim.rtskit.activity.RTSActivity"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden" /> <!-- 申明白板会话的广播接收器，第三方APP集成时，action中的com.zl.vo_请替换为自己的包名 -->
+        <receiver
+            android:name="com.netease.nimlib.receiver.RTSBroadcastReceiver"
+            android:enabled="true"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.zl.vo_.ACTION.RECEIVE_RTS_NOTIFICATION" />
+            </intent-filter>
+        </receiver>
+
+        <meta-data
+            android:name="android.support.VERSION"
+            android:value="26.1.0" />
+        <meta-data
+            android:name="android.arch.lifecycle.VERSION"
+            android:value="27.0.0-SNAPSHOT" />
+    </application>
+
+</manifest>

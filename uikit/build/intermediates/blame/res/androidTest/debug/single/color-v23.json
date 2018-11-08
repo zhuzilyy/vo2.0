@@ -1,0 +1,42 @@
+[
+    {
+        "merged": "/Users/tianou/vo2.0/vo2.0/uikit/build/intermediates/res/merged/androidTest/debug/color-v23/abc_btn_colored_borderless_text_material.xml",
+        "source": "/Users/tianou/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/162af99f07aa7ab3868e16b0e992e25f/res/color-v23/abc_btn_colored_borderless_text_material.xml"
+    },
+    {
+        "merged": "/Users/tianou/vo2.0/vo2.0/uikit/build/intermediates/res/merged/androidTest/debug/color-v23/abc_tint_btn_checkable.xml",
+        "source": "/Users/tianou/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/162af99f07aa7ab3868e16b0e992e25f/res/color-v23/abc_tint_btn_checkable.xml"
+    },
+    {
+        "merged": "/Users/tianou/vo2.0/vo2.0/uikit/build/intermediates/res/merged/androidTest/debug/color-v23/abc_btn_colored_text_material.xml",
+        "source": "/Users/tianou/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/162af99f07aa7ab3868e16b0e992e25f/res/color-v23/abc_btn_colored_text_material.xml"
+    },
+    {
+        "merged": "/Users/tianou/vo2.0/vo2.0/uikit/build/intermediates/res/merged/androidTest/debug/color-v23/abc_tint_switch_track.xml",
+        "source": "/Users/tianou/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/162af99f07aa7ab3868e16b0e992e25f/res/color-v23/abc_tint_switch_track.xml"
+    },
+    {
+        "merged": "/Users/tianou/vo2.0/vo2.0/uikit/build/intermediates/res/merged/androidTest/debug/color-v23/abc_tint_seek_thumb.xml",
+        "source": "/Users/tianou/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/162af99f07aa7ab3868e16b0e992e25f/res/color-v23/abc_tint_seek_thumb.xml"
+    },
+    {
+        "merged": "/Users/tianou/vo2.0/vo2.0/uikit/build/intermediates/res/merged/androidTest/debug/color-v23/abc_tint_default.xml",
+        "source": "/Users/tianou/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/162af99f07aa7ab3868e16b0e992e25f/res/color-v23/abc_tint_default.xml"
+    },
+    {
+        "merged": "/Users/tianou/vo2.0/vo2.0/uikit/build/intermediates/res/merged/androidTest/debug/color-v23/abc_color_highlight_material.xml",
+        "source": "/Users/tianou/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/162af99f07aa7ab3868e16b0e992e25f/res/color-v23/abc_color_highlight_material.xml"
+    },
+    {
+        "merged": "/Users/tianou/vo2.0/vo2.0/uikit/build/intermediates/res/merged/androidTest/debug/color-v23/design_tint_password_toggle.xml",
+        "source": "/Users/tianou/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/2dabd34852044fb48f3bc09bd818b78f/res/color-v23/design_tint_password_toggle.xml"
+    },
+    {
+        "merged": "/Users/tianou/vo2.0/vo2.0/uikit/build/intermediates/res/merged/androidTest/debug/color-v23/abc_tint_edittext.xml",
+        "source": "/Users/tianou/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/162af99f07aa7ab3868e16b0e992e25f/res/color-v23/abc_tint_edittext.xml"
+    },
+    {
+        "merged": "/Users/tianou/vo2.0/vo2.0/uikit/build/intermediates/res/merged/androidTest/debug/color-v23/abc_tint_spinner.xml",
+        "source": "/Users/tianou/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/162af99f07aa7ab3868e16b0e992e25f/res/color-v23/abc_tint_spinner.xml"
+    }
+]

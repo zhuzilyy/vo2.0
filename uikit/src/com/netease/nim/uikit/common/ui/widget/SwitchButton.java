@@ -57,9 +57,9 @@ public class SwitchButton extends View implements OnTouchListener {
     }
 
     private void init() {// 初始化
-       // bg_on = BitmapFactory.decodeResource(getResources(), R.drawable.openversion);
-       // bg_off = BitmapFactory.decodeResource(getResources(), R.drawable.closeversion);
-        //slip_btn = BitmapFactory.decodeResource(getResources(), R.drawable.icon_trans);
+       // bg_on = BitmapFactory.decodeResource(getResources(), R.drawable.switch_zi);
+       // bg_off = BitmapFactory.decodeResource(getResources(), R.drawable.switch_gray);
+       // slip_btn = BitmapFactory.decodeResource(getResources(), R.drawable.switch_circle);
 
         bg_on = BitmapFactory.decodeResource(getResources(), R.drawable.nim_slide_toggle_on);
         bg_off = BitmapFactory.decodeResource(getResources(), R.drawable.nim_slide_toggle_off);
