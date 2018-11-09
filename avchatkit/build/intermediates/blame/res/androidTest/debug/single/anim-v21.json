@@ -1,10 +1,18 @@
 [
     {
-        "merged": "/Users/tianou/vo2.0/vo2.0/avchatkit/build/intermediates/res/merged/androidTest/debug/anim-v21/design_bottom_sheet_slide_in.xml",
-        "source": "/Users/tianou/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/2dabd34852044fb48f3bc09bd818b78f/res/anim-v21/design_bottom_sheet_slide_in.xml"
+        "merged": "E:\\Users\\tianou\\vo2.0\\vo2.0\\avchatkit\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim-v21\\design_bottom_sheet_slide_in.xml",
+        "source": "E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\2dabd34852044fb48f3bc09bd818b78f\\res\\anim-v21\\design_bottom_sheet_slide_in.xml"
     },
     {
-        "merged": "/Users/tianou/vo2.0/vo2.0/avchatkit/build/intermediates/res/merged/androidTest/debug/anim-v21/design_bottom_sheet_slide_out.xml",
-        "source": "/Users/tianou/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/2dabd34852044fb48f3bc09bd818b78f/res/anim-v21/design_bottom_sheet_slide_out.xml"
+        "merged": "E:\\Users\\tianou\\vo2.0\\vo2.0\\avchatkit\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim-v21\\design_bottom_sheet_slide_out.xml",
+        "source": "E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\2dabd34852044fb48f3bc09bd818b78f\\res\\anim-v21\\design_bottom_sheet_slide_out.xml"
+    },
+    {
+        "merged": "E:\\studioWorkspace\\vo2.0\\avchatkit\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim-v21\\design_bottom_sheet_slide_out.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\d163af441293557595ae966b2d9d97a9\\res\\anim-v21\\design_bottom_sheet_slide_out.xml"
+    },
+    {
+        "merged": "E:\\studioWorkspace\\vo2.0\\avchatkit\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim-v21\\design_bottom_sheet_slide_in.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\d163af441293557595ae966b2d9d97a9\\res\\anim-v21\\design_bottom_sheet_slide_in.xml"
     }
 ]

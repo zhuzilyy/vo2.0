@@ -11,7 +11,7 @@ import com.netease.nimlib.sdk.StatusBarNotificationConfig;
  * Created by jezhee on 2/20/15.
  */
 public class DemoCache {
-
+    /*测试提交*/
     private static Context context;
 
     private static String account;

@@ -1,94 +1,186 @@
 [
     {
-        "merged": "/Users/tianou/vo2.0/vo2.0/uikit/build/intermediates/res/merged/androidTest/debug/color/abc_hint_foreground_material_dark.xml",
-        "source": "/Users/tianou/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/162af99f07aa7ab3868e16b0e992e25f/res/color/abc_hint_foreground_material_dark.xml"
+        "merged": "E:\\Users\\tianou\\vo2.0\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_tint_btn_checkable.xml",
+        "source": "E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\162af99f07aa7ab3868e16b0e992e25f\\res\\color\\abc_tint_btn_checkable.xml"
     },
     {
-        "merged": "/Users/tianou/vo2.0/vo2.0/uikit/build/intermediates/res/merged/androidTest/debug/color/switch_thumb_material_light.xml",
-        "source": "/Users/tianou/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/162af99f07aa7ab3868e16b0e992e25f/res/color/switch_thumb_material_light.xml"
+        "merged": "E:\\Users\\tianou\\vo2.0\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_tint_spinner.xml",
+        "source": "E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\162af99f07aa7ab3868e16b0e992e25f\\res\\color\\abc_tint_spinner.xml"
     },
     {
-        "merged": "/Users/tianou/vo2.0/vo2.0/uikit/build/intermediates/res/merged/androidTest/debug/color/design_tint_password_toggle.xml",
-        "source": "/Users/tianou/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/2dabd34852044fb48f3bc09bd818b78f/res/color/design_tint_password_toggle.xml"
+        "merged": "E:\\Users\\tianou\\vo2.0\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\color_picker_preview_selector.xml",
+        "source": "E:\\Users\\tianou\\vo2.0\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\color\\color_picker_preview_selector.xml"
     },
     {
-        "merged": "/Users/tianou/vo2.0/vo2.0/uikit/build/intermediates/res/merged/androidTest/debug/color/abc_btn_colored_text_material.xml",
-        "source": "/Users/tianou/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/162af99f07aa7ab3868e16b0e992e25f/res/color/abc_btn_colored_text_material.xml"
+        "merged": "E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\design_error.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\d163af441293557595ae966b2d9d97a9\\res\\color\\design_error.xml"
     },
     {
-        "merged": "/Users/tianou/vo2.0/vo2.0/uikit/build/intermediates/res/merged/androidTest/debug/color/abc_primary_text_material_light.xml",
-        "source": "/Users/tianou/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/162af99f07aa7ab3868e16b0e992e25f/res/color/abc_primary_text_material_light.xml"
+        "merged": "E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_primary_text_disable_only_material_light.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\36461769f90b2604d4b0bb9a3731b6f2\\res\\color\\abc_primary_text_disable_only_material_light.xml"
     },
     {
-        "merged": "/Users/tianou/vo2.0/vo2.0/uikit/build/intermediates/res/merged/androidTest/debug/color/abc_secondary_text_material_dark.xml",
-        "source": "/Users/tianou/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/162af99f07aa7ab3868e16b0e992e25f/res/color/abc_secondary_text_material_dark.xml"
+        "merged": "E:\\Users\\tianou\\vo2.0\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\switch_thumb_material_light.xml",
+        "source": "E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\162af99f07aa7ab3868e16b0e992e25f\\res\\color\\switch_thumb_material_light.xml"
     },
     {
-        "merged": "/Users/tianou/vo2.0/vo2.0/uikit/build/intermediates/res/merged/androidTest/debug/color/abc_tint_default.xml",
-        "source": "/Users/tianou/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/162af99f07aa7ab3868e16b0e992e25f/res/color/abc_tint_default.xml"
+        "merged": "E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_primary_text_disable_only_material_dark.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\36461769f90b2604d4b0bb9a3731b6f2\\res\\color\\abc_primary_text_disable_only_material_dark.xml"
     },
     {
-        "merged": "/Users/tianou/vo2.0/vo2.0/uikit/build/intermediates/res/merged/androidTest/debug/color/abc_primary_text_disable_only_material_light.xml",
-        "source": "/Users/tianou/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/162af99f07aa7ab3868e16b0e992e25f/res/color/abc_primary_text_disable_only_material_light.xml"
+        "merged": "E:\\Users\\tianou\\vo2.0\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\switch_thumb_material_dark.xml",
+        "source": "E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\162af99f07aa7ab3868e16b0e992e25f\\res\\color\\switch_thumb_material_dark.xml"
     },
     {
-        "merged": "/Users/tianou/vo2.0/vo2.0/uikit/build/intermediates/res/merged/androidTest/debug/color/abc_primary_text_disable_only_material_dark.xml",
-        "source": "/Users/tianou/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/162af99f07aa7ab3868e16b0e992e25f/res/color/abc_primary_text_disable_only_material_dark.xml"
+        "merged": "E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_tint_spinner.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\36461769f90b2604d4b0bb9a3731b6f2\\res\\color\\abc_tint_spinner.xml"
     },
     {
-        "merged": "/Users/tianou/vo2.0/vo2.0/uikit/build/intermediates/res/merged/androidTest/debug/color/abc_tint_btn_checkable.xml",
-        "source": "/Users/tianou/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/162af99f07aa7ab3868e16b0e992e25f/res/color/abc_tint_btn_checkable.xml"
+        "merged": "E:\\Users\\tianou\\vo2.0\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\design_tint_password_toggle.xml",
+        "source": "E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\2dabd34852044fb48f3bc09bd818b78f\\res\\color\\design_tint_password_toggle.xml"
     },
     {
-        "merged": "/Users/tianou/vo2.0/vo2.0/uikit/build/intermediates/res/merged/androidTest/debug/color/abc_secondary_text_material_light.xml",
-        "source": "/Users/tianou/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/162af99f07aa7ab3868e16b0e992e25f/res/color/abc_secondary_text_material_light.xml"
+        "merged": "E:\\Users\\tianou\\vo2.0\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_tint_default.xml",
+        "source": "E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\162af99f07aa7ab3868e16b0e992e25f\\res\\color\\abc_tint_default.xml"
     },
     {
-        "merged": "/Users/tianou/vo2.0/vo2.0/uikit/build/intermediates/res/merged/androidTest/debug/color/abc_tint_switch_track.xml",
-        "source": "/Users/tianou/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/162af99f07aa7ab3868e16b0e992e25f/res/color/abc_tint_switch_track.xml"
+        "merged": "E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_tint_default.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\36461769f90b2604d4b0bb9a3731b6f2\\res\\color\\abc_tint_default.xml"
     },
     {
-        "merged": "/Users/tianou/vo2.0/vo2.0/uikit/build/intermediates/res/merged/androidTest/debug/color/abc_tint_edittext.xml",
-        "source": "/Users/tianou/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/162af99f07aa7ab3868e16b0e992e25f/res/color/abc_tint_edittext.xml"
+        "merged": "E:\\Users\\tianou\\vo2.0\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_tint_edittext.xml",
+        "source": "E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\162af99f07aa7ab3868e16b0e992e25f\\res\\color\\abc_tint_edittext.xml"
     },
     {
-        "merged": "/Users/tianou/vo2.0/vo2.0/uikit/build/intermediates/res/merged/androidTest/debug/color/color_picker_preview_selector.xml",
-        "source": "/Users/tianou/vo2.0/vo2.0/uikit/build/intermediates/bundles/debug/res/color/color_picker_preview_selector.xml"
+        "merged": "E:\\Users\\tianou\\vo2.0\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_btn_colored_text_material.xml",
+        "source": "E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\162af99f07aa7ab3868e16b0e992e25f\\res\\color\\abc_btn_colored_text_material.xml"
     },
     {
-        "merged": "/Users/tianou/vo2.0/vo2.0/uikit/build/intermediates/res/merged/androidTest/debug/color/abc_tint_spinner.xml",
-        "source": "/Users/tianou/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/162af99f07aa7ab3868e16b0e992e25f/res/color/abc_tint_spinner.xml"
+        "merged": "E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_tint_edittext.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\36461769f90b2604d4b0bb9a3731b6f2\\res\\color\\abc_tint_edittext.xml"
     },
     {
-        "merged": "/Users/tianou/vo2.0/vo2.0/uikit/build/intermediates/res/merged/androidTest/debug/color/abc_primary_text_material_dark.xml",
-        "source": "/Users/tianou/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/162af99f07aa7ab3868e16b0e992e25f/res/color/abc_primary_text_material_dark.xml"
+        "merged": "E:\\Users\\tianou\\vo2.0\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\design_error.xml",
+        "source": "E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\2dabd34852044fb48f3bc09bd818b78f\\res\\color\\design_error.xml"
     },
     {
-        "merged": "/Users/tianou/vo2.0/vo2.0/uikit/build/intermediates/res/merged/androidTest/debug/color/switch_thumb_material_dark.xml",
-        "source": "/Users/tianou/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/162af99f07aa7ab3868e16b0e992e25f/res/color/switch_thumb_material_dark.xml"
+        "merged": "E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_secondary_text_material_light.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\36461769f90b2604d4b0bb9a3731b6f2\\res\\color\\abc_secondary_text_material_light.xml"
     },
     {
-        "merged": "/Users/tianou/vo2.0/vo2.0/uikit/build/intermediates/res/merged/androidTest/debug/color/color_green_text_view_selector.xml",
-        "source": "/Users/tianou/vo2.0/vo2.0/uikit/build/intermediates/bundles/debug/res/color/color_green_text_view_selector.xml"
+        "merged": "E:\\Users\\tianou\\vo2.0\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_secondary_text_material_light.xml",
+        "source": "E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\162af99f07aa7ab3868e16b0e992e25f\\res\\color\\abc_secondary_text_material_light.xml"
     },
     {
-        "merged": "/Users/tianou/vo2.0/vo2.0/uikit/build/intermediates/res/merged/androidTest/debug/color/abc_btn_colored_borderless_text_material.xml",
-        "source": "/Users/tianou/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/162af99f07aa7ab3868e16b0e992e25f/res/color/abc_btn_colored_borderless_text_material.xml"
+        "merged": "E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_secondary_text_material_dark.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\36461769f90b2604d4b0bb9a3731b6f2\\res\\color\\abc_secondary_text_material_dark.xml"
     },
     {
-        "merged": "/Users/tianou/vo2.0/vo2.0/uikit/build/intermediates/res/merged/androidTest/debug/color/design_error.xml",
-        "source": "/Users/tianou/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/2dabd34852044fb48f3bc09bd818b78f/res/color/design_error.xml"
+        "merged": "E:\\Users\\tianou\\vo2.0\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_primary_text_material_light.xml",
+        "source": "E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\162af99f07aa7ab3868e16b0e992e25f\\res\\color\\abc_primary_text_material_light.xml"
     },
     {
-        "merged": "/Users/tianou/vo2.0/vo2.0/uikit/build/intermediates/res/merged/androidTest/debug/color/abc_hint_foreground_material_light.xml",
-        "source": "/Users/tianou/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/162af99f07aa7ab3868e16b0e992e25f/res/color/abc_hint_foreground_material_light.xml"
+        "merged": "E:\\Users\\tianou\\vo2.0\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_hint_foreground_material_light.xml",
+        "source": "E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\162af99f07aa7ab3868e16b0e992e25f\\res\\color\\abc_hint_foreground_material_light.xml"
     },
     {
-        "merged": "/Users/tianou/vo2.0/vo2.0/uikit/build/intermediates/res/merged/androidTest/debug/color/abc_search_url_text.xml",
-        "source": "/Users/tianou/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/162af99f07aa7ab3868e16b0e992e25f/res/color/abc_search_url_text.xml"
+        "merged": "E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_hint_foreground_material_light.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\36461769f90b2604d4b0bb9a3731b6f2\\res\\color\\abc_hint_foreground_material_light.xml"
     },
     {
-        "merged": "/Users/tianou/vo2.0/vo2.0/uikit/build/intermediates/res/merged/androidTest/debug/color/abc_tint_seek_thumb.xml",
-        "source": "/Users/tianou/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/162af99f07aa7ab3868e16b0e992e25f/res/color/abc_tint_seek_thumb.xml"
+        "merged": "E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_primary_text_material_dark.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\36461769f90b2604d4b0bb9a3731b6f2\\res\\color\\abc_primary_text_material_dark.xml"
+    },
+    {
+        "merged": "E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_search_url_text.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\36461769f90b2604d4b0bb9a3731b6f2\\res\\color\\abc_search_url_text.xml"
+    },
+    {
+        "merged": "E:\\Users\\tianou\\vo2.0\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_btn_colored_borderless_text_material.xml",
+        "source": "E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\162af99f07aa7ab3868e16b0e992e25f\\res\\color\\abc_btn_colored_borderless_text_material.xml"
+    },
+    {
+        "merged": "E:\\Users\\tianou\\vo2.0\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_primary_text_material_dark.xml",
+        "source": "E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\162af99f07aa7ab3868e16b0e992e25f\\res\\color\\abc_primary_text_material_dark.xml"
+    },
+    {
+        "merged": "E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_tint_seek_thumb.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\36461769f90b2604d4b0bb9a3731b6f2\\res\\color\\abc_tint_seek_thumb.xml"
+    },
+    {
+        "merged": "E:\\Users\\tianou\\vo2.0\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_tint_seek_thumb.xml",
+        "source": "E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\162af99f07aa7ab3868e16b0e992e25f\\res\\color\\abc_tint_seek_thumb.xml"
+    },
+    {
+        "merged": "E:\\Users\\tianou\\vo2.0\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_search_url_text.xml",
+        "source": "E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\162af99f07aa7ab3868e16b0e992e25f\\res\\color\\abc_search_url_text.xml"
+    },
+    {
+        "merged": "E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_tint_btn_checkable.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\36461769f90b2604d4b0bb9a3731b6f2\\res\\color\\abc_tint_btn_checkable.xml"
+    },
+    {
+        "merged": "E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_hint_foreground_material_dark.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\36461769f90b2604d4b0bb9a3731b6f2\\res\\color\\abc_hint_foreground_material_dark.xml"
+    },
+    {
+        "merged": "E:\\Users\\tianou\\vo2.0\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_secondary_text_material_dark.xml",
+        "source": "E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\162af99f07aa7ab3868e16b0e992e25f\\res\\color\\abc_secondary_text_material_dark.xml"
+    },
+    {
+        "merged": "E:\\Users\\tianou\\vo2.0\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_primary_text_disable_only_material_light.xml",
+        "source": "E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\162af99f07aa7ab3868e16b0e992e25f\\res\\color\\abc_primary_text_disable_only_material_light.xml"
+    },
+    {
+        "merged": "E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_btn_colored_borderless_text_material.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\36461769f90b2604d4b0bb9a3731b6f2\\res\\color\\abc_btn_colored_borderless_text_material.xml"
+    },
+    {
+        "merged": "E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\design_tint_password_toggle.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\d163af441293557595ae966b2d9d97a9\\res\\color\\design_tint_password_toggle.xml"
+    },
+    {
+        "merged": "E:\\Users\\tianou\\vo2.0\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_hint_foreground_material_dark.xml",
+        "source": "E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\162af99f07aa7ab3868e16b0e992e25f\\res\\color\\abc_hint_foreground_material_dark.xml"
+    },
+    {
+        "merged": "E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\color_picker_preview_selector.xml",
+        "source": "E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\color\\color_picker_preview_selector.xml"
+    },
+    {
+        "merged": "E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_tint_switch_track.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\36461769f90b2604d4b0bb9a3731b6f2\\res\\color\\abc_tint_switch_track.xml"
+    },
+    {
+        "merged": "E:\\Users\\tianou\\vo2.0\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\color_green_text_view_selector.xml",
+        "source": "E:\\Users\\tianou\\vo2.0\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\color\\color_green_text_view_selector.xml"
+    },
+    {
+        "merged": "E:\\Users\\tianou\\vo2.0\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_tint_switch_track.xml",
+        "source": "E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\162af99f07aa7ab3868e16b0e992e25f\\res\\color\\abc_tint_switch_track.xml"
+    },
+    {
+        "merged": "E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\switch_thumb_material_dark.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\36461769f90b2604d4b0bb9a3731b6f2\\res\\color\\switch_thumb_material_dark.xml"
+    },
+    {
+        "merged": "E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_btn_colored_text_material.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\36461769f90b2604d4b0bb9a3731b6f2\\res\\color\\abc_btn_colored_text_material.xml"
+    },
+    {
+        "merged": "E:\\Users\\tianou\\vo2.0\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_primary_text_disable_only_material_dark.xml",
+        "source": "E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\162af99f07aa7ab3868e16b0e992e25f\\res\\color\\abc_primary_text_disable_only_material_dark.xml"
+    },
+    {
+        "merged": "E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\switch_thumb_material_light.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\36461769f90b2604d4b0bb9a3731b6f2\\res\\color\\switch_thumb_material_light.xml"
+    },
+    {
+        "merged": "E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\color_green_text_view_selector.xml",
+        "source": "E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\color\\color_green_text_view_selector.xml"
+    },
+    {
+        "merged": "E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_primary_text_material_light.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\36461769f90b2604d4b0bb9a3731b6f2\\res\\color\\abc_primary_text_material_light.xml"
     }
 ]

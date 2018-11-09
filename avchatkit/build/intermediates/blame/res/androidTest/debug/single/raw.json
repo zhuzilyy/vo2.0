@@ -1,22 +1,42 @@
 [
     {
-        "merged": "/Users/tianou/vo2.0/vo2.0/avchatkit/build/intermediates/res/merged/androidTest/debug/raw/avchat_no_response.mp3",
-        "source": "/Users/tianou/vo2.0/vo2.0/avchatkit/build/intermediates/bundles/debug/res/raw/avchat_no_response.mp3"
+        "merged": "E:\\Users\\tianou\\vo2.0\\vo2.0\\avchatkit\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\avchat_connecting.mp3",
+        "source": "E:\\Users\\tianou\\vo2.0\\vo2.0\\avchatkit\\build\\intermediates\\bundles\\debug\\res\\raw\\avchat_connecting.mp3"
     },
     {
-        "merged": "/Users/tianou/vo2.0/vo2.0/avchatkit/build/intermediates/res/merged/androidTest/debug/raw/avchat_peer_reject.mp3",
-        "source": "/Users/tianou/vo2.0/vo2.0/avchatkit/build/intermediates/bundles/debug/res/raw/avchat_peer_reject.mp3"
+        "merged": "E:\\studioWorkspace\\vo2.0\\avchatkit\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\avchat_peer_busy.mp3",
+        "source": "E:\\studioWorkspace\\vo2.0\\avchatkit\\build\\intermediates\\bundles\\debug\\res\\raw\\avchat_peer_busy.mp3"
     },
     {
-        "merged": "/Users/tianou/vo2.0/vo2.0/avchatkit/build/intermediates/res/merged/androidTest/debug/raw/avchat_connecting.mp3",
-        "source": "/Users/tianou/vo2.0/vo2.0/avchatkit/build/intermediates/bundles/debug/res/raw/avchat_connecting.mp3"
+        "merged": "E:\\Users\\tianou\\vo2.0\\vo2.0\\avchatkit\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\avchat_peer_reject.mp3",
+        "source": "E:\\Users\\tianou\\vo2.0\\vo2.0\\avchatkit\\build\\intermediates\\bundles\\debug\\res\\raw\\avchat_peer_reject.mp3"
     },
     {
-        "merged": "/Users/tianou/vo2.0/vo2.0/avchatkit/build/intermediates/res/merged/androidTest/debug/raw/avchat_ring.mp3",
-        "source": "/Users/tianou/vo2.0/vo2.0/avchatkit/build/intermediates/bundles/debug/res/raw/avchat_ring.mp3"
+        "merged": "E:\\studioWorkspace\\vo2.0\\avchatkit\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\avchat_connecting.mp3",
+        "source": "E:\\studioWorkspace\\vo2.0\\avchatkit\\build\\intermediates\\bundles\\debug\\res\\raw\\avchat_connecting.mp3"
     },
     {
-        "merged": "/Users/tianou/vo2.0/vo2.0/avchatkit/build/intermediates/res/merged/androidTest/debug/raw/avchat_peer_busy.mp3",
-        "source": "/Users/tianou/vo2.0/vo2.0/avchatkit/build/intermediates/bundles/debug/res/raw/avchat_peer_busy.mp3"
+        "merged": "E:\\studioWorkspace\\vo2.0\\avchatkit\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\avchat_no_response.mp3",
+        "source": "E:\\studioWorkspace\\vo2.0\\avchatkit\\build\\intermediates\\bundles\\debug\\res\\raw\\avchat_no_response.mp3"
+    },
+    {
+        "merged": "E:\\studioWorkspace\\vo2.0\\avchatkit\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\avchat_ring.mp3",
+        "source": "E:\\studioWorkspace\\vo2.0\\avchatkit\\build\\intermediates\\bundles\\debug\\res\\raw\\avchat_ring.mp3"
+    },
+    {
+        "merged": "E:\\studioWorkspace\\vo2.0\\avchatkit\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\avchat_peer_reject.mp3",
+        "source": "E:\\studioWorkspace\\vo2.0\\avchatkit\\build\\intermediates\\bundles\\debug\\res\\raw\\avchat_peer_reject.mp3"
+    },
+    {
+        "merged": "E:\\Users\\tianou\\vo2.0\\vo2.0\\avchatkit\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\avchat_ring.mp3",
+        "source": "E:\\Users\\tianou\\vo2.0\\vo2.0\\avchatkit\\build\\intermediates\\bundles\\debug\\res\\raw\\avchat_ring.mp3"
+    },
+    {
+        "merged": "E:\\Users\\tianou\\vo2.0\\vo2.0\\avchatkit\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\avchat_peer_busy.mp3",
+        "source": "E:\\Users\\tianou\\vo2.0\\vo2.0\\avchatkit\\build\\intermediates\\bundles\\debug\\res\\raw\\avchat_peer_busy.mp3"
+    },
+    {
+        "merged": "E:\\Users\\tianou\\vo2.0\\vo2.0\\avchatkit\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\avchat_no_response.mp3",
+        "source": "E:\\Users\\tianou\\vo2.0\\vo2.0\\avchatkit\\build\\intermediates\\bundles\\debug\\res\\raw\\avchat_no_response.mp3"
     }
 ]

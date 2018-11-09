@@ -1,6 +1,10 @@
 [
     {
-        "merged": "/Users/tianou/vo2.0/vo2.0/jrmfRpWalletlib/build/intermediates/res/merged/androidTest/debug/raw/njrmf360.crt",
-        "source": "/Users/tianou/vo2.0/vo2.0/jrmfRpWalletlib/build/intermediates/bundles/debug/res/raw/njrmf360.crt"
+        "merged": "E:\\studioWorkspace\\vo2.0\\jrmfRpWalletlib\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\njrmf360.crt",
+        "source": "E:\\studioWorkspace\\vo2.0\\jrmfRpWalletlib\\build\\intermediates\\bundles\\debug\\res\\raw\\njrmf360.crt"
+    },
+    {
+        "merged": "E:\\Users\\tianou\\vo2.0\\vo2.0\\jrmfRpWalletlib\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\njrmf360.crt",
+        "source": "E:\\Users\\tianou\\vo2.0\\vo2.0\\jrmfRpWalletlib\\build\\intermediates\\bundles\\debug\\res\\raw\\njrmf360.crt"
     }
 ]

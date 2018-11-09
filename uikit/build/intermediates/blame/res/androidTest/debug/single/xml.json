@@ -1,6 +1,10 @@
 [
     {
-        "merged": "/Users/tianou/vo2.0/vo2.0/uikit/build/intermediates/res/merged/androidTest/debug/xml/provider_paths.xml",
-        "source": "/Users/tianou/vo2.0/vo2.0/uikit/build/intermediates/bundles/debug/res/xml/provider_paths.xml"
+        "merged": "E:\\Users\\tianou\\vo2.0\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\xml\\provider_paths.xml",
+        "source": "E:\\Users\\tianou\\vo2.0\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\xml\\provider_paths.xml"
+    },
+    {
+        "merged": "E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\xml\\provider_paths.xml",
+        "source": "E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\xml\\provider_paths.xml"
     }
 ]

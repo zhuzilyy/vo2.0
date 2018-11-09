@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/tianou/vo2.0/vo2.0/uikit/build/intermediates/res/merged/androidTest/debug/values-v14/values-v14.xml",
+            "outputFile": "E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\values-v14\\values-v14.xml",
             "map": [
                 {
-                    "source": "/Users/tianou/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/162af99f07aa7ab3868e16b0e992e25f/res/values-v14/values-v14.xml",
+                    "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\36461769f90b2604d4b0bb9a3731b6f2\\res\\values-v14\\values-v14.xml",
                     "from": {
                         "startLines": "2,7,8,9,15",
                         "startColumns": "4,4,4,4,4",
@@ -17,10 +17,42 @@
             ]
         },
         {
-            "outputFile": "/Users/tianou/vo2.0/vo2.0/uikit/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values-v14/values-v14.xml",
+            "outputFile": "E:\\Users\\tianou\\vo2.0\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\values-v14\\values-v14.xml",
             "map": [
                 {
-                    "source": "/Users/tianou/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/162af99f07aa7ab3868e16b0e992e25f/res/values-v14/values-v14.xml",
+                    "source": "E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\162af99f07aa7ab3868e16b0e992e25f\\res\\values-v14\\values-v14.xml",
+                    "from": {
+                        "startLines": "2,7,8,9,15",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "55,331,402,485,895",
+                        "endLines": "6,7,8,14,20",
+                        "endColumns": "12,70,82,12,12",
+                        "endOffsets": "326,397,480,890,1312"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-v14\\values-v14.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\36461769f90b2604d4b0bb9a3731b6f2\\res\\values-v14\\values-v14.xml",
+                    "from": {
+                        "startLines": "2,7,8,9,15",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "55,331,402,485,895",
+                        "endLines": "6,7,8,14,20",
+                        "endColumns": "12,70,82,12,12",
+                        "endOffsets": "326,397,480,890,1312"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "E:\\Users\\tianou\\vo2.0\\vo2.0\\uikit\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-v14\\values-v14.xml",
+            "map": [
+                {
+                    "source": "E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\162af99f07aa7ab3868e16b0e992e25f\\res\\values-v14\\values-v14.xml",
                     "from": {
                         "startLines": "2,7,8,9,15",
                         "startColumns": "4,4,4,4,4",

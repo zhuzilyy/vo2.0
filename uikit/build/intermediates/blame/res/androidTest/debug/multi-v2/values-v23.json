@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/tianou/vo2.0/vo2.0/uikit/build/intermediates/res/merged/androidTest/debug/values-v23/values-v23.xml",
+            "outputFile": "E:\\Users\\tianou\\vo2.0\\vo2.0\\uikit\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-v23\\values-v23.xml",
             "map": [
                 {
-                    "source": "/Users/tianou/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/162af99f07aa7ab3868e16b0e992e25f/res/values-v23/values-v23.xml",
+                    "source": "E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\162af99f07aa7ab3868e16b0e992e25f\\res\\values-v23\\values-v23.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,19,32,33,34,35,36",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
@@ -17,10 +17,42 @@
             ]
         },
         {
-            "outputFile": "/Users/tianou/vo2.0/vo2.0/uikit/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values-v23/values-v23.xml",
+            "outputFile": "E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\values-v23\\values-v23.xml",
             "map": [
                 {
-                    "source": "/Users/tianou/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/162af99f07aa7ab3868e16b0e992e25f/res/values-v23/values-v23.xml",
+                    "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\36461769f90b2604d4b0bb9a3731b6f2\\res\\values-v23\\values-v23.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,19,32,33,34,35,36",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,190,325,400,487,1277,2079,2206,2311,2426,2533",
+                        "endLines": "2,3,4,5,18,31,32,33,34,35,36",
+                        "endColumns": "134,134,74,86,12,12,126,104,114,106,112",
+                        "endOffsets": "185,320,395,482,1272,2074,2201,2306,2421,2528,2641"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-v23\\values-v23.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\36461769f90b2604d4b0bb9a3731b6f2\\res\\values-v23\\values-v23.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,19,32,33,34,35,36",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,190,325,400,487,1277,2079,2206,2311,2426,2533",
+                        "endLines": "2,3,4,5,18,31,32,33,34,35,36",
+                        "endColumns": "134,134,74,86,12,12,126,104,114,106,112",
+                        "endOffsets": "185,320,395,482,1272,2074,2201,2306,2421,2528,2641"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "E:\\Users\\tianou\\vo2.0\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\values-v23\\values-v23.xml",
+            "map": [
+                {
+                    "source": "E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\162af99f07aa7ab3868e16b0e992e25f\\res\\values-v23\\values-v23.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,19,32,33,34,35,36",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
