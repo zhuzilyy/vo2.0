@@ -49,6 +49,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
 /**
  * 用户资料页面
  * Created by huangjun on 2015/8/11.
@@ -87,6 +91,8 @@ public class UserProfileActivity extends UI {
     private SwitchButton blackSwitch;
     private SwitchButton noticeSwitch;
     private Map<String, Boolean> toggleStateMap;
+    @BindView(R.id.tv_title)
+    TextView tv_title;
 
     public static void start(Context context, String account) {
         Intent intent = new Intent();
@@ -100,7 +106,7 @@ public class UserProfileActivity extends UI {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.user_profile_activity);
-
+        ButterKnife.bind(this);
         ToolBarOptions options = new NimToolBarOptions();
         options.titleId = R.string.user_profile;
         setToolBar(R.id.toolbar, options);
@@ -111,6 +117,19 @@ public class UserProfileActivity extends UI {
 
         findViews();
         registerObserver(true);
+        initData();
+    }
+
+    private void initData() {
+        tv_title.setText("个人名片");
+    }
+    @OnClick({R.id.iv_back})
+    public void click(View view){
+        switch(view.getId()){
+            case R.id.iv_back:
+                finish();
+                break;
+        }
     }
 
     @Override

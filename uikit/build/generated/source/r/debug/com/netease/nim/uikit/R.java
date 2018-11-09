@@ -1780,6 +1780,10 @@ public final class R {
     public static final class menu {
         public static int nim_contacts_search_menu = 0x7f100001;
     }
+    public static final class mipmap {
+        public static int back_ = 0x7f110001;
+        public static int create_chattingroom = 0x7f110002;
+    }
     public static final class raw {
         public static int audio_end_tip = 0x7f140001;
     }

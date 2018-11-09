@@ -12,6 +12,7 @@
         android:orientation="vertical">
 
         <android.support.design.widget.AppBarLayout
+            android:visibility="gone"
             android:id="@+id/app_bar_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -28,6 +29,7 @@
                 <include layout="@layout/nim_action_bar_right_clickable_tv" />
             </android.support.v7.widget.Toolbar>
         </android.support.design.widget.AppBarLayout>
+        <include layout="@layout/layout_title"/>
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -61,7 +63,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/black"
-                        android:textSize="17sp" />
+                        android:textSize="15sp" />
 
                     <ImageView
                         android:id="@+id/gender_img"
@@ -78,7 +80,7 @@
                     android:layout_height="0dp"
                     android:layout_weight="1"
                     android:textColor="@color/color_black_ff666666"
-                    android:textSize="15sp" />
+                    android:textSize="14sp" />
 
                 <TextView
                     android:id="@+id/user_nick"
@@ -86,7 +88,7 @@
                     android:layout_height="0dp"
                     android:layout_weight="1"
                     android:textColor="@color/color_black_ff666666"
-                    android:textSize="15sp"
+                    android:textSize="14sp"
                     android:visibility="gone" />
             </LinearLayout>
 
@@ -95,7 +97,7 @@
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="2px"
+            android:layout_height="0.5dp"
             android:layout_below="@+id/attribute"
             android:background="@color/color_split_line_d9d9d9" />
 
@@ -144,7 +146,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dip"
-                android:background="@drawable/nim_team_create_btn_selector"
+                android:background="@color/mainColor"
                 android:minHeight="50dp"
                 android:text="@string/begin_chat"
                 android:textColor="@color/white"

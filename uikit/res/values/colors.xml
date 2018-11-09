@@ -49,12 +49,11 @@
     <color name="contact_list_hover">#d9d9d9</color>
     <color name="contact_letter_idx_bg">#33000000</color>
     <color name="contacts_letters_color">#80807c</color>
-    <color name="color_background">#ECF1F5</color>
+    <color name="color_background">#00000000</color>
     <color name="press_mask">#33000000</color>
     <color name="color_grey_ababab">#ababab</color>
     <color name="color_yellow_796413">#796413</color>
     <color name="color_yellow_b39729">#b39729</color>
-
     <!-- setting -->
     <color name="color_black_ff333333">#ff333333</color>
     <color name="color_black_ff666666">#ff666666</color>

@@ -221,7 +221,7 @@ public class SessionHelper {
                     initPopuptWindow(context, view, sessionId, SessionTypeEnum.P2P);
                 }
             };
-            cloudMsgButton.iconId = R.drawable.nim_ic_messge_history;
+           // cloudMsgButton.iconId = R.drawable.nim_ic_messge_history;
 
             SessionCustomization.OptionsButton infoButton = new SessionCustomization.OptionsButton() {
                 @Override
@@ -230,11 +230,8 @@ public class SessionHelper {
                     MessageInfoActivity.startActivity(context, sessionId); //打开聊天信息
                 }
             };
-
-
-            infoButton.iconId = R.drawable.nim_ic_message_actionbar_p2p_add;
-
-            buttons.add(cloudMsgButton);
+            infoButton.iconId = R.mipmap.create_chattingroom;
+            //buttons.add(cloudMsgButton);
             buttons.add(infoButton);
             p2pCustomization.buttons = buttons;
         }

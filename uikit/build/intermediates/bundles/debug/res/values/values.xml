@@ -68,7 +68,7 @@
     <color name="color_aaaaaa_content_text">#ffaaaaaa</color>
     <color name="color_activity_blue_bg">#f7389fff</color>
     <color name="color_b3b3b3">#b3b3b3</color>
-    <color name="color_background">#ECF1F5</color>
+    <color name="color_background">#00000000</color>
     <color name="color_black_000000_88_transparent">#e0000000</color>
     <color name="color_black_333333">#333333</color>
     <color name="color_black_333333_90_transparent">#e5333333</color>
@@ -428,7 +428,7 @@
     <string name="withdrawn_msg">撤 回</string>
     <string name="without_content">暂无</string>
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
+        
         <item name="colorPrimary">@color/white</item>
         <item name="colorPrimaryDark">@color/color_gray_d9d9d9</item>
         <item name="colorAccent">@color/color_blue_0888ff</item>
@@ -444,7 +444,7 @@
         <item name="windowNoTitle">true</item>
     </style>
     <style name="DarkTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
+        
         <item name="colorPrimary">@color/color_black_333333</item>
         <item name="colorPrimaryDark">@color/black</item>
         <item name="colorAccent">@color/color_blue_0888ff</item>
@@ -519,17 +519,17 @@
     </style>
     <style name="easy_dialog_style" parent="@android:style/Theme.Dialog">
         <item name="android:windowFrame">@null</item>
-        <!-- 边框 -->
+        
         <item name="android:windowIsFloating">true</item>
-        <!-- 是否浮现在activity之上 -->
+        
         <item name="android:windowIsTranslucent">true</item>
-        <!-- 半透明 -->
+        
         <item name="android:windowNoTitle">true</item>
-        <!-- 无标题 -->
+        
         <item name="android:windowBackground">@color/transparent</item>
-        <!-- 背景透明 -->
+        
         <item name="android:backgroundDimEnabled">true</item>
-        <!-- 后面的activity变暗 -->
+        
     </style>
     <style name="edit_text_style">
         <item name="android:textCursorDrawable">@color/black</item>
@@ -544,7 +544,7 @@
     <style name="horizontal_light_thin_divider">
         <item name="android:layout_height">2px</item>
         <item name="android:layout_width">fill_parent</item>
-        <item name="android:background">@color/color_gray_d9d9d9</item>
+        <item name="android:background">@color/common_line</item>
     </style>
     <style name="list_view" parent="@android:style/Widget.ListView">
         <item name="android:scrollbarThumbVertical">@drawable/nim_scrollbar_handle_holo_dark</item>

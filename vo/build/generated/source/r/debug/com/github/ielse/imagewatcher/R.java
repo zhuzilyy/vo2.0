@@ -736,7 +736,7 @@ public final class R {
         public static final int tooltip = 0x7f0401cc;
     }
     public static final class mipmap {
-        public static final int error_picture = 0x7f03001a;
+        public static final int error_picture = 0x7f03001b;
     }
     public static final class string {
         public static final int abc_action_bar_home_description = 0x7f090000;

@@ -29,6 +29,10 @@ import com.netease.nimlib.sdk.team.model.CreateTeamResult;
 
 import java.util.ArrayList;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
 /**
  * Created by hzxuwen on 2015/10/13.
  */
@@ -41,7 +45,8 @@ public class MessageInfoActivity extends UI {
     private String account;
     // view
     private SwitchButton switchButton;
-
+    @BindView(R.id.tv_title)
+    TextView tv_title;
     public static void startActivity(Context context, String account) {
         Intent intent = new Intent();
         intent.setClass(context, MessageInfoActivity.class);
@@ -53,15 +58,30 @@ public class MessageInfoActivity extends UI {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.message_info_activity);
+        ButterKnife.bind(this);
         addActivity(this);
 
         ToolBarOptions options = new NimToolBarOptions();
         options.titleId = R.string.message_info;
-        options.navigateId = R.drawable.actionbar_dark_back_icon;
+        options.navigateId = R.mipmap.back_;
         setToolBar(R.id.toolbar, options);
 
         account = getIntent().getStringExtra(EXTRA_ACCOUNT);
         findViews();
+        initData();
+    }
+
+
+    private void initData() {
+        tv_title.setText("聊天信息");
+    }
+    @OnClick({R.id.iv_back})
+    public void click(View view){
+        switch (view.getId()){
+            case R.id.iv_back:
+                finish();
+                break;
+        }
     }
 
     @Override
