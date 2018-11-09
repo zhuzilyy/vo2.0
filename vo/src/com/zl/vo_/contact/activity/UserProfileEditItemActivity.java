@@ -40,6 +40,10 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
 /**
  * Created by hzxuwen on 2015/9/14.
  */
@@ -72,6 +76,8 @@ public class UserProfileEditItemActivity extends UI implements View.OnClickListe
     private RelativeLayout birthPickerLayout;
     private TextView birthText;
     private int gender;
+    @BindView(R.id.tv_title)
+    TextView tv_title;
 
     public static final void startActivity(Context context, int key, String data) {
         Intent intent = new Intent();
@@ -88,6 +94,8 @@ public class UserProfileEditItemActivity extends UI implements View.OnClickListe
         if (key == UserConstant.KEY_NICKNAME || key == UserConstant.KEY_PHONE || key == UserConstant.KEY_EMAIL
                 || key == UserConstant.KEY_SIGNATURE || key == UserConstant.KEY_ALIAS) {
             setContentView(R.layout.user_profile_edittext_layout);
+            ButterKnife.bind(this);
+            initData();
             findEditText();
         } else if (key == UserConstant.KEY_GENDER) {
             setContentView(R.layout.user_profile_gender_layout);
@@ -100,6 +108,19 @@ public class UserProfileEditItemActivity extends UI implements View.OnClickListe
         setToolBar(R.id.toolbar, options);
         initActionbar();
         setTitles();
+    }
+    //自己添加的部分
+    private void initData() {
+        tv_title.setText("备注名");
+    }
+    @OnClick({R.id.iv_back})
+    public void click(View view){
+        switch(view.getId()){
+            case R.id.iv_back:
+                finish();
+                showKeyboard(false);
+                break;
+        }
     }
 
     @Override

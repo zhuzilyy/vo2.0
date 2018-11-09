@@ -16,12 +16,13 @@
         android:textSize="16sp"/>
 
     <com.netease.nim.uikit.common.ui.widget.SwitchButton
-        android:layout_marginRight="@dimen/isetting_item_padding_right"
+        android:layout_marginRight="15dp"
         android:id="@+id/user_profile_toggle"
         android:layout_width="58dip"
         android:layout_height="36.67dip"
         android:layout_alignParentRight="true"
-        android:layout_centerVertical="true"/>
+        android:layout_centerVertical="true"
+        />
 
     <View
         android:id="@+id/line"
