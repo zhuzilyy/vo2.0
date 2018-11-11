@@ -2,6 +2,7 @@ package com.netease.nim.uikit.common.ui.dialog;
 
 import android.app.Dialog;
 import android.content.Context;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
@@ -63,10 +64,17 @@ public class MenuDialog extends Dialog implements View.OnClickListener {
         if (selectMode) {
             itemViews = new ArrayList<>();
         }
-
         View itemView;
         for (int i = 0; i < btnNames.size(); i++) {
             itemView = View.inflate(context, R.layout.nim_menu_dialog_item, null);
+          /*  *//*第一个条目*//*
+            if (i==0){
+                itemView.setBackgroundResource(R.drawable.shape_first_item);
+            }
+            *//*最后一个条目*//*
+            if (i==btnNames.size()-1){
+                itemView.setBackgroundColor(Color.parseColor("#ff0000"));
+            }*/
             ((TextView) itemView.findViewById(R.id.menu_button)).setText(btnNames.get(i));
             itemView.setTag(i);
             itemView.setOnClickListener(this);

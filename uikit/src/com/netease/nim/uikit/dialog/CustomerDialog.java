@@ -40,7 +40,6 @@ public class CustomerDialog extends Dialog{
         initViews();
         initData();
     }
-
     private void initViews() {
         tv_dialogTitle=findViewById(R.id.tv_dialogTitle);
         tv_dialogContent=findViewById(R.id.tv_dialogContent);

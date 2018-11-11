@@ -1154,9 +1154,10 @@ public final class R {
         public static int shape_cursor = 0x7f090129;
         public static int shape_customer_dialog = 0x7f09012a;
         public static int shape_dialog_corner = 0x7f09012b;
-        public static int tooltip_frame_dark = 0x7f09012c;
-        public static int tooltip_frame_light = 0x7f09012d;
-        public static int zi = 0x7f09012e;
+        public static int shape_first_item = 0x7f09012c;
+        public static int tooltip_frame_dark = 0x7f09012d;
+        public static int tooltip_frame_light = 0x7f09012e;
+        public static int zi = 0x7f09012f;
     }
     public static final class id {
         public static int BaseQuickAdapter_databinding_support = 0x7f0c0001;

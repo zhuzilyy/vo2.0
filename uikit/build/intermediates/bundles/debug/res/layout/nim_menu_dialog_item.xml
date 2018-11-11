@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 android:id="@+id/menu_button_click_layout"
-                android:layout_width="match_parent"
+                android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:clickable="true"
-                android:background="@drawable/nim_list_item_selector"
                 android:orientation="vertical">
     <View
         android:id="@+id/divider_line"
         style="@style/horizontal_light_thin_divider"
        />
-
     <TextView
         android:id="@+id/menu_button"
         style="@style/dialog_button_text_style"
