@@ -101,10 +101,10 @@ public abstract class UI extends AppCompatActivity {
     public void setToolBar(int toolBarId, ToolBarOptions options) {
         toolbar = (Toolbar) findViewById(toolBarId);
         if (options.titleId != 0) {
-            toolbar.setTitle(options.titleId);
+            //toolbar.setTitle(options.titleId);
         }
         if (!TextUtils.isEmpty(options.titleString)) {
-            toolbar.setTitle(options.titleString);
+            //toolbar.setTitle(options.titleString);
         }
         if (options.logoId != 0) {
           //  toolbar.setLogo(options.logoId);

@@ -6,6 +6,8 @@ import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.netease.nim.uikit.R;
 import com.netease.nim.uikit.api.wrapper.NimToolBarOptions;
@@ -25,7 +27,8 @@ public class CropImageActivity extends UI {
     private String filePath;
 
     private CropImageView cropImageView;
-
+    private TextView tv_title;
+    private ImageView iv_back;
     public static void startForData(Activity activity, String srcFile, int outputX, int outputY, int requestCode) {
         Intent intent = new Intent(activity, CropImageActivity.class);
         intent.putExtra(Extras.EXTRA_SRC_FILE, srcFile);
@@ -53,6 +56,16 @@ public class CropImageActivity extends UI {
         ToolBarOptions options = new NimToolBarOptions();
         options.titleId = R.string.crop;
         setToolBar(R.id.toolbar, options);
+        tv_title=findView(R.id.tv_title);
+        iv_back=findView(R.id.iv_back);
+        tv_title.setText("裁剪");
+        iv_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
+
 
         processIntent();
 

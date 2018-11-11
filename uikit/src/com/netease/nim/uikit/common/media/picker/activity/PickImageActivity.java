@@ -11,6 +11,9 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.provider.MediaStore.Images;
 import android.text.TextUtils;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.netease.nim.uikit.R;
@@ -40,7 +43,8 @@ public class PickImageActivity extends UI {
     private static final int REQUEST_CODE_CAMERA = FROM_CAMERA;
 
     private boolean inited = false;
-
+    private TextView tv_title;
+    private ImageView iv_back;
     public static void start(Activity activity, int requestCode, int from, String outPath) {
         Intent intent = new Intent(activity, PickImageActivity.class);
         intent.putExtra(Extras.EXTRA_FROM, from);
@@ -69,6 +73,16 @@ public class PickImageActivity extends UI {
         setContentView(R.layout.nim_pick_image_activity);
         ToolBarOptions options = new NimToolBarOptions();
         setToolBar(R.id.toolbar, options);
+      /*  tv_title=findViewById(R.id.tv_title);
+        iv_back=findViewById(R.id.iv_back);
+        tv_title.setText("相册");
+        iv_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });*/
+
     }
 
     @Override
@@ -146,7 +160,6 @@ public class PickImageActivity extends UI {
             finish();
         }
     }
-
     private Intent pickIntent() {
         Intent intent = getIntent();
         boolean mutiSelect = intent.getBooleanExtra(Extras.EXTRA_MUTI_SELECT_MODE, false);

@@ -430,7 +430,7 @@
     <string name="withdrawn_msg">撤 回</string>
     <string name="without_content">暂无</string>
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        
+        <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/white</item>
         <item name="colorPrimaryDark">@color/color_gray_d9d9d9</item>
         <item name="colorAccent">@color/color_blue_0888ff</item>
@@ -446,7 +446,7 @@
         <item name="windowNoTitle">true</item>
     </style>
     <style name="DarkTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        
+        <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/color_black_333333</item>
         <item name="colorPrimaryDark">@color/black</item>
         <item name="colorAccent">@color/color_blue_0888ff</item>
@@ -460,7 +460,7 @@
         <item name="android:textSize">10sp</item>
     </style>
     <style name="Toolbar.TitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
-        <item name="android:textSize">16sp</item>
+        <item name="android:textSize">0sp</item>
     </style>
     <style name="blue_bottom_line_edit_text_style" parent="@android:style/Widget.EditText">
         <item name="android:background">@drawable/nim_blue_edit_text_bg</item>
@@ -507,9 +507,7 @@
         <item name="android:textSize">@dimen/big_text_size</item>
         <item name="android:textColor">@color/mainColor</item>
         <item name="android:textStyle">bold</item>
-     <!--   <item name="android:paddingLeft">@dimen/dialog_text_margin_horizontal</item>
-        <item name="android:paddingRight">@dimen/dialog_text_margin_horizontal</item>
-        -->
+     
         <item name="android:paddingTop">@dimen/dialog_padding_vertical</item>
         <item name="android:paddingBottom">@dimen/dialog_padding_vertical</item>
     </style>
@@ -522,17 +520,17 @@
     </style>
     <style name="easy_dialog_style" parent="@android:style/Theme.Dialog">
         <item name="android:windowFrame">@null</item>
-        <!-- 边框 -->
+        
         <item name="android:windowIsFloating">true</item>
-        <!-- 是否浮现在activity之上 -->
+        
         <item name="android:windowIsTranslucent">true</item>
-        <!-- 半透明 -->
+        
         <item name="android:windowNoTitle">true</item>
-        <!-- 无标题 -->
+        
         <item name="android:windowBackground">@color/transparent</item>
-        <!-- 背景透明 -->
+        
         <item name="android:backgroundDimEnabled">true</item>
-        <!-- 后面的activity变暗 -->
+        
     </style>
     <style name="edit_text_style">
         <item name="android:textCursorDrawable">@color/black</item>

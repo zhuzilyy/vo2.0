@@ -96,7 +96,7 @@
         <item name="android:paddingRight">10dp</item>
         <item name="android:paddingLeft">10dp</item>
     </style><style name="Toolbar.TitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
-        <item name="android:textSize">16sp</item>
+        <item name="android:textSize">0sp</item>
     </style><style name="Toolbar.SubTitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Subtitle">
         <item name="android:textSize">10sp</item>
     </style><style name="DarkTheme" parent="Theme.AppCompat.Light.DarkActionBar">

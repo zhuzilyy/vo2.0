@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -58,7 +59,8 @@ public class PickerAlbumActivity extends UI implements OnAlbumItemClickListener,
     private int mutiSelectLimitSize;
 
     private boolean isAlbumPage;
-
+    private ImageView iv_back;
+    private TextView tv_title;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -66,7 +68,6 @@ public class PickerAlbumActivity extends UI implements OnAlbumItemClickListener,
 
         ToolBarOptions options = new NimToolBarOptions();
         setToolBar(R.id.toolbar, options);
-
         proceedExtra();
         initActionBar();
         initUI();
@@ -86,6 +87,19 @@ public class PickerAlbumActivity extends UI implements OnAlbumItemClickListener,
     }
 
     private void initUI() {
+        tv_title=findView(R.id.tv_title);
+        iv_back=findView(R.id.iv_back);
+        tv_title.setText("相册");
+
+
+        iv_back.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
+
+
         // bottom bar
         pickerBottomBar = (RelativeLayout) findViewById(R.id.picker_bottombar);
         if (isMutiMode) {

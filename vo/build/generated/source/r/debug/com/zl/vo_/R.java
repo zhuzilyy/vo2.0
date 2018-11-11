@@ -9782,8 +9782,6 @@ containing a value of this type.
         public static final int dialog_message_text_style=0x7f0b01ab;
         public static final int dialog_title_text_style=0x7f0b01ac;
         public static final int easy_dialog_edit_text_style=0x7f0b01ad;
-        /**  后面的activity变暗 
-         */
         public static final int easy_dialog_style=0x7f0b01ae;
         public static final int edit_text_style=0x7f0b01af;
         public static final int global_search_bg=0x7f0b01b0;
