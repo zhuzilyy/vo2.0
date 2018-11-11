@@ -10,6 +10,7 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.AbsListView;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -62,6 +63,8 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+
+import butterknife.BindView;
 
 /**
  * 高级群群资料页
@@ -143,7 +146,8 @@ public class AdvancedTeamInfoActivity extends UI implements
     // state
     private boolean isSelfAdmin = false;
     private boolean isSelfManager = false;
-
+    private TextView tv_title;
+    private ImageView iv_back;
     public static void start(Context context, String tid) {
         Intent intent = new Intent();
         intent.putExtra(EXTRA_ID, tid);
@@ -163,7 +167,6 @@ public class AdvancedTeamInfoActivity extends UI implements
     public Class<? extends TViewHolder> viewHolderAtPosition(int position) {
         return TeamMemberHolder.class;
     }
-
     @Override
     public boolean enabled(int position) {
         return false;
@@ -258,6 +261,15 @@ public class AdvancedTeamInfoActivity extends UI implements
     }
 
     private void findViews() {
+        tv_title=findViewById(R.id.tv_title);
+        iv_back=findViewById(R.id.iv_back);
+        iv_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
+
         headerLayout = findViewById(R.id.team_info_header);
         headerLayout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -443,8 +455,18 @@ public class AdvancedTeamInfoActivity extends UI implements
             }
         });
     }
-
     private void initActionbar() {
+        TextView tv_right=findViewById(R.id.tv_right);
+        tv_right.setVisibility(View.VISIBLE);
+        tv_right.setText("菜单");
+        tv_right.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showRegularTeamMenu();
+            }
+        });
+
+
         TextView toolbarView = findView(R.id.action_bar_right_clickable_textview);
         toolbarView.setText(R.string.menu);
         toolbarView.setOnClickListener(new View.OnClickListener() {
@@ -524,8 +546,9 @@ public class AdvancedTeamInfoActivity extends UI implements
             if (creator.equals(NimUIKit.getAccount())) {
                 isSelfAdmin = true;
             }
-
             setTitle(team.getName());
+            //自己设置的title
+            tv_title.setText(team.getName());
         }
 
         teamHeadImage.loadTeamIconByTeam(team);
@@ -537,6 +560,7 @@ public class AdvancedTeamInfoActivity extends UI implements
         introduceEdit.setText(team.getIntroduce());
         extensionTextView.setText(team.getExtension());
         memberCountText.setText(String.format("共%d人", team.getMemberCount()));
+        tv_title.setText(team.getName()+"("+String.format("共%d人", team.getMemberCount())+")");
 
         setAnnouncement(team.getAnnouncement());
         setAuthenticationText(team.getVerifyType());

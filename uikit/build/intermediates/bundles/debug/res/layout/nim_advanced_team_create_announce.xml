@@ -7,6 +7,7 @@
     android:orientation="vertical">
 
     <android.support.design.widget.AppBarLayout
+        android:visibility="gone"
         android:id="@+id/app_bar_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -23,27 +24,40 @@
             <include layout="@layout/nim_action_bar_right_clickable_tv" />
         </android.support.v7.widget.Toolbar>
     </android.support.design.widget.AppBarLayout>
-
+    <include layout="@layout/layout_title"/>
     <EditText
+        android:textCursorDrawable="@drawable/shape_cursor"
         android:id="@+id/team_announce_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="11dp"
-        android:layout_marginRight="11dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:layout_marginTop="25dp"
         android:padding="5dp"
-        android:background="@drawable/nim_blue_edit_text_bg"
+        android:background="@null"
         android:hint="@string/team_announce_title" />
+    <View
+        android:background="@color/mainColor"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
 
     <EditText
+        android:textCursorDrawable="@color/mainColor"
         android:id="@+id/team_announce_content"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="11dp"
-        android:layout_marginRight="11dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:layout_marginTop="25dp"
         android:padding="5dp"
-        android:background="@drawable/nim_blue_edit_text_bg"
+        android:background="@null"
         android:hint="@string/team_announce_content" />
-
+    <View
+        android:background="@color/mainColor"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
 </LinearLayout>

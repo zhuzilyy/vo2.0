@@ -5,10 +5,12 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -41,7 +43,8 @@ public class TeamPropertySettingActivity extends UI implements View.OnClickListe
     private String teamId;
     private TeamFieldEnum filed;
     private String initialValue;
-
+    private TextView tv_title,tv_right;
+    private ImageView iv_back;
 
     /**
      * 修改群某一个属性公用界面
@@ -82,13 +85,10 @@ public class TeamPropertySettingActivity extends UI implements View.OnClickListe
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.nim_team_name_activity);
-
-        ToolBarOptions options = new NimToolBarOptions();
-        setToolBar(R.id.toolbar, options);
-
         findViews();
+        ToolBarOptions options = new NimToolBarOptions();
+        //setToolBarTitleGravity(R.id.toolbar, options,tv_title);
         parseIntent();
-
         TextView toolbarView = findView(R.id.action_bar_right_clickable_textview);
         toolbarView.setText(R.string.save);
         toolbarView.setOnClickListener(this);
@@ -97,6 +97,7 @@ public class TeamPropertySettingActivity extends UI implements View.OnClickListe
     private void parseIntent() {
         teamId = getIntent().getStringExtra(EXTRA_TID);
         filed = (TeamFieldEnum) getIntent().getSerializableExtra(EXTRA_FIELD);
+        Log.i("tag",filed+"=======filed========");
         initialValue = getIntent().getStringExtra(EXTRA_DATA);
 
         initData();
@@ -106,17 +107,20 @@ public class TeamPropertySettingActivity extends UI implements View.OnClickListe
         int limit = 0;
         switch (filed) {
             case Name:
-                setTitle(R.string.team_settings_name);
+                tv_title.setText(R.string.team_settings_name);
+                //setTitle(R.string.team_settings_name);
                 editText.setHint(R.string.team_settings_set_name);
                 limit = 64;
                 break;
             case Introduce:
-                setTitle(R.string.team_introduce);
+                tv_title.setText(R.string.team_introduce);
+                //setTitle(R.string.team_introduce);
                 editText.setHint(R.string.team_introduce_hint);
                 limit = 512;
                 break;
             case Extension:
-                setTitle(R.string.team_extension);
+                tv_title.setText(R.string.team_extension);
+                //setTitle(R.string.team_extension);
                 editText.setHint(R.string.team_extension_hint);
                 limit = 65535;
                 break;
@@ -130,6 +134,13 @@ public class TeamPropertySettingActivity extends UI implements View.OnClickListe
     }
 
     private void findViews() {
+        tv_title=findViewById(R.id.tv_title);
+        tv_right=findViewById(R.id.tv_right);
+        iv_back=findViewById(R.id.iv_back);
+        tv_right.setVisibility(View.VISIBLE);
+        tv_right.setOnClickListener(this);
+        iv_back.setOnClickListener(this);
+
         editText = (EditText) findViewById(R.id.discussion_name);
         editText.setOnKeyListener(new View.OnKeyListener() {
 
@@ -169,7 +180,12 @@ public class TeamPropertySettingActivity extends UI implements View.OnClickListe
         if (i == R.id.action_bar_right_clickable_textview) {
             showKeyboard(false);
             complete();
-        } else {
+        } else if(i==R.id.tv_right){
+            showKeyboard(false);
+            complete();
+        }else if(i==R.id.iv_back){
+            showKeyboard(false);
+            finish();
         }
     }
 

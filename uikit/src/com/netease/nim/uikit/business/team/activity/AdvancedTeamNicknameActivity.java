@@ -11,6 +11,7 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -36,6 +37,8 @@ public class AdvancedTeamNicknameActivity extends UI implements TextWatcher, Vie
 
     // data
     private String nickName;
+    private TextView tv_title,tv_right;
+    private ImageView iv_back;
 
     public static void start(Context context, String name) {
         Intent intent = new Intent();
@@ -48,6 +51,7 @@ public class AdvancedTeamNicknameActivity extends UI implements TextWatcher, Vie
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.nim_advanced_team_nickname_activity);
+        initData();
 
         ToolBarOptions options = new NimToolBarOptions();
         options.titleId = R.string.team_nickname;
@@ -96,6 +100,29 @@ public class AdvancedTeamNicknameActivity extends UI implements TextWatcher, Vie
 
             @Override
             public void onClick(View v) {
+                showKeyboard(false);
+            }
+        });
+    }
+
+    private void initData() {
+        tv_title=findView(R.id.tv_title);
+        tv_right=findView(R.id.tv_right);
+        iv_back=findView(R.id.iv_back);
+        tv_title.setText("群昵称");
+        tv_right.setText("保存");
+        tv_right.setVisibility(View.VISIBLE);
+        tv_right.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showKeyboard(false);
+                complete();
+            }
+        });
+        iv_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
                 showKeyboard(false);
             }
         });

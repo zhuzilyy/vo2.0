@@ -7,6 +7,7 @@ import android.text.InputFilter;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -42,6 +43,8 @@ public class AdvancedTeamCreateAnnounceActivity extends UI {
     private EditText teamAnnounceTitle;
     private EditText teamAnnounceContent;
     private TextView toolbarView;
+    private TextView tv_title,tv_right;
+    private ImageView iv_back;
 
     public static void startActivityForResult(Activity activity, String teamId, int requestCode) {
         Intent intent = new Intent();
@@ -69,6 +72,25 @@ public class AdvancedTeamCreateAnnounceActivity extends UI {
     }
 
     private void findViews() {
+        tv_title=findViewById(R.id.tv_title);
+        tv_right=findViewById(R.id.tv_right);
+        iv_back=findViewById(R.id.iv_back);
+        tv_right.setVisibility(View.VISIBLE);
+        tv_title.setText("群公告");
+        iv_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showKeyboard(false);
+                finish();
+            }
+        });
+        tv_right.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                requestAnnounceData();
+            }
+        });
+
         teamAnnounceTitle = (EditText) findViewById(R.id.team_announce_title);
         teamAnnounceContent = (EditText) findViewById(R.id.team_announce_content);
         teamAnnounceTitle.setFilters(new InputFilter[]{new InputFilter.LengthFilter(64)});

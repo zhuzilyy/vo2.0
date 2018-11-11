@@ -7,6 +7,8 @@ import android.text.TextUtils;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.AbsListView;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.netease.nim.uikit.R;
 import com.netease.nim.uikit.api.NimUIKit;
@@ -55,6 +57,8 @@ public class AdvancedTeamMemberActivity extends UI implements TAdapterDelegate,
     private boolean isSelfManager = false;
     private boolean isMemberChange = false;
     private UserInfoObserver userInfoObserver;
+    private TextView tv_title;
+    private ImageView iv_back;
 
     public static void startActivityForResult(Activity context, String tid, int resCode) {
         Intent intent = new Intent();
@@ -81,6 +85,20 @@ public class AdvancedTeamMemberActivity extends UI implements TAdapterDelegate,
         findViews();
         registerUserInfoChangedObserver(true);
         requestData();
+        initData();
+    }
+
+    private void initData() {
+        tv_title=findViewById(R.id.tv_title);
+        iv_back=findViewById(R.id.iv_back);
+        tv_title.setText("群成员");
+        iv_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
+
     }
 
     @Override

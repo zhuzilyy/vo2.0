@@ -9,6 +9,7 @@
 
 
     <android.support.design.widget.AppBarLayout
+        android:visibility="gone"
         android:id="@+id/app_bar_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -25,9 +26,10 @@
             <include layout="@layout/nim_action_bar_right_clickable_tv" />
         </android.support.v7.widget.Toolbar>
     </android.support.design.widget.AppBarLayout>
-
-
+    <include layout="@layout/layout_title"/>
     <EditText
+        android:textCursorDrawable="@drawable/shape_cursor"
+        android:background="@null"
         android:id="@+id/regular_team_nickname"
         style="@style/blue_bottom_line_edit_text_style"
         android:layout_width="fill_parent"
@@ -37,5 +39,11 @@
         android:layout_marginTop="16dip"
         android:hint="@string/team_nickname"
         android:imeOptions="actionDone" />
+    <View
+        android:background="@color/mainColor"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"/>
 
 </LinearLayout>

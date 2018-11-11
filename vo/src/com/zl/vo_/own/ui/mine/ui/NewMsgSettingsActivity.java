@@ -34,7 +34,6 @@ public class NewMsgSettingsActivity extends BaseActivity {
             }
         });
     }
-
     @Override
     protected void initData() {
         //新消息提醒

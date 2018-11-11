@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -24,6 +25,7 @@ import com.netease.nim.uikit.common.ui.dialog.MenuDialog;
 import com.netease.nim.uikit.common.ui.imageview.HeadImageView;
 import com.netease.nim.uikit.common.ui.widget.SwitchButton;
 import com.netease.nim.uikit.common.util.sys.NetworkUtil;
+import com.netease.nim.uikit.dialog.CustomerDialog;
 import com.netease.nimlib.sdk.NIMClient;
 import com.netease.nimlib.sdk.RequestCallback;
 import com.netease.nimlib.sdk.team.TeamService;
@@ -73,7 +75,8 @@ public class AdvancedTeamMemberInfoActivity extends UI implements View.OnClickLi
     // state
     private boolean isSelfCreator = false;
     private boolean isSelfManager = false;
-
+    private TextView tv_title;
+    private ImageView iv_back;
     public static void startActivityForResult(Activity activity, String account, String tid) {
         Intent intent = new Intent();
         intent.putExtra(EXTRA_ID, account);
@@ -124,6 +127,15 @@ public class AdvancedTeamMemberInfoActivity extends UI implements View.OnClickLi
     }
 
     private void findViews() {
+        tv_title=findViewById(R.id.tv_title);
+        iv_back=findViewById(R.id.iv_back);
+        iv_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
+        tv_title.setText("成员信息");
         nickContainer = findViewById(R.id.nickname_container);
         identityContainer = findViewById(R.id.identity_container);
         headImageView = (HeadImageView) findViewById(R.id.team_member_head_view);
@@ -533,12 +545,10 @@ public class AdvancedTeamMemberInfoActivity extends UI implements View.OnClickLi
      * 移除群成员确认
      */
     private void showConfirmButton() {
-        EasyAlertDialogHelper.OnDialogActionListener listener = new EasyAlertDialogHelper.OnDialogActionListener() {
-
+      /*  EasyAlertDialogHelper.OnDialogActionListener listener = new EasyAlertDialogHelper.OnDialogActionListener() {
             @Override
             public void doCancelAction() {
             }
-
             @Override
             public void doOkAction() {
                 removeMember();
@@ -546,7 +556,26 @@ public class AdvancedTeamMemberInfoActivity extends UI implements View.OnClickLi
         };
         final EasyAlertDialog dialog = EasyAlertDialogHelper.createOkCancelDiolag(this, null, getString(R.string.team_member_remove_confirm),
                 getString(R.string.remove), getString(R.string.cancel), true, listener);
+        dialog.show();*/
+        final CustomerDialog dialog=new CustomerDialog(this);
+        dialog.setDialogTitle("提示");
+        dialog.setDialogConfirmText("确定");
+        dialog.setDialogMessage("确定要将其移除群组吗");
+        dialog.setYesOnclickListener(new CustomerDialog.onYesOnclickListener() {
+            @Override
+            public void onYesClick() {
+                dialog.dismiss();
+                removeMember();
+            }
+        });
+        dialog.setNoOnclickListener(new CustomerDialog.onNoOnclickListener() {
+            @Override
+            public void onNoClick() {
+                dialog.dismiss();
+            }
+        });
         dialog.show();
+
     }
 
     /**

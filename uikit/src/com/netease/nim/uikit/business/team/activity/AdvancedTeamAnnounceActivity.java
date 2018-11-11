@@ -8,6 +8,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.AbsListView;
 import android.widget.AdapterView;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -58,6 +59,8 @@ public class AdvancedTeamAnnounceActivity extends UI implements TAdapterDelegate
     private List<Announcement> items;
 
     private boolean isMember = false;
+    private TextView tv_title,tv_right;
+    private ImageView iv_back;
 
     public static void start(Activity activity, String teamId) {
         start(activity, teamId, null);
@@ -120,8 +123,27 @@ public class AdvancedTeamAnnounceActivity extends UI implements TAdapterDelegate
     }
 
     private void findViews() {
+        tv_title=findViewById(R.id.tv_title);
+        tv_right=findViewById(R.id.tv_right);
+        iv_back=findViewById(R.id.iv_back);
+        tv_right.setVisibility(View.VISIBLE);
+        tv_right.setText("新建");
+        tv_right.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AdvancedTeamCreateAnnounceActivity.startActivityForResult(AdvancedTeamAnnounceActivity.this, teamId, RES_ANNOUNCE_CREATE_CODE);
+            }
+        });
+        tv_title.setText("群公告");
+        iv_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
         announceListView = (ListView) findViewById(R.id.team_announce_listview);
         announceTips = (TextView) findViewById(R.id.team_announce_tips);
+
     }
 
     private void initActionbar() {

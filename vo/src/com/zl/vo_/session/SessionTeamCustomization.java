@@ -29,12 +29,9 @@ public class SessionTeamCustomization extends SessionCustomization{
 
     public interface SessionTeamCustomListener extends Serializable {
         void initPopupWindow(Context context,View view, String sessionId, SessionTypeEnum sessionTypeEnum);
-
         void onSelectedAccountsResult(ArrayList<String> selectedAccounts);
-
         void onSelectedAccountFail();
     }
-
     private SessionTeamCustomListener sessionTeamCustomListener;
 
     public SessionTeamCustomization(SessionTeamCustomListener listener) {
@@ -47,7 +44,7 @@ public class SessionTeamCustomization extends SessionCustomization{
                 sessionTeamCustomListener.initPopupWindow(context, view, sessionId, SessionTypeEnum.Team);
             }
         };
-        cloudMsgButton.iconId = R.drawable.nim_ic_messge_history;
+        //cloudMsgButton.iconId = R.drawable.nim_ic_messge_history;
 
         SessionCustomization.OptionsButton infoButton = new SessionCustomization.OptionsButton() {
             @Override
@@ -62,13 +59,11 @@ public class SessionTeamCustomization extends SessionCustomization{
             }
         };
         infoButton.iconId = R.drawable.nim_ic_message_actionbar_team;
-        optionsButtons.add(cloudMsgButton);
+        //optionsButtons.add(cloudMsgButton);
         optionsButtons.add(infoButton);
-
         buttons = optionsButtons;
         withSticker = true;
     }
-
     @Override
     public void onActivityResult(Activity activity, int requestCode, int resultCode, Intent data) {
         if (requestCode == TeamRequestCode.REQUEST_CODE) {

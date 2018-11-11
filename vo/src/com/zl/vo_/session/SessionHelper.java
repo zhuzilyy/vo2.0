@@ -291,9 +291,9 @@ public class SessionHelper {
                 }
             };
 
-            cloudMsgButton.iconId = R.drawable.nim_ic_messge_history;
+            //cloudMsgButton.iconId = R.drawable.nim_ic_messge_history;
 
-            buttons.add(cloudMsgButton);
+            //buttons.add(cloudMsgButton);
             myP2pCustomization.buttons = buttons;
         }
         return myP2pCustomization;
@@ -347,7 +347,7 @@ public class SessionHelper {
                     initPopuptWindow(context, view, sessionId, SessionTypeEnum.P2P);
                 }
             };
-            cloudMsgButton.iconId = R.drawable.nim_ic_messge_history;
+           // cloudMsgButton.iconId = R.drawable.nim_ic_messge_history;
 
             SessionCustomization.OptionsButton infoButton = new SessionCustomization.OptionsButton() {
                 @Override
@@ -358,9 +358,9 @@ public class SessionHelper {
             };
 
 
-            infoButton.iconId = R.drawable.nim_ic_actionbar_robot_info;
+            //infoButton.iconId = R.drawable.nim_ic_actionbar_robot_info;
 
-            buttons.add(cloudMsgButton);
+            //buttons.add(cloudMsgButton);
             buttons.add(infoButton);
             robotCustomization.buttons = buttons;
         }

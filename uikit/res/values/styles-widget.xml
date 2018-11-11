@@ -19,11 +19,10 @@
     </style>
 
     <style name="horizontal_light_thin_divider">
-        <item name="android:layout_height">2px</item>
+        <item name="android:layout_height">0.5dp</item>
         <item name="android:layout_width">fill_parent</item>
         <item name="android:background">@color/common_line</item>
     </style>
-
     <style name="horizontal_deep_thick_divider">
         <item name="android:layout_height">@dimen/split_one_dip</item>
         <item name="android:layout_width">fill_parent</item>
@@ -42,10 +41,11 @@
 
     <style name="dialog_title_text_style">
         <item name="android:textSize">@dimen/big_text_size</item>
-        <item name="android:textColor">@color/color_activity_blue_bg</item>
+        <item name="android:textColor">@color/mainColor</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:paddingLeft">@dimen/dialog_text_margin_horizontal</item>
+     <!--   <item name="android:paddingLeft">@dimen/dialog_text_margin_horizontal</item>
         <item name="android:paddingRight">@dimen/dialog_text_margin_horizontal</item>
+        -->
         <item name="android:paddingTop">@dimen/dialog_padding_vertical</item>
         <item name="android:paddingBottom">@dimen/dialog_padding_vertical</item>
     </style>
@@ -69,7 +69,7 @@
     </style>
 
     <style name="dialog_button_text_style">
-        <item name="android:textSize">@dimen/big_text_size</item>
+        <item name="android:textSize">@dimen/dialog_text_size</item>
         <item name="android:textColor">@color/black</item>
         <item name="android:background">@drawable/nim_list_item_selector</item>
         <item name="android:paddingTop">@dimen/custom_dialog_padding_vertical</item>

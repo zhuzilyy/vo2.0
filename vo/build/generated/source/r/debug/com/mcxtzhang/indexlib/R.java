@@ -408,17 +408,17 @@ public final class R {
         public static final int abc_text_size_subtitle_material_toolbar = 0x7f0a0003;
         public static final int abc_text_size_title_material = 0x7f0a0061;
         public static final int abc_text_size_title_material_toolbar = 0x7f0a0004;
-        public static final int disabled_alpha_material_dark = 0x7f0a00ba;
-        public static final int disabled_alpha_material_light = 0x7f0a00bb;
-        public static final int highlight_alpha_material_colored = 0x7f0a0106;
-        public static final int highlight_alpha_material_dark = 0x7f0a0107;
-        public static final int highlight_alpha_material_light = 0x7f0a0108;
-        public static final int item_touch_helper_max_drag_scroll_per_frame = 0x7f0a0116;
-        public static final int item_touch_helper_swipe_escape_max_velocity = 0x7f0a0117;
-        public static final int item_touch_helper_swipe_escape_velocity = 0x7f0a0118;
-        public static final int notification_large_icon_height = 0x7f0a0141;
-        public static final int notification_large_icon_width = 0x7f0a0142;
-        public static final int notification_subtext_size = 0x7f0a0146;
+        public static final int disabled_alpha_material_dark = 0x7f0a00bb;
+        public static final int disabled_alpha_material_light = 0x7f0a00bc;
+        public static final int highlight_alpha_material_colored = 0x7f0a0107;
+        public static final int highlight_alpha_material_dark = 0x7f0a0108;
+        public static final int highlight_alpha_material_light = 0x7f0a0109;
+        public static final int item_touch_helper_max_drag_scroll_per_frame = 0x7f0a0117;
+        public static final int item_touch_helper_swipe_escape_max_velocity = 0x7f0a0118;
+        public static final int item_touch_helper_swipe_escape_velocity = 0x7f0a0119;
+        public static final int notification_large_icon_height = 0x7f0a0142;
+        public static final int notification_large_icon_width = 0x7f0a0143;
+        public static final int notification_subtext_size = 0x7f0a0147;
     }
     public static final class drawable {
         public static final int abc_ab_share_pack_mtrl_alpha = 0x7f020000;
