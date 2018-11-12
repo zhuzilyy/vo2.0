@@ -8,6 +8,8 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.zl.vo_.R;
@@ -43,6 +45,10 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
 /**
  * 系统消息中心界面
  * <p/>
@@ -62,9 +68,12 @@ public class SystemMessageActivity extends UI implements TAdapterDelegate,
     private SystemMessageAdapter adapter;
     private List<SystemMessage> items = new ArrayList<>();
     private Set<Long> itemIds = new HashSet<>();
-
     // db
     private boolean firstLoad = true;
+    @BindView(R.id.tv_title)
+    TextView tv_title;
+    @BindView(R.id.iv_right)
+    ImageView iv_right;
 
     public static void start(Context context) {
         start(context, null, true);
@@ -113,16 +122,28 @@ public class SystemMessageActivity extends UI implements TAdapterDelegate,
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.system_notification_message_activity);
-
+        ButterKnife.bind(this);
         ToolBarOptions options = new NimToolBarOptions();
         options.titleId = R.string.verify_reminder;
         setToolBar(R.id.toolbar, options);
-
         initAdapter();
         initListView();
-
         loadMessages(); // load old data
         registerSystemObserver(true);
+        initData();
+    }
+    private void initData() {
+        tv_title.setText("系统消息");
+        iv_right.setVisibility(View.VISIBLE);
+        //iv_right.setImageResource(R.mipmap.delete2);
+    }
+    @OnClick({R.id.iv_back})
+    public void click(View view){
+        switch (view.getId()){
+            case R.id.iv_back:
+                finish();
+                break;
+        }
     }
 
     @Override

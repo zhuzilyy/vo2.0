@@ -58,14 +58,14 @@ public final class R {
         public static final int center = 0x7f100060;
         public static final int dark = 0x7f100093;
         public static final int email = 0x7f100078;
-        public static final int end_text = 0x7f10050e;
+        public static final int end_text = 0x7f10050f;
         public static final int icon_only = 0x7f100090;
         public static final int light = 0x7f100094;
         public static final int none = 0x7f100036;
         public static final int normal = 0x7f100038;
         public static final int radio = 0x7f1000b2;
         public static final int standard = 0x7f100091;
-        public static final int start_text = 0x7f10050b;
+        public static final int start_text = 0x7f10050c;
         public static final int text = 0x7f10001e;
         public static final int text1 = 0x7f100260;
         public static final int text2 = 0x7f10001f;

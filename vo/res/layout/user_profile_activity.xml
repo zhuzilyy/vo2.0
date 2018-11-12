@@ -52,6 +52,7 @@
                 android:orientation="vertical">
 
                 <LinearLayout
+                    android:gravity="center_vertical"
                     android:id="@+id/nick_layout"
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
@@ -170,7 +171,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="15dip"
-                android:background="@drawable/nim_team_create_btn_selector"
+                android:background="@color/mainColor"
                 android:minHeight="50dp"
                 android:text="@string/add_friend"
                 android:textColor="@color/white"

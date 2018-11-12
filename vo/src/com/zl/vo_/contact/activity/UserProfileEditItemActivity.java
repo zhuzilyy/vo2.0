@@ -78,6 +78,8 @@ public class UserProfileEditItemActivity extends UI implements View.OnClickListe
     private int gender;
     @BindView(R.id.tv_title)
     TextView tv_title;
+    @BindView(R.id.tv_right)
+    TextView tv_right;
 
     public static final void startActivity(Context context, int key, String data) {
         Intent intent = new Intent();
@@ -112,13 +114,32 @@ public class UserProfileEditItemActivity extends UI implements View.OnClickListe
     //自己添加的部分
     private void initData() {
         tv_title.setText("备注名");
+        tv_right.setVisibility(View.VISIBLE);
     }
-    @OnClick({R.id.iv_back})
+    @OnClick({R.id.iv_back,R.id.tv_right})
     public void click(View view){
         switch(view.getId()){
             case R.id.iv_back:
                 finish();
                 showKeyboard(false);
+                break;
+            case R.id.tv_right:
+                showKeyboard(false);
+                if (!NetworkUtil.isNetAvailable(UserProfileEditItemActivity.this)) {
+                    Toast.makeText(UserProfileEditItemActivity.this, R.string.network_is_not_available, Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                if (key == UserConstant.KEY_NICKNAME && TextUtils.isEmpty(editText.getText().toString().trim())) {
+                    Toast.makeText(UserProfileEditItemActivity.this, R.string.nickname_empty, Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                if (key == UserConstant.KEY_BIRTH) {
+                    update(birthText.getText().toString());
+                } else if (key == UserConstant.KEY_GENDER) {
+                    update(Integer.valueOf(gender));
+                } else {
+                    update(editText.getText().toString().trim());
+                }
                 break;
         }
     }

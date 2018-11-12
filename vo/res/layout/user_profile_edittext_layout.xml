@@ -25,7 +25,6 @@
         </android.support.v7.widget.Toolbar>
     </android.support.design.widget.AppBarLayout>
     <include layout="@layout/layout_title"/>
-
     <com.netease.nim.uikit.common.ui.widget.ClearableEditTextWithIcon
         android:id="@+id/edittext"
         android:layout_width="match_parent"

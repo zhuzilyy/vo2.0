@@ -1,5 +1,6 @@
 package com.zl.vo_.contact.activity;
 
+import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -18,6 +19,8 @@ import com.zl.vo_.DemoCache;
 import com.zl.vo_.R;
 import com.zl.vo_.contact.constant.UserConstant;
 import com.zl.vo_.main.model.Extras;
+import com.zl.vo_.own.dialog.CustomerDialog;
+import com.zl.vo_.own.util.WeiboDialogUtils;
 import com.zl.vo_.session.SessionHelper;
 import com.netease.nim.uikit.business.uinfo.UserInfoHelper;
 import com.netease.nim.uikit.common.activity.ToolBarOptions;
@@ -93,6 +96,7 @@ public class UserProfileActivity extends UI {
     private Map<String, Boolean> toggleStateMap;
     @BindView(R.id.tv_title)
     TextView tv_title;
+    private Dialog loadingDialog;
 
     public static void start(Context context, String account) {
         Intent intent = new Intent();
@@ -584,7 +588,7 @@ public class UserProfileActivity extends UI {
             Toast.makeText(UserProfileActivity.this, R.string.network_is_not_available, Toast.LENGTH_SHORT).show();
             return;
         }
-        EasyAlertDialog dialog = EasyAlertDialogHelper.createOkCancelDiolag(this, getString(R.string.remove_friend),
+     /*   EasyAlertDialog dialog = EasyAlertDialogHelper.createOkCancelDiolag(this, getString(R.string.remove_friend),
                 getString(R.string.remove_friend_tip), true,
                 new EasyAlertDialogHelper.OnDialogActionListener() {
 
@@ -620,10 +624,59 @@ public class UserProfileActivity extends UI {
                             }
                         });
                     }
+                });*/
+        loadingDialog = WeiboDialogUtils.createLoadingDialog(this, "正在删除");
+        final CustomerDialog dialog=new CustomerDialog(this);
+        dialog.setDialogTitle("删除好友");
+        dialog.setDialogConfirmText("确定");
+        dialog.setDialogMessage("删除好友后,将同时解除双方的好友关系");
+        dialog.setYesOnclickListener(new CustomerDialog.onYesOnclickListener() {
+            @Override
+            public void onYesClick() {
+                loadingDialog.show();
+                //DialogMaker.showProgressDialog(UserProfileActivity.this, "", true);
+                NIMClient.getService(FriendService.class).deleteFriend(account).setCallback(new RequestCallback<Void>() {
+                    @Override
+                    public void onSuccess(Void param) {
+                        //DialogMaker.dismissProgressDialog();
+                        dialog.dismiss();
+                        WeiboDialogUtils.closeDialog(loadingDialog);
+                        Toast.makeText(UserProfileActivity.this, R.string.remove_friend_success, Toast.LENGTH_SHORT).show();
+                        finish();
+                    }
+                    @Override
+                    public void onFailed(int code) {
+                        dialog.dismiss();
+                        WeiboDialogUtils.closeDialog(loadingDialog);
+                        if (code == 408) {
+                            Toast.makeText(UserProfileActivity.this, R.string.network_is_not_available, Toast.LENGTH_SHORT).show();
+                        } else {
+                            Toast.makeText(UserProfileActivity.this, "on failed:" + code, Toast.LENGTH_SHORT).show();
+                        }
+                    }
+
+                    @Override
+                    public void onException(Throwable exception) {
+                        //DialogMaker.dismissProgressDialog();
+                        dialog.dismiss();
+                        WeiboDialogUtils.closeDialog(loadingDialog);
+                    }
                 });
-        if (!isFinishing() && !isDestroyedCompatible()) {
+            }
+        });
+        dialog.setNoOnclickListener(new CustomerDialog.onNoOnclickListener() {
+            @Override
+            public void onNoClick() {
+                dialog.dismiss();
+                //WeiboDialogUtils.closeDialog(loadingDialog);
+            }
+        });
+        dialog.show();
+        /*if (!isFinishing() && !isDestroyedCompatible()) {
             dialog.show();
-        }
+        }*/
+
+
     }
 
     private void onChat() {

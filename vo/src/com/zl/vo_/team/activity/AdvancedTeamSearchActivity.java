@@ -1,5 +1,6 @@
 package com.zl.vo_.team.activity;
 
+import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -17,12 +18,21 @@ import com.netease.nimlib.sdk.NIMClient;
 import com.netease.nimlib.sdk.RequestCallback;
 import com.netease.nimlib.sdk.team.TeamService;
 import com.netease.nimlib.sdk.team.model.Team;
+import com.zl.vo_.own.util.WeiboDialogUtils;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 /**
  * 搜索加入群组界面
  * Created by hzxuwen on 2015/3/20.
  */
 public class AdvancedTeamSearchActivity extends UI {
+    @BindView(R.id.tv_title)
+    TextView tv_title;
+    @BindView(R.id.tv_right)
+    TextView tv_right;
 
     private ClearableEditTextWithIcon searchEditText;
 
@@ -36,6 +46,7 @@ public class AdvancedTeamSearchActivity extends UI {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.nim_advanced_team_search_activity);
+        ButterKnife.bind(this);
         setTitle(R.string.search_join_team);
 
         ToolBarOptions options = new NimToolBarOptions();
@@ -44,6 +55,28 @@ public class AdvancedTeamSearchActivity extends UI {
 
         findViews();
         initActionbar();
+        initData();
+    }
+
+    private void initData() {
+        tv_title.setText("搜索加入群组");
+        tv_right.setText("搜索");
+        tv_right.setVisibility(View.VISIBLE);
+    }
+    @OnClick({R.id.iv_back,R.id.tv_right})
+    public void click(View view){
+        switch (view.getId()){
+            case R.id.iv_back:
+                finish();
+                break;
+            case R.id.tv_right:
+                if (TextUtils.isEmpty(searchEditText.getText().toString())) {
+                    Toast.makeText(AdvancedTeamSearchActivity.this, R.string.not_allow_empty, Toast.LENGTH_SHORT).show();
+                } else {
+                    queryTeamById();
+                }
+                break;
+        }
     }
 
     private void findViews() {
@@ -67,14 +100,18 @@ public class AdvancedTeamSearchActivity extends UI {
     }
 
     private void queryTeamById() {
+        final Dialog dialog = WeiboDialogUtils.createLoadingDialog(this, "正在搜索");
+        dialog.show();
         NIMClient.getService(TeamService.class).searchTeam(searchEditText.getText().toString()).setCallback(new RequestCallback<Team>() {
             @Override
             public void onSuccess(Team team) {
+                dialog.dismiss();
                 updateTeamInfo(team);
             }
 
             @Override
             public void onFailed(int code) {
+                dialog.dismiss();
                 if (code == 803) {
                     Toast.makeText(AdvancedTeamSearchActivity.this, R.string.team_number_not_exist, Toast.LENGTH_LONG).show();
                 } else {
@@ -84,6 +121,7 @@ public class AdvancedTeamSearchActivity extends UI {
 
             @Override
             public void onException(Throwable exception) {
+                dialog.dismiss();
                 Toast.makeText(AdvancedTeamSearchActivity.this, "search team exception：" + exception.getMessage(), Toast.LENGTH_LONG).show();
             }
         });

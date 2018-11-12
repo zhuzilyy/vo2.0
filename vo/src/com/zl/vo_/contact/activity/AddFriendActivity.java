@@ -1,5 +1,6 @@
 package com.zl.vo_.contact.activity;
 
+import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -20,6 +21,11 @@ import com.netease.nim.uikit.common.ui.dialog.EasyAlertDialogHelper;
 import com.netease.nim.uikit.common.ui.widget.ClearableEditTextWithIcon;
 import com.netease.nimlib.sdk.ResponseCode;
 import com.netease.nimlib.sdk.uinfo.model.NimUserInfo;
+import com.zl.vo_.own.util.WeiboDialogUtils;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 /**
  * 添加好友页面
@@ -28,6 +34,10 @@ import com.netease.nimlib.sdk.uinfo.model.NimUserInfo;
 public class AddFriendActivity extends UI {
 
     private ClearableEditTextWithIcon searchEdit;
+    @BindView(R.id.tv_title)
+    TextView tv_title;
+    @BindView(R.id.tv_right)
+    TextView tv_right;
 
     public static final void start(Context context) {
         Intent intent = new Intent();
@@ -39,15 +49,38 @@ public class AddFriendActivity extends UI {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.add_friend_activity);
-
+        ButterKnife.bind(this);
         ToolBarOptions options = new NimToolBarOptions();
         options.titleId = R.string.add_buddy;
         setToolBar(R.id.toolbar, options);
 
         findViews();
         initActionbar();
+        initData();
     }
 
+    private void initData() {
+        tv_title.setText("添加好友");
+        tv_right.setVisibility(View.VISIBLE);
+        tv_right.setText("搜索");
+    }
+    @OnClick({R.id.iv_back,R.id.tv_right})
+    public void click(View view){
+        switch (view.getId()){
+            case R.id.iv_back:
+                finish();
+                break;
+            case R.id.tv_right:
+                if (TextUtils.isEmpty(searchEdit.getText().toString())) {
+                    Toast.makeText(AddFriendActivity.this, R.string.not_allow_empty, Toast.LENGTH_SHORT).show();
+                } else if (searchEdit.getText().toString().equals(DemoCache.getAccount())) {
+                    Toast.makeText(AddFriendActivity.this, R.string.add_friend_self_tip, Toast.LENGTH_SHORT).show();
+                } else {
+                    query();
+                }
+                break;
+        }
+    }
     private void findViews() {
         searchEdit = findView(R.id.search_friend_edit);
         searchEdit.setDeleteImage(R.drawable.nim_grey_delete_icon);
@@ -71,12 +104,15 @@ public class AddFriendActivity extends UI {
     }
 
     private void query() {
-        DialogMaker.showProgressDialog(this, null, false);
+        final Dialog dialog = WeiboDialogUtils.createLoadingDialog(this, "正在搜索");
+        dialog.show();
+        //DialogMaker.showProgressDialog(this, null, false);
         final String account = searchEdit.getText().toString().toLowerCase();
         NimUIKit.getUserInfoProvider().getUserInfoAsync(account, new SimpleCallback<NimUserInfo>() {
             @Override
             public void onResult(boolean success, NimUserInfo result, int code) {
-                DialogMaker.dismissProgressDialog();
+                //DialogMaker.dismissProgressDialog();
+                dialog.dismiss();
                 if (success) {
                     if (result == null) {
                         EasyAlertDialogHelper.showOneButtonDiolag(AddFriendActivity.this, R.string.user_not_exsit,

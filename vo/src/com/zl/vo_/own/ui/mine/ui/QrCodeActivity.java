@@ -48,7 +48,7 @@ public class QrCodeActivity extends BaseActivity {
         Glide.with(this).load(avatar).into(iv__head);
         if (sex.equals("1")){
             iv_sex.setImageResource(R.mipmap.nan);
-        }else{
+        }else if (sex.equals("2")){
             iv_sex.setImageResource(R.mipmap.nv);
         }
     }

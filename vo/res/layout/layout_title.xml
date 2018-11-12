@@ -44,6 +44,15 @@
             android:textSize="14sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
+        <ImageView
+            android:id="@+id/iv_right"
+            android:visibility="gone"
+            android:layout_marginRight="10dp"
+            android:src="@mipmap/right_arrow"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
     </RelativeLayout>
     <View
         android:background="@color/common_line"
