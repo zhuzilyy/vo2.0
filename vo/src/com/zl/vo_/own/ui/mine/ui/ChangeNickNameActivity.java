@@ -102,7 +102,7 @@ public class ChangeNickNameActivity extends BaseActivity {
                 if (code.equals(ApiConstant.SUCCESS_CODE)){
                     UserInfoData userInfoData = userInfoBean.getData();
                     String token = userInfoData.getToken();
-                    String uuid = userInfoData.getUuid();
+                    //String uuid = userInfoData.getUuid();
                     String avatar = userInfoData.getAvatar();
                     String vo_code = userInfoData.getVo_code();
                     String nickName = userInfoData.getName();

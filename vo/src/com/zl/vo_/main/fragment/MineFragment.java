@@ -93,9 +93,15 @@ public class MineFragment extends MainTabFragment implements View.OnClickListene
         String avatar = (String) SPUtils.get(getActivity(), "avatar", "");
         String vo_code = (String) SPUtils.get(getActivity(), "vo_code", "");
         String nickName = (String) SPUtils.get(getActivity(), "nickName", "");
+        String vo_code_can = (String) SPUtils.get(getActivity(), "vo_code_can", "");
+        String vo_code_set = (String) SPUtils.get(getActivity(), "vo_code_set", "");
         Glide.with(getActivity()).load(avatar).into(iv_avatar);
         tv_nickName.setText("昵称:"+nickName);
-        tv_voNum.setText("vo号:"+vo_code);
+        if (vo_code_can.equals("1")){
+            tv_voNum.setText("vo号:"+vo_code);
+        }else{
+            tv_voNum.setText("vo号:"+vo_code_set);
+        }
 
     }
     @Override

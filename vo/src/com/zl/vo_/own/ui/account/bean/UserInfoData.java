@@ -6,10 +6,9 @@ package com.zl.vo_.own.ui.account.bean;
 
 public class UserInfoData {
     private String id;
-    private String Uuid;
     private String vo_code;
+    private String vo_code_set;
     private String vo_code_can;
-    private String signature;
     private String token;
     private String mobile;
     private String name;
@@ -18,20 +17,19 @@ public class UserInfoData {
     private String province;
     private String city;
     private String country;
+    private String signature;
     public String getId() {
         return id;
     }
-
     public void setId(String id) {
         this.id = id;
     }
-
-    public String getUuid() {
-        return Uuid;
+    public String getVo_code_set() {
+        return vo_code_set;
     }
 
-    public void setUuid(String uuid) {
-        Uuid = uuid;
+    public void setVo_code_set(String vo_code_set) {
+        this.vo_code_set = vo_code_set;
     }
 
     public String getVo_code() {

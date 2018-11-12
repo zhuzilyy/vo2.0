@@ -155,6 +155,8 @@ public class RegisterActivity extends BaseActivity{
                 try {
                     JSONObject jsonObject = new JSONObject(data);
                     String code = jsonObject.getString("code");
+                    String message = jsonObject.getString("message");
+                    Toast.makeText(RegisterActivity.this, message, Toast.LENGTH_SHORT).show();
                     if (code.equals(ApiConstant.SUCCESS_CODE)){
                         finish();
                     }

@@ -95,6 +95,7 @@ public class ChangeVoIDActivity extends BaseActivity {
                 UserInfoData userInfoData = userInfoBean.getData();
                 if (code.equals(ApiConstant.SUCCESS_CODE)){
                     String token = userInfoData.getToken();
+                    String vo_code_set = userInfoData.getVo_code_set();
                     String avatar = userInfoData.getAvatar();
                     String vo_code = userInfoData.getVo_code();
                     String nickName = userInfoData.getName();
@@ -116,6 +117,7 @@ public class ChangeVoIDActivity extends BaseActivity {
                     SPUtils.put(ChangeVoIDActivity.this,"id",id);
                     SPUtils.put(ChangeVoIDActivity.this,"vo_code_can",vo_code_can);
                     SPUtils.put(ChangeVoIDActivity.this,"signature",signature);
+                    SPUtils.put(ChangeVoIDActivity.this,"vo_code_set",vo_code_set);
                     Intent intent = new Intent();
                     intent.putExtra("voCode",vo_code);
                     intent.setAction("com.action.changeVoCode");

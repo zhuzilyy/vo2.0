@@ -127,11 +127,14 @@ public class LoginActivity extends BaseActivity {
                 try {
                     JSONObject jsonObject = new JSONObject(data);
                     String code=jsonObject.getString("code");
+                    String message=jsonObject.getString("message");
                     if (code.equals(ApiConstant.SUCCESS_CODE)){
                         JSONObject jsonData = jsonObject.getJSONObject("data");
                         token= jsonData.getString("token");
                         SPUtils.put(LoginActivity.this,"cloudToken",token);
                         getUserInfo();
+                    }else if(code.equals("404002")){
+                        Toast.makeText(LoginActivity.this, message, Toast.LENGTH_SHORT).show();
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();
@@ -149,14 +152,14 @@ public class LoginActivity extends BaseActivity {
             ApiAccount.getUserInfo(this, new OnRequestDataListener() {
                 @Override
                 public void requestSuccess( String data) {
-                    Log.i("tag",data);
+                    Log.i("tag","11"+data);
                     Gson gson = new Gson();
                     UserInfoBean userInfoBean = gson.fromJson(data, UserInfoBean.class);
                     String code = userInfoBean.getCode();
                     if (code.equals(ApiConstant.SUCCESS_CODE)){
                         UserInfoData userInfoData = userInfoBean.getData();
                         String token = userInfoData.getToken();
-                        String uuid = userInfoData.getUuid();
+                        String vo_code_set = userInfoData.getVo_code_set();
                         String avatar = userInfoData.getAvatar();
                         String vo_code = userInfoData.getVo_code();
                         String nickName = userInfoData.getName();
@@ -178,8 +181,9 @@ public class LoginActivity extends BaseActivity {
                         SPUtils.put(LoginActivity.this,"id",id);
                         SPUtils.put(LoginActivity.this,"vo_code_can",vo_code_can);
                         SPUtils.put(LoginActivity.this,"signature",signature);
+                        SPUtils.put(LoginActivity.this,"vo_code_set",vo_code_set);
                         //云信登录
-                        cloudLogin(token,uuid);
+                        cloudLogin(token,vo_code);
                     }
                 }
                 @Override
