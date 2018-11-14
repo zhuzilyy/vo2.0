@@ -1,10 +1,14 @@
 [
     {
-        "merged": "E:\\Users\\tianou\\vo2.0\\vo2.0\\avchatkit\\build\\intermediates\\res\\merged\\androidTest\\debug\\xml\\nrtc_setting_pref.xml",
-        "source": "E:\\Users\\tianou\\vo2.0\\vo2.0\\avchatkit\\build\\intermediates\\bundles\\debug\\res\\xml\\nrtc_setting_pref.xml"
+        "merged": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\studioWorkspace\\vo2.0\\avchatkit\\build\\intermediates\\res\\merged\\androidTest\\debug\\xml\\nrtc_setting_pref.xml",
+        "source": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\studioWorkspace\\vo2.0\\avchatkit\\build\\intermediates\\bundles\\debug\\res\\xml\\nrtc_setting_pref.xml"
     },
     {
-        "merged": "E:\\studioWorkspace\\vo2.0\\avchatkit\\build\\intermediates\\res\\merged\\androidTest\\debug\\xml\\nrtc_setting_pref.xml",
-        "source": "E:\\studioWorkspace\\vo2.0\\avchatkit\\build\\intermediates\\bundles\\debug\\res\\xml\\nrtc_setting_pref.xml"
+        "merged": "/Users/tianou/Desktop/AndroidContent/vo2.0/avchatkit/build/intermediates/res/merged/androidTest/debug/xml/nrtc_setting_pref.xml",
+        "source": "/Users/tianou/Desktop/AndroidContent/vo2.0/avchatkit/build/intermediates/bundles/debug/res/xml/nrtc_setting_pref.xml"
+    },
+    {
+        "merged": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\Users\\tianou\\vo2.0\\vo2.0\\avchatkit\\build\\intermediates\\res\\merged\\androidTest\\debug\\xml\\nrtc_setting_pref.xml",
+        "source": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\Users\\tianou\\vo2.0\\vo2.0\\avchatkit\\build\\intermediates\\bundles\\debug\\res\\xml\\nrtc_setting_pref.xml"
     }
 ]
