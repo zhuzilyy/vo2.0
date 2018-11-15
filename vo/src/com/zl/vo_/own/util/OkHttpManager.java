@@ -287,7 +287,6 @@ public class OkHttpManager {
             builder.addHeader("version","1.0.0");
             builder.addHeader("Authorization",cloudToken);
         }
-
         if (methodType == HttpMethodType.GET) {
             builder.get();
         } else if (methodType == HttpMethodType.POST) {

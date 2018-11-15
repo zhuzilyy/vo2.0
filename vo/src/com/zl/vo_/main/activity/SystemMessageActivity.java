@@ -116,11 +116,9 @@ public class SystemMessageActivity extends UI implements TAdapterDelegate,
     public void onRefreshFromEnd() {
         loadMessages(); // load old data
     }
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.system_notification_message_activity);
         ButterKnife.bind(this);
         ToolBarOptions options = new NimToolBarOptions();

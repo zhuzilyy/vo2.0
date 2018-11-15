@@ -142,7 +142,7 @@ public class LoginActivity extends BaseActivity {
             }
             @Override
             public void requestFailure(int code, String msg) {
-
+                Log.i("tag",msg);
             }
         });
 

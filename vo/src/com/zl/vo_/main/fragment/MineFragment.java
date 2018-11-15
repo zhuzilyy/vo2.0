@@ -88,6 +88,8 @@ public class MineFragment extends MainTabFragment implements View.OnClickListene
         iv_guideDeletePravcyFriends.setOnClickListener(this);
         setDefaultValue();
     }
+
+
     //设置初始化的数据
     private void setDefaultValue() {
         String avatar = (String) SPUtils.get(getActivity(), "avatar", "");
@@ -102,7 +104,6 @@ public class MineFragment extends MainTabFragment implements View.OnClickListene
         }else{
             tv_voNum.setText("vo号:"+vo_code_set);
         }
-
     }
     @Override
     public void onClick(View view) {
