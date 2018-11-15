@@ -1,10 +1,14 @@
 [
     {
-        "merged": "E:\\Users\\tianou\\vo2.0\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\menu\\nim_contacts_search_menu.xml",
-        "source": "E:\\Users\\tianou\\vo2.0\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\menu\\nim_contacts_search_menu.xml"
+        "merged": "/Users/tianou/Desktop/AndroidContent/vo2.0/uikit/build/intermediates/res/merged/androidTest/debug/menu/nim_contacts_search_menu.xml",
+        "source": "/Users/tianou/Desktop/AndroidContent/vo2.0/uikit/build/intermediates/bundles/debug/res/menu/nim_contacts_search_menu.xml"
     },
     {
-        "merged": "E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\menu\\nim_contacts_search_menu.xml",
-        "source": "E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\menu\\nim_contacts_search_menu.xml"
+        "merged": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\menu\\nim_contacts_search_menu.xml",
+        "source": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\menu\\nim_contacts_search_menu.xml"
+    },
+    {
+        "merged": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\Users\\tianou\\vo2.0\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\menu\\nim_contacts_search_menu.xml",
+        "source": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\Users\\tianou\\vo2.0\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\menu\\nim_contacts_search_menu.xml"
     }
 ]

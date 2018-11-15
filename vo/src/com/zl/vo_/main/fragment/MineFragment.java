@@ -48,6 +48,7 @@ public class MineFragment extends MainTabFragment implements View.OnClickListene
     private ImageView iv_guidePravcyFriends,iv_guideLifeNotePwd,iv_guideInfoTrans,iv_guideDeletePravcyFriends;
     private CircleImageView iv_avatar;
     private TextView tv_nickName,tv_voNum;
+    //123
     @Override
     protected void onInit() {
         initViews();
