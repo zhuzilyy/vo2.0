@@ -1,112 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\Users\\tianou\\vo2.0\\vo2.0\\avchatkit\\build\\intermediates\\res\\merged\\androidTest\\debug\\values-land\\values-land.xml",
+            "outputFile": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\Users\\tianou\\vo2.0\\vo2.0\\avchatkit\\build\\intermediates\\res\\merged\\androidTest\\debug\\values-land\\values-land.xml",
             "map": [
                 {
-                    "source": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\2dabd34852044fb48f3bc09bd818b78f\\res\\values-land\\values-land.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endLines": "5",
-                        "endColumns": "12",
-                        "endOffsets": "232"
-                    },
-                    "to": {
-                        "startLines": "6",
-                        "startColumns": "4",
-                        "startOffsets": "328",
-                        "endLines": "9",
-                        "endColumns": "12",
-                        "endOffsets": "505"
-                    }
-                },
-                {
-                    "source": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\162af99f07aa7ab3868e16b0e992e25f\\res\\values-land\\values-land.xml",
-                    "from": {
-                        "startLines": "2,3,4,5",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "55,125,189,260",
-                        "endColumns": "69,63,70,67",
-                        "endOffsets": "120,184,255,323"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\Users\\tianou\\vo2.0\\vo2.0\\avchatkit\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-land\\values-land.xml",
-            "map": [
-                {
-                    "source": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\2dabd34852044fb48f3bc09bd818b78f\\res\\values-land\\values-land.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endLines": "5",
-                        "endColumns": "12",
-                        "endOffsets": "232"
-                    },
-                    "to": {
-                        "startLines": "6",
-                        "startColumns": "4",
-                        "startOffsets": "328",
-                        "endLines": "9",
-                        "endColumns": "12",
-                        "endOffsets": "505"
-                    }
-                },
-                {
-                    "source": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\162af99f07aa7ab3868e16b0e992e25f\\res\\values-land\\values-land.xml",
-                    "from": {
-                        "startLines": "2,3,4,5",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "55,125,189,260",
-                        "endColumns": "69,63,70,67",
-                        "endOffsets": "120,184,255,323"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\studioWorkspace\\vo2.0\\avchatkit\\build\\intermediates\\res\\merged\\androidTest\\debug\\values-land\\values-land.xml",
-            "map": [
-                {
-                    "source": "/Users/tianou/Desktop/AndroidContent/vo2.0/C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\d163af441293557595ae966b2d9d97a9\\res\\values-land\\values-land.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endLines": "5",
-                        "endColumns": "12",
-                        "endOffsets": "232"
-                    },
-                    "to": {
-                        "startLines": "6",
-                        "startColumns": "4",
-                        "startOffsets": "328",
-                        "endLines": "9",
-                        "endColumns": "12",
-                        "endOffsets": "505"
-                    }
-                },
-                {
-                    "source": "/Users/tianou/Desktop/AndroidContent/vo2.0/C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\36461769f90b2604d4b0bb9a3731b6f2\\res\\values-land\\values-land.xml",
-                    "from": {
-                        "startLines": "2,3,4,5",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "55,125,189,260",
-                        "endColumns": "69,63,70,67",
-                        "endOffsets": "120,184,255,323"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "/Users/tianou/Desktop/AndroidContent/vo2.0/avchatkit/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values-land/values-land.xml",
-            "map": [
-                {
-                    "source": "/Users/tianou/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/162af99f07aa7ab3868e16b0e992e25f/res/values-land/values-land.xml",
+                    "source": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\162af99f07aa7ab3868e16b0e992e25f\\res\\values-land\\values-land.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
@@ -116,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "/Users/tianou/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/2dabd34852044fb48f3bc09bd818b78f/res/values-land/values-land.xml",
+                    "source": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\2dabd34852044fb48f3bc09bd818b78f\\res\\values-land\\values-land.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -137,10 +35,112 @@
             ]
         },
         {
-            "outputFile": "/Users/tianou/Desktop/AndroidContent/vo2.0/avchatkit/build/intermediates/res/merged/androidTest/debug/values-land/values-land.xml",
+            "outputFile": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\studioWorkspace\\vo2.0\\avchatkit\\build\\intermediates\\res\\merged\\androidTest\\debug\\values-land\\values-land.xml",
             "map": [
                 {
-                    "source": "/Users/tianou/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/162af99f07aa7ab3868e16b0e992e25f/res/values-land/values-land.xml",
+                    "source": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\d163af441293557595ae966b2d9d97a9\\res\\values-land\\values-land.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "5",
+                        "endColumns": "12",
+                        "endOffsets": "232"
+                    },
+                    "to": {
+                        "startLines": "6",
+                        "startColumns": "4",
+                        "startOffsets": "328",
+                        "endLines": "9",
+                        "endColumns": "12",
+                        "endOffsets": "505"
+                    }
+                },
+                {
+                    "source": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\36461769f90b2604d4b0bb9a3731b6f2\\res\\values-land\\values-land.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,125,189,260",
+                        "endColumns": "69,63,70,67",
+                        "endOffsets": "120,184,255,323"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\avchatkit\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-land\\values-land.xml",
+            "map": [
+                {
+                    "source": "E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\2dabd34852044fb48f3bc09bd818b78f\\res\\values-land\\values-land.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "5",
+                        "endColumns": "12",
+                        "endOffsets": "232"
+                    },
+                    "to": {
+                        "startLines": "6",
+                        "startColumns": "4",
+                        "startOffsets": "328",
+                        "endLines": "9",
+                        "endColumns": "12",
+                        "endOffsets": "505"
+                    }
+                },
+                {
+                    "source": "E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\162af99f07aa7ab3868e16b0e992e25f\\res\\values-land\\values-land.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,125,189,260",
+                        "endColumns": "69,63,70,67",
+                        "endOffsets": "120,184,255,323"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "E:\\studioWorkspace\\vo2.0\\avchatkit\\build\\intermediates\\res\\merged\\androidTest\\debug\\values-land\\values-land.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\d163af441293557595ae966b2d9d97a9\\res\\values-land\\values-land.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "5",
+                        "endColumns": "12",
+                        "endOffsets": "232"
+                    },
+                    "to": {
+                        "startLines": "6",
+                        "startColumns": "4",
+                        "startOffsets": "328",
+                        "endLines": "9",
+                        "endColumns": "12",
+                        "endOffsets": "505"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\36461769f90b2604d4b0bb9a3731b6f2\\res\\values-land\\values-land.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,125,189,260",
+                        "endColumns": "69,63,70,67",
+                        "endOffsets": "120,184,255,323"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\Users\\tianou\\vo2.0\\vo2.0\\avchatkit\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-land\\values-land.xml",
+            "map": [
+                {
+                    "source": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\162af99f07aa7ab3868e16b0e992e25f\\res\\values-land\\values-land.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
@@ -150,7 +150,7 @@
                     }
                 },
                 {
-                    "source": "/Users/tianou/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/2dabd34852044fb48f3bc09bd818b78f/res/values-land/values-land.xml",
+                    "source": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\2dabd34852044fb48f3bc09bd818b78f\\res\\values-land\\values-land.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -171,10 +171,10 @@
             ]
         },
         {
-            "outputFile": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\studioWorkspace\\vo2.0\\avchatkit\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-land\\values-land.xml",
+            "outputFile": "E:\\studioWorkspace\\vo2.0\\avchatkit\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-land\\values-land.xml",
             "map": [
                 {
-                    "source": "/Users/tianou/Desktop/AndroidContent/vo2.0/C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\d163af441293557595ae966b2d9d97a9\\res\\values-land\\values-land.xml",
+                    "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\d163af441293557595ae966b2d9d97a9\\res\\values-land\\values-land.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -193,7 +193,75 @@
                     }
                 },
                 {
-                    "source": "/Users/tianou/Desktop/AndroidContent/vo2.0/C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\36461769f90b2604d4b0bb9a3731b6f2\\res\\values-land\\values-land.xml",
+                    "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\36461769f90b2604d4b0bb9a3731b6f2\\res\\values-land\\values-land.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,125,189,260",
+                        "endColumns": "69,63,70,67",
+                        "endOffsets": "120,184,255,323"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\studioWorkspace\\vo2.0\\avchatkit\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-land\\values-land.xml",
+            "map": [
+                {
+                    "source": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\d163af441293557595ae966b2d9d97a9\\res\\values-land\\values-land.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "5",
+                        "endColumns": "12",
+                        "endOffsets": "232"
+                    },
+                    "to": {
+                        "startLines": "6",
+                        "startColumns": "4",
+                        "startOffsets": "328",
+                        "endLines": "9",
+                        "endColumns": "12",
+                        "endOffsets": "505"
+                    }
+                },
+                {
+                    "source": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\36461769f90b2604d4b0bb9a3731b6f2\\res\\values-land\\values-land.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,125,189,260",
+                        "endColumns": "69,63,70,67",
+                        "endOffsets": "120,184,255,323"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\avchatkit\\build\\intermediates\\res\\merged\\androidTest\\debug\\values-land\\values-land.xml",
+            "map": [
+                {
+                    "source": "E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\2dabd34852044fb48f3bc09bd818b78f\\res\\values-land\\values-land.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "5",
+                        "endColumns": "12",
+                        "endOffsets": "232"
+                    },
+                    "to": {
+                        "startLines": "6",
+                        "startColumns": "4",
+                        "startOffsets": "328",
+                        "endLines": "9",
+                        "endColumns": "12",
+                        "endOffsets": "505"
+                    }
+                },
+                {
+                    "source": "E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\162af99f07aa7ab3868e16b0e992e25f\\res\\values-land\\values-land.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",

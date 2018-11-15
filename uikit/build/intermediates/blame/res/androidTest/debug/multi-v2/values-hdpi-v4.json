@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/tianou/Desktop/AndroidContent/vo2.0/uikit/build/intermediates/res/merged/androidTest/debug/values-hdpi-v4/values-hdpi-v4.xml",
+            "outputFile": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\values-hdpi-v4\\values-hdpi-v4.xml",
             "map": [
                 {
-                    "source": "/Users/tianou/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/162af99f07aa7ab3868e16b0e992e25f/res/values-hdpi-v4/values-hdpi-v4.xml",
+                    "source": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\36461769f90b2604d4b0bb9a3731b6f2\\res\\values-hdpi-v4\\values-hdpi-v4.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -17,10 +17,10 @@
             ]
         },
         {
-            "outputFile": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\Users\\tianou\\vo2.0\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\values-hdpi-v4\\values-hdpi-v4.xml",
+            "outputFile": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\values-hdpi-v4\\values-hdpi-v4.xml",
             "map": [
                 {
-                    "source": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\162af99f07aa7ab3868e16b0e992e25f\\res\\values-hdpi-v4\\values-hdpi-v4.xml",
+                    "source": "E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\162af99f07aa7ab3868e16b0e992e25f\\res\\values-hdpi-v4\\values-hdpi-v4.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -33,10 +33,10 @@
             ]
         },
         {
-            "outputFile": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-hdpi-v4\\values-hdpi-v4.xml",
+            "outputFile": "E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-hdpi-v4\\values-hdpi-v4.xml",
             "map": [
                 {
-                    "source": "/Users/tianou/Desktop/AndroidContent/vo2.0/C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\36461769f90b2604d4b0bb9a3731b6f2\\res\\values-hdpi-v4\\values-hdpi-v4.xml",
+                    "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\36461769f90b2604d4b0bb9a3731b6f2\\res\\values-hdpi-v4\\values-hdpi-v4.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -49,10 +49,10 @@
             ]
         },
         {
-            "outputFile": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\values-hdpi-v4\\values-hdpi-v4.xml",
+            "outputFile": "E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\values-hdpi-v4\\values-hdpi-v4.xml",
             "map": [
                 {
-                    "source": "/Users/tianou/Desktop/AndroidContent/vo2.0/C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\36461769f90b2604d4b0bb9a3731b6f2\\res\\values-hdpi-v4\\values-hdpi-v4.xml",
+                    "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\36461769f90b2604d4b0bb9a3731b6f2\\res\\values-hdpi-v4\\values-hdpi-v4.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -65,10 +65,10 @@
             ]
         },
         {
-            "outputFile": "/Users/tianou/Desktop/AndroidContent/vo2.0/uikit/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values-hdpi-v4/values-hdpi-v4.xml",
+            "outputFile": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\Users\\tianou\\vo2.0\\vo2.0\\uikit\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-hdpi-v4\\values-hdpi-v4.xml",
             "map": [
                 {
-                    "source": "/Users/tianou/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/162af99f07aa7ab3868e16b0e992e25f/res/values-hdpi-v4/values-hdpi-v4.xml",
+                    "source": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\162af99f07aa7ab3868e16b0e992e25f\\res\\values-hdpi-v4\\values-hdpi-v4.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -81,10 +81,42 @@
             ]
         },
         {
-            "outputFile": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\Users\\tianou\\vo2.0\\vo2.0\\uikit\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-hdpi-v4\\values-hdpi-v4.xml",
+            "outputFile": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\uikit\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-hdpi-v4\\values-hdpi-v4.xml",
             "map": [
                 {
-                    "source": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\162af99f07aa7ab3868e16b0e992e25f\\res\\values-hdpi-v4\\values-hdpi-v4.xml",
+                    "source": "E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\162af99f07aa7ab3868e16b0e992e25f\\res\\values-hdpi-v4\\values-hdpi-v4.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "6",
+                        "endColumns": "13",
+                        "endOffsets": "327"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-hdpi-v4\\values-hdpi-v4.xml",
+            "map": [
+                {
+                    "source": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\36461769f90b2604d4b0bb9a3731b6f2\\res\\values-hdpi-v4\\values-hdpi-v4.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "6",
+                        "endColumns": "13",
+                        "endOffsets": "327"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\Users\\tianou\\vo2.0\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\values-hdpi-v4\\values-hdpi-v4.xml",
+            "map": [
+                {
+                    "source": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\162af99f07aa7ab3868e16b0e992e25f\\res\\values-hdpi-v4\\values-hdpi-v4.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

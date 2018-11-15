@@ -49,6 +49,7 @@ public class MineFragment extends MainTabFragment implements View.OnClickListene
     private CircleImageView iv_avatar;
     private TextView tv_nickName,tv_voNum;
     //12345
+    //ceshitijiao
     @Override
     protected void onInit() {
         initViews();

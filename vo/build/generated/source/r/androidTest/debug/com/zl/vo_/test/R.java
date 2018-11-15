@@ -7980,8 +7980,6 @@ containing a value of this type.
         public static final int Dialog_Audio_StyleAnim=0x7f0b00e3;
         public static final int EasyPermissions=0x7f0b00e4;
         public static final int EasyPermissions_Transparent=0x7f0b00e5;
-        /**  Customize your theme here. 
-         */
         public static final int FullScreenTheme=0x7f0b00e6;
         public static final int GridPasswordView_EditText=0x7f0b00e7;
         public static final int Jrmf_Rp_AnimBottom=0x7f0b00e8;
@@ -8227,8 +8225,6 @@ containing a value of this type.
         public static final int grid_view=0x7f0b01a7;
         public static final int horizontal_deep_thick_divider=0x7f0b01a8;
         public static final int horizontal_light_thin_divider=0x7f0b01a9;
-        /**  是否允许背景模糊 
-         */
         public static final int jrmf_b_dialog=0x7f0b01aa;
         public static final int jrmf_rp_commondialog=0x7f0b01ab;
         public static final int list_view=0x7f0b01ac;

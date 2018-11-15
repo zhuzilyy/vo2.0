@@ -1,146 +1,194 @@
 [
     {
-        "merged": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\studioWorkspace\\vo2.0\\faceunity\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_fade_in.xml",
-        "source": "/Users/tianou/Desktop/AndroidContent/vo2.0/C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\36461769f90b2604d4b0bb9a3731b6f2\\res\\anim\\abc_fade_in.xml"
+        "merged": "E:\\studioWorkspace\\vo2.0\\faceunity\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_fade_in.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\36461769f90b2604d4b0bb9a3731b6f2\\res\\anim\\abc_fade_in.xml"
     },
     {
-        "merged": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\studioWorkspace\\vo2.0\\faceunity\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_fade_out.xml",
-        "source": "/Users/tianou/Desktop/AndroidContent/vo2.0/C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\36461769f90b2604d4b0bb9a3731b6f2\\res\\anim\\abc_fade_out.xml"
+        "merged": "E:\\studioWorkspace\\vo2.0\\faceunity\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\tooltip_enter.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\36461769f90b2604d4b0bb9a3731b6f2\\res\\anim\\tooltip_enter.xml"
     },
     {
-        "merged": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\studioWorkspace\\vo2.0\\faceunity\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_popup_enter.xml",
-        "source": "/Users/tianou/Desktop/AndroidContent/vo2.0/C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\36461769f90b2604d4b0bb9a3731b6f2\\res\\anim\\abc_popup_enter.xml"
+        "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\Users\\tianou\\vo2.0\\vo2.0\\faceunity\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_popup_enter.xml",
+        "source": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\162af99f07aa7ab3868e16b0e992e25f\\res\\anim\\abc_popup_enter.xml"
     },
     {
-        "merged": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\studioWorkspace\\vo2.0\\faceunity\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\tooltip_enter.xml",
-        "source": "/Users/tianou/Desktop/AndroidContent/vo2.0/C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\36461769f90b2604d4b0bb9a3731b6f2\\res\\anim\\tooltip_enter.xml"
+        "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\faceunity\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_slide_out_top.xml",
+        "source": "E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\162af99f07aa7ab3868e16b0e992e25f\\res\\anim\\abc_slide_out_top.xml"
     },
     {
-        "merged": "/Users/tianou/Desktop/AndroidContent/vo2.0/faceunity/build/intermediates/res/merged/androidTest/debug/anim/abc_slide_in_top.xml",
-        "source": "/Users/tianou/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/162af99f07aa7ab3868e16b0e992e25f/res/anim/abc_slide_in_top.xml"
+        "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\Users\\tianou\\vo2.0\\vo2.0\\faceunity\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_slide_in_top.xml",
+        "source": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\162af99f07aa7ab3868e16b0e992e25f\\res\\anim\\abc_slide_in_top.xml"
     },
     {
-        "merged": "/Users/tianou/Desktop/AndroidContent/vo2.0/faceunity/build/intermediates/res/merged/androidTest/debug/anim/abc_slide_out_top.xml",
-        "source": "/Users/tianou/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/162af99f07aa7ab3868e16b0e992e25f/res/anim/abc_slide_out_top.xml"
+        "merged": "E:\\studioWorkspace\\vo2.0\\faceunity\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_slide_in_bottom.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\36461769f90b2604d4b0bb9a3731b6f2\\res\\anim\\abc_slide_in_bottom.xml"
     },
     {
-        "merged": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\studioWorkspace\\vo2.0\\faceunity\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_slide_in_bottom.xml",
-        "source": "/Users/tianou/Desktop/AndroidContent/vo2.0/C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\36461769f90b2604d4b0bb9a3731b6f2\\res\\anim\\abc_slide_in_bottom.xml"
+        "merged": "E:\\studioWorkspace\\vo2.0\\faceunity\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_slide_in_top.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\36461769f90b2604d4b0bb9a3731b6f2\\res\\anim\\abc_slide_in_top.xml"
     },
     {
-        "merged": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\studioWorkspace\\vo2.0\\faceunity\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_slide_in_top.xml",
-        "source": "/Users/tianou/Desktop/AndroidContent/vo2.0/C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\36461769f90b2604d4b0bb9a3731b6f2\\res\\anim\\abc_slide_in_top.xml"
+        "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\Users\\tianou\\vo2.0\\vo2.0\\faceunity\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\tooltip_enter.xml",
+        "source": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\162af99f07aa7ab3868e16b0e992e25f\\res\\anim\\tooltip_enter.xml"
     },
     {
-        "merged": "/Users/tianou/Desktop/AndroidContent/vo2.0/faceunity/build/intermediates/res/merged/androidTest/debug/anim/abc_fade_out.xml",
-        "source": "/Users/tianou/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/162af99f07aa7ab3868e16b0e992e25f/res/anim/abc_fade_out.xml"
+        "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\studioWorkspace\\vo2.0\\faceunity\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_grow_fade_in_from_bottom.xml",
+        "source": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\36461769f90b2604d4b0bb9a3731b6f2\\res\\anim\\abc_grow_fade_in_from_bottom.xml"
     },
     {
-        "merged": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\Users\\tianou\\vo2.0\\vo2.0\\faceunity\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_slide_in_top.xml",
-        "source": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\162af99f07aa7ab3868e16b0e992e25f\\res\\anim\\abc_slide_in_top.xml"
+        "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\faceunity\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_slide_out_bottom.xml",
+        "source": "E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\162af99f07aa7ab3868e16b0e992e25f\\res\\anim\\abc_slide_out_bottom.xml"
     },
     {
-        "merged": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\Users\\tianou\\vo2.0\\vo2.0\\faceunity\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_fade_out.xml",
-        "source": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\162af99f07aa7ab3868e16b0e992e25f\\res\\anim\\abc_fade_out.xml"
+        "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\Users\\tianou\\vo2.0\\vo2.0\\faceunity\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_fade_out.xml",
+        "source": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\162af99f07aa7ab3868e16b0e992e25f\\res\\anim\\abc_fade_out.xml"
     },
     {
-        "merged": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\Users\\tianou\\vo2.0\\vo2.0\\faceunity\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_grow_fade_in_from_bottom.xml",
-        "source": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\162af99f07aa7ab3868e16b0e992e25f\\res\\anim\\abc_grow_fade_in_from_bottom.xml"
+        "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\faceunity\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\tooltip_enter.xml",
+        "source": "E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\162af99f07aa7ab3868e16b0e992e25f\\res\\anim\\tooltip_enter.xml"
     },
     {
-        "merged": "/Users/tianou/Desktop/AndroidContent/vo2.0/faceunity/build/intermediates/res/merged/androidTest/debug/anim/abc_fade_in.xml",
-        "source": "/Users/tianou/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/162af99f07aa7ab3868e16b0e992e25f/res/anim/abc_fade_in.xml"
+        "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\studioWorkspace\\vo2.0\\faceunity\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_slide_out_top.xml",
+        "source": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\36461769f90b2604d4b0bb9a3731b6f2\\res\\anim\\abc_slide_out_top.xml"
     },
     {
-        "merged": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\studioWorkspace\\vo2.0\\faceunity\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_slide_out_top.xml",
-        "source": "/Users/tianou/Desktop/AndroidContent/vo2.0/C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\36461769f90b2604d4b0bb9a3731b6f2\\res\\anim\\abc_slide_out_top.xml"
+        "merged": "E:\\studioWorkspace\\vo2.0\\faceunity\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_grow_fade_in_from_bottom.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\36461769f90b2604d4b0bb9a3731b6f2\\res\\anim\\abc_grow_fade_in_from_bottom.xml"
     },
     {
-        "merged": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\Users\\tianou\\vo2.0\\vo2.0\\faceunity\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_slide_out_top.xml",
-        "source": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\162af99f07aa7ab3868e16b0e992e25f\\res\\anim\\abc_slide_out_top.xml"
+        "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\studioWorkspace\\vo2.0\\faceunity\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_slide_in_top.xml",
+        "source": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\36461769f90b2604d4b0bb9a3731b6f2\\res\\anim\\abc_slide_in_top.xml"
     },
     {
-        "merged": "/Users/tianou/Desktop/AndroidContent/vo2.0/faceunity/build/intermediates/res/merged/androidTest/debug/anim/tooltip_enter.xml",
-        "source": "/Users/tianou/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/162af99f07aa7ab3868e16b0e992e25f/res/anim/tooltip_enter.xml"
+        "merged": "E:\\studioWorkspace\\vo2.0\\faceunity\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_slide_out_bottom.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\36461769f90b2604d4b0bb9a3731b6f2\\res\\anim\\abc_slide_out_bottom.xml"
     },
     {
-        "merged": "/Users/tianou/Desktop/AndroidContent/vo2.0/faceunity/build/intermediates/res/merged/androidTest/debug/anim/abc_popup_enter.xml",
-        "source": "/Users/tianou/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/162af99f07aa7ab3868e16b0e992e25f/res/anim/abc_popup_enter.xml"
+        "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\faceunity\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_popup_exit.xml",
+        "source": "E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\162af99f07aa7ab3868e16b0e992e25f\\res\\anim\\abc_popup_exit.xml"
     },
     {
-        "merged": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\studioWorkspace\\vo2.0\\faceunity\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_grow_fade_in_from_bottom.xml",
-        "source": "/Users/tianou/Desktop/AndroidContent/vo2.0/C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\36461769f90b2604d4b0bb9a3731b6f2\\res\\anim\\abc_grow_fade_in_from_bottom.xml"
+        "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\Users\\tianou\\vo2.0\\vo2.0\\faceunity\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_fade_in.xml",
+        "source": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\162af99f07aa7ab3868e16b0e992e25f\\res\\anim\\abc_fade_in.xml"
     },
     {
-        "merged": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\Users\\tianou\\vo2.0\\vo2.0\\faceunity\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\tooltip_enter.xml",
-        "source": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\162af99f07aa7ab3868e16b0e992e25f\\res\\anim\\tooltip_enter.xml"
+        "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\studioWorkspace\\vo2.0\\faceunity\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\tooltip_exit.xml",
+        "source": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\36461769f90b2604d4b0bb9a3731b6f2\\res\\anim\\tooltip_exit.xml"
     },
     {
-        "merged": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\Users\\tianou\\vo2.0\\vo2.0\\faceunity\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_popup_exit.xml",
-        "source": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\162af99f07aa7ab3868e16b0e992e25f\\res\\anim\\abc_popup_exit.xml"
+        "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\studioWorkspace\\vo2.0\\faceunity\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_slide_out_bottom.xml",
+        "source": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\36461769f90b2604d4b0bb9a3731b6f2\\res\\anim\\abc_slide_out_bottom.xml"
     },
     {
-        "merged": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\studioWorkspace\\vo2.0\\faceunity\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_popup_exit.xml",
-        "source": "/Users/tianou/Desktop/AndroidContent/vo2.0/C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\36461769f90b2604d4b0bb9a3731b6f2\\res\\anim\\abc_popup_exit.xml"
+        "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\Users\\tianou\\vo2.0\\vo2.0\\faceunity\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_slide_out_top.xml",
+        "source": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\162af99f07aa7ab3868e16b0e992e25f\\res\\anim\\abc_slide_out_top.xml"
     },
     {
-        "merged": "/Users/tianou/Desktop/AndroidContent/vo2.0/faceunity/build/intermediates/res/merged/androidTest/debug/anim/tooltip_exit.xml",
-        "source": "/Users/tianou/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/162af99f07aa7ab3868e16b0e992e25f/res/anim/tooltip_exit.xml"
+        "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\Users\\tianou\\vo2.0\\vo2.0\\faceunity\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_grow_fade_in_from_bottom.xml",
+        "source": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\162af99f07aa7ab3868e16b0e992e25f\\res\\anim\\abc_grow_fade_in_from_bottom.xml"
     },
     {
-        "merged": "/Users/tianou/Desktop/AndroidContent/vo2.0/faceunity/build/intermediates/res/merged/androidTest/debug/anim/abc_shrink_fade_out_from_bottom.xml",
-        "source": "/Users/tianou/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/162af99f07aa7ab3868e16b0e992e25f/res/anim/abc_shrink_fade_out_from_bottom.xml"
+        "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\Users\\tianou\\vo2.0\\vo2.0\\faceunity\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\tooltip_exit.xml",
+        "source": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\162af99f07aa7ab3868e16b0e992e25f\\res\\anim\\tooltip_exit.xml"
     },
     {
-        "merged": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\Users\\tianou\\vo2.0\\vo2.0\\faceunity\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_fade_in.xml",
-        "source": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\162af99f07aa7ab3868e16b0e992e25f\\res\\anim\\abc_fade_in.xml"
+        "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\faceunity\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_slide_in_top.xml",
+        "source": "E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\162af99f07aa7ab3868e16b0e992e25f\\res\\anim\\abc_slide_in_top.xml"
     },
     {
-        "merged": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\studioWorkspace\\vo2.0\\faceunity\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_slide_out_bottom.xml",
-        "source": "/Users/tianou/Desktop/AndroidContent/vo2.0/C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\36461769f90b2604d4b0bb9a3731b6f2\\res\\anim\\abc_slide_out_bottom.xml"
+        "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\faceunity\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\tooltip_exit.xml",
+        "source": "E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\162af99f07aa7ab3868e16b0e992e25f\\res\\anim\\tooltip_exit.xml"
     },
     {
-        "merged": "/Users/tianou/Desktop/AndroidContent/vo2.0/faceunity/build/intermediates/res/merged/androidTest/debug/anim/abc_slide_out_bottom.xml",
-        "source": "/Users/tianou/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/162af99f07aa7ab3868e16b0e992e25f/res/anim/abc_slide_out_bottom.xml"
+        "merged": "E:\\studioWorkspace\\vo2.0\\faceunity\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_fade_out.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\36461769f90b2604d4b0bb9a3731b6f2\\res\\anim\\abc_fade_out.xml"
     },
     {
-        "merged": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\Users\\tianou\\vo2.0\\vo2.0\\faceunity\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\tooltip_exit.xml",
-        "source": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\162af99f07aa7ab3868e16b0e992e25f\\res\\anim\\tooltip_exit.xml"
+        "merged": "E:\\studioWorkspace\\vo2.0\\faceunity\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_popup_enter.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\36461769f90b2604d4b0bb9a3731b6f2\\res\\anim\\abc_popup_enter.xml"
     },
     {
-        "merged": "/Users/tianou/Desktop/AndroidContent/vo2.0/faceunity/build/intermediates/res/merged/androidTest/debug/anim/abc_grow_fade_in_from_bottom.xml",
-        "source": "/Users/tianou/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/162af99f07aa7ab3868e16b0e992e25f/res/anim/abc_grow_fade_in_from_bottom.xml"
+        "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\Users\\tianou\\vo2.0\\vo2.0\\faceunity\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_slide_out_bottom.xml",
+        "source": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\162af99f07aa7ab3868e16b0e992e25f\\res\\anim\\abc_slide_out_bottom.xml"
     },
     {
-        "merged": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\studioWorkspace\\vo2.0\\faceunity\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\tooltip_exit.xml",
-        "source": "/Users/tianou/Desktop/AndroidContent/vo2.0/C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\36461769f90b2604d4b0bb9a3731b6f2\\res\\anim\\tooltip_exit.xml"
+        "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\faceunity\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_shrink_fade_out_from_bottom.xml",
+        "source": "E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\162af99f07aa7ab3868e16b0e992e25f\\res\\anim\\abc_shrink_fade_out_from_bottom.xml"
     },
     {
-        "merged": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\Users\\tianou\\vo2.0\\vo2.0\\faceunity\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_shrink_fade_out_from_bottom.xml",
-        "source": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\162af99f07aa7ab3868e16b0e992e25f\\res\\anim\\abc_shrink_fade_out_from_bottom.xml"
+        "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\faceunity\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_fade_in.xml",
+        "source": "E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\162af99f07aa7ab3868e16b0e992e25f\\res\\anim\\abc_fade_in.xml"
     },
     {
-        "merged": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\Users\\tianou\\vo2.0\\vo2.0\\faceunity\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_slide_in_bottom.xml",
-        "source": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\162af99f07aa7ab3868e16b0e992e25f\\res\\anim\\abc_slide_in_bottom.xml"
+        "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\studioWorkspace\\vo2.0\\faceunity\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_slide_in_bottom.xml",
+        "source": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\36461769f90b2604d4b0bb9a3731b6f2\\res\\anim\\abc_slide_in_bottom.xml"
     },
     {
-        "merged": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\Users\\tianou\\vo2.0\\vo2.0\\faceunity\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_popup_enter.xml",
-        "source": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\162af99f07aa7ab3868e16b0e992e25f\\res\\anim\\abc_popup_enter.xml"
+        "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\faceunity\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_slide_in_bottom.xml",
+        "source": "E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\162af99f07aa7ab3868e16b0e992e25f\\res\\anim\\abc_slide_in_bottom.xml"
     },
     {
-        "merged": "/Users/tianou/Desktop/AndroidContent/vo2.0/faceunity/build/intermediates/res/merged/androidTest/debug/anim/abc_slide_in_bottom.xml",
-        "source": "/Users/tianou/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/162af99f07aa7ab3868e16b0e992e25f/res/anim/abc_slide_in_bottom.xml"
+        "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\studioWorkspace\\vo2.0\\faceunity\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\tooltip_enter.xml",
+        "source": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\36461769f90b2604d4b0bb9a3731b6f2\\res\\anim\\tooltip_enter.xml"
     },
     {
-        "merged": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\Users\\tianou\\vo2.0\\vo2.0\\faceunity\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_slide_out_bottom.xml",
-        "source": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\162af99f07aa7ab3868e16b0e992e25f\\res\\anim\\abc_slide_out_bottom.xml"
+        "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\Users\\tianou\\vo2.0\\vo2.0\\faceunity\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_popup_exit.xml",
+        "source": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\162af99f07aa7ab3868e16b0e992e25f\\res\\anim\\abc_popup_exit.xml"
     },
     {
-        "merged": "/Users/tianou/Desktop/AndroidContent/vo2.0/faceunity/build/intermediates/res/merged/androidTest/debug/anim/abc_popup_exit.xml",
-        "source": "/Users/tianou/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/162af99f07aa7ab3868e16b0e992e25f/res/anim/abc_popup_exit.xml"
+        "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\studioWorkspace\\vo2.0\\faceunity\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_popup_exit.xml",
+        "source": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\36461769f90b2604d4b0bb9a3731b6f2\\res\\anim\\abc_popup_exit.xml"
     },
     {
-        "merged": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\studioWorkspace\\vo2.0\\faceunity\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_shrink_fade_out_from_bottom.xml",
-        "source": "/Users/tianou/Desktop/AndroidContent/vo2.0/C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\36461769f90b2604d4b0bb9a3731b6f2\\res\\anim\\abc_shrink_fade_out_from_bottom.xml"
+        "merged": "E:\\studioWorkspace\\vo2.0\\faceunity\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_slide_out_top.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\36461769f90b2604d4b0bb9a3731b6f2\\res\\anim\\abc_slide_out_top.xml"
+    },
+    {
+        "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\studioWorkspace\\vo2.0\\faceunity\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_shrink_fade_out_from_bottom.xml",
+        "source": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\36461769f90b2604d4b0bb9a3731b6f2\\res\\anim\\abc_shrink_fade_out_from_bottom.xml"
+    },
+    {
+        "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\Users\\tianou\\vo2.0\\vo2.0\\faceunity\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_slide_in_bottom.xml",
+        "source": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\162af99f07aa7ab3868e16b0e992e25f\\res\\anim\\abc_slide_in_bottom.xml"
+    },
+    {
+        "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\studioWorkspace\\vo2.0\\faceunity\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_popup_enter.xml",
+        "source": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\36461769f90b2604d4b0bb9a3731b6f2\\res\\anim\\abc_popup_enter.xml"
+    },
+    {
+        "merged": "E:\\studioWorkspace\\vo2.0\\faceunity\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_popup_exit.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\36461769f90b2604d4b0bb9a3731b6f2\\res\\anim\\abc_popup_exit.xml"
+    },
+    {
+        "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\studioWorkspace\\vo2.0\\faceunity\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_fade_out.xml",
+        "source": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\36461769f90b2604d4b0bb9a3731b6f2\\res\\anim\\abc_fade_out.xml"
+    },
+    {
+        "merged": "E:\\studioWorkspace\\vo2.0\\faceunity\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\tooltip_exit.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\36461769f90b2604d4b0bb9a3731b6f2\\res\\anim\\tooltip_exit.xml"
+    },
+    {
+        "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\faceunity\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_fade_out.xml",
+        "source": "E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\162af99f07aa7ab3868e16b0e992e25f\\res\\anim\\abc_fade_out.xml"
+    },
+    {
+        "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\faceunity\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_grow_fade_in_from_bottom.xml",
+        "source": "E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\162af99f07aa7ab3868e16b0e992e25f\\res\\anim\\abc_grow_fade_in_from_bottom.xml"
+    },
+    {
+        "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\faceunity\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_popup_enter.xml",
+        "source": "E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\162af99f07aa7ab3868e16b0e992e25f\\res\\anim\\abc_popup_enter.xml"
+    },
+    {
+        "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\Users\\tianou\\vo2.0\\vo2.0\\faceunity\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_shrink_fade_out_from_bottom.xml",
+        "source": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\162af99f07aa7ab3868e16b0e992e25f\\res\\anim\\abc_shrink_fade_out_from_bottom.xml"
+    },
+    {
+        "merged": "E:\\studioWorkspace\\vo2.0\\faceunity\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_shrink_fade_out_from_bottom.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\36461769f90b2604d4b0bb9a3731b6f2\\res\\anim\\abc_shrink_fade_out_from_bottom.xml"
+    },
+    {
+        "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\studioWorkspace\\vo2.0\\faceunity\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_fade_in.xml",
+        "source": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\36461769f90b2604d4b0bb9a3731b6f2\\res\\anim\\abc_fade_in.xml"
     }
 ]

@@ -1,26 +1,34 @@
 [
     {
-        "merged": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\Users\\tianou\\vo2.0\\vo2.0\\faceunity\\build\\intermediates\\res\\merged\\androidTest\\debug\\color-v11\\abc_background_cache_hint_selector_material_light.xml",
-        "source": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\162af99f07aa7ab3868e16b0e992e25f\\res\\color-v11\\abc_background_cache_hint_selector_material_light.xml"
+        "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\studioWorkspace\\vo2.0\\faceunity\\build\\intermediates\\res\\merged\\androidTest\\debug\\color-v11\\abc_background_cache_hint_selector_material_light.xml",
+        "source": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\36461769f90b2604d4b0bb9a3731b6f2\\res\\color-v11\\abc_background_cache_hint_selector_material_light.xml"
     },
     {
-        "merged": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\studioWorkspace\\vo2.0\\faceunity\\build\\intermediates\\res\\merged\\androidTest\\debug\\color-v11\\abc_background_cache_hint_selector_material_light.xml",
-        "source": "/Users/tianou/Desktop/AndroidContent/vo2.0/C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\36461769f90b2604d4b0bb9a3731b6f2\\res\\color-v11\\abc_background_cache_hint_selector_material_light.xml"
+        "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\faceunity\\build\\intermediates\\res\\merged\\androidTest\\debug\\color-v11\\abc_background_cache_hint_selector_material_light.xml",
+        "source": "E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\162af99f07aa7ab3868e16b0e992e25f\\res\\color-v11\\abc_background_cache_hint_selector_material_light.xml"
     },
     {
-        "merged": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\studioWorkspace\\vo2.0\\faceunity\\build\\intermediates\\res\\merged\\androidTest\\debug\\color-v11\\abc_background_cache_hint_selector_material_dark.xml",
-        "source": "/Users/tianou/Desktop/AndroidContent/vo2.0/C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\36461769f90b2604d4b0bb9a3731b6f2\\res\\color-v11\\abc_background_cache_hint_selector_material_dark.xml"
+        "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\Users\\tianou\\vo2.0\\vo2.0\\faceunity\\build\\intermediates\\res\\merged\\androidTest\\debug\\color-v11\\abc_background_cache_hint_selector_material_light.xml",
+        "source": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\162af99f07aa7ab3868e16b0e992e25f\\res\\color-v11\\abc_background_cache_hint_selector_material_light.xml"
     },
     {
-        "merged": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\Users\\tianou\\vo2.0\\vo2.0\\faceunity\\build\\intermediates\\res\\merged\\androidTest\\debug\\color-v11\\abc_background_cache_hint_selector_material_dark.xml",
-        "source": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\162af99f07aa7ab3868e16b0e992e25f\\res\\color-v11\\abc_background_cache_hint_selector_material_dark.xml"
+        "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\faceunity\\build\\intermediates\\res\\merged\\androidTest\\debug\\color-v11\\abc_background_cache_hint_selector_material_dark.xml",
+        "source": "E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\162af99f07aa7ab3868e16b0e992e25f\\res\\color-v11\\abc_background_cache_hint_selector_material_dark.xml"
     },
     {
-        "merged": "/Users/tianou/Desktop/AndroidContent/vo2.0/faceunity/build/intermediates/res/merged/androidTest/debug/color-v11/abc_background_cache_hint_selector_material_light.xml",
-        "source": "/Users/tianou/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/162af99f07aa7ab3868e16b0e992e25f/res/color-v11/abc_background_cache_hint_selector_material_light.xml"
+        "merged": "E:\\studioWorkspace\\vo2.0\\faceunity\\build\\intermediates\\res\\merged\\androidTest\\debug\\color-v11\\abc_background_cache_hint_selector_material_light.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\36461769f90b2604d4b0bb9a3731b6f2\\res\\color-v11\\abc_background_cache_hint_selector_material_light.xml"
     },
     {
-        "merged": "/Users/tianou/Desktop/AndroidContent/vo2.0/faceunity/build/intermediates/res/merged/androidTest/debug/color-v11/abc_background_cache_hint_selector_material_dark.xml",
-        "source": "/Users/tianou/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/162af99f07aa7ab3868e16b0e992e25f/res/color-v11/abc_background_cache_hint_selector_material_dark.xml"
+        "merged": "E:\\studioWorkspace\\vo2.0\\faceunity\\build\\intermediates\\res\\merged\\androidTest\\debug\\color-v11\\abc_background_cache_hint_selector_material_dark.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\36461769f90b2604d4b0bb9a3731b6f2\\res\\color-v11\\abc_background_cache_hint_selector_material_dark.xml"
+    },
+    {
+        "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\Users\\tianou\\vo2.0\\vo2.0\\faceunity\\build\\intermediates\\res\\merged\\androidTest\\debug\\color-v11\\abc_background_cache_hint_selector_material_dark.xml",
+        "source": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\162af99f07aa7ab3868e16b0e992e25f\\res\\color-v11\\abc_background_cache_hint_selector_material_dark.xml"
+    },
+    {
+        "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\studioWorkspace\\vo2.0\\faceunity\\build\\intermediates\\res\\merged\\androidTest\\debug\\color-v11\\abc_background_cache_hint_selector_material_dark.xml",
+        "source": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\36461769f90b2604d4b0bb9a3731b6f2\\res\\color-v11\\abc_background_cache_hint_selector_material_dark.xml"
     }
 ]
