@@ -48,7 +48,7 @@ public class MineFragment extends MainTabFragment implements View.OnClickListene
     private ImageView iv_guidePravcyFriends,iv_guideLifeNotePwd,iv_guideInfoTrans,iv_guideDeletePravcyFriends;
     private CircleImageView iv_avatar;
     private TextView tv_nickName,tv_voNum;
-    //123
+    //12345
     @Override
     protected void onInit() {
         initViews();
@@ -58,6 +58,8 @@ public class MineFragment extends MainTabFragment implements View.OnClickListene
         super.onActivityCreated(savedInstanceState);
         onCurrent();
     }
+
+
     private void initViews() {
         iv_guidePravcyFriends=findView(R.id.iv_guidePravcyFriends);
         iv_guideLifeNotePwd=findView(R.id.iv_guideLifeNotePwd);
@@ -295,7 +297,8 @@ public class MineFragment extends MainTabFragment implements View.OnClickListene
                 .setOpenVipListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                      /*  Intent intent = new Intent(getActivity(), CreateVoVIPAccountActivityVo.class);
+                      /*
+                      Intent intent = new Intent(getActivity(), CreateVoVIPAccountActivityVo.class);
                         startActivity(intent);
                         dialog_vip.dismiss();*/
                     }
