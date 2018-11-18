@@ -582,7 +582,8 @@ public class UserProfileActivity extends UI {
                         addFriendDialog.dismiss();
                         updateUserOperatorView();
                         if (VerifyType.DIRECT_ADD == verifyType) {
-                            Toast.makeText(UserProfileActivity.this, "添加好友成功", Toast.LENGTH_SHORT).show();
+                            //走自己的接口添加好友
+                            insertFriend();
                         } else {
                             Toast.makeText(UserProfileActivity.this, "添加好友请求发送成功", Toast.LENGTH_SHORT).show();
                         }
@@ -610,7 +611,29 @@ public class UserProfileActivity extends UI {
 
         Log.i(TAG, "onAddFriendByVerify");
     }
+    //添加好友
+    private void insertFriend() {
+        Map<String,String> params = new HashMap<>();
+        params.put("f_vo_code",account);
+        ApiFriends.insertFriend(UserProfileActivity.this, params, new OnRequestDataListener() {
+            @Override
+            public void requestSuccess(String data) {
+                try {
+                    JSONObject jsonObject = new JSONObject(data);
+                    String code = jsonObject.getString("code");
+                    if (code.equals(ApiConstant.SUCCESS_CODE)){
+                        Toast.makeText(UserProfileActivity.this, "添加好友成功", Toast.LENGTH_SHORT).show();
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+            @Override
+            public void requestFailure(int code, String msg) {
 
+            }
+        });
+    }
     private void onRemoveFriend() {
         Log.i(TAG, "onRemoveFriend");
         if (!NetworkUtil.isNetAvailable(this)) {

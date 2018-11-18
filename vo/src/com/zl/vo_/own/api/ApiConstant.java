@@ -38,6 +38,8 @@ public class ApiConstant {
     public static final String SEARCH_FRIEND=BASE_URL+"/api/v1/friend/search";
     //判断添加好友的方式
     public static final String ADD_FRIEND_DIRECTLY=BASE_URL+"/api/v1/friend/profile";
+    //添加好友
+    public static final String INSERT_FRIEND=BASE_URL+"/api/v1/friend/insert";
 
 
 

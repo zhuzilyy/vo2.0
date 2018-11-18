@@ -26,4 +26,9 @@ public class ApiFriends {
         Dialog dialog = WeiboDialogUtils.createLoadingDialog(context, "正在加载");
         excutePost(ApiConstant.ADD_FRIEND_DIRECTLY,"two", context, params,dialog, listener);
     }
+    /*添加好友*/
+    public static void insertFriend(final Context context, Map<String,String> params, final OnRequestDataListener listener) {
+        Dialog dialog = WeiboDialogUtils.createLoadingDialog(context, "正在添加");
+        excutePost(ApiConstant.INSERT_FRIEND,"two", context, params,dialog, listener);
+    }
 }

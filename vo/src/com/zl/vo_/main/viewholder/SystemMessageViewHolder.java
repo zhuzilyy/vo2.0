@@ -1,10 +1,13 @@
 package com.zl.vo_.main.viewholder;
 
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.zl.vo_.R;
+import com.zl.vo_.contact.activity.UserProfileActivity;
 import com.zl.vo_.main.helper.MessageHelper;
 import com.netease.nim.uikit.business.uinfo.UserInfoHelper;
 import com.netease.nim.uikit.common.adapter.TViewHolder;
@@ -12,6 +15,15 @@ import com.netease.nim.uikit.common.ui.imageview.HeadImageView;
 import com.netease.nim.uikit.common.util.sys.TimeUtil;
 import com.netease.nimlib.sdk.msg.constant.SystemMessageStatus;
 import com.netease.nimlib.sdk.msg.model.SystemMessage;
+import com.zl.vo_.own.api.ApiConstant;
+import com.zl.vo_.own.api.ApiFriends;
+import com.zl.vo_.own.listener.OnRequestDataListener;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Created by huangjun on 2015/3/18.
@@ -106,6 +118,7 @@ public class SystemMessageViewHolder extends TViewHolder {
         agreeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                addFriend(message.getTargetId());
                 setReplySending();
                 listener.onAgree(message);
             }
@@ -118,7 +131,30 @@ public class SystemMessageViewHolder extends TViewHolder {
             }
         });
     }
+    //通知后台添加好友成功
+    private void addFriend(String targetId) {
+        Map<String,String> params = new HashMap<>();
+        params.put("f_vo_code",targetId);
+        ApiFriends.insertFriend(context, params, new OnRequestDataListener() {
+            @Override
+            public void requestSuccess(String data) {
+                Log.i("tag",data);
+                try {
+                    JSONObject jsonObject = new JSONObject(data);
+                    String code = jsonObject.getString("code");
+                    if (code.equals(ApiConstant.SUCCESS_CODE)){
+                        Toast.makeText(context, "添加好友成功", Toast.LENGTH_SHORT).show();
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+            @Override
+            public void requestFailure(int code, String msg) {
 
+            }
+        });
+    }
     /**
      * 等待服务器返回状态设置
      */
