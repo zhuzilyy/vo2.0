@@ -4,8 +4,11 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.netease.nimlib.sdk.friend.constant.VerifyType;
 import com.zl.vo_.R;
+import com.zl.vo_.contact.activity.UserProfileActivity;
 import com.zl.vo_.own.base.BaseActivity;
+import com.zl.vo_.own.util.SPUtils;
 import com.zl.vo_.own.views.EaseSwitchButton;
 
 import butterknife.BindView;
@@ -32,14 +35,13 @@ public class CurrencySettingActivity extends BaseActivity {
 
     @Override
     protected void initData() {
+        //设置默认样式
 
     }
-
     @Override
     protected void getResLayout() {
         setContentView(R.layout.layout_currencysetting_activity);
     }
-
     @Override
     protected void initListener() {
         //加我为好友时需要验证

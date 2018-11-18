@@ -19,7 +19,11 @@ import com.zl.vo_.DemoCache;
 import com.zl.vo_.R;
 import com.zl.vo_.contact.constant.UserConstant;
 import com.zl.vo_.main.model.Extras;
+import com.zl.vo_.own.api.ApiConstant;
+import com.zl.vo_.own.api.ApiFriends;
 import com.zl.vo_.own.dialog.CustomerDialog;
+import com.zl.vo_.own.listener.OnRequestDataListener;
+import com.zl.vo_.own.util.SPUtils;
 import com.zl.vo_.own.util.WeiboDialogUtils;
 import com.zl.vo_.session.SessionHelper;
 import com.netease.nim.uikit.business.uinfo.UserInfoHelper;
@@ -46,6 +50,9 @@ import com.netease.nimlib.sdk.friend.model.MuteListChangedNotify;
 import com.netease.nimlib.sdk.uinfo.constant.GenderEnum;
 import com.netease.nimlib.sdk.uinfo.model.NimUserInfo;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -59,14 +66,11 @@ import butterknife.OnClick;
  * Created by huangjun on 2015/8/11.
  */
 public class UserProfileActivity extends UI {
-
     private static final String TAG = UserProfileActivity.class.getSimpleName();
-
-    private final boolean FLAG_ADD_FRIEND_DIRECTLY = false; // 是否直接加为好友开关，false为需要好友申请
+    public static boolean FLAG_ADD_FRIEND_DIRECTLY = false; // 是否直接加为好友开关，false为需要好友申请
     private final String KEY_BLACK_LIST = "black_list";
     private final String KEY_MSG_NOTICE = "msg_notice";
     private String account;
-
     // 基本信息
     private HeadImageView headImageView;
     private TextView nameText;
@@ -93,8 +97,7 @@ public class UserProfileActivity extends UI {
     private Map<String, Boolean> toggleStateMap;
     @BindView(R.id.tv_title)
     TextView tv_title;
-    private Dialog loadingDialog;
-
+    private Dialog loadingDialog,addFriendDialog;
     public static void start(Context context, String account) {
         Intent intent = new Intent();
         intent.setClass(context, UserProfileActivity.class);
@@ -490,11 +493,7 @@ public class UserProfileActivity extends UI {
         @Override
         public void onClick(View v) {
             if (v == addFriendBtn) {
-                if (FLAG_ADD_FRIEND_DIRECTLY) {
-                    doAddFriend(null, true);  // 直接加为好友
-                } else {
-                    onAddFriendByVerify(); // 发起好友验证请求
-                }
+                isAddFriendDirectly();
             } else if (v == removeFriendBtn) {
                 onRemoveFriend();
             } else if (v == chatBtn) {
@@ -502,6 +501,35 @@ public class UserProfileActivity extends UI {
             }
         }
     };
+    //是不是直接
+    private void isAddFriendDirectly() {
+            Map<String,String> params = new HashMap<>();
+            params.put("f_vo_code",account);
+            ApiFriends.addFriendDirectly(this, params, new OnRequestDataListener() {
+                @Override
+                public void requestSuccess(String data) {
+                    try {
+                        JSONObject jsonObject = new JSONObject(data);
+                        String code = jsonObject.getString("code");
+                        if (code.equals(ApiConstant.SUCCESS_CODE)){
+                            JSONObject jsonData = jsonObject.getJSONObject("data");
+                            String friend_verify = jsonData.getString("friend_verify");
+                            if (friend_verify.equals("1")){
+                                onAddFriendByVerify(); // 发起好友验证请求
+                            }else if(friend_verify.equals("0")){
+                                doAddFriend(null, true);  // 直接加为好友
+                            }
+                        }
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                }
+                @Override
+                public void requestFailure(int code, String msg) {
+                    Toast.makeText(UserProfileActivity.this, "添加失败请重新添加", Toast.LENGTH_SHORT).show();
+                }
+            });
+    }
 
     /**
      * 通过验证方式添加好友
@@ -534,6 +562,7 @@ public class UserProfileActivity extends UI {
     }
 
     private void doAddFriend(String msg, boolean addDirectly) {
+        addFriendDialog = WeiboDialogUtils.createLoadingDialog(this, "正在添加");
         if (!NetworkUtil.isNetAvailable(this)) {
             Toast.makeText(UserProfileActivity.this, R.string.network_is_not_available, Toast.LENGTH_SHORT).show();
             return;
@@ -543,12 +572,14 @@ public class UserProfileActivity extends UI {
             return;
         }
         final VerifyType verifyType = addDirectly ? VerifyType.DIRECT_ADD : VerifyType.VERIFY_REQUEST;
-        DialogMaker.showProgressDialog(this, "", true);
+        //DialogMaker.showProgressDialog(this, "", true);
+        addFriendDialog.show();
         NIMClient.getService(FriendService.class).addFriend(new AddFriendData(account, verifyType, msg))
                 .setCallback(new RequestCallback<Void>() {
                     @Override
                     public void onSuccess(Void param) {
-                        DialogMaker.dismissProgressDialog();
+                        //DialogMaker.dismissProgressDialog();
+                        addFriendDialog.dismiss();
                         updateUserOperatorView();
                         if (VerifyType.DIRECT_ADD == verifyType) {
                             Toast.makeText(UserProfileActivity.this, "添加好友成功", Toast.LENGTH_SHORT).show();
@@ -559,7 +590,8 @@ public class UserProfileActivity extends UI {
 
                     @Override
                     public void onFailed(int code) {
-                        DialogMaker.dismissProgressDialog();
+                        addFriendDialog.dismiss();
+                        //DialogMaker.dismissProgressDialog();
                         if (code == 408) {
                             Toast.makeText(UserProfileActivity.this, R.string.network_is_not_available, Toast
                                     .LENGTH_SHORT).show();
@@ -571,7 +603,8 @@ public class UserProfileActivity extends UI {
 
                     @Override
                     public void onException(Throwable exception) {
-                        DialogMaker.dismissProgressDialog();
+                        //DialogMaker.dismissProgressDialog();
+                        addFriendDialog.dismiss();
                     }
                 });
 

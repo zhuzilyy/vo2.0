@@ -125,14 +125,14 @@ public class AddFriendActivity extends UI {
             public void onClick(View view) {
                if (InternetUtil.hasInternet()){
                    //设置不能搜索自己
-                   if (tv_search_name.getText().toString().equals(DemoCache.getAccount())){
-                       //Toast.makeText(this, R.string.add_friend_self_tip, Toast.LENGTH_SHORT).show();
+                  /* if (tv_search_name.getText().toString().equals(DemoCache.getAccount())){
+                       Toast.makeText(AddFriendActivity.this, R.string.add_friend_self_tip, Toast.LENGTH_SHORT).show();
                        return;
-                   }
+                   }*/
                    String friend = tv_search_name.getText().toString().trim();
                    searchFriend(friend);
                }else{
-                   //Toast.makeText(this, "请检查网络", Toast.LENGTH_SHORT).show();
+                   Toast.makeText(AddFriendActivity.this, "请检查网络", Toast.LENGTH_SHORT).show();
                }
             }
         });
@@ -142,6 +142,8 @@ public class AddFriendActivity extends UI {
     private void searchFriend(final String name) {
         Map<String,String> params = new HashMap<>();
         params.put("keyword",name);
+        String account = DemoCache.getAccount();
+       /* vo_dd55fdf22a2f*/
         String cloudToken =(String)SPUtils.get(AddFriendActivity.this,"cloudToken","");
         ApiFriends.searchFriend(this, params, new OnRequestDataListener() {
             @Override
@@ -156,6 +158,8 @@ public class AddFriendActivity extends UI {
                         UserProfileActivity.start(AddFriendActivity.this, vo_code);
                     }else if (code.equals("404001")){
                             showNouserDialog();
+                    }else if(code.equals("404003")){
+                        Toast.makeText(AddFriendActivity.this, R.string.add_friend_self_tip, Toast.LENGTH_SHORT).show();
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();

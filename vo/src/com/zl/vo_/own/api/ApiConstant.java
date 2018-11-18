@@ -35,6 +35,8 @@ public class ApiConstant {
     public static final String CHANGE_AVATAR=BASE_URL+"/api/v1/user/avatar";
     //搜索好友
     public static final String SEARCH_FRIEND=BASE_URL+"/api/v1/friend/search";
+    //判断添加好友的方式
+    public static final String ADD_FRIEND_DIRECTLY=BASE_URL+"/api/v1/friend/profile";
 
 
 
