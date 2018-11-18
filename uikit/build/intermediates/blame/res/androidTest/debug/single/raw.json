@@ -1,18 +1,22 @@
 [
     {
-        "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\Users\\tianou\\vo2.0\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\audio_end_tip.wav",
-        "source": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\Users\\tianou\\vo2.0\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\raw\\audio_end_tip.wav"
+        "merged": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\Users\\tianou\\vo2.0\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\audio_end_tip.wav",
+        "source": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\Users\\tianou\\vo2.0\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\raw\\audio_end_tip.wav"
     },
     {
-        "merged": "E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\audio_end_tip.wav",
-        "source": "E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\raw\\audio_end_tip.wav"
+        "merged": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\audio_end_tip.wav",
+        "source": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\raw\\audio_end_tip.wav"
     },
     {
-        "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\audio_end_tip.wav",
-        "source": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\raw\\audio_end_tip.wav"
+        "merged": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\audio_end_tip.wav",
+        "source": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\raw\\audio_end_tip.wav"
     },
     {
-        "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\audio_end_tip.wav",
-        "source": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\raw\\audio_end_tip.wav"
+        "merged": "/Users/tianou/Desktop/AndroidContent/vo2.0/uikit/build/intermediates/res/merged/androidTest/debug/raw/audio_end_tip.wav",
+        "source": "/Users/tianou/Desktop/AndroidContent/vo2.0/uikit/build/intermediates/bundles/debug/res/raw/audio_end_tip.wav"
+    },
+    {
+        "merged": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\audio_end_tip.wav",
+        "source": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\raw\\audio_end_tip.wav"
     }
 ]
