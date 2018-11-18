@@ -104,7 +104,7 @@ public class LoginActivity extends BaseActivity {
     //检查参数是不是合法
     private boolean checkParamsIsLegal(String account, String pwd) {
         if (TextUtils.isEmpty(account)){
-            Toast.makeText(this, "用户名不能位空", Toast.LENGTH_SHORT).show();
+            Toast.makeText(LoginActivity.this, "用户名不能位空", Toast.LENGTH_SHORT).show();
             return false;
         }
         if (TextUtils.isEmpty(pwd)){

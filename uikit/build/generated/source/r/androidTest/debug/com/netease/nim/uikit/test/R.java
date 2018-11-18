@@ -5180,6 +5180,8 @@ containing a value of this type.
         public static final int dialog_message_text_style=0x7f0b0194;
         public static final int dialog_title_text_style=0x7f0b0195;
         public static final int easy_dialog_edit_text_style=0x7f0b0196;
+        /**  后面的activity变暗 
+         */
         public static final int easy_dialog_style=0x7f0b0197;
         public static final int edit_text_style=0x7f0b0198;
         public static final int grid_view=0x7f0b0199;

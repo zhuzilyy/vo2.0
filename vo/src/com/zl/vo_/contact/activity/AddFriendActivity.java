@@ -35,6 +35,7 @@ import com.zl.vo_.own.api.ApiFriends;
 import com.zl.vo_.own.dialog.CustomerDialog;
 import com.zl.vo_.own.listener.OnRequestDataListener;
 import com.zl.vo_.own.util.InternetUtil;
+import com.zl.vo_.own.util.SPUtils;
 import com.zl.vo_.own.util.WeiboDialogUtils;
 
 import org.json.JSONException;
@@ -128,6 +129,11 @@ public class AddFriendActivity extends UI {
             @Override
             public void onClick(View view) {
                if (InternetUtil.hasInternet()){
+                   //设置不能搜索自己
+                   if (tv_search_name.getText().toString().equals(DemoCache.getAccount())){
+                       Toast.makeText(AddFriendActivity.this, R.string.add_friend_self_tip, Toast.LENGTH_SHORT).show();
+                       return;
+                   }
                    String friend = tv_search_name.getText().toString().trim();
                    searchFriend(friend);
                }else{
@@ -141,14 +147,18 @@ public class AddFriendActivity extends UI {
     private void searchFriend(final String name) {
         Map<String,String> params = new HashMap<>();
         params.put("keyword",name);
+        String cloudToken =(String)SPUtils.get(AddFriendActivity.this,"cloudToken","");
         ApiFriends.searchFriend(this, params, new OnRequestDataListener() {
             @Override
             public void requestSuccess(String data) {
+                Log.i("tag",data);
                 try {
                     JSONObject jsonObject = new JSONObject(data);
                     String code = jsonObject.getString("code");
                     if (code.equals(ApiConstant.SUCCESS_CODE)){
-                        UserProfileActivity.start(AddFriendActivity.this, name);
+                        JSONObject jsonData = jsonObject.getJSONObject("data");
+                        String vo_code = jsonData.getString("vo_code");
+                        UserProfileActivity.start(AddFriendActivity.this, vo_code);
                     }else if (code.equals("404001")){
                             showNouserDialog();
                     }
@@ -158,6 +168,7 @@ public class AddFriendActivity extends UI {
             }
             @Override
             public void requestFailure(int code, String msg) {
+
             }
         });
 

@@ -6,7 +6,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AbsListView;
 import android.widget.AdapterView;
+import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.zl.vo_.R;
@@ -46,6 +48,8 @@ public class TeamListActivity extends UI implements AdapterView.OnItemClickListe
     private ListView lvContacts;
 
     private int itemType;
+    private TextView tv_title;
+    private ImageView iv_back;
 
     public static final void start(Context context, int teamItemTypes) {
         Intent intent = new Intent();
@@ -62,7 +66,6 @@ public class TeamListActivity extends UI implements AdapterView.OnItemClickListe
         itemType = getIntent().getIntExtra(EXTRA_DATA_ITEM_TYPES, ItemTypes.TEAMS.ADVANCED_TEAM);
 
         setContentView(R.layout.group_list_activity);
-
         ToolBarOptions options = new NimToolBarOptions();
         options.titleId = itemType == ItemTypes.TEAMS.ADVANCED_TEAM ? R.string.advanced_team : R.string.normal_team;
         setToolBar(R.id.toolbar, options);
@@ -117,6 +120,20 @@ public class TeamListActivity extends UI implements AdapterView.OnItemClickListe
         adapter.load(true);
 
         registerTeamUpdateObserver(true);
+
+        initData();
+    }
+
+    private void initData() {
+         tv_title = findView(R.id.tv_title);
+         tv_title.setText("群聊");
+        iv_back=findView(R.id.iv_back);
+        iv_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
     }
 
     @Override

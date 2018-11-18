@@ -1,102 +1,22 @@
 [
     {
-        "merged": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\Users\\tianou\\vo2.0\\vo2.0\\jrmfRpWalletlib\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\jrmf_rp_slide_right_out.xml",
-        "source": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\Users\\tianou\\vo2.0\\vo2.0\\jrmfRpWalletlib\\build\\intermediates\\bundles\\debug\\res\\anim\\jrmf_rp_slide_right_out.xml"
+        "merged": "E:\\studioWorkspace\\vo2.0\\jrmfRpWalletlib\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\jrmf_w_actionsheet_dialog_out.xml",
+        "source": "E:\\studioWorkspace\\vo2.0\\jrmfRpWalletlib\\build\\intermediates\\bundles\\debug\\res\\anim\\jrmf_w_actionsheet_dialog_out.xml"
     },
     {
-        "merged": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\jrmfRpWalletlib\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\jrmf_rp_slide_right_in.xml",
-        "source": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\jrmfRpWalletlib\\build\\intermediates\\bundles\\debug\\res\\anim\\jrmf_rp_slide_right_in.xml"
+        "merged": "E:\\studioWorkspace\\vo2.0\\jrmfRpWalletlib\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\jrmf_rp_slide_right_out.xml",
+        "source": "E:\\studioWorkspace\\vo2.0\\jrmfRpWalletlib\\build\\intermediates\\bundles\\debug\\res\\anim\\jrmf_rp_slide_right_out.xml"
     },
     {
-        "merged": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\studioWorkspace\\vo2.0\\jrmfRpWalletlib\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\jrmf_rp_slide_right_in.xml",
-        "source": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\studioWorkspace\\vo2.0\\jrmfRpWalletlib\\build\\intermediates\\bundles\\debug\\res\\anim\\jrmf_rp_slide_right_in.xml"
+        "merged": "E:\\studioWorkspace\\vo2.0\\jrmfRpWalletlib\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\jrmf_rp_fade_out.xml",
+        "source": "E:\\studioWorkspace\\vo2.0\\jrmfRpWalletlib\\build\\intermediates\\bundles\\debug\\res\\anim\\jrmf_rp_fade_out.xml"
     },
     {
-        "merged": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\Users\\tianou\\vo2.0\\vo2.0\\jrmfRpWalletlib\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\jrmf_w_actionsheet_dialog_in.xml",
-        "source": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\Users\\tianou\\vo2.0\\vo2.0\\jrmfRpWalletlib\\build\\intermediates\\bundles\\debug\\res\\anim\\jrmf_w_actionsheet_dialog_in.xml"
+        "merged": "E:\\studioWorkspace\\vo2.0\\jrmfRpWalletlib\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\jrmf_rp_slide_right_in.xml",
+        "source": "E:\\studioWorkspace\\vo2.0\\jrmfRpWalletlib\\build\\intermediates\\bundles\\debug\\res\\anim\\jrmf_rp_slide_right_in.xml"
     },
     {
-        "merged": "/Users/tianou/Desktop/AndroidContent/vo2.0/jrmfRpWalletlib/build/intermediates/res/merged/androidTest/debug/anim/jrmf_w_actionsheet_dialog_out.xml",
-        "source": "/Users/tianou/Desktop/AndroidContent/vo2.0/jrmfRpWalletlib/build/intermediates/bundles/debug/res/anim/jrmf_w_actionsheet_dialog_out.xml"
-    },
-    {
-        "merged": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\studioWorkspace\\vo2.0\\jrmfRpWalletlib\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\jrmf_rp_fade_out.xml",
-        "source": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\studioWorkspace\\vo2.0\\jrmfRpWalletlib\\build\\intermediates\\bundles\\debug\\res\\anim\\jrmf_rp_fade_out.xml"
-    },
-    {
-        "merged": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\studioWorkspace\\vo2.0\\jrmfRpWalletlib\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\jrmf_rp_slide_right_in.xml",
-        "source": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\studioWorkspace\\vo2.0\\jrmfRpWalletlib\\build\\intermediates\\bundles\\debug\\res\\anim\\jrmf_rp_slide_right_in.xml"
-    },
-    {
-        "merged": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\Users\\tianou\\vo2.0\\vo2.0\\jrmfRpWalletlib\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\jrmf_rp_slide_right_in.xml",
-        "source": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\Users\\tianou\\vo2.0\\vo2.0\\jrmfRpWalletlib\\build\\intermediates\\bundles\\debug\\res\\anim\\jrmf_rp_slide_right_in.xml"
-    },
-    {
-        "merged": "/Users/tianou/Desktop/AndroidContent/vo2.0/jrmfRpWalletlib/build/intermediates/res/merged/androidTest/debug/anim/jrmf_rp_slide_right_in.xml",
-        "source": "/Users/tianou/Desktop/AndroidContent/vo2.0/jrmfRpWalletlib/build/intermediates/bundles/debug/res/anim/jrmf_rp_slide_right_in.xml"
-    },
-    {
-        "merged": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\jrmfRpWalletlib\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\jrmf_w_actionsheet_dialog_out.xml",
-        "source": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\jrmfRpWalletlib\\build\\intermediates\\bundles\\debug\\res\\anim\\jrmf_w_actionsheet_dialog_out.xml"
-    },
-    {
-        "merged": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\jrmfRpWalletlib\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\jrmf_rp_fade_out.xml",
-        "source": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\jrmfRpWalletlib\\build\\intermediates\\bundles\\debug\\res\\anim\\jrmf_rp_fade_out.xml"
-    },
-    {
-        "merged": "/Users/tianou/Desktop/AndroidContent/vo2.0/jrmfRpWalletlib/build/intermediates/res/merged/androidTest/debug/anim/jrmf_rp_slide_right_out.xml",
-        "source": "/Users/tianou/Desktop/AndroidContent/vo2.0/jrmfRpWalletlib/build/intermediates/bundles/debug/res/anim/jrmf_rp_slide_right_out.xml"
-    },
-    {
-        "merged": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\studioWorkspace\\vo2.0\\jrmfRpWalletlib\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\jrmf_rp_fade_out.xml",
-        "source": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\studioWorkspace\\vo2.0\\jrmfRpWalletlib\\build\\intermediates\\bundles\\debug\\res\\anim\\jrmf_rp_fade_out.xml"
-    },
-    {
-        "merged": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\studioWorkspace\\vo2.0\\jrmfRpWalletlib\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\jrmf_rp_slide_right_out.xml",
-        "source": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\studioWorkspace\\vo2.0\\jrmfRpWalletlib\\build\\intermediates\\bundles\\debug\\res\\anim\\jrmf_rp_slide_right_out.xml"
-    },
-    {
-        "merged": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\Users\\tianou\\vo2.0\\vo2.0\\jrmfRpWalletlib\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\jrmf_w_actionsheet_dialog_out.xml",
-        "source": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\Users\\tianou\\vo2.0\\vo2.0\\jrmfRpWalletlib\\build\\intermediates\\bundles\\debug\\res\\anim\\jrmf_w_actionsheet_dialog_out.xml"
-    },
-    {
-        "merged": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\jrmfRpWalletlib\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\jrmf_w_actionsheet_dialog_in.xml",
-        "source": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\jrmfRpWalletlib\\build\\intermediates\\bundles\\debug\\res\\anim\\jrmf_w_actionsheet_dialog_in.xml"
-    },
-    {
-        "merged": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\studioWorkspace\\vo2.0\\jrmfRpWalletlib\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\jrmf_w_actionsheet_dialog_out.xml",
-        "source": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\studioWorkspace\\vo2.0\\jrmfRpWalletlib\\build\\intermediates\\bundles\\debug\\res\\anim\\jrmf_w_actionsheet_dialog_out.xml"
-    },
-    {
-        "merged": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\studioWorkspace\\vo2.0\\jrmfRpWalletlib\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\jrmf_w_actionsheet_dialog_out.xml",
-        "source": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\studioWorkspace\\vo2.0\\jrmfRpWalletlib\\build\\intermediates\\bundles\\debug\\res\\anim\\jrmf_w_actionsheet_dialog_out.xml"
-    },
-    {
-        "merged": "/Users/tianou/Desktop/AndroidContent/vo2.0/jrmfRpWalletlib/build/intermediates/res/merged/androidTest/debug/anim/jrmf_rp_fade_out.xml",
-        "source": "/Users/tianou/Desktop/AndroidContent/vo2.0/jrmfRpWalletlib/build/intermediates/bundles/debug/res/anim/jrmf_rp_fade_out.xml"
-    },
-    {
-        "merged": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\studioWorkspace\\vo2.0\\jrmfRpWalletlib\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\jrmf_rp_slide_right_out.xml",
-        "source": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\studioWorkspace\\vo2.0\\jrmfRpWalletlib\\build\\intermediates\\bundles\\debug\\res\\anim\\jrmf_rp_slide_right_out.xml"
-    },
-    {
-        "merged": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\studioWorkspace\\vo2.0\\jrmfRpWalletlib\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\jrmf_w_actionsheet_dialog_in.xml",
-        "source": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\studioWorkspace\\vo2.0\\jrmfRpWalletlib\\build\\intermediates\\bundles\\debug\\res\\anim\\jrmf_w_actionsheet_dialog_in.xml"
-    },
-    {
-        "merged": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\studioWorkspace\\vo2.0\\jrmfRpWalletlib\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\jrmf_w_actionsheet_dialog_in.xml",
-        "source": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\studioWorkspace\\vo2.0\\jrmfRpWalletlib\\build\\intermediates\\bundles\\debug\\res\\anim\\jrmf_w_actionsheet_dialog_in.xml"
-    },
-    {
-        "merged": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\Users\\tianou\\vo2.0\\vo2.0\\jrmfRpWalletlib\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\jrmf_rp_fade_out.xml",
-        "source": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\Users\\tianou\\vo2.0\\vo2.0\\jrmfRpWalletlib\\build\\intermediates\\bundles\\debug\\res\\anim\\jrmf_rp_fade_out.xml"
-    },
-    {
-        "merged": "/Users/tianou/Desktop/AndroidContent/vo2.0/jrmfRpWalletlib/build/intermediates/res/merged/androidTest/debug/anim/jrmf_w_actionsheet_dialog_in.xml",
-        "source": "/Users/tianou/Desktop/AndroidContent/vo2.0/jrmfRpWalletlib/build/intermediates/bundles/debug/res/anim/jrmf_w_actionsheet_dialog_in.xml"
-    },
-    {
-        "merged": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\jrmfRpWalletlib\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\jrmf_rp_slide_right_out.xml",
-        "source": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\jrmfRpWalletlib\\build\\intermediates\\bundles\\debug\\res\\anim\\jrmf_rp_slide_right_out.xml"
+        "merged": "E:\\studioWorkspace\\vo2.0\\jrmfRpWalletlib\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\jrmf_w_actionsheet_dialog_in.xml",
+        "source": "E:\\studioWorkspace\\vo2.0\\jrmfRpWalletlib\\build\\intermediates\\bundles\\debug\\res\\anim\\jrmf_w_actionsheet_dialog_in.xml"
     }
 ]

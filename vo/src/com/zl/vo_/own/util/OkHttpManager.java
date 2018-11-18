@@ -236,7 +236,6 @@ public class OkHttpManager {
         }
         return res;
     }
-
     //去进行网络 异步 请求
     private void doRequest(Request request, final BaseCallBack callBack) {
         callBack.OnRequestBefore(request);
