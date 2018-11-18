@@ -124,5 +124,11 @@ public class ApiAccount {
             }
         });
     }
+    //退出登录
+     /*注册的方法*/
+    public static void logoutServer(final Context context, Map<String,String> params, final OnRequestDataListener listener) {
+        Dialog dialog = WeiboDialogUtils.createLoadingDialog(context, "加载中");
+        excutePost(ApiConstant.LOGOUT_SERVER,"two", context, params,dialog, listener);
+    }
 
 }
