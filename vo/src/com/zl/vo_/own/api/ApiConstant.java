@@ -30,6 +30,7 @@ public class ApiConstant {
     //修改vo号
     public static final String CHANGE_VO_CODE=BASE_URL+"/api/v1/user/vo_code";
     //获取二维码
+
     public static final String GET_ERWEIMA=BASE_URL+"/api/v1/user/qrcode";
     //修改头像
     public static final String CHANGE_AVATAR=BASE_URL+"/api/v1/user/avatar";
