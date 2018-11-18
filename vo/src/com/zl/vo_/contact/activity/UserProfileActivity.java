@@ -517,7 +517,6 @@ public class UserProfileActivity extends UI {
                             if (friend_verify.equals("1")){
                                 onAddFriendByVerify(); // 发起好友验证请求
                             }else if(friend_verify.equals("0")){
-
                                 doAddFriend(null, true);  // 直接加为好友
                             }
                         }
