@@ -47,10 +47,19 @@ public class UserInfoActivity extends BaseActivity {
     private void setDefaultValue() {
         String avatar = (String) SPUtils.get(this, "avatar", "");
         String vo_code = (String) SPUtils.get(this, "vo_code", "");
+        String vo_code_can = (String) SPUtils.get(this,"vo_code_can","");
+        String vo_code_set = (String) SPUtils.get(this,"vo_code_set","");
+
         String nickName = (String) SPUtils.get(this, "nickName", "");
         Glide.with(this).load(avatar).into(iv_avatar);
-        tv_nickName.setText("昵称:"+nickName);
-        tv_voNum.setText("vo号:"+vo_code);
+        tv_nickName.setText(nickName);
+
+        if("0".equals(vo_code_can)){
+            tv_voNum.setText(vo_code_set);
+        }else {
+            tv_voNum.setText(vo_code);
+        }
+
     }
     @Override
     protected void getResLayout() {
@@ -68,6 +77,9 @@ public class UserInfoActivity extends BaseActivity {
     public void click(View view){
         switch (view.getId()){
             case R.id.iv_back:
+                Intent intent = new Intent();
+                intent.putExtra("nick_setOk",tv_nickName.getText().toString().trim());
+                setResult(210,intent);
                 finish();
                 break;
             case R.id.rl_avatar:
@@ -75,11 +87,13 @@ public class UserInfoActivity extends BaseActivity {
                 break;
             //修改昵称
             case R.id.rl_nickName:
-                jumpActivity(UserInfoActivity.this,ChangeNickNameActivity.class,102);
+                String nick_name = tv_nickName.getText().toString().trim();
+                jumpActivity(UserInfoActivity.this,ChangeNickNameActivity.class,nick_name,102);
                 break;
             //修改vo号
             case R.id.rl_voId:
-                jumpActivity(UserInfoActivity.this,ChangeVoIDActivity.class);
+                String voCode = tv_voNum.getText().toString().trim();
+                jumpActivity(UserInfoActivity.this,ChangeVoIDActivity.class,voCode,103);
                 break;
             //二维码
             case R.id.rl_qrcode:
@@ -90,6 +104,9 @@ public class UserInfoActivity extends BaseActivity {
                 jumpActivity(UserInfoActivity.this,ChangeMoreActivity.class);
                 break;
         }
+
+
+
     }
 
     @Override

@@ -36,10 +36,16 @@ public class ChangeVoIDActivity extends BaseActivity {
     TextView tv_right;
     @BindView(R.id.et_voId)
     EditText et_voId;
+    private String voCode;
     @Override
     protected void initViews() {
         tv_title.setText("更改VO号");
         tv_right.setVisibility(View.VISIBLE);
+        //获取从上一个界面传递的vo号
+        voCode = getIntent().getStringExtra("param");
+        if(!TextUtils.isEmpty(voCode)){
+            et_voId.setText(voCode);
+        }
     }
     @Override
     protected void initData() {

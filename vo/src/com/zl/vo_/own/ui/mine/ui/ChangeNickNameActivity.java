@@ -37,10 +37,17 @@ public class ChangeNickNameActivity extends BaseActivity {
     @BindView(R.id.et_nickName)
     EditText et_nickName;
     private String nick;
+    private String nick_param;
     @Override
     protected void initViews() {
         tv_title.setText("更改昵称");
         tv_right.setVisibility(View.VISIBLE);
+        nick_param = getIntent().getStringExtra("param");
+        if(!TextUtils.isEmpty(nick_param)){
+            et_nickName.setText(nick_param);
+        }
+
+
     }
 
     @Override
