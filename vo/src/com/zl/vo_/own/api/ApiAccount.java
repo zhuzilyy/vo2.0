@@ -4,6 +4,7 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.text.TextUtils;
+import android.util.Log;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
@@ -12,6 +13,7 @@ import com.zl.vo_.own.listener.OnRequestDataListener;
 import com.zl.vo_.own.ui.account.LoginActivity;
 import com.zl.vo_.own.util.InternetUtil;
 import com.zl.vo_.own.util.OkHttpManager;
+import com.zl.vo_.own.util.SPUtils;
 import com.zl.vo_.own.util.WeiboDialogUtils;
 
 import org.json.JSONException;
@@ -47,7 +49,7 @@ public class ApiAccount {
         Dialog dialog = WeiboDialogUtils.createLoadingDialog(context, "加载中");
         //excutePost("http://www.xfxhfgs.cn/index.php/user/VoUser/sendCode/2", context, params,dialog, listener);
     }
-    protected static void excutePost(String url,String typeHeader,final Context context, Map<String,String> params,final Dialog dialog, final OnRequestDataListener listener) {
+    protected static void excutePost(final String url,String typeHeader,final Context context, Map<String,String> params,final Dialog dialog, final OnRequestDataListener listener) {
         if (!InternetUtil.hasInternet()){
             Toast.makeText(context, "没有网，请检查网络", Toast.LENGTH_SHORT).show();
             return;
@@ -56,6 +58,11 @@ public class ApiAccount {
         OkHttpManager.getInstance().postRequest(url, params, typeHeader,new RequestCallBack<String>() {
             @Override
             public void onSuccess(Call call, Response response, final String s) {
+                String token=response.header("Authorization");
+                if (!TextUtils.isEmpty(token)){
+                    SPUtils.put(context,"cloudToken",token);
+                }
+                Log.i("tag",token+"===token====");
                 if(null != context){
                     if(dialog != null && null != dialog.getContext() && null != dialog.getWindow())
                         dialog.dismiss();

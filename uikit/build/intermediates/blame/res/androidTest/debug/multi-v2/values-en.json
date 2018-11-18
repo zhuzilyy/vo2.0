@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\values-en\\values-en.xml",
+            "outputFile": "/Users/tianou/Desktop/AndroidContent/vo2.0/uikit/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values-en/values-en.xml",
             "map": [
                 {
-                    "source": "E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "source": "/Users/tianou/Desktop/AndroidContent/vo2.0/uikit/build/intermediates/bundles/debug/res/values-en/values-en.xml",
                     "from": {
                         "startLines": "2,3,4",
                         "startColumns": "4,4,4",
@@ -16,10 +16,10 @@
             ]
         },
         {
-            "outputFile": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-en\\values-en.xml",
+            "outputFile": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\values-en\\values-en.xml",
             "map": [
                 {
-                    "source": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "source": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "from": {
                         "startLines": "2,3,4",
                         "startColumns": "4,4,4",
@@ -31,10 +31,10 @@
             ]
         },
         {
-            "outputFile": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\values-en\\values-en.xml",
+            "outputFile": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-en\\values-en.xml",
             "map": [
                 {
-                    "source": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "source": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "from": {
                         "startLines": "2,3,4",
                         "startColumns": "4,4,4",
@@ -46,10 +46,10 @@
             ]
         },
         {
-            "outputFile": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\Users\\tianou\\vo2.0\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\values-en\\values-en.xml",
+            "outputFile": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\values-en\\values-en.xml",
             "map": [
                 {
-                    "source": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\Users\\tianou\\vo2.0\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "source": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "from": {
                         "startLines": "2,3,4",
                         "startColumns": "4,4,4",
@@ -61,10 +61,10 @@
             ]
         },
         {
-            "outputFile": "E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-en\\values-en.xml",
+            "outputFile": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\Users\\tianou\\vo2.0\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\values-en\\values-en.xml",
             "map": [
                 {
-                    "source": "E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "source": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\Users\\tianou\\vo2.0\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "from": {
                         "startLines": "2,3,4",
                         "startColumns": "4,4,4",
@@ -76,10 +76,10 @@
             ]
         },
         {
-            "outputFile": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\Users\\tianou\\vo2.0\\vo2.0\\uikit\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-en\\values-en.xml",
+            "outputFile": "/Users/tianou/Desktop/AndroidContent/vo2.0/uikit/build/intermediates/res/merged/androidTest/debug/values-en/values-en.xml",
             "map": [
                 {
-                    "source": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\Users\\tianou\\vo2.0\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "source": "/Users/tianou/Desktop/AndroidContent/vo2.0/uikit/build/intermediates/bundles/debug/res/values-en/values-en.xml",
                     "from": {
                         "startLines": "2,3,4",
                         "startColumns": "4,4,4",
@@ -91,10 +91,10 @@
             ]
         },
         {
-            "outputFile": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\uikit\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-en\\values-en.xml",
+            "outputFile": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-en\\values-en.xml",
             "map": [
                 {
-                    "source": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "source": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "from": {
                         "startLines": "2,3,4",
                         "startColumns": "4,4,4",
@@ -106,10 +106,40 @@
             ]
         },
         {
-            "outputFile": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\values-en\\values-en.xml",
+            "outputFile": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\Users\\tianou\\vo2.0\\vo2.0\\uikit\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-en\\values-en.xml",
             "map": [
                 {
-                    "source": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "source": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\Users\\tianou\\vo2.0\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "from": {
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,105,162",
+                        "endColumns": "49,56,46",
+                        "endOffsets": "100,157,204"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\uikit\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-en\\values-en.xml",
+            "map": [
+                {
+                    "source": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "from": {
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,105,162",
+                        "endColumns": "49,56,46",
+                        "endOffsets": "100,157,204"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\values-en\\values-en.xml",
+            "map": [
+                {
+                    "source": "/Users/tianou/Desktop/AndroidContent/vo2.0/E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "from": {
                         "startLines": "2,3,4",
                         "startColumns": "4,4,4",
