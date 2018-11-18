@@ -92,11 +92,8 @@ public class MineFragment extends MainTabFragment implements View.OnClickListene
         iv_guideDeletePravcyFriends.setOnClickListener(this);
         setDefaultValue();
     }
-
-
     //设置初始化的数据
     private void setDefaultValue() {
-
         String avatar = (String) SPUtils.get(getActivity(), "avatar", "");
         String vo_code = (String) SPUtils.get(getActivity(), "vo_code", "");
         String nickName = (String) SPUtils.get(getActivity(), "nickName", "");

@@ -16,9 +16,14 @@ import static com.zl.vo_.own.api.ApiAccount.excutePost;
  */
 
 public class ApiFriends {
-    /*注册的方法*/
-    public static void searchFriend(final AddFriendActivity context, Map<String,String> params, final OnRequestDataListener listener) {
+    /*搜索好友*/
+    public static void searchFriend(final Context context, Map<String,String> params, final OnRequestDataListener listener) {
         Dialog dialog = WeiboDialogUtils.createLoadingDialog(context, "正在搜索");
         excutePost(ApiConstant.SEARCH_FRIEND,"two", context, params,dialog, listener);
+    }
+    /*搜索好友*/
+    public static void addFriendDirectly(final Context context, Map<String,String> params, final OnRequestDataListener listener) {
+        Dialog dialog = WeiboDialogUtils.createLoadingDialog(context, "正在加载");
+        excutePost(ApiConstant.ADD_FRIEND_DIRECTLY,"two", context, params,dialog, listener);
     }
 }
