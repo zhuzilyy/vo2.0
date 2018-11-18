@@ -28,6 +28,8 @@ public class QrCodeActivity_ViewBinding<T extends QrCodeActivity> implements Unb
     target.iv__head = Utils.findRequiredViewAsType(source, R.id.iv__head, "field 'iv__head'", CircleImageView.class);
     target.iv_sex = Utils.findRequiredViewAsType(source, R.id.iv_sex, "field 'iv_sex'", ImageView.class);
     target.code_image = Utils.findRequiredViewAsType(source, R.id.code_image, "field 'code_image'", ImageView.class);
+    target.et_nick = Utils.findRequiredViewAsType(source, R.id.ewm_nick, "field 'et_nick'", TextView.class);
+    target.et_address = Utils.findRequiredViewAsType(source, R.id.ewm_address, "field 'et_address'", TextView.class);
     view = Utils.findRequiredView(source, R.id.iv_back, "method 'click'");
     view2131755346 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
@@ -48,6 +50,8 @@ public class QrCodeActivity_ViewBinding<T extends QrCodeActivity> implements Unb
     target.iv__head = null;
     target.iv_sex = null;
     target.code_image = null;
+    target.et_nick = null;
+    target.et_address = null;
 
     view2131755346.setOnClickListener(null);
     view2131755346 = null;

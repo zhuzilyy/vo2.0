@@ -39,13 +39,33 @@ public class QrCodeActivity extends BaseActivity {
     ImageView iv_sex;
     @BindView(R.id.code_image)
     ImageView code_image;
+    @BindView(R.id.ewm_nick)
+    TextView et_nick;
+    @BindView(R.id.ewm_address)
+    TextView et_address;
+
     @Override
     protected void initViews() {
         tv_title.setText("我的二维码");
-        //设置默认值
+        //获取默认值
         String avatar= (String) SPUtils.get(this,"avatar","");
         String sex= (String) SPUtils.get(this,"sex","");
+        String nick = (String )SPUtils.get(this,"nickName","");
+        String country = (String)SPUtils.get(this,"country","");
+        String city = (String)SPUtils.get(this,"city","");
+        //设置个人信心
+        //头像
         Glide.with(this).load(avatar).into(iv__head);
+        //昵称
+        if(!TextUtils.isEmpty(nick)){
+            et_nick.setText(nick);
+        }
+        //地址
+        if(!TextUtils.isEmpty(country)){
+            if(!TextUtils.isEmpty(city)){
+                et_address.setText(city+"-"+country);
+            }
+        }
         if (sex.equals("1")){
             iv_sex.setImageResource(R.mipmap.nan);
         }else if (sex.equals("2")){

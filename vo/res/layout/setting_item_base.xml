@@ -69,7 +69,8 @@
             android:id="@+id/setting_item_toggle"
             android:layout_width="58dip"
             android:layout_height="36.67dip"
-            android:visibility="gone" />
+
+            android:visibility="visible" />
     </LinearLayout>
 
     <TextView

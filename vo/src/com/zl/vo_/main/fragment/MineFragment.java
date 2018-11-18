@@ -144,7 +144,7 @@ public class MineFragment extends MainTabFragment implements View.OnClickListene
             //用户信息
             case R.id.rl_userInfo:
                 intent=new Intent(getActivity(),UserInfoActivity.class);
-                startActivity(intent);
+                startActivityForResult(intent,201);
                 break;
              //开通vip
             case R.id.rl_openVip:
@@ -365,5 +365,22 @@ public class MineFragment extends MainTabFragment implements View.OnClickListene
         if (getActivity().hasWindowFocus()) {
             mBubblePopupWindow.showArrowTo(iv, mRelativePos, mMarginH, mMarginV);
         }
+    }
+
+
+    //接收回传参数
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if(210 == resultCode){
+            String nickName = data.getStringExtra("nick_setOk");
+            if(!TextUtils.isEmpty(nickName)){
+                tv_nickName.setText(nickName);
+            }
+
+        }
+
+
     }
 }

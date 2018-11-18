@@ -144,7 +144,7 @@ public class ChangeMoreActivity extends BaseActivity {
                 showAddressDialog();
                 break;
             case R.id.rl_sign:
-                jumpActivity(this, PersonSignActivity.class, 101);
+                jumpActivity(this, PersonSignActivity.class, "",101);
                 break;
         }
     }

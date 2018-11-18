@@ -98,8 +98,9 @@ public abstract class BaseActivity extends AppCompatActivity {
         startActivity(intent);
     }
     //跳转的方法2:ForResult
-    public void jumpActivity(Context context,Class<?> targetActivity,int requestCode){
+    public void jumpActivity(Context context,Class<?> targetActivity,String param,int requestCode){
         Intent intent=new Intent(context,targetActivity);
+        intent.putExtra("param",param);
         startActivityForResult(intent,requestCode);
     }
 
