@@ -112,7 +112,6 @@ public class AddFriendActivity extends UI {
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
             }
-
             @Override
             public void afterTextChanged(Editable editable) {
                 String s = et_search.getText().toString();
