@@ -118,6 +118,8 @@ public class ApiConstant {
     public static final String SET_SEX=BASE_URL+"/api/v1/user/sex";
     //设置昵称
     public static final String SET_NICK=BASE_URL+"/api/v1/user/name";
+    //退出登录
+    public static final String LOGOUT_SERVER = BASE_URL+"/api/v1/logout";
 
 
 

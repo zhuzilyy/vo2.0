@@ -14,8 +14,15 @@ import com.zl.vo_.R;
 import com.zl.vo_.config.preference.Preferences;
 import com.zl.vo_.login.LogoutHelper;
 import com.zl.vo_.main.activity.NoDisturbActivity;
+import com.zl.vo_.own.api.ApiAccount;
 import com.zl.vo_.own.base.BaseActivity;
+import com.zl.vo_.own.listener.OnRequestDataListener;
 import com.zl.vo_.own.ui.account.Login_Register_Acitivity;
+
+import org.json.JSONObject;
+
+import java.util.HashMap;
+import java.util.Map;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -100,8 +107,11 @@ public class SettingsActivity extends BaseActivity implements View.OnClickListen
         final Dialog dialog = new Dialog(SettingsActivity.this);
         View vv = LayoutInflater.from(SettingsActivity.this).inflate(R.layout.dia_logout,null);
         dialog.setContentView(vv);
+        //退出登录
         LinearLayout ll_quite_login =vv.findViewById(R.id.ll_quite_login);
+        //退出vo
         LinearLayout ll_quite_vo =vv.findViewById(R.id.ll_quite_vo);
+
         ll_quite_vo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -113,19 +123,59 @@ public class SettingsActivity extends BaseActivity implements View.OnClickListen
         ll_quite_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Preferences.saveUserToken("");
-                // 清理缓存&注销监听
-                LogoutHelper.logout();
+                boolean flag = false;
+                flag = logoutServer();
+                if(flag){
+                    Preferences.saveUserToken("");
+                    // 清理缓存&注销监听
+                    LogoutHelper.logout();
 
-                // 启动登录
-                Login_Register_Acitivity.start(SettingsActivity.this);
-                finish();
-                dialog.dismiss();
+                    // 启动登录
+                    Login_Register_Acitivity.start(SettingsActivity.this);
+                    finish();
+                    dialog.dismiss();
+                }
             }
         });
         dialog.show();
 
-
-
     }
+
+
+    //
+    public boolean logoutServer(){
+         final boolean flag = false;
+        Map<String,String> params = new HashMap<>();
+
+        ApiAccount.logoutServer(this, params, new OnRequestDataListener() {
+            @Override
+            public void requestSuccess(String data) {
+                try {
+                    JSONObject jsonObject = new JSONObject(data);
+                    String code = jsonObject.getString("code");
+                    if("2000".equals(code)){
+                       // flag = true;
+                    }
+                }catch (Exception e){
+
+                }
+
+            }
+
+            @Override
+            public void requestFailure(int code, String msg) {
+
+            }
+        });
+
+
+
+
+
+
+
+
+        return flag;
+    }
+
 }
