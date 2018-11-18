@@ -28,12 +28,11 @@
         android:layout_width="match_parent"
         android:layout_height="0dip"
         android:layout_weight="1">
-
         <LinearLayout
+            android:background="@color/white"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
-
             <com.netease.nim.uikit.common.ui.listview.MessageListView
                 android:id="@+id/messageListView"
                 style="@style/list_view"
@@ -44,7 +43,7 @@
                 android:fadingEdge="none"
                 android:focusable="false"
                 android:listSelector="@android:color/transparent"
-                android:scrollbars="vertical"></com.netease.nim.uikit.common.ui.listview.MessageListView>
+                android:scrollbars="vertical"/>
         </LinearLayout>
     </FrameLayout>
 </LinearLayout>

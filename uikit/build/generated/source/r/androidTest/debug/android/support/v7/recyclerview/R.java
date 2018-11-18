@@ -65,18 +65,18 @@ public final class R {
         public static final int notification_top_pad_large_text = 0x7f0a00d1;
     }
     public static final class drawable {
-        public static final int notification_action_background = 0x7f02011a;
-        public static final int notification_bg = 0x7f02011b;
-        public static final int notification_bg_low = 0x7f02011c;
-        public static final int notification_bg_low_normal = 0x7f02011d;
-        public static final int notification_bg_low_pressed = 0x7f02011e;
-        public static final int notification_bg_normal = 0x7f02011f;
-        public static final int notification_bg_normal_pressed = 0x7f020120;
-        public static final int notification_icon_background = 0x7f020121;
-        public static final int notification_template_icon_bg = 0x7f02012d;
-        public static final int notification_template_icon_low_bg = 0x7f02012e;
-        public static final int notification_tile_bg = 0x7f020122;
-        public static final int notify_panel_notification_icon_bg = 0x7f020123;
+        public static final int notification_action_background = 0x7f02011b;
+        public static final int notification_bg = 0x7f02011c;
+        public static final int notification_bg_low = 0x7f02011d;
+        public static final int notification_bg_low_normal = 0x7f02011e;
+        public static final int notification_bg_low_pressed = 0x7f02011f;
+        public static final int notification_bg_normal = 0x7f020120;
+        public static final int notification_bg_normal_pressed = 0x7f020121;
+        public static final int notification_icon_background = 0x7f020122;
+        public static final int notification_template_icon_bg = 0x7f02012e;
+        public static final int notification_template_icon_low_bg = 0x7f02012f;
+        public static final int notification_tile_bg = 0x7f020123;
+        public static final int notify_panel_notification_icon_bg = 0x7f020124;
     }
     public static final class id {
         public static final int action_container = 0x7f1001ce;

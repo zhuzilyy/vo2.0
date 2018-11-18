@@ -8,7 +8,7 @@ package com.meizu.cloud.pushinternal;
 
 public final class R {
     public static final class drawable {
-        public static final int stat_sys_third_app_notify = 0x7f0202db;
+        public static final int stat_sys_third_app_notify = 0x7f0202dc;
     }
     public static final class id {
         public static final int push_big_bigtext_defaultView = 0x7f100577;

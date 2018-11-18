@@ -33,6 +33,8 @@ public class ApiConstant {
     public static final String GET_ERWEIMA=BASE_URL+"/api/v1/user/qrcode";
     //修改头像
     public static final String CHANGE_AVATAR=BASE_URL+"/api/v1/user/avatar";
+    //搜索好友
+    public static final String SEARCH_FRIEND=BASE_URL+"/api/v1/friend/search";
 
 
 

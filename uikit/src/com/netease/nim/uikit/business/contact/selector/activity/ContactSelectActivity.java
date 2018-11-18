@@ -88,6 +88,8 @@ public class ContactSelectActivity extends UI implements View.OnClickListener, a
     private Option option;
 
     // class
+    private TextView tv_title;
+    private ImageView iv_back;
 
     private static class ContactsSelectGroupStrategy extends ContactGroupStrategy {
         public ContactsSelectGroupStrategy() {
@@ -245,6 +247,19 @@ public class ContactSelectActivity extends UI implements View.OnClickListener, a
         initContactSelectArea();
 
         loadData();
+        initData();
+    }
+
+    private void initData() {
+        tv_title=findView(R.id.tv_title);
+        tv_title.setText("邀请成员");
+        iv_back=findView(R.id.iv_back);
+        iv_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
     }
 
     private void parseIntentData() {

@@ -4,11 +4,19 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.test.mock.MockApplication;
+import android.text.Editable;
 import android.text.TextUtils;
+import android.text.TextWatcher;
+import android.util.Log;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.luck.picture.lib.dialog.CustomDialog;
 import com.zl.vo_.DemoCache;
 import com.zl.vo_.R;
 import com.netease.nim.uikit.api.NimUIKit;
@@ -21,7 +29,19 @@ import com.netease.nim.uikit.common.ui.dialog.EasyAlertDialogHelper;
 import com.netease.nim.uikit.common.ui.widget.ClearableEditTextWithIcon;
 import com.netease.nimlib.sdk.ResponseCode;
 import com.netease.nimlib.sdk.uinfo.model.NimUserInfo;
+import com.zl.vo_.own.api.ApiAccount;
+import com.zl.vo_.own.api.ApiConstant;
+import com.zl.vo_.own.api.ApiFriends;
+import com.zl.vo_.own.dialog.CustomerDialog;
+import com.zl.vo_.own.listener.OnRequestDataListener;
+import com.zl.vo_.own.util.InternetUtil;
 import com.zl.vo_.own.util.WeiboDialogUtils;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.HashMap;
+import java.util.Map;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -39,6 +59,16 @@ public class AddFriendActivity extends UI {
     @BindView(R.id.tv_right)
     TextView tv_right;
 
+    @BindView(R.id.et_search)
+    EditText et_search;
+    @BindView(R.id.tv_search_name)
+    TextView tv_search_name;
+    @BindView(R.id.ll_search_noUser)
+    LinearLayout ll_search_noUser;
+    @BindView(R.id.ll_search_result)
+    LinearLayout ll_search_result;
+
+    private ImageView back_arrow;
     public static final void start(Context context) {
         Intent intent = new Intent();
         intent.setClass(context, AddFriendActivity.class);
@@ -63,6 +93,74 @@ public class AddFriendActivity extends UI {
         tv_title.setText("添加好友");
         tv_right.setVisibility(View.VISIBLE);
         tv_right.setText("搜索");
+        back_arrow=findView(R.id.back_arrow);
+        back_arrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
+
+        et_search.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                String s = et_search.getText().toString();
+                if(!TextUtils.isEmpty(s)){
+                    ll_search_result.setVisibility(View.VISIBLE);
+                    tv_search_name.setText(s);
+                    ll_search_noUser.setVisibility(View.GONE);
+                }else {
+                    ll_search_result.setVisibility(View.GONE);
+                }
+            }
+        });
+        ll_search_result.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+               if (InternetUtil.hasInternet()){
+                   String friend = tv_search_name.getText().toString().trim();
+                   searchFriend(friend);
+               }else{
+                   Toast.makeText(AddFriendActivity.this, "请检查网络", Toast.LENGTH_SHORT).show();
+               }
+            }
+        });
+
+    }
+    //搜索好友
+    private void searchFriend(final String name) {
+        Map<String,String> params = new HashMap<>();
+        params.put("keyword",name);
+        ApiFriends.searchFriend(this, params, new OnRequestDataListener() {
+            @Override
+            public void requestSuccess(String data) {
+                try {
+                    JSONObject jsonObject = new JSONObject(data);
+                    String code = jsonObject.getString("code");
+                    if (code.equals(ApiConstant.SUCCESS_CODE)){
+                        UserProfileActivity.start(AddFriendActivity.this, name);
+                    }else if (code.equals("404001")){
+                            showNouserDialog();
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+            @Override
+            public void requestFailure(int code, String msg) {
+            }
+        });
+
     }
     @OnClick({R.id.iv_back,R.id.tv_right})
     public void click(View view){
@@ -107,7 +205,7 @@ public class AddFriendActivity extends UI {
         final Dialog dialog = WeiboDialogUtils.createLoadingDialog(this, "正在搜索");
         dialog.show();
         //DialogMaker.showProgressDialog(this, null, false);
-        final String account = searchEdit.getText().toString().toLowerCase();
+        final String account = tv_search_name.getText().toString().toLowerCase();
         NimUIKit.getUserInfoProvider().getUserInfoAsync(account, new SimpleCallback<NimUserInfo>() {
             @Override
             public void onResult(boolean success, NimUserInfo result, int code) {
@@ -115,8 +213,9 @@ public class AddFriendActivity extends UI {
                 dialog.dismiss();
                 if (success) {
                     if (result == null) {
-                        EasyAlertDialogHelper.showOneButtonDiolag(AddFriendActivity.this, R.string.user_not_exsit,
-                                R.string.user_tips, R.string.ok, false, null);
+                       /* EasyAlertDialogHelper.showOneButtonDiolag(AddFriendActivity.this, R.string.user_not_exsit,
+                                R.string.user_tips, R.string.ok, false, null);*/
+                       showNouserDialog();
                     } else {
                         UserProfileActivity.start(AddFriendActivity.this, account);
                     }
@@ -129,5 +228,25 @@ public class AddFriendActivity extends UI {
                 }
             }
         });
+    }
+    //设置没有用户
+    private void showNouserDialog() {
+        final CustomerDialog dialog=new CustomerDialog(AddFriendActivity.this);
+        dialog.setDialogTitle("用户不存在");
+        dialog.setDialogConfirmText("确定");
+        dialog.setDialogMessage("请检查输入的账号是否正确");
+        dialog.setYesOnclickListener(new CustomerDialog.onYesOnclickListener() {
+            @Override
+            public void onYesClick() {
+                dialog.dismiss();
+            }
+        });
+        dialog.setNoOnclickListener(new CustomerDialog.onNoOnclickListener() {
+            @Override
+            public void onNoClick() {
+                dialog.dismiss();
+            }
+        });
+        dialog.show();
     }
 }
