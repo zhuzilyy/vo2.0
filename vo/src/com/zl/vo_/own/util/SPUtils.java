@@ -3,6 +3,8 @@ package com.zl.vo_.own.util;
 import android.content.Context;
 import android.content.SharedPreferences;
 
+import com.zl.vo_.contact.activity.AddFriendActivity;
+
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.Map;

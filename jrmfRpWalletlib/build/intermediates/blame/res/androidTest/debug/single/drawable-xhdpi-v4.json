@@ -8,12 +8,12 @@
         "source": "E:\\studioWorkspace\\vo2.0\\jrmfRpWalletlib\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\jrmf_rp_ic_wx.png"
     },
     {
-        "merged": "E:\\studioWorkspace\\vo2.0\\jrmfRpWalletlib\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\jrmf_rp_bg_pswd.png",
-        "source": "E:\\studioWorkspace\\vo2.0\\jrmfRpWalletlib\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\jrmf_rp_bg_pswd.png"
-    },
-    {
         "merged": "E:\\studioWorkspace\\vo2.0\\jrmfRpWalletlib\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\jrmf_rp_btn_red.9.png",
         "source": "E:\\studioWorkspace\\vo2.0\\jrmfRpWalletlib\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\jrmf_rp_btn_red.9.png"
+    },
+    {
+        "merged": "E:\\studioWorkspace\\vo2.0\\jrmfRpWalletlib\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\jrmf_rp_bg_pswd.png",
+        "source": "E:\\studioWorkspace\\vo2.0\\jrmfRpWalletlib\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\jrmf_rp_bg_pswd.png"
     },
     {
         "merged": "E:\\studioWorkspace\\vo2.0\\jrmfRpWalletlib\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\jrmf_b_failure.png",

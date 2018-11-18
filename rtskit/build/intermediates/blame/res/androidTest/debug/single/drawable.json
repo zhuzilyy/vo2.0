@@ -28,12 +28,12 @@
         "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\e7a76767135dc991778eee21af67bade\\res\\drawable\\notification_icon_background.xml"
     },
     {
-        "merged": "E:\\studioWorkspace\\vo2.0\\rtskit\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\notification_bg.xml",
-        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\e7a76767135dc991778eee21af67bade\\res\\drawable\\notification_bg.xml"
-    },
-    {
         "merged": "E:\\studioWorkspace\\vo2.0\\rtskit\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_edit_text_material.xml",
         "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\36461769f90b2604d4b0bb9a3731b6f2\\res\\drawable\\abc_edit_text_material.xml"
+    },
+    {
+        "merged": "E:\\studioWorkspace\\vo2.0\\rtskit\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\notification_bg.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\e7a76767135dc991778eee21af67bade\\res\\drawable\\notification_bg.xml"
     },
     {
         "merged": "E:\\studioWorkspace\\vo2.0\\rtskit\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\g_red_long_btn_selector.xml",

@@ -1,5 +1,6 @@
 package com.zl.vo_.contact;
 
+
 import android.content.Context;
 
 import com.zl.vo_.contact.activity.UserProfileActivity;
@@ -23,7 +24,6 @@ public class ContactHelper {
             public void onItemClick(Context context, String account) {
                 UserProfileActivity.start(context, account);
             }
-
             @Override
             public void onItemLongClick(Context context, String account) {
 

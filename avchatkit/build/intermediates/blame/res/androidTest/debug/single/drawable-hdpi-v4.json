@@ -24,28 +24,28 @@
         "source": "E:\\studioWorkspace\\vo2.0\\avchatkit\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\avchat_mute_speaker_bg_pressed.9.png"
     },
     {
-        "merged": "E:\\studioWorkspace\\vo2.0\\avchatkit\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\avchat_speaker_icon_checked.png",
-        "source": "E:\\studioWorkspace\\vo2.0\\avchatkit\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\avchat_speaker_icon_checked.png"
-    },
-    {
         "merged": "E:\\studioWorkspace\\vo2.0\\avchatkit\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\network_grade_2.png",
         "source": "E:\\studioWorkspace\\vo2.0\\avchatkit\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\network_grade_2.png"
     },
     {
-        "merged": "E:\\studioWorkspace\\vo2.0\\avchatkit\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\avchat_mute_icon_checked.png",
-        "source": "E:\\studioWorkspace\\vo2.0\\avchatkit\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\avchat_mute_icon_checked.png"
+        "merged": "E:\\studioWorkspace\\vo2.0\\avchatkit\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\avchat_speaker_icon_checked.png",
+        "source": "E:\\studioWorkspace\\vo2.0\\avchatkit\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\avchat_speaker_icon_checked.png"
     },
     {
         "merged": "E:\\studioWorkspace\\vo2.0\\avchatkit\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\avchat_mute_speaker_bg_disable.9.png",
         "source": "E:\\studioWorkspace\\vo2.0\\avchatkit\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\avchat_mute_speaker_bg_disable.9.png"
     },
     {
-        "merged": "E:\\studioWorkspace\\vo2.0\\avchatkit\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\abc_btn_radio_to_on_mtrl_000.png",
-        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\36461769f90b2604d4b0bb9a3731b6f2\\res\\drawable-hdpi-v4\\abc_btn_radio_to_on_mtrl_000.png"
+        "merged": "E:\\studioWorkspace\\vo2.0\\avchatkit\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\avchat_mute_icon_checked.png",
+        "source": "E:\\studioWorkspace\\vo2.0\\avchatkit\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\avchat_mute_icon_checked.png"
     },
     {
         "merged": "E:\\studioWorkspace\\vo2.0\\avchatkit\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\abc_popup_background_mtrl_mult.9.png",
         "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\36461769f90b2604d4b0bb9a3731b6f2\\res\\drawable-hdpi-v4\\abc_popup_background_mtrl_mult.9.png"
+    },
+    {
+        "merged": "E:\\studioWorkspace\\vo2.0\\avchatkit\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\abc_btn_radio_to_on_mtrl_000.png",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\36461769f90b2604d4b0bb9a3731b6f2\\res\\drawable-hdpi-v4\\abc_btn_radio_to_on_mtrl_000.png"
     },
     {
         "merged": "E:\\studioWorkspace\\vo2.0\\avchatkit\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\avchat_record_bg.9.png",

@@ -4,7 +4,6 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.test.mock.MockApplication;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
@@ -16,20 +15,17 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.luck.picture.lib.dialog.CustomDialog;
-import com.zl.vo_.DemoCache;
-import com.zl.vo_.R;
 import com.netease.nim.uikit.api.NimUIKit;
 import com.netease.nim.uikit.api.model.SimpleCallback;
 import com.netease.nim.uikit.api.wrapper.NimToolBarOptions;
 import com.netease.nim.uikit.common.activity.ToolBarOptions;
 import com.netease.nim.uikit.common.activity.UI;
-import com.netease.nim.uikit.common.ui.dialog.DialogMaker;
-import com.netease.nim.uikit.common.ui.dialog.EasyAlertDialogHelper;
 import com.netease.nim.uikit.common.ui.widget.ClearableEditTextWithIcon;
 import com.netease.nimlib.sdk.ResponseCode;
 import com.netease.nimlib.sdk.uinfo.model.NimUserInfo;
-import com.zl.vo_.own.api.ApiAccount;
+import com.zl.vo_.DemoCache;
+import com.zl.vo_.NimApplication;
+import com.zl.vo_.R;
 import com.zl.vo_.own.api.ApiConstant;
 import com.zl.vo_.own.api.ApiFriends;
 import com.zl.vo_.own.dialog.CustomerDialog;
@@ -130,13 +126,13 @@ public class AddFriendActivity extends UI {
                if (InternetUtil.hasInternet()){
                    //设置不能搜索自己
                    if (tv_search_name.getText().toString().equals(DemoCache.getAccount())){
-                       Toast.makeText(AddFriendActivity.this, R.string.add_friend_self_tip, Toast.LENGTH_SHORT).show();
+                       //Toast.makeText(this, R.string.add_friend_self_tip, Toast.LENGTH_SHORT).show();
                        return;
                    }
                    String friend = tv_search_name.getText().toString().trim();
                    searchFriend(friend);
                }else{
-                   Toast.makeText(AddFriendActivity.this, "请检查网络", Toast.LENGTH_SHORT).show();
+                   //Toast.makeText(this, "请检查网络", Toast.LENGTH_SHORT).show();
                }
             }
         });
@@ -230,7 +226,7 @@ public class AddFriendActivity extends UI {
                         UserProfileActivity.start(AddFriendActivity.this, account);
                     }
                 } else if (code == 408) {
-                    Toast.makeText(AddFriendActivity.this, R.string.network_is_not_available, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(NimApplication.getAppliaction(), R.string.network_is_not_available, Toast.LENGTH_SHORT).show();
                 } else if (code == ResponseCode.RES_EXCEPTION) {
                     Toast.makeText(AddFriendActivity.this, "on exception", Toast.LENGTH_SHORT).show();
                 } else {
@@ -241,7 +237,7 @@ public class AddFriendActivity extends UI {
     }
     //设置没有用户
     private void showNouserDialog() {
-        final CustomerDialog dialog=new CustomerDialog(AddFriendActivity.this);
+        final CustomerDialog dialog=new CustomerDialog(this);
         dialog.setDialogTitle("用户不存在");
         dialog.setDialogConfirmText("确定");
         dialog.setDialogMessage("请检查输入的账号是否正确");

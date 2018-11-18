@@ -3,6 +3,7 @@ package com.zl.vo_.own.api;
 import android.app.Dialog;
 import android.content.Context;
 
+import com.zl.vo_.contact.activity.AddFriendActivity;
 import com.zl.vo_.own.listener.OnRequestDataListener;
 import com.zl.vo_.own.util.WeiboDialogUtils;
 
@@ -16,7 +17,7 @@ import static com.zl.vo_.own.api.ApiAccount.excutePost;
 
 public class ApiFriends {
     /*注册的方法*/
-    public static void searchFriend(final Context context, Map<String,String> params, final OnRequestDataListener listener) {
+    public static void searchFriend(final AddFriendActivity context, Map<String,String> params, final OnRequestDataListener listener) {
         Dialog dialog = WeiboDialogUtils.createLoadingDialog(context, "正在搜索");
         excutePost(ApiConstant.SEARCH_FRIEND,"two", context, params,dialog, listener);
     }

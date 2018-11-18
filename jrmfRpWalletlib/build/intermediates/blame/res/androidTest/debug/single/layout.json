@@ -12,24 +12,24 @@
         "source": "E:\\studioWorkspace\\vo2.0\\jrmfRpWalletlib\\build\\intermediates\\bundles\\debug\\res\\layout\\jrmf_b_floating_label_text_view.xml"
     },
     {
-        "merged": "E:\\studioWorkspace\\vo2.0\\jrmfRpWalletlib\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\jrmf_w_fragment_red_packet_history.xml",
-        "source": "E:\\studioWorkspace\\vo2.0\\jrmfRpWalletlib\\build\\intermediates\\bundles\\debug\\res\\layout\\jrmf_w_fragment_red_packet_history.xml"
-    },
-    {
         "merged": "E:\\studioWorkspace\\vo2.0\\jrmfRpWalletlib\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\jrmf_rp_activity_open_rp.xml",
         "source": "E:\\studioWorkspace\\vo2.0\\jrmfRpWalletlib\\build\\intermediates\\bundles\\debug\\res\\layout\\jrmf_rp_activity_open_rp.xml"
     },
     {
-        "merged": "E:\\studioWorkspace\\vo2.0\\jrmfRpWalletlib\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\jrmf_rp_activity_trans_succ.xml",
-        "source": "E:\\studioWorkspace\\vo2.0\\jrmfRpWalletlib\\build\\intermediates\\bundles\\debug\\res\\layout\\jrmf_rp_activity_trans_succ.xml"
+        "merged": "E:\\studioWorkspace\\vo2.0\\jrmfRpWalletlib\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\jrmf_w_fragment_red_packet_history.xml",
+        "source": "E:\\studioWorkspace\\vo2.0\\jrmfRpWalletlib\\build\\intermediates\\bundles\\debug\\res\\layout\\jrmf_w_fragment_red_packet_history.xml"
+    },
+    {
+        "merged": "E:\\studioWorkspace\\vo2.0\\jrmfRpWalletlib\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\jrmf_rp_activity_add_card_second.xml",
+        "source": "E:\\studioWorkspace\\vo2.0\\jrmfRpWalletlib\\build\\intermediates\\bundles\\debug\\res\\layout\\jrmf_rp_activity_add_card_second.xml"
     },
     {
         "merged": "E:\\studioWorkspace\\vo2.0\\jrmfRpWalletlib\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\jrmf_w_dialog_input_pwd.xml",
         "source": "E:\\studioWorkspace\\vo2.0\\jrmfRpWalletlib\\build\\intermediates\\bundles\\debug\\res\\layout\\jrmf_w_dialog_input_pwd.xml"
     },
     {
-        "merged": "E:\\studioWorkspace\\vo2.0\\jrmfRpWalletlib\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\jrmf_rp_activity_add_card_second.xml",
-        "source": "E:\\studioWorkspace\\vo2.0\\jrmfRpWalletlib\\build\\intermediates\\bundles\\debug\\res\\layout\\jrmf_rp_activity_add_card_second.xml"
+        "merged": "E:\\studioWorkspace\\vo2.0\\jrmfRpWalletlib\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\jrmf_rp_activity_trans_succ.xml",
+        "source": "E:\\studioWorkspace\\vo2.0\\jrmfRpWalletlib\\build\\intermediates\\bundles\\debug\\res\\layout\\jrmf_rp_activity_trans_succ.xml"
     },
     {
         "merged": "E:\\studioWorkspace\\vo2.0\\jrmfRpWalletlib\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\jrmf_rp_adapter_banklist_item.xml",
