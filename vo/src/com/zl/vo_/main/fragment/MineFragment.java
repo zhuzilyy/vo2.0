@@ -367,6 +367,7 @@ public class MineFragment extends MainTabFragment implements View.OnClickListene
         }
     }
 
+
     //接收回传参数
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
