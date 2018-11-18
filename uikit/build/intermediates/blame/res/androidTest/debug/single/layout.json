@@ -28,12 +28,12 @@
         "source": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\layout\\nim_picker_image_folder_activity.xml"
     },
     {
-        "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\abc_action_mode_close_item_material.xml",
-        "source": "E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\162af99f07aa7ab3868e16b0e992e25f\\res\\layout\\abc_action_mode_close_item_material.xml"
-    },
-    {
         "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\nim_message_item_name_layout.xml",
         "source": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\layout\\nim_message_item_name_layout.xml"
+    },
+    {
+        "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\abc_action_mode_close_item_material.xml",
+        "source": "E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\162af99f07aa7ab3868e16b0e992e25f\\res\\layout\\abc_action_mode_close_item_material.xml"
     },
     {
         "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\design_bottom_navigation_item.xml",
@@ -72,12 +72,12 @@
         "source": "E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\layout\\nim_message_item_notification.xml"
     },
     {
-        "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\design_navigation_item.xml",
-        "source": "E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\2dabd34852044fb48f3bc09bd818b78f\\res\\layout\\design_navigation_item.xml"
-    },
-    {
         "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\Users\\tianou\\vo2.0\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\nim_menu_dialog_item.xml",
         "source": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\Users\\tianou\\vo2.0\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\layout\\nim_menu_dialog_item.xml"
+    },
+    {
+        "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\design_navigation_item.xml",
+        "source": "E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\2dabd34852044fb48f3bc09bd818b78f\\res\\layout\\design_navigation_item.xml"
     },
     {
         "merged": "E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\nim_message_robot_text.xml",
@@ -104,16 +104,16 @@
         "source": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\2dabd34852044fb48f3bc09bd818b78f\\res\\layout\\design_navigation_item_header.xml"
     },
     {
-        "merged": "E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\nim_team_member_list_layout.xml",
-        "source": "E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\layout\\nim_team_member_list_layout.xml"
+        "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\nim_preview_image_from_camera_activity.xml",
+        "source": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\layout\\nim_preview_image_from_camera_activity.xml"
     },
     {
         "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\Users\\tianou\\vo2.0\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\nim_advanced_team_nickname_activity.xml",
         "source": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\Users\\tianou\\vo2.0\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\layout\\nim_advanced_team_nickname_activity.xml"
     },
     {
-        "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\nim_preview_image_from_camera_activity.xml",
-        "source": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\layout\\nim_preview_image_from_camera_activity.xml"
+        "merged": "E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\nim_team_member_list_layout.xml",
+        "source": "E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\layout\\nim_team_member_list_layout.xml"
     },
     {
         "merged": "E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\abc_action_mode_bar.xml",

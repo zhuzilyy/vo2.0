@@ -12,20 +12,16 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.zl.vo_.R;
-import com.zl.vo_.main.adapter.SystemMessageAdapter;
-import com.zl.vo_.main.viewholder.SystemMessageViewHolder;
+import com.netease.nim.uikit.api.NimUIKit;
+import com.netease.nim.uikit.api.model.SimpleCallback;
+import com.netease.nim.uikit.api.wrapper.NimToolBarOptions;
 import com.netease.nim.uikit.common.activity.ToolBarOptions;
 import com.netease.nim.uikit.common.activity.UI;
 import com.netease.nim.uikit.common.adapter.TAdapterDelegate;
 import com.netease.nim.uikit.common.adapter.TViewHolder;
-import com.netease.nim.uikit.common.ui.dialog.CustomAlertDialog;
 import com.netease.nim.uikit.common.ui.listview.AutoRefreshListView;
 import com.netease.nim.uikit.common.ui.listview.ListViewUtil;
 import com.netease.nim.uikit.common.ui.listview.MessageListView;
-import com.netease.nim.uikit.api.NimUIKit;
-import com.netease.nim.uikit.api.model.SimpleCallback;
-import com.netease.nim.uikit.api.wrapper.NimToolBarOptions;
 import com.netease.nimlib.sdk.NIMClient;
 import com.netease.nimlib.sdk.Observer;
 import com.netease.nimlib.sdk.RequestCallback;
@@ -39,6 +35,10 @@ import com.netease.nimlib.sdk.msg.constant.SystemMessageType;
 import com.netease.nimlib.sdk.msg.model.SystemMessage;
 import com.netease.nimlib.sdk.team.TeamService;
 import com.netease.nimlib.sdk.uinfo.model.NimUserInfo;
+import com.zl.vo_.R;
+import com.zl.vo_.main.adapter.SystemMessageAdapter;
+import com.zl.vo_.main.viewholder.SystemMessageViewHolder;
+import com.zl.vo_.own.dialog.CustomerDialog;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -147,14 +147,12 @@ public class SystemMessageActivity extends UI implements TAdapterDelegate,
     @Override
     protected void onResume() {
         super.onResume();
-
         NIMClient.getService(SystemMessageService.class).resetSystemMessageUnreadCount();
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-
         NIMClient.getService(SystemMessageService.class).resetSystemMessageUnreadCount();
     }
 
@@ -506,7 +504,7 @@ public class SystemMessageActivity extends UI implements TAdapterDelegate,
     }
 
     private void showLongClickMenu(final SystemMessage message) {
-        CustomAlertDialog alertDialog = new CustomAlertDialog(this);
+      /*  CustomAlertDialog alertDialog = new CustomAlertDialog(this);
         alertDialog.setTitle(R.string.delete_tip);
         String title = getString(R.string.delete_system_message);
         alertDialog.addItem(title, new CustomAlertDialog.onSeparateItemClickListener() {
@@ -515,7 +513,25 @@ public class SystemMessageActivity extends UI implements TAdapterDelegate,
                 deleteSystemMessage(message);
             }
         });
-        alertDialog.show();
+        alertDialog.show();*/
+        final CustomerDialog dialog=new CustomerDialog(SystemMessageActivity.this);
+        dialog.setDialogTitle("删除提示");
+        dialog.setDialogConfirmText("确定");
+        dialog.setDialogMessage("您确定删除该条系统消息");
+        dialog.setYesOnclickListener(new CustomerDialog.onYesOnclickListener() {
+            @Override
+            public void onYesClick() {
+                dialog.dismiss();
+                deleteSystemMessage(message);
+            }
+        });
+        dialog.setNoOnclickListener(new CustomerDialog.onNoOnclickListener() {
+            @Override
+            public void onNoClick() {
+                dialog.dismiss();
+            }
+        });
+        dialog.show();
     }
 
     private void deleteSystemMessage(final SystemMessage message) {

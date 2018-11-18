@@ -4,12 +4,12 @@
         "source": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\drawable\\nim_message_item_left_selector.xml"
     },
     {
-        "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\nim_play_btn_select.xml",
-        "source": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\drawable\\nim_play_btn_select.xml"
-    },
-    {
         "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\tooltip_frame_light.xml",
         "source": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\36461769f90b2604d4b0bb9a3731b6f2\\res\\drawable\\tooltip_frame_light.xml"
+    },
+    {
+        "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\nim_play_btn_select.xml",
+        "source": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\drawable\\nim_play_btn_select.xml"
     },
     {
         "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_text_cursor_material.xml",
@@ -56,12 +56,12 @@
         "source": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\162af99f07aa7ab3868e16b0e992e25f\\res\\drawable\\abc_ic_clear_material.xml"
     },
     {
-        "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\shape_cursor.xml",
-        "source": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\drawable\\shape_cursor.xml"
-    },
-    {
         "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\nim_actionbar_black_bg.xml",
         "source": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\drawable\\nim_actionbar_black_bg.xml"
+    },
+    {
+        "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\shape_cursor.xml",
+        "source": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\drawable\\shape_cursor.xml"
     },
     {
         "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\nim_team_member_delete_selector.xml",
@@ -76,12 +76,12 @@
         "source": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\drawable\\nim_recent_contact_sticky_selecter.xml"
     },
     {
-        "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\design_password_eye.xml",
-        "source": "E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\2dabd34852044fb48f3bc09bd818b78f\\res\\drawable\\design_password_eye.xml"
-    },
-    {
         "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\nim_list_item_bg_selecter.xml",
         "source": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\drawable\\nim_list_item_bg_selecter.xml"
+    },
+    {
+        "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\design_password_eye.xml",
+        "source": "E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\2dabd34852044fb48f3bc09bd818b78f\\res\\drawable\\design_password_eye.xml"
     },
     {
         "merged": "E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\nim_message_plus_location_selector.xml",
@@ -120,24 +120,24 @@
         "source": "E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\162af99f07aa7ab3868e16b0e992e25f\\res\\drawable\\abc_ic_arrow_drop_right_black_24dp.xml"
     },
     {
-        "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\Users\\tianou\\vo2.0\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\notification_bg.xml",
-        "source": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\ad03e6b386f0a597b2bc6fb8762ff8ed\\res\\drawable\\notification_bg.xml"
-    },
-    {
         "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\Users\\tianou\\vo2.0\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\nim_sticker_button_background_pressed_layer_list.xml",
         "source": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\Users\\tianou\\vo2.0\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\drawable\\nim_sticker_button_background_pressed_layer_list.xml"
+    },
+    {
+        "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\Users\\tianou\\vo2.0\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\notification_bg.xml",
+        "source": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\ad03e6b386f0a597b2bc6fb8762ff8ed\\res\\drawable\\notification_bg.xml"
     },
     {
         "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\nim_message_button_bottom_send_selector.xml",
         "source": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\drawable\\nim_message_button_bottom_send_selector.xml"
     },
     {
-        "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\nim_bottom_divider_match_parent_selector.xml",
-        "source": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\drawable\\nim_bottom_divider_match_parent_selector.xml"
-    },
-    {
         "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\notification_bg_low.xml",
         "source": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\e7a76767135dc991778eee21af67bade\\res\\drawable\\notification_bg_low.xml"
+    },
+    {
+        "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\nim_bottom_divider_match_parent_selector.xml",
+        "source": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\drawable\\nim_bottom_divider_match_parent_selector.xml"
     },
     {
         "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\nim_sticker_button_background_pressed_layer_list.xml",
@@ -196,12 +196,12 @@
         "source": "E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\drawable\\nim_portrait_mask_round.xml"
     },
     {
-        "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_tab_indicator_material.xml",
-        "source": "E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\162af99f07aa7ab3868e16b0e992e25f\\res\\drawable\\abc_tab_indicator_material.xml"
-    },
-    {
         "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\tooltip_frame_dark.xml",
         "source": "E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\162af99f07aa7ab3868e16b0e992e25f\\res\\drawable\\tooltip_frame_dark.xml"
+    },
+    {
+        "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_tab_indicator_material.xml",
+        "source": "E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\162af99f07aa7ab3868e16b0e992e25f\\res\\drawable\\abc_tab_indicator_material.xml"
     },
     {
         "merged": "E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\nim_audio_animation_list_right.xml",
@@ -228,12 +228,12 @@
         "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\36461769f90b2604d4b0bb9a3731b6f2\\res\\drawable\\abc_list_selector_background_transition_holo_dark.xml"
     },
     {
-        "merged": "E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\nim_progress_bar_background.xml",
-        "source": "E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\drawable\\nim_progress_bar_background.xml"
-    },
-    {
         "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\Users\\tianou\\vo2.0\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\nim_portrait_mask_round.xml",
         "source": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\Users\\tianou\\vo2.0\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\drawable\\nim_portrait_mask_round.xml"
+    },
+    {
+        "merged": "E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\nim_progress_bar_background.xml",
+        "source": "E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\drawable\\nim_progress_bar_background.xml"
     },
     {
         "merged": "E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_seekbar_track_material.xml",
@@ -356,16 +356,16 @@
         "source": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\36461769f90b2604d4b0bb9a3731b6f2\\res\\drawable\\abc_ic_menu_overflow_material.xml"
     },
     {
-        "merged": "E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\nim_message_plus_photo_selector.xml",
-        "source": "E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\drawable\\nim_message_plus_photo_selector.xml"
+        "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_cab_background_top_material.xml",
+        "source": "E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\162af99f07aa7ab3868e16b0e992e25f\\res\\drawable\\abc_cab_background_top_material.xml"
     },
     {
         "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_vector_test.xml",
         "source": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\36461769f90b2604d4b0bb9a3731b6f2\\res\\drawable\\abc_vector_test.xml"
     },
     {
-        "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_cab_background_top_material.xml",
-        "source": "E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\162af99f07aa7ab3868e16b0e992e25f\\res\\drawable\\abc_cab_background_top_material.xml"
+        "merged": "E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\nim_message_plus_photo_selector.xml",
+        "source": "E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\drawable\\nim_message_plus_photo_selector.xml"
     },
     {
         "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\nim_audio_animation_list_right.xml",
@@ -396,12 +396,12 @@
         "source": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\drawable\\nim_cancel_record_red_bg.xml"
     },
     {
-        "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_ic_go_search_api_material.xml",
-        "source": "E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\162af99f07aa7ab3868e16b0e992e25f\\res\\drawable\\abc_ic_go_search_api_material.xml"
-    },
-    {
         "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\Users\\tianou\\vo2.0\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\nim_message_button_bottom_emoji_selector.xml",
         "source": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\Users\\tianou\\vo2.0\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\drawable\\nim_message_button_bottom_emoji_selector.xml"
+    },
+    {
+        "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_ic_go_search_api_material.xml",
+        "source": "E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\162af99f07aa7ab3868e16b0e992e25f\\res\\drawable\\abc_ic_go_search_api_material.xml"
     },
     {
         "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\Users\\tianou\\vo2.0\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\navigation_empty_icon.xml",
@@ -460,12 +460,12 @@
         "source": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\Users\\tianou\\vo2.0\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\drawable\\nim_audio_animation_list_left.xml"
     },
     {
-        "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\Users\\tianou\\vo2.0\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\nim_chatroom_robot_link_view_press_round.xml",
-        "source": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\Users\\tianou\\vo2.0\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\drawable\\nim_chatroom_robot_link_view_press_round.xml"
-    },
-    {
         "merged": "E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\nim_sticker_button_background_normal_layer_list.xml",
         "source": "E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\drawable\\nim_sticker_button_background_normal_layer_list.xml"
+    },
+    {
+        "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\Users\\tianou\\vo2.0\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\nim_chatroom_robot_link_view_press_round.xml",
+        "source": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\Users\\tianou\\vo2.0\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\drawable\\nim_chatroom_robot_link_view_press_round.xml"
     },
     {
         "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\nim_easy_edit_text_dialog_bg.xml",
@@ -484,12 +484,12 @@
         "source": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\36461769f90b2604d4b0bb9a3731b6f2\\res\\drawable\\abc_dialog_material_background.xml"
     },
     {
-        "merged": "E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\nim_message_button_bottom_add_selector.xml",
-        "source": "E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\drawable\\nim_message_button_bottom_add_selector.xml"
-    },
-    {
         "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\nim_explosion.xml",
         "source": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\drawable\\nim_explosion.xml"
+    },
+    {
+        "merged": "E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\nim_message_button_bottom_add_selector.xml",
+        "source": "E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\drawable\\nim_message_button_bottom_add_selector.xml"
     },
     {
         "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\nim_message_button_bottom_audio_selector.xml",
@@ -576,12 +576,12 @@
         "source": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\162af99f07aa7ab3868e16b0e992e25f\\res\\drawable\\abc_ratingbar_small_material.xml"
     },
     {
-        "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\nim_sticker_button_background_normal_layer_list.xml",
-        "source": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\drawable\\nim_sticker_button_background_normal_layer_list.xml"
-    },
-    {
         "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\nim_popup_menu_item_selector.xml",
         "source": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\drawable\\nim_popup_menu_item_selector.xml"
+    },
+    {
+        "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\nim_sticker_button_background_normal_layer_list.xml",
+        "source": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\drawable\\nim_sticker_button_background_normal_layer_list.xml"
     },
     {
         "merged": "E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\nim_robot_link_view_round.xml",
@@ -620,12 +620,12 @@
         "source": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\Users\\tianou\\vo2.0\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\drawable\\nim_message_item_right_selector.xml"
     },
     {
-        "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\Users\\tianou\\vo2.0\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\design_fab_background.xml",
-        "source": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\2dabd34852044fb48f3bc09bd818b78f\\res\\drawable\\design_fab_background.xml"
-    },
-    {
         "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_list_selector_holo_dark.xml",
         "source": "E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\162af99f07aa7ab3868e16b0e992e25f\\res\\drawable\\abc_list_selector_holo_dark.xml"
+    },
+    {
+        "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\Users\\tianou\\vo2.0\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\design_fab_background.xml",
+        "source": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\2dabd34852044fb48f3bc09bd818b78f\\res\\drawable\\design_fab_background.xml"
     },
     {
         "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\Users\\tianou\\vo2.0\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\nim_emoji_item_selector.xml",
@@ -636,12 +636,12 @@
         "source": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\Users\\tianou\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\162af99f07aa7ab3868e16b0e992e25f\\res\\drawable\\abc_switch_thumb_material.xml"
     },
     {
-        "merged": "E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\nim_chatroom_robot_link_view_selector.xml",
-        "source": "E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\drawable\\nim_chatroom_robot_link_view_selector.xml"
-    },
-    {
         "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\nim_bg_edittext_rectangle.xml",
         "source": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\drawable\\nim_bg_edittext_rectangle.xml"
+    },
+    {
+        "merged": "E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\nim_chatroom_robot_link_view_selector.xml",
+        "source": "E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\drawable\\nim_chatroom_robot_link_view_selector.xml"
     },
     {
         "merged": "E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\nim_nim_action_bar_button_selector.xml",
@@ -664,12 +664,12 @@
         "source": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\drawable\\nim_message_plus_video_selector.xml"
     },
     {
-        "merged": "E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\nim_sample_footer_loading_progress.xml",
-        "source": "E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\drawable\\nim_sample_footer_loading_progress.xml"
-    },
-    {
         "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\Users\\tianou\\vo2.0\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\nim_message_button_bottom_text_selector.xml",
         "source": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\Users\\tianou\\vo2.0\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\drawable\\nim_message_button_bottom_text_selector.xml"
+    },
+    {
+        "merged": "E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\nim_sample_footer_loading_progress.xml",
+        "source": "E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\drawable\\nim_sample_footer_loading_progress.xml"
     },
     {
         "merged": "E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\notification_tile_bg.xml",
@@ -1698,6 +1698,10 @@
     {
         "merged": "E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_vector_test.xml",
         "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\36461769f90b2604d4b0bb9a3731b6f2\\res\\drawable\\abc_vector_test.xml"
+    },
+    {
+        "merged": "E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\bg_refuse.xml",
+        "source": "E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\bundles\\debug\\res\\drawable\\bg_refuse.xml"
     },
     {
         "merged": "E:\\Users\\tianou\\Desktop\\AndroidContent\\vo2.0\\E:\\studioWorkspace\\vo2.0\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_btn_colored_material.xml",

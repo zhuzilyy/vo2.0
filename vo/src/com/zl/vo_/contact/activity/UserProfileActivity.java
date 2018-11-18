@@ -311,18 +311,17 @@ public class UserProfileActivity extends UI {
         } else {
             signatureLayout.setVisibility(View.GONE);
         }
-
     }
-
     private void updateUserOperatorView() {
-        chatBtn.setVisibility(View.VISIBLE);
         if (NIMClient.getService(FriendService.class).isMyFriend(account)) {
             removeFriendBtn.setVisibility(View.VISIBLE);
             addFriendBtn.setVisibility(View.GONE);
+            chatBtn.setVisibility(View.VISIBLE);
             updateAlias(true);
         } else {
             addFriendBtn.setVisibility(View.VISIBLE);
             removeFriendBtn.setVisibility(View.GONE);
+            chatBtn.setVisibility(View.GONE);
             updateAlias(false);
         }
     }

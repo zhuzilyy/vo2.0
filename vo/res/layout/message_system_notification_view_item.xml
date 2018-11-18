@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/white"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical">
-
     <View
+        android:visibility="gone"
         android:id="@+id/top_line"
         style="@style/horizontal_light_thin_divider"
-        android:layout_marginLeft="70dp" />
-
+        />
     <RelativeLayout
+        android:background="@color/white"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:minHeight="70dp"
         android:paddingBottom="10dp"
         android:paddingTop="10dp">
-
         <com.netease.nim.uikit.common.ui.imageview.HeadImageView
             android:id="@+id/from_account_head_image"
             android:layout_width="@dimen/avatar_size_default"
@@ -24,7 +24,6 @@
             android:layout_alignParentLeft="true"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp" />
-
         <LinearLayout
             android:id="@+id/operator_layout"
             android:layout_alignParentRight="true"
@@ -32,27 +31,24 @@
             android:layout_centerVertical="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
-
             <Button
                 android:id="@+id/agree"
                 android:layout_width="54dip"
                 android:layout_height="34dip"
-                android:background="@drawable/nim_team_create_btn_selector"
+                android:background="@drawable/bg_save"
                 android:text="@string/agree"
                 android:textColor="@color/white"
                 android:textSize="@dimen/text_size_14" />
-
             <Button
                 android:id="@+id/reject"
                 android:layout_width="54dip"
                 android:layout_height="34dip"
                 android:layout_marginLeft="8dip"
                 android:layout_marginRight="8dp"
-                android:background="@drawable/nim_red_round_button_selector"
+                android:background="@drawable/bg_refuse"
                 android:text="@string/reject"
                 android:textColor="@color/white"
                 android:textSize="@dimen/text_size_14" />
-
             <TextView
                 android:id="@+id/operator_result"
                 android:layout_width="wrap_content"
@@ -122,6 +118,6 @@
     <View
         android:id="@+id/bottom_line"
         style="@style/horizontal_light_thin_divider"
-        android:layout_marginLeft="70dp" />
+        />
 
 </LinearLayout>

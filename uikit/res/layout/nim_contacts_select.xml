@@ -11,6 +11,7 @@
         android:layout_height="fill_parent">
 
         <android.support.design.widget.AppBarLayout
+            android:visibility="gone"
             android:id="@+id/app_bar_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -24,12 +25,15 @@
                 android:background="?attr/colorPrimary"
                 app:titleTextAppearance="@style/Toolbar.TitleText"></android.support.v7.widget.Toolbar>
         </android.support.design.widget.AppBarLayout>
+        <include
+            android:id="@+id/title"
+            layout="@layout/layout_title"/>
         <RelativeLayout
             android:id="@+id/contactsLayout"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:layout_above="@+id/rlCtrl"
-            android:layout_below="@id/app_bar_layout"
+            android:layout_below="@id/title"
             android:background="@color/transparent">
 
             <ListView
@@ -74,7 +78,6 @@
                 android:layout_alignParentRight="true"
                 android:background="#00000000" />
         </RelativeLayout>
-
         <RelativeLayout
             android:id="@+id/rlCtrl"
             android:layout_width="fill_parent"

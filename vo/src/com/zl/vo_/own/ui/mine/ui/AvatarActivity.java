@@ -69,7 +69,6 @@ public class AvatarActivity extends BaseActivity {
     protected void getResLayout() {
        setContentView(R.layout.activity_avatar);
     }
-
     @Override
     protected void initListener() {
 

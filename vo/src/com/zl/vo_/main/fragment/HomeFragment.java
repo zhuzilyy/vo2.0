@@ -321,7 +321,7 @@ public class HomeFragment extends TFragment implements OnPageChangeListener, Rem
                 showAddPw(iv_add);
                 break;
             case R.id.iv_search:
-                Intent intent=new Intent(getActivity(), SearchFriendsActivity.class);
+                Intent intent=new Intent(getActivity(), AddFriendActivity.class);
                 startActivity(intent);
                 break;
         }

@@ -76,7 +76,6 @@ public class MainActivity extends UI {
     private static final int REQUEST_CODE_ADVANCED = 2;
     private static final String TAG = MainActivity.class.getSimpleName();
     private static final int BASIC_PERMISSION_REQUEST_CODE = 100;
-
     private HomeFragment mainFragment;
 
     public static void start(Context context) {
