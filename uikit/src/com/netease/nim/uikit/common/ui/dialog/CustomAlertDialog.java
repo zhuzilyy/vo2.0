@@ -2,8 +2,10 @@ package com.netease.nim.uikit.common.ui.dialog;
 
 import android.app.AlertDialog;
 import android.content.Context;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.util.Pair;
 import android.view.View;
 import android.view.ViewGroup;
@@ -72,7 +74,6 @@ public class CustomAlertDialog extends AlertDialog {
 
     private void initAdapter() {
         listAdapter = new TAdapter(context, itemTextList, new TAdapterDelegate() {
-
             @Override
             public int getViewTypeCount() {
                 return itemTextList.size();
@@ -102,7 +103,6 @@ public class CustomAlertDialog extends AlertDialog {
         listAdapter = adapter;
         listListener = listener;
         itemListener = new OnItemClickListener() {
-
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 dismiss();
@@ -121,9 +121,9 @@ public class CustomAlertDialog extends AlertDialog {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.nim_easy_alert_dialog_with_listview);
         LinearLayout root = (LinearLayout) findViewById(R.id.easy_alert_dialog_layout);
-        ViewGroup.LayoutParams params = root.getLayoutParams();
+    /*    ViewGroup.LayoutParams params = root.getLayoutParams();
         params.width = (int) ScreenUtil.getDialogWidth();
-        root.setLayoutParams(params);
+        root.setLayoutParams(params);*/
         addFootView(root);
         titleView = findViewById(R.id.easy_dialog_title_view);
         if (titleView != null) {

@@ -577,6 +577,7 @@ public class UserProfileActivity extends UI {
             @Override
             public void onYesClick(String content) {
                 doAddFriend(content, false);
+                dialog.dismiss();
             }
         });
         dialog.show();

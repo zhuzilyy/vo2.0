@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -250,7 +251,6 @@ public class RecentContactsFragment extends TFragment {
                 });
             }
         });
-
         title = (isTagSet(recent, RECENT_TAG_STICKY) ? getString(R.string.main_msg_list_clear_sticky_on_top) : getString(R.string.main_msg_list_sticky_on_top));
         alertDialog.addItem(title, new onSeparateItemClickListener() {
             @Override
@@ -261,7 +261,6 @@ public class RecentContactsFragment extends TFragment {
                     addTag(recent, RECENT_TAG_STICKY);
                 }
                 NIMClient.getService(MsgService.class).updateRecent(recent);
-
                 refreshMessages(false);
             }
         });
