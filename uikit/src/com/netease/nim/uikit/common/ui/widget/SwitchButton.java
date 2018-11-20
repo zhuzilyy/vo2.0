@@ -57,17 +57,19 @@ public class SwitchButton extends View implements OnTouchListener {
     }
 
     private void init() {// 初始化
-        bg_on = BitmapFactory.decodeResource(getResources(), R.mipmap.zi);
-        bg_off = BitmapFactory.decodeResource(getResources(), R.mipmap.gray);
-        slip_btn = BitmapFactory.decodeResource(getResources(),R.mipmap.circle);
+       // bg_on = BitmapFactory.decodeResource(getResources(), R.mipmap.zi);
+       // bg_off = BitmapFactory.decodeResource(getResources(), R.mipmap.gray);
+       // slip_btn = BitmapFactory.decodeResource(getResources(),R.mipmap.circle);
 
-       // bg_on = BitmapFactory.decodeResource(getResources(), R.drawable.nim_slide_toggle_on);
-       // bg_off = BitmapFactory.decodeResource(getResources(), R.drawable.nim_slide_toggle_off);
-        //slip_btn = BitmapFactory.decodeResource(getResources(), R.drawable.nim_slide_toggle);
+        bg_on = BitmapFactory.decodeResource(getResources(), R.drawable.nim_slide_toggle_on2);
+        bg_off = BitmapFactory.decodeResource(getResources(), R.drawable.nim_slide_toggle_off);
+        slip_btn = BitmapFactory.decodeResource(getResources(), R.drawable.nim_slide_toggle);
+
         btn_off = new Rect(0, 0, slip_btn.getWidth(), slip_btn.getHeight());
         btn_on = new Rect(bg_off.getWidth() - slip_btn.getWidth(), 0, bg_off.getWidth(), slip_btn.getHeight());
         setOnTouchListener(this);// 设置监听器,也可以直接复写OnTouchEvent
     }
+
     @SuppressLint("DrawAllocation")
     @Override
     protected void onDraw(Canvas canvas) {// 绘图函数
