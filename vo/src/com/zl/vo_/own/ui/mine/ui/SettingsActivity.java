@@ -129,7 +129,6 @@ public class SettingsActivity extends BaseActivity implements View.OnClickListen
                     Preferences.saveUserToken("");
                     // 清理缓存&注销监听
                     LogoutHelper.logout();
-
                     // 启动登录
                     Login_Register_Acitivity.start(SettingsActivity.this);
                     finish();

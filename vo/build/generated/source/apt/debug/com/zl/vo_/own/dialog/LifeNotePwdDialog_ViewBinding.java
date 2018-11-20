@@ -15,7 +15,7 @@ import java.lang.Override;
 public class LifeNotePwdDialog_ViewBinding<T extends LifeNotePwdDialog> implements Unbinder {
   protected T target;
 
-  private View view2131755792;
+  private View view2131755793;
 
   private View view2131755480;
 
@@ -26,7 +26,7 @@ public class LifeNotePwdDialog_ViewBinding<T extends LifeNotePwdDialog> implemen
     View view;
     target.et_pwd = Utils.findRequiredViewAsType(source, R.id.et_pwd, "field 'et_pwd'", EditText.class);
     view = Utils.findRequiredView(source, R.id.tv_confirm, "method 'click'");
-    view2131755792 = view;
+    view2131755793 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -51,8 +51,8 @@ public class LifeNotePwdDialog_ViewBinding<T extends LifeNotePwdDialog> implemen
 
     target.et_pwd = null;
 
-    view2131755792.setOnClickListener(null);
-    view2131755792 = null;
+    view2131755793.setOnClickListener(null);
+    view2131755793 = null;
     view2131755480.setOnClickListener(null);
     view2131755480 = null;
 

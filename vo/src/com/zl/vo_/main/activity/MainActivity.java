@@ -125,7 +125,6 @@ public class MainActivity extends UI {
         if (!syncCompleted) {
         DialogMaker.showProgressDialog(MainActivity.this, getString(R.string.prepare_data)).setCanceledOnTouchOutside(false);
     }
-
     onInit();
 }
 
@@ -189,10 +188,8 @@ public class MainActivity extends UI {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
         MPermission.printMPermissionResult(false, this, BASIC_PERMISSIONS);
     }
-
     @OnMPermissionDenied(BASIC_PERMISSION_REQUEST_CODE)
     @OnMPermissionNeverAskAgain(BASIC_PERMISSION_REQUEST_CODE)
     public void onBasicPermissionFailed() {
@@ -201,16 +198,13 @@ public class MainActivity extends UI {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
         MPermission.printMPermissionResult(false, this, BASIC_PERMISSIONS);
     }
-
     private void onInit() {
         // 加载主页面
         showMainFragment();
         LogUtil.ui("NIM SDK cache path=" + NIMClient.getSdkStorageDirPath());
     }
-
     @Override
     protected void onNewIntent(Intent intent) {
         setIntent(intent);

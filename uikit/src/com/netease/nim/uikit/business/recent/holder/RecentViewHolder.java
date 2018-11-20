@@ -158,7 +158,6 @@ public abstract class RecentViewHolder extends RecyclerViewHolder<BaseQuickAdapt
         loadPortrait(recent);
 
         updateNickLabel(UserInfoHelper.getUserTitleName(recent.getContactId(), recent.getSessionType()));
-
         updateOnlineState(recent);
 
         updateMsgLabel(holder, recent);

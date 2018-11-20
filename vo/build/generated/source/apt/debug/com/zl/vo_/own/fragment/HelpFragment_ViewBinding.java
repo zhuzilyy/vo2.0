@@ -16,11 +16,11 @@ import java.lang.Override;
 public class HelpFragment_ViewBinding<T extends HelpFragment> implements Unbinder {
   protected T target;
 
-  private View view2131755547;
-
-  private View view2131755549;
+  private View view2131755548;
 
   private View view2131755550;
+
+  private View view2131755551;
 
   @UiThread
   public HelpFragment_ViewBinding(final T target, View source) {
@@ -30,7 +30,7 @@ public class HelpFragment_ViewBinding<T extends HelpFragment> implements Unbinde
     target.tv_title = Utils.findRequiredViewAsType(source, R.id.tv_title, "field 'tv_title'", TextView.class);
     target.ll_help = Utils.findRequiredViewAsType(source, R.id.ll_help, "field 'll_help'", LinearLayout.class);
     view = Utils.findRequiredView(source, R.id.rl_share, "method 'click'");
-    view2131755547 = view;
+    view2131755548 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -38,7 +38,7 @@ public class HelpFragment_ViewBinding<T extends HelpFragment> implements Unbinde
       }
     });
     view = Utils.findRequiredView(source, R.id.rl_helpAndFeedback, "method 'click'");
-    view2131755549 = view;
+    view2131755550 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -46,7 +46,7 @@ public class HelpFragment_ViewBinding<T extends HelpFragment> implements Unbinde
       }
     });
     view = Utils.findRequiredView(source, R.id.rl_aboutVo, "method 'click'");
-    view2131755550 = view;
+    view2131755551 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -64,12 +64,12 @@ public class HelpFragment_ViewBinding<T extends HelpFragment> implements Unbinde
     target.tv_title = null;
     target.ll_help = null;
 
-    view2131755547.setOnClickListener(null);
-    view2131755547 = null;
-    view2131755549.setOnClickListener(null);
-    view2131755549 = null;
+    view2131755548.setOnClickListener(null);
+    view2131755548 = null;
     view2131755550.setOnClickListener(null);
     view2131755550 = null;
+    view2131755551.setOnClickListener(null);
+    view2131755551 = null;
 
     this.target = null;
   }

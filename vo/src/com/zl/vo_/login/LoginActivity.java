@@ -18,6 +18,7 @@ import android.view.View.OnKeyListener;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.netease.nim.uikit.common.ui.dialog.EasyAlertDialogHelper;
 import com.zl.vo_.DemoCache;
 import com.zl.vo_.R;
 import com.zl.vo_.config.preference.Preferences;
@@ -29,7 +30,6 @@ import com.netease.nim.uikit.api.wrapper.NimToolBarOptions;
 import com.netease.nim.uikit.common.activity.ToolBarOptions;
 import com.netease.nim.uikit.common.activity.UI;
 import com.netease.nim.uikit.common.ui.dialog.DialogMaker;
-import com.netease.nim.uikit.common.ui.dialog.EasyAlertDialogHelper;
 import com.netease.nim.uikit.common.ui.widget.ClearableEditTextWithIcon;
 import com.netease.nim.uikit.common.util.log.LogUtil;
 import com.netease.nim.uikit.common.util.string.MD5;
@@ -48,6 +48,7 @@ import com.netease.nimlib.sdk.StatusBarNotificationConfig;
 import com.netease.nimlib.sdk.auth.AuthService;
 import com.netease.nimlib.sdk.auth.ClientType;
 import com.netease.nimlib.sdk.auth.LoginInfo;
+import com.zl.vo_.own.dialog.CustomerDialog;
 
 /**
  * 登录/注册界面
@@ -82,7 +83,7 @@ public class LoginActivity extends UI implements OnKeyListener {
     }
 
     public static void start(Context context, boolean kickOut) {
-        Intent intent = new Intent(context, LoginActivity.class);
+        Intent intent = new Intent(context, com.zl.vo_.own.ui.account.LoginActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
         intent.putExtra(KICK_OUT, kickOut);
         context.startActivity(intent);
@@ -167,10 +168,15 @@ public class LoginActivity extends UI implements OnKeyListener {
                     client = "移动端";
                     break;
             }
+            Intent intent = new Intent();
+            intent.setAction("com.action.singleLogin");
+            sendBroadcast(intent);
             EasyAlertDialogHelper.showOneButtonDiolag(LoginActivity.this, getString(R.string.kickout_notify),
                     String.format(getString(R.string.kickout_content), client), getString(R.string.ok), true, null);
         }
     }
+
+
 
     /**
      * ActionBar 右上角按钮

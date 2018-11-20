@@ -16,21 +16,21 @@ import java.lang.Override;
 public class MineFragment_ViewBinding<T extends MineFragment> implements Unbinder {
   protected T target;
 
-  private View view2131755922;
+  private View view2131755923;
+
+  private View view2131755554;
+
+  private View view2131755560;
+
+  private View view2131755563;
+
+  private View view2131755566;
+
+  private View view2131755569;
 
   private View view2131755553;
 
-  private View view2131755559;
-
-  private View view2131755562;
-
-  private View view2131755565;
-
-  private View view2131755568;
-
-  private View view2131755552;
-
-  private View view2131755557;
+  private View view2131755558;
 
   @UiThread
   public MineFragment_ViewBinding(final T target, View source) {
@@ -40,7 +40,7 @@ public class MineFragment_ViewBinding<T extends MineFragment> implements Unbinde
     target.tv_title = Utils.findRequiredViewAsType(source, R.id.tv_title, "field 'tv_title'", TextView.class);
     view = Utils.findRequiredView(source, R.id.iv_add, "field 'iv_add' and method 'click'");
     target.iv_add = Utils.castView(view, R.id.iv_add, "field 'iv_add'", ImageView.class);
-    view2131755922 = view;
+    view2131755923 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -48,7 +48,7 @@ public class MineFragment_ViewBinding<T extends MineFragment> implements Unbinde
       }
     });
     view = Utils.findRequiredView(source, R.id.rl_lifeNote, "method 'click'");
-    view2131755553 = view;
+    view2131755554 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -56,7 +56,7 @@ public class MineFragment_ViewBinding<T extends MineFragment> implements Unbinde
       }
     });
     view = Utils.findRequiredView(source, R.id.rl_setPrivacyFriends, "method 'click'");
-    view2131755559 = view;
+    view2131755560 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -64,7 +64,7 @@ public class MineFragment_ViewBinding<T extends MineFragment> implements Unbinde
       }
     });
     view = Utils.findRequiredView(source, R.id.rl_lifeNotePwdSetting, "method 'click'");
-    view2131755562 = view;
+    view2131755563 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -72,7 +72,7 @@ public class MineFragment_ViewBinding<T extends MineFragment> implements Unbinde
       }
     });
     view = Utils.findRequiredView(source, R.id.rl_infoTransmission, "method 'click'");
-    view2131755565 = view;
+    view2131755566 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -80,7 +80,7 @@ public class MineFragment_ViewBinding<T extends MineFragment> implements Unbinde
       }
     });
     view = Utils.findRequiredView(source, R.id.rl_deletePravcyFriends, "method 'click'");
-    view2131755568 = view;
+    view2131755569 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -88,7 +88,7 @@ public class MineFragment_ViewBinding<T extends MineFragment> implements Unbinde
       }
     });
     view = Utils.findRequiredView(source, R.id.rl_userInfo, "method 'click'");
-    view2131755552 = view;
+    view2131755553 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -96,7 +96,7 @@ public class MineFragment_ViewBinding<T extends MineFragment> implements Unbinde
       }
     });
     view = Utils.findRequiredView(source, R.id.rl_openVip, "method 'click'");
-    view2131755557 = view;
+    view2131755558 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -114,22 +114,22 @@ public class MineFragment_ViewBinding<T extends MineFragment> implements Unbinde
     target.tv_title = null;
     target.iv_add = null;
 
-    view2131755922.setOnClickListener(null);
-    view2131755922 = null;
+    view2131755923.setOnClickListener(null);
+    view2131755923 = null;
+    view2131755554.setOnClickListener(null);
+    view2131755554 = null;
+    view2131755560.setOnClickListener(null);
+    view2131755560 = null;
+    view2131755563.setOnClickListener(null);
+    view2131755563 = null;
+    view2131755566.setOnClickListener(null);
+    view2131755566 = null;
+    view2131755569.setOnClickListener(null);
+    view2131755569 = null;
     view2131755553.setOnClickListener(null);
     view2131755553 = null;
-    view2131755559.setOnClickListener(null);
-    view2131755559 = null;
-    view2131755562.setOnClickListener(null);
-    view2131755562 = null;
-    view2131755565.setOnClickListener(null);
-    view2131755565 = null;
-    view2131755568.setOnClickListener(null);
-    view2131755568 = null;
-    view2131755552.setOnClickListener(null);
-    view2131755552 = null;
-    view2131755557.setOnClickListener(null);
-    view2131755557 = null;
+    view2131755558.setOnClickListener(null);
+    view2131755558 = null;
 
     this.target = null;
   }
