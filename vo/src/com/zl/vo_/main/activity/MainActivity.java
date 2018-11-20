@@ -110,9 +110,7 @@ public class MainActivity extends UI {
         setContentView(R.layout.activity_main_tab);
         requestBasicPermission();
         onParseIntent();
-        //存储通讯录到DemoCache
 
-        //DemoCache.setPhone_contacts(getContactsRes());
     // 等待同步数据完成
     boolean syncCompleted = LoginSyncDataStatusObserver.getInstance().observeSyncDataCompletedEvent(new Observer<Void>() {
         @Override
@@ -185,7 +183,8 @@ public class MainActivity extends UI {
         try {
             Toast.makeText(this, "授权成功", Toast.LENGTH_SHORT).show();
             //存储通讯录到DemoCache
-            //DemoCache.setPhone_contacts(getContactsRes());
+            DemoCache.setPhone_contacts(getContactsRes());
+            Log.i("sssssss",getContactsRes());
         } catch (Exception e) {
             e.printStackTrace();
         }

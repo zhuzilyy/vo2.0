@@ -123,18 +123,38 @@ public class SettingsActivity extends BaseActivity implements View.OnClickListen
         ll_quite_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                boolean flag = false;
-                flag = logoutServer();
-                if(flag){
-                    Preferences.saveUserToken("");
-                    // 清理缓存&注销监听
-                    LogoutHelper.logout();
 
-                    // 启动登录
-                    Login_Register_Acitivity.start(SettingsActivity.this);
-                    finish();
-                    dialog.dismiss();
-                }
+                Map<String,String> params = new HashMap<>();
+
+                ApiAccount.logoutServer(SettingsActivity.this, params, new OnRequestDataListener() {
+                    @Override
+                    public void requestSuccess(String data) {
+                        try {
+                            JSONObject jsonObject = new JSONObject(data);
+                            String code = jsonObject.getString("code");
+                            if("200000".equals(code)){
+                                Preferences.saveUserToken("");
+                                // 清理缓存&注销监听
+                                LogoutHelper.logout();
+
+                                // 启动登录
+                                Login_Register_Acitivity.start(SettingsActivity.this);
+                                finish();
+                                dialog.dismiss();
+                            }
+                        }catch (Exception e){
+
+                        }
+
+                    }
+
+                    @Override
+                    public void requestFailure(int code, String msg) {
+
+                    }
+                });
+
+
             }
         });
         dialog.show();
@@ -142,40 +162,6 @@ public class SettingsActivity extends BaseActivity implements View.OnClickListen
     }
 
 
-    //
-    public boolean logoutServer(){
-         final boolean flag = false;
-        Map<String,String> params = new HashMap<>();
 
-        ApiAccount.logoutServer(this, params, new OnRequestDataListener() {
-            @Override
-            public void requestSuccess(String data) {
-                try {
-                    JSONObject jsonObject = new JSONObject(data);
-                    String code = jsonObject.getString("code");
-                    if("2000".equals(code)){
-                       // flag = true;
-                    }
-                }catch (Exception e){
-
-                }
-
-            }
-
-            @Override
-            public void requestFailure(int code, String msg) {
-
-            }
-        });
-
-
-
-
-
-
-
-
-        return flag;
-    }
 
 }
