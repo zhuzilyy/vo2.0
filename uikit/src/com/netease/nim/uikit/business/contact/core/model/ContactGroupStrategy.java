@@ -31,6 +31,7 @@ public class ContactGroupStrategy implements Comparator<String> {
 
     private final Map<String, Group> groups = new HashMap<String, Group>();
 
+    //返回所属组名称
     public String belongs(AbsContactItem item) {
         return item.belongsGroup();
     }
@@ -52,13 +53,13 @@ public class ContactGroupStrategy implements Comparator<String> {
 
         return order;
     }
-
+    //获取分组名称
     public final String getName(String id) {
         Group group = groups.get(id);
         String name = group != null ? group.name : null;
         return name != null ? name : "";
     }
-
+    //返回组的序号
     private Integer toOrder(String id) {
         Group group = groups.get(id);
         return group != null ? group.order : null;

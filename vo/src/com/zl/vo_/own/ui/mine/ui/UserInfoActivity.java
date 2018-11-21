@@ -4,11 +4,13 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.zl.vo_.R;
+import com.zl.vo_.own.api.ReqResCodeForVo;
 import com.zl.vo_.own.base.BaseActivity;
 import com.zl.vo_.own.util.SPUtils;
 
@@ -79,8 +81,13 @@ public class UserInfoActivity extends BaseActivity {
             case R.id.iv_back:
                 Intent intent = new Intent();
                 intent.putExtra("nick_setOk",tv_nickName.getText().toString().trim());
-                setResult(210,intent);
-                finish();
+                intent.putExtra("void_setOk",tv_voNum.getText().toString().trim());
+                setResult(ReqResCodeForVo.USERINFO_VONAME_ID_RESULT_CODE,intent);
+
+              //  Intent intent_void = new Intent();
+              //  intent_void.putExtra("void_setOk",tv_voNum.getText().toString().trim());
+              //  setResult(ReqResCodeForVo.USERINFO_VOID_RESULT_CODE,intent_void);
+               finish();
                 break;
             case R.id.rl_avatar:
                 jumpActivity(UserInfoActivity.this,AvatarActivity.class);
@@ -130,8 +137,15 @@ public class UserInfoActivity extends BaseActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if(202 == resultCode){
+        if(ReqResCodeForVo.CHANGE_VONAME_RESULT_CODE == resultCode){
             tv_nickName.setText((String)SPUtils.get(UserInfoActivity.this,"nickName",""));
+        }
+        if(ReqResCodeForVo.CHANGE_VOID_RESULT_CODE == resultCode){
+           String vocode =  data.getStringExtra("coVode");
+           if(!TextUtils.isEmpty(vocode)){
+               tv_voNum.setText(vocode);
+           }
+
         }
     }
 }

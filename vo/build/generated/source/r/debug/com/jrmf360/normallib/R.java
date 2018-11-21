@@ -131,7 +131,7 @@ public final class R {
         public static final int jrmf_dimen_8 = 0x7f0a0127;
         public static final int jrmf_dimen_80 = 0x7f0a0128;
         public static final int round_radius = 0x7f0a0155;
-        public static final int titlebar_height = 0x7f0a018e;
+        public static final int titlebar_height = 0x7f0a0190;
     }
     public static final class drawable {
         public static final int crown = 0x7f0200cd;

@@ -15,8 +15,8 @@ public final class R {
         public static final int upsdk_white = 0x7f0e0189;
     }
     public static final class dimen {
-        public static final int upsdk_dialog_content_size = 0x7f0a01a9;
-        public static final int upsdk_dialog_subtitle_size = 0x7f0a01aa;
+        public static final int upsdk_dialog_content_size = 0x7f0a01ab;
+        public static final int upsdk_dialog_subtitle_size = 0x7f0a01ac;
     }
     public static final class drawable {
         public static final int upsdk_btn_emphasis_normal_layer = 0x7f020311;

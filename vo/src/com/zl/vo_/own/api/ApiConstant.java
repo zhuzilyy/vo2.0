@@ -125,7 +125,8 @@ public class ApiConstant {
     public static final String SET_NICK=BASE_URL+"/api/v1/user/name";
     //退出登录
     public static final String LOGOUT_SERVER = BASE_URL+"/api/v1/logout";
-
+    //加我为好友时需要验证
+    public static final String FriendAsMe_Verification = BASE_URL+"/api/v1/user/friend_verify";
 
 
 

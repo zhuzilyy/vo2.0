@@ -125,10 +125,16 @@ public class ApiAccount {
         });
     }
     //退出登录
-     /*注册的方法*/
+     /*xzy注册的方法*/
     public static void logoutServer(final Context context, Map<String,String> params, final OnRequestDataListener listener) {
         Dialog dialog = WeiboDialogUtils.createLoadingDialog(context, "加载中");
         excutePost(ApiConstant.LOGOUT_SERVER,"two", context, params,dialog, listener);
+    }
+
+    /*xzy加我为好友时是否需要验证的方法*/
+    public static void FriendAsMe_Verification (final Context context, Map<String,String> params, final OnRequestDataListener listener) {
+        Dialog dialog = WeiboDialogUtils.createLoadingDialog(context, "加载中");
+        excutePost(ApiConstant.FriendAsMe_Verification,"two", context, params,dialog, listener);
     }
 
 }

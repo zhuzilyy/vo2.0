@@ -62,7 +62,7 @@ public class ContactsFragment extends TFragment {
     private View loadingFrame;
 
     private ContactsCustomization customization;
-
+    //通讯录加载频率控制
     private ReloadFrequencyControl reloadControl = new ReloadFrequencyControl();
 
     public void setContactsCustomization(ContactsCustomization customization) {
@@ -112,7 +112,8 @@ public class ContactsFragment extends TFragment {
     private void initAdapter() {
         IContactDataProvider dataProvider = new ContactDataProvider(ItemTypes.FRIEND);
 
-        adapter = new ContactDataAdapter(getActivity(), new ContactsGroupStrategy(), dataProvider) {
+        adapter = new ContactDataAdapter(getActivity(), new ContactsGroupStrategy(), dataProvider)
+        {
             @Override
             protected List<AbsContactItem> onNonDataItems() {
                 if (customization != null) {
@@ -136,6 +137,7 @@ public class ContactsFragment extends TFragment {
             }
         };
 
+
         adapter.addViewHolder(ItemTypes.LABEL, LabelHolder.class);
         if (customization != null) {
             adapter.addViewHolder(ItemTypes.FUNC, customization.onGetFuncViewHolderClass());
@@ -154,6 +156,7 @@ public class ContactsFragment extends TFragment {
         // ListView
         listView = findView(R.id.contact_list_view);
         listView.addFooterView(countLayout); // 注意：addFooter要放在setAdapter之前，否则旧版本手机可能会add不上
+        //设置适配器
         listView.setAdapter(adapter);
         listView.setOnScrollListener(new AbsListView.OnScrollListener() {
 
@@ -199,6 +202,7 @@ public class ContactsFragment extends TFragment {
             int type = item.getItemType();
 
             if (type == ItemTypes.FUNC && customization != null) {
+                //跳转
                 customization.onFuncItemClick(item);
                 return;
             }
@@ -430,7 +434,7 @@ public class ContactsFragment extends TFragment {
             adapter.notifyDataSetChanged();
         }
     };
-
+//注册在线状态的监听器
     private void registerOnlineStateChangeListener(boolean register) {
         if (!NimUIKitImpl.enableOnlineState()) {
             return;

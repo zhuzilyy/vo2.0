@@ -125,4 +125,8 @@
     <dimen name="dp120">120dp</dimen>
     <dimen name="dp150">150dp</dimen>
 
+
+    <dimen name="switbtn_width">58dip</dimen>
+    <dimen name="switbtn_height">36.67dip</dimen>
+
 </resources>

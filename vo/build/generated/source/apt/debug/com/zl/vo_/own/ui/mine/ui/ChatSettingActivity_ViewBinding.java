@@ -5,11 +5,12 @@ import android.support.annotation.CallSuper;
 import android.support.annotation.UiThread;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import butterknife.Unbinder;
 import butterknife.internal.Utils;
+import com.netease.nim.uikit.common.ui.widget.SwitchButton;
 import com.zl.vo_.R;
-import com.zl.vo_.own.views.EaseSwitchButton;
 import java.lang.IllegalStateException;
 import java.lang.Override;
 
@@ -22,7 +23,8 @@ public class ChatSettingActivity_ViewBinding<T extends ChatSettingActivity> impl
 
     target.title = Utils.findRequiredViewAsType(source, R.id.tv_title, "field 'title'", TextView.class);
     target.back = Utils.findRequiredViewAsType(source, R.id.iv_back, "field 'back'", ImageView.class);
-    target.switch_Usehandset = Utils.findRequiredViewAsType(source, R.id.switch_Usehandset, "field 'switch_Usehandset'", EaseSwitchButton.class);
+    target.switch_Usehandset = Utils.findRequiredViewAsType(source, R.id.switch_Usehandset, "field 'switch_Usehandset'", SwitchButton.class);
+    target.clearAllmsg_re = Utils.findRequiredViewAsType(source, R.id.clearAllmsg_re, "field 'clearAllmsg_re'", RelativeLayout.class);
   }
 
   @Override
@@ -34,6 +36,7 @@ public class ChatSettingActivity_ViewBinding<T extends ChatSettingActivity> impl
     target.title = null;
     target.back = null;
     target.switch_Usehandset = null;
+    target.clearAllmsg_re = null;
 
     this.target = null;
   }

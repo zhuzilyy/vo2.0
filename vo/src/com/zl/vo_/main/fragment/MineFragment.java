@@ -17,6 +17,7 @@ import com.cpiz.android.bubbleview.RelativePos;
 import com.zl.vo_.R;
 import com.zl.vo_.config.preference.Preferences;
 import com.zl.vo_.login.LogoutHelper;
+import com.zl.vo_.own.api.ReqResCodeForVo;
 import com.zl.vo_.own.dialog.CustomerDialog;
 import com.zl.vo_.own.dialog.JiamiDialog;
 import com.zl.vo_.own.dialog.LifeNotePwdDialog;
@@ -370,14 +371,19 @@ public class MineFragment extends MainTabFragment implements View.OnClickListene
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-
-        if(210 == resultCode){
+        //设置返回的voName,id
+        if(ReqResCodeForVo.USERINFO_VONAME_ID_RESULT_CODE == resultCode){
             String nickName = data.getStringExtra("nick_setOk");
             if(!TextUtils.isEmpty(nickName)){
                 tv_nickName.setText(nickName);
             }
+            String voId = data.getStringExtra("void_setOk");
+            if(!TextUtils.isEmpty(voId)){
+                tv_voNum.setText(voId);
+            }
 
         }
+
 
 
     }

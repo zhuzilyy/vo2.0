@@ -8,8 +8,10 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.netease.nim.uikit.business.contact.core.item.AbsContactItem;
+import com.netease.nim.uikit.business.contact.core.item.ContactItem;
 import com.netease.nim.uikit.business.contact.core.item.ContactItemFilter;
 import com.netease.nim.uikit.business.contact.core.model.ContactDataTask.Host;
 import com.netease.nim.uikit.business.contact.core.query.IContactDataProvider;
@@ -113,6 +115,7 @@ public class ContactDataAdapter extends BaseAdapter {
         updateIndexes(datas.getIndexes());
 
         notifyDataSetChanged();
+
     }
 
     @Override

@@ -55,9 +55,9 @@ public class ContactListFragment extends MainTabFragment {
         static final FuncItem BLACK_LIST = new FuncItem();
         static final FuncItem MY_COMPUTER = new FuncItem();*/
         //修改的部分
-        static final FuncItem NEW_FRIEND = new FuncItem();
-        static final FuncItem MY_CONTACT = new FuncItem();
-        static final FuncItem GROUP_CONTACT = new FuncItem();
+        static final FuncItem NEW_FRIEND = new FuncItem();//新的朋友
+        static final FuncItem MY_CONTACT = new FuncItem();//我的通讯录
+        static final FuncItem GROUP_CONTACT = new FuncItem();//群聊
 
         @Override
         public int getItemType() {
@@ -172,7 +172,7 @@ public class ContactListFragment extends MainTabFragment {
             items.add(GROUP_CONTACT);
             return items;
         }
-
+        //处理跳转
         static void handle(Context context, AbsContactItem item) {
          /*   if (item == VERIFY) {
                 SystemMessageActivity.start(context);
@@ -189,14 +189,17 @@ public class ContactListFragment extends MainTabFragment {
             }*/
            //薛金柱添加的部分
             if (item==NEW_FRIEND){
+                //新的朋友
                 SystemMessageActivity.start(context);
             }else if(item==MY_CONTACT){
+                //通讯录好友
                 //TeamListActivity.start(context, ItemTypes.TEAMS.ADVANCED_TEAM);
                 Intent intent = new Intent();
                 intent.setClass(context, AddressListFriendActivity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
                 context.startActivity(intent);
             }else if(item==GROUP_CONTACT){
+                //群聊
                 TeamListActivity.start(context, ItemTypes.TEAMS.ADVANCED_TEAM);
             }
         }
@@ -217,7 +220,9 @@ public class ContactListFragment extends MainTabFragment {
         addContactFragment();  // 集成通讯录页面
     }
 
-    // 将通讯录列表fragment动态集成进来。 开发者也可以使用在xml中配置的方式静态集成。
+    /**
+     * 将通讯录列表fragment动态集成进来。 开发者也可以使用在xml中配置的方式静态集成。
+      */
     private void addContactFragment() {
         fragment = new ContactsFragment();
         fragment.setContainerId(R.id.contact_fragment);
@@ -238,7 +243,7 @@ public class ContactListFragment extends MainTabFragment {
             public List<AbsContactItem> onGetFuncItems() {
                 return FuncItem.provide();
             }
-
+            //自定义跳转
             @Override
             public void onFuncItemClick(AbsContactItem item) {
                 FuncItem.handle(getActivity(), item);

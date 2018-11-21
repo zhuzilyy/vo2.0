@@ -8,8 +8,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import butterknife.Unbinder;
 import butterknife.internal.Utils;
+import com.netease.nim.uikit.common.ui.widget.SwitchButton;
 import com.zl.vo_.R;
-import com.zl.vo_.own.views.EaseSwitchButton;
 import java.lang.IllegalStateException;
 import java.lang.Override;
 
@@ -22,8 +22,8 @@ public class CurrencySettingActivity_ViewBinding<T extends CurrencySettingActivi
 
     target.title = Utils.findRequiredViewAsType(source, R.id.tv_title, "field 'title'", TextView.class);
     target.back = Utils.findRequiredViewAsType(source, R.id.iv_back, "field 'back'", ImageView.class);
-    target.switch_Verification = Utils.findRequiredViewAsType(source, R.id.switch_Verification, "field 'switch_Verification'", EaseSwitchButton.class);
-    target.switch_Recommended_address_friends = Utils.findRequiredViewAsType(source, R.id.switch_Recommended_address_friends, "field 'switch_Recommended_address_friends'", EaseSwitchButton.class);
+    target.switch_Verification = Utils.findRequiredViewAsType(source, R.id.switch_Verification, "field 'switch_Verification'", SwitchButton.class);
+    target.switch_Recommended_address_friends = Utils.findRequiredViewAsType(source, R.id.switch_Recommended_address_friends, "field 'switch_Recommended_address_friends'", SwitchButton.class);
   }
 
   @Override
