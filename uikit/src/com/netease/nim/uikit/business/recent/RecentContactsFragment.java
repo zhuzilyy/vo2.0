@@ -216,7 +216,6 @@ public class RecentContactsFragment extends TFragment {
 
         }
     };
-
     OnlineStateChangeObserver onlineStateChangeObserver = new OnlineStateChangeObserver() {
         @Override
         public void onlineStateChange(Set<String> accounts) {

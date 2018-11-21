@@ -55,12 +55,9 @@ import java.util.List;
  * Created by huangjun on 2015/3/3.
  */
 public class ContactSelectActivity extends UI implements View.OnClickListener, android.support.v7.widget.SearchView.OnQueryTextListener {
-
     public static final String EXTRA_DATA = "EXTRA_DATA"; // 请求数据：Option
     public static final String RESULT_DATA = "RESULT_DATA"; // 返回结果
-
     // adapter
-
     private ContactSelectAdapter contactAdapter;
 
     private ContactSelectAvatarAdapter contactSelectedAdapter;
@@ -245,7 +242,6 @@ public class ContactSelectActivity extends UI implements View.OnClickListener, a
         initAdapter();
         initListView();
         initContactSelectArea();
-
         loadData();
         initData();
     }

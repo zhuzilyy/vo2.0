@@ -112,13 +112,12 @@ public class ContactsFragment extends TFragment {
     private void initAdapter() {
         IContactDataProvider dataProvider = new ContactDataProvider(ItemTypes.FRIEND);
 
-        adapter = new ContactDataAdapter(getActivity(), new ContactsGroupStrategy(), dataProvider) {
+        adapter = new ContactDataAdapter(getActivity(), new ContactsGroupStrategy(), dataProvider){
             @Override
             protected List<AbsContactItem> onNonDataItems() {
                 if (customization != null) {
                     return customization.onGetFuncItems();
                 }
-
                 return new ArrayList<>();
             }
 
