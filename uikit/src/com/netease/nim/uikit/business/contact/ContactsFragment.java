@@ -115,6 +115,7 @@ public class ContactsFragment extends TFragment {
         adapter = new ContactDataAdapter(getActivity(), new ContactsGroupStrategy(), dataProvider){
             @Override
             protected List<AbsContactItem> onNonDataItems() {
+                List<AbsContactItem> absContactItems = customization.onGetFuncItems();
                 if (customization != null) {
                     return customization.onGetFuncItems();
                 }
@@ -181,20 +182,18 @@ public class ContactsFragment extends TFragment {
         ImageView imgBackLetter = (ImageView) view.findViewById(R.id.img_hit_letter);
         TextView litterHit = (TextView) view.findViewById(R.id.tv_hit_letter);
         litterIdx = adapter.createLivIndex(listView, livIndex, litterHit, imgBackLetter);
-
         litterIdx.show();
     }
-
     private final class ContactItemClickListener implements OnItemClickListener, OnItemLongClickListener {
 
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position,
                                 long id) {
             AbsContactItem item = (AbsContactItem) adapter.getItem(position);
+
             if (item == null) {
                 return;
             }
-
             int type = item.getItemType();
 
             if (type == ItemTypes.FUNC && customization != null) {
@@ -281,10 +280,8 @@ public class ContactsFragment extends TFragment {
             // 本次加载完成
             reloadControl.resetStatus();
         }
-
         LogUtil.i(UIKitLogTag.CONTACT, "contact load completed");
     }
-
     /**
      * 通讯录加载频率控制
      */
@@ -341,23 +338,19 @@ public class ContactsFragment extends TFragment {
         public void onAddedOrUpdatedFriends(List<String> accounts) {
             reloadWhenDataChanged(accounts, "onAddedOrUpdatedFriends", true);
         }
-
         @Override
         public void onDeletedFriends(List<String> accounts) {
             reloadWhenDataChanged(accounts, "onDeletedFriends", true);
         }
-
         @Override
         public void onAddUserToBlackList(List<String> accounts) {
             reloadWhenDataChanged(accounts, "onAddUserToBlackList", true);
         }
-
         @Override
         public void onRemoveUserFromBlackList(List<String> accounts) {
             reloadWhenDataChanged(accounts, "onRemoveUserFromBlackList", true);
         }
     };
-
     private UserInfoObserver userInfoObserver = new UserInfoObserver() {
         @Override
         public void onUserInfoChanged(List<String> accounts) {

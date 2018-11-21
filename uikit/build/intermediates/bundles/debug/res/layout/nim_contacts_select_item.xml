@@ -55,5 +55,4 @@
         android:layout_alignParentBottom="true"
         android:layout_marginRight="10dp"
         />
-
 </RelativeLayout>

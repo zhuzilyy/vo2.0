@@ -145,7 +145,7 @@ public class LoginActivity extends BaseActivity {
                         token= jsonData.getString("token");
                         SPUtils.put(LoginActivity.this,"cloudToken",token);
                         getUserInfo();
-                    }else if(code.equals("404002")){
+                    }else{
                         Toast.makeText(LoginActivity.this, message, Toast.LENGTH_SHORT).show();
                     }
                 } catch (JSONException e) {
