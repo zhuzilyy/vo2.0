@@ -12,7 +12,7 @@ public class ContactDataProvider implements IContactDataProvider {
 
     private int[] itemTypes;
 
-    public ContactDataProvider(int... itemTypes) {
+    public ContactDataProvider(int... itemTypes) {//条目类型为1，好友类型
         this.itemTypes = itemTypes;
     }
 

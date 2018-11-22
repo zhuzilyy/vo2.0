@@ -111,7 +111,7 @@ public class ContactDataAdapter extends BaseAdapter {
 
     private void updateData(AbsContactDataList datas) {
         this.datas = datas;
-
+        //从这入手
         updateIndexes(datas.getIndexes());
 
         notifyDataSetChanged();

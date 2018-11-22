@@ -25,7 +25,7 @@ final class UserDataProvider {
         LogUtil.i(UIKitLogTag.CONTACT, "contact provide data size =" + items.size());
         return items;
     }
-
+//获取好友联系人
     private static final List<UserInfo> query(TextQuery query) {
 
         List<String> friends = NimUIKit.getContactProvider().getUserInfoOfMyFriends();

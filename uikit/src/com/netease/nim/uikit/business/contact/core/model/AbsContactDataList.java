@@ -156,6 +156,7 @@ public abstract class AbsContactDataList {
                 addComparable((Comparable<AbsContactItem>) add);
             } else {
                 items.add(add);
+
             }
         }
 
