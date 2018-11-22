@@ -1,8 +1,10 @@
 package com.zl.vo_.own.ui.account;
 
+import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.text.TextUtils;
@@ -20,6 +22,8 @@ import com.netease.nimlib.sdk.AbortableFuture;
 import com.netease.nimlib.sdk.NIMClient;
 import com.netease.nimlib.sdk.RequestCallback;
 import com.netease.nimlib.sdk.StatusBarNotificationConfig;
+import com.netease.nimlib.sdk.auth.AuthService;
+import com.netease.nimlib.sdk.auth.ClientType;
 import com.netease.nimlib.sdk.auth.LoginInfo;
 import com.zl.vo_.DemoCache;
 import com.zl.vo_.R;
@@ -28,6 +32,7 @@ import com.zl.vo_.config.preference.UserPreferences;
 import com.zl.vo_.own.api.ApiAccount;
 import com.zl.vo_.own.api.ApiConstant;
 import com.zl.vo_.own.base.BaseActivity;
+import com.zl.vo_.own.dialog.CustomerDialog;
 import com.zl.vo_.own.listener.OnRequestDataListener;
 import com.zl.vo_.own.ui.account.bean.UserInfoBean;
 import com.zl.vo_.own.ui.account.bean.UserInfoData;
@@ -54,6 +59,7 @@ public class LoginActivity extends BaseActivity {
     ClearEditText login_pwd;
     //------------------------
     private AbortableFuture<LoginInfo> loginRequest;
+    private Intent intent;
     private static final String TAG = com.zl.vo_.login.LoginActivity.class.getSimpleName();
 
     @Override
@@ -62,7 +68,13 @@ public class LoginActivity extends BaseActivity {
     }
     @Override
     protected void initData() {
-
+            intent = getIntent();
+            if (intent!=null){
+                boolean KICK_OUT = intent.getBooleanExtra("KICK_OUT", false);
+                if (KICK_OUT){
+                    showQuitDialog();
+                }
+            }
     }
     @Override
     protected void getResLayout() {
@@ -133,7 +145,7 @@ public class LoginActivity extends BaseActivity {
                         token= jsonData.getString("token");
                         SPUtils.put(LoginActivity.this,"cloudToken",token);
                         getUserInfo();
-                    }else if(code.equals("404002")){
+                    }else{
                         Toast.makeText(LoginActivity.this, message, Toast.LENGTH_SHORT).show();
                     }
                 } catch (JSONException e) {
@@ -282,5 +294,26 @@ public class LoginActivity extends BaseActivity {
             e.printStackTrace();
         }
         return null;
+    }
+
+    private void showQuitDialog() {
+        final CustomerDialog dialog=new CustomerDialog(this);
+        dialog.setDialogTitle("下线通知");
+        dialog.setDialogConfirmText("确定");
+        dialog.setDialogMessage("你的帐号被踢出下线，请确定帐号信息安全");
+        dialog.setYesOnclickListener(new CustomerDialog.onYesOnclickListener() {
+            @Override
+            public void onYesClick() {
+                dialog.dismiss();
+            }
+        });
+        dialog.setNoOnclickListener(new CustomerDialog.onNoOnclickListener() {
+            @Override
+            public void onNoClick() {
+                dialog.dismiss();
+            }
+        });
+        dialog.setCancelable(true);
+        dialog.show();
     }
 }

@@ -41,10 +41,8 @@ public class ContactSelectAdapter extends ContactDataAdapter {
                 res.add(new ContactItem(ContactHelper.makeContactFromUserInfo(user), ItemTypes.FRIEND));
             }
         }
-
         return res;
     }
-
     public final void selectItem(int position) {
         AbsContactItem item = (AbsContactItem) getItem(position);
         if (item != null && item instanceof ContactItem) {
@@ -60,7 +58,6 @@ public class ContactSelectAdapter extends ContactDataAdapter {
         }
         return false;
     }
-
     public final void cancelItem(int position) {
         AbsContactItem item = (AbsContactItem) getItem(position);
         if (item != null && item instanceof ContactItem) {
@@ -68,7 +65,6 @@ public class ContactSelectAdapter extends ContactDataAdapter {
         }
         notifyDataSetChanged();
     }
-
     public final void cancelItem(IContact iContact) {
         selects.remove(iContact.getContactId());
     }

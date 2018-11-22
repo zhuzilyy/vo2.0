@@ -16,13 +16,13 @@ public class LifeNotePwdSettingDialog_ViewBinding<T extends LifeNotePwdSettingDi
 
   private View view2131755480;
 
-  private View view2131755901;
-
   private View view2131755902;
 
-  private View view2131755904;
+  private View view2131755903;
 
   private View view2131755905;
+
+  private View view2131755906;
 
   @UiThread
   public LifeNotePwdSettingDialog_ViewBinding(final T target, View source) {
@@ -38,14 +38,6 @@ public class LifeNotePwdSettingDialog_ViewBinding<T extends LifeNotePwdSettingDi
       }
     });
     view = Utils.findRequiredView(source, R.id.ll_setPwd, "method 'click'");
-    view2131755901 = view;
-    view.setOnClickListener(new DebouncingOnClickListener() {
-      @Override
-      public void doClick(View p0) {
-        target.click(p0);
-      }
-    });
-    view = Utils.findRequiredView(source, R.id.ll_fixPwd, "method 'click'");
     view2131755902 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
@@ -53,8 +45,16 @@ public class LifeNotePwdSettingDialog_ViewBinding<T extends LifeNotePwdSettingDi
         target.click(p0);
       }
     });
+    view = Utils.findRequiredView(source, R.id.ll_fixPwd, "method 'click'");
+    view2131755903 = view;
+    view.setOnClickListener(new DebouncingOnClickListener() {
+      @Override
+      public void doClick(View p0) {
+        target.click(p0);
+      }
+    });
     view = Utils.findRequiredView(source, R.id.ll_canclePwd, "method 'click'");
-    view2131755904 = view;
+    view2131755905 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -62,7 +62,7 @@ public class LifeNotePwdSettingDialog_ViewBinding<T extends LifeNotePwdSettingDi
       }
     });
     view = Utils.findRequiredView(source, R.id.ll_findPwd, "method 'click'");
-    view2131755905 = view;
+    view2131755906 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -78,14 +78,14 @@ public class LifeNotePwdSettingDialog_ViewBinding<T extends LifeNotePwdSettingDi
 
     view2131755480.setOnClickListener(null);
     view2131755480 = null;
-    view2131755901.setOnClickListener(null);
-    view2131755901 = null;
     view2131755902.setOnClickListener(null);
     view2131755902 = null;
-    view2131755904.setOnClickListener(null);
-    view2131755904 = null;
+    view2131755903.setOnClickListener(null);
+    view2131755903 = null;
     view2131755905.setOnClickListener(null);
     view2131755905 = null;
+    view2131755906.setOnClickListener(null);
+    view2131755906 = null;
 
     this.target = null;
   }

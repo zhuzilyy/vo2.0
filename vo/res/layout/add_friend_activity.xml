@@ -76,6 +76,7 @@
                 android:layout_centerVertical="true"
                 android:src="@mipmap/back_" />
             <EditText
+                android:layout_marginRight="10dp"
                 android:textCursorDrawable="@drawable/shape_cursor"
                 android:id="@+id/et_search"
                 android:layout_width="match_parent"

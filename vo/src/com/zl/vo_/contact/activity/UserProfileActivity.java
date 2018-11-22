@@ -15,6 +15,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.netease.nim.uikit.dialog.EdittextCustomerDialog;
 import com.zl.vo_.DemoCache;
 import com.zl.vo_.R;
 import com.zl.vo_.contact.constant.UserConstant;
@@ -501,7 +502,7 @@ public class UserProfileActivity extends UI {
             }
         }
     };
-    //是不是直接
+    //是不是直接加好友
     private void isAddFriendDirectly() {
             Map<String,String> params = new HashMap<>();
             params.put("f_vo_code",account);
@@ -530,12 +531,11 @@ public class UserProfileActivity extends UI {
                 }
             });
     }
-
     /**
      * 通过验证方式添加好友
      */
     private void onAddFriendByVerify() {
-        final EasyEditDialog requestDialog = new EasyEditDialog(this);
+     /*   final EasyEditDialog requestDialog = new EasyEditDialog(this);
         requestDialog.setEditTextMaxLength(32);
         requestDialog.setTitle(getString(R.string.add_friend_verify_tip));
         requestDialog.addNegativeButtonListener(R.string.cancel, new View.OnClickListener() {
@@ -558,7 +558,29 @@ public class UserProfileActivity extends UI {
 
             }
         });
-        requestDialog.show();
+        requestDialog.show();*/
+        showVerfyDialog();
+    }
+
+    private void showVerfyDialog() {
+        final EdittextCustomerDialog dialog=new EdittextCustomerDialog(UserProfileActivity.this);
+        dialog.setDialogTitle("好友验证请求");
+        dialog.setDialogConfirmText("确定");
+        dialog.setDialogMessage("请输入验证信息");
+        dialog.setNoOnclickListener(new EdittextCustomerDialog.onNoOnclickListener() {
+            @Override
+            public void onNoClick() {
+                dialog.dismiss();
+            }
+        });
+        dialog.setYesOnclickListener(new EdittextCustomerDialog.onYesOnclickListener() {
+            @Override
+            public void onYesClick(String content) {
+                doAddFriend(content, false);
+                dialog.dismiss();
+            }
+        });
+        dialog.show();
     }
 
     private void doAddFriend(String msg, boolean addDirectly) {

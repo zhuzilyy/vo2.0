@@ -3,6 +3,9 @@ package com.netease.nim.uikit.business.uinfo;
 import android.text.TextUtils;
 
 import com.netease.nim.uikit.api.NimUIKit;
+import com.netease.nim.uikit.api.model.contact.ContactChangedObservable;
+import com.netease.nim.uikit.api.model.contact.ContactProvider;
+import com.netease.nim.uikit.api.model.user.IUserInfoProvider;
 import com.netease.nim.uikit.business.team.helper.TeamHelper;
 import com.netease.nimlib.sdk.msg.constant.SessionTypeEnum;
 import com.netease.nimlib.sdk.uinfo.model.UserInfo;

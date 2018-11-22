@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="/Users/tianou/Desktop/AndroidContent/vo2.0/rtskit/src/main/shaders"/></dataSet><dataSet config="debug"><source path="/Users/tianou/Desktop/AndroidContent/vo2.0/rtskit/src/debug/shaders"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="E:\studioWorkspace\vo2.0\rtskit\src\main\shaders"/></dataSet><dataSet config="debug"><source path="E:\studioWorkspace\vo2.0\rtskit\src\debug\shaders"/></dataSet></merger>

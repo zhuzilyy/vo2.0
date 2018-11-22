@@ -335,7 +335,9 @@ public class HomeFragment extends TFragment implements OnPageChangeListener, Rem
             public void itemsOnClick(int position) {
                 switch (position) {
                     case 0:
-                        AdvancedTeamSearchActivity.start(getActivity());
+                        //AdvancedTeamSearchActivity.start(getActivity());
+                        ContactSelectActivity.Option advancedOption = TeamHelper.getCreateContactSelectOption(null, 50);
+                        NimUIKit.startContactSelector(getActivity(), advancedOption, REQUEST_CODE_ADVANCED);
                         break;
                     //添加新的好友
                     case 1:
@@ -352,8 +354,8 @@ public class HomeFragment extends TFragment implements OnPageChangeListener, Rem
                         intent.putExtra("url", ApiConstant.FUNCTION_INTRODUCE);
                         intent.putExtra("title","功能介绍");
                         startActivity(intent);*/
-                        ContactSelectActivity.Option advancedOption = TeamHelper.getCreateContactSelectOption(null, 50);
-                        NimUIKit.startContactSelector(getActivity(), advancedOption, REQUEST_CODE_ADVANCED);
+                       /* ContactSelectActivity.Option advancedOption = TeamHelper.getCreateContactSelectOption(null, 50);
+                        NimUIKit.startContactSelector(getActivity(), advancedOption, REQUEST_CODE_ADVANCED);*/
                         break;
                 }
             }

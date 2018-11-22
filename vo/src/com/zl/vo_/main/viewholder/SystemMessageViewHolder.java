@@ -118,7 +118,7 @@ public class SystemMessageViewHolder extends TViewHolder {
         agreeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                addFriend(message.getTargetId());
+                addFriend(message.getFromAccount());
                 setReplySending();
                 listener.onAgree(message);
             }
@@ -138,7 +138,6 @@ public class SystemMessageViewHolder extends TViewHolder {
         ApiFriends.insertFriend(context, params, new OnRequestDataListener() {
             @Override
             public void requestSuccess(String data) {
-                Log.i("tag",data);
                 try {
                     JSONObject jsonObject = new JSONObject(data);
                     String code = jsonObject.getString("code");
@@ -151,7 +150,7 @@ public class SystemMessageViewHolder extends TViewHolder {
             }
             @Override
             public void requestFailure(int code, String msg) {
-
+                Toast.makeText(context, "添加好友失败", Toast.LENGTH_SHORT).show();
             }
         });
     }
