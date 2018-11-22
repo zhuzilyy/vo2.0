@@ -9573,6 +9573,8 @@ containing a value of this type.
         public static final int Platform_V25_AppCompat=0x7f0b009c;
         public static final int Platform_V25_AppCompat_Light=0x7f0b009d;
         public static final int Platform_Widget_AppCompat_Spinner=0x7f0b0023;
+        /**  指定消失的动画xml  
+         */
         public static final int PopWindowAnimStyle=0x7f0b00f6;
         public static final int RtlOverlay_DialogWindowTitle_AppCompat=0x7f0b002c;
         public static final int RtlOverlay_Widget_AppCompat_ActionBar_TitleItem=0x7f0b002d;
@@ -9790,12 +9792,16 @@ containing a value of this type.
         public static final int dialog_message_text_style=0x7f0b01ab;
         public static final int dialog_title_text_style=0x7f0b01ac;
         public static final int easy_dialog_edit_text_style=0x7f0b01ad;
+        /**  后面的activity变暗 
+         */
         public static final int easy_dialog_style=0x7f0b01ae;
         public static final int edit_text_style=0x7f0b01af;
         public static final int global_search_bg=0x7f0b01b0;
         public static final int grid_view=0x7f0b01b1;
         public static final int horizontal_deep_thick_divider=0x7f0b01b2;
         public static final int horizontal_light_thin_divider=0x7f0b01b3;
+        /**  是否允许背景模糊 
+         */
         public static final int jrmf_b_dialog=0x7f0b01b4;
         public static final int jrmf_rp_commondialog=0x7f0b01b5;
         public static final int list_view=0x7f0b01b6;
