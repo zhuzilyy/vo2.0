@@ -14,7 +14,7 @@ import java.lang.Override;
 public class VipFunctionIntroduceDialog_ViewBinding<T extends VipFunctionIntroduceDialog> implements Unbinder {
   protected T target;
 
-  private View view2131755796;
+  private View view2131755800;
 
   private View view2131755483;
 
@@ -24,7 +24,7 @@ public class VipFunctionIntroduceDialog_ViewBinding<T extends VipFunctionIntrodu
 
     View view;
     view = Utils.findRequiredView(source, R.id.tv_confirm, "method 'click'");
-    view2131755796 = view;
+    view2131755800 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -46,8 +46,8 @@ public class VipFunctionIntroduceDialog_ViewBinding<T extends VipFunctionIntrodu
   public void unbind() {
     if (this.target == null) throw new IllegalStateException("Bindings already cleared.");
 
-    view2131755796.setOnClickListener(null);
-    view2131755796 = null;
+    view2131755800.setOnClickListener(null);
+    view2131755800 = null;
     view2131755483.setOnClickListener(null);
     view2131755483 = null;
 

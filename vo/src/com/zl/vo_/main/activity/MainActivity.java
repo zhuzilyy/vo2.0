@@ -140,7 +140,7 @@ public class MainActivity extends UI {
                     continue;
                 String phoneName = cursor.getString(PHONES_DISPLAY_NAME_INDEX);
                 phoneNum = XCommUtils.replaceBlank(phoneNum);
-                stringBuilder.append(phoneName + "-" + phoneNum + ",");
+                stringBuilder.append(phoneName + "vo*vo" + phoneNum + ",");
 
             }
         }

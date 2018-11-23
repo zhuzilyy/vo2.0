@@ -16,7 +16,7 @@ import java.lang.Override;
 public class MineFragment_ViewBinding<T extends MineFragment> implements Unbinder {
   protected T target;
 
-  private View view2131755926;
+  private View view2131755930;
 
   private View view2131755557;
 
@@ -40,7 +40,7 @@ public class MineFragment_ViewBinding<T extends MineFragment> implements Unbinde
     target.tv_title = Utils.findRequiredViewAsType(source, R.id.tv_title, "field 'tv_title'", TextView.class);
     view = Utils.findRequiredView(source, R.id.iv_add, "field 'iv_add' and method 'click'");
     target.iv_add = Utils.castView(view, R.id.iv_add, "field 'iv_add'", ImageView.class);
-    view2131755926 = view;
+    view2131755930 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -114,8 +114,8 @@ public class MineFragment_ViewBinding<T extends MineFragment> implements Unbinde
     target.tv_title = null;
     target.iv_add = null;
 
-    view2131755926.setOnClickListener(null);
-    view2131755926 = null;
+    view2131755930.setOnClickListener(null);
+    view2131755930 = null;
     view2131755557.setOnClickListener(null);
     view2131755557 = null;
     view2131755563.setOnClickListener(null);

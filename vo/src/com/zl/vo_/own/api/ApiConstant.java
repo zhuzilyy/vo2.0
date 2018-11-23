@@ -128,7 +128,8 @@ public class ApiConstant {
     //加我为好友时需要验证
     public static final String FriendAsMe_Verification = BASE_URL+"/api/v1/user/friend_verify";
 
-
+    //获取通讯录好友
+    public static final String GET_ADDFRIENDS = BASE_URL+"/api/v1/friend/book_friends";
 
 
 

@@ -95,7 +95,7 @@
                 android:layout_width="24dp"
                 android:layout_height="match_parent"
                 android:layout_gravity="right"
-                app:indexBarPressBackground="#ff0000"
+                app:indexBarPressBackground="#77000000"
                 app:indexBarTextSize="16sp"/>
 
             <TextView
@@ -111,12 +111,6 @@
                 tools:text="A"
                 tools:visibility="visible"/>
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                android:onClick="updateDatas"
-                android:text="更新数据源"/>
 
         </FrameLayout>
     </LinearLayout>

@@ -16,13 +16,13 @@ public class LifeNotePwdSettingDialog_ViewBinding<T extends LifeNotePwdSettingDi
 
   private View view2131755483;
 
-  private View view2131755905;
-
-  private View view2131755906;
-
-  private View view2131755908;
-
   private View view2131755909;
+
+  private View view2131755910;
+
+  private View view2131755912;
+
+  private View view2131755913;
 
   @UiThread
   public LifeNotePwdSettingDialog_ViewBinding(final T target, View source) {
@@ -38,7 +38,7 @@ public class LifeNotePwdSettingDialog_ViewBinding<T extends LifeNotePwdSettingDi
       }
     });
     view = Utils.findRequiredView(source, R.id.ll_setPwd, "method 'click'");
-    view2131755905 = view;
+    view2131755909 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -46,7 +46,7 @@ public class LifeNotePwdSettingDialog_ViewBinding<T extends LifeNotePwdSettingDi
       }
     });
     view = Utils.findRequiredView(source, R.id.ll_fixPwd, "method 'click'");
-    view2131755906 = view;
+    view2131755910 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -54,7 +54,7 @@ public class LifeNotePwdSettingDialog_ViewBinding<T extends LifeNotePwdSettingDi
       }
     });
     view = Utils.findRequiredView(source, R.id.ll_canclePwd, "method 'click'");
-    view2131755908 = view;
+    view2131755912 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -62,7 +62,7 @@ public class LifeNotePwdSettingDialog_ViewBinding<T extends LifeNotePwdSettingDi
       }
     });
     view = Utils.findRequiredView(source, R.id.ll_findPwd, "method 'click'");
-    view2131755909 = view;
+    view2131755913 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -78,14 +78,14 @@ public class LifeNotePwdSettingDialog_ViewBinding<T extends LifeNotePwdSettingDi
 
     view2131755483.setOnClickListener(null);
     view2131755483 = null;
-    view2131755905.setOnClickListener(null);
-    view2131755905 = null;
-    view2131755906.setOnClickListener(null);
-    view2131755906 = null;
-    view2131755908.setOnClickListener(null);
-    view2131755908 = null;
     view2131755909.setOnClickListener(null);
     view2131755909 = null;
+    view2131755910.setOnClickListener(null);
+    view2131755910 = null;
+    view2131755912.setOnClickListener(null);
+    view2131755912 = null;
+    view2131755913.setOnClickListener(null);
+    view2131755913 = null;
 
     this.target = null;
   }
