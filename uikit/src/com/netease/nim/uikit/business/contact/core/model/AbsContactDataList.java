@@ -113,11 +113,8 @@ public abstract class AbsContactDataList {
     @SuppressWarnings({"rawtypes", "unchecked"})
     protected static final class Group {
         final String id;
-
         final String title;
-
         final boolean hasHead;
-
         final List items = new ArrayList();
 
         Group(String id, String title) {

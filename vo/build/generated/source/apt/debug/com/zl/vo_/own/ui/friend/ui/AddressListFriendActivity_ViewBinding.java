@@ -16,9 +16,9 @@ import java.lang.Override;
 public class AddressListFriendActivity_ViewBinding<T extends AddressListFriendActivity> implements Unbinder {
   protected T target;
 
-  private View view2131755346;
+  private View view2131755349;
 
-  private View view2131755234;
+  private View view2131755236;
 
   @UiThread
   public AddressListFriendActivity_ViewBinding(final T target, View source) {
@@ -29,7 +29,7 @@ public class AddressListFriendActivity_ViewBinding<T extends AddressListFriendAc
     target.container = Utils.findRequiredViewAsType(source, R.id.container, "field 'container'", RelativeLayout.class);
     target.tv_right = Utils.findRequiredViewAsType(source, R.id.tv_right, "field 'tv_right'", TextView.class);
     view = Utils.findRequiredView(source, R.id.iv_back, "method 'click'");
-    view2131755346 = view;
+    view2131755349 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -37,7 +37,7 @@ public class AddressListFriendActivity_ViewBinding<T extends AddressListFriendAc
       }
     });
     view = Utils.findRequiredView(source, R.id.wx_share_ll, "method 'click'");
-    view2131755234 = view;
+    view2131755236 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -56,10 +56,10 @@ public class AddressListFriendActivity_ViewBinding<T extends AddressListFriendAc
     target.container = null;
     target.tv_right = null;
 
-    view2131755346.setOnClickListener(null);
-    view2131755346 = null;
-    view2131755234.setOnClickListener(null);
-    view2131755234 = null;
+    view2131755349.setOnClickListener(null);
+    view2131755349 = null;
+    view2131755236.setOnClickListener(null);
+    view2131755236 = null;
 
     this.target = null;
   }

@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
+import butterknife.BindView;
 import me.everything.android.ui.overscroll.OverScrollDecoratorHelper;
 
 

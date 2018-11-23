@@ -3,15 +3,21 @@ package com.zl.vo_.own.ui.friend.ui;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.mcxtzhang.indexlib.IndexBar.widget.IndexBar;
+import com.mcxtzhang.indexlib.suspension.SuspensionDecoration;
+import com.netease.nim.uikit.common.ui.liv.LivIndex;
 import com.tencent.mm.sdk.modelmsg.SendMessageToWX;
 import com.tencent.mm.sdk.modelmsg.WXMediaMessage;
 import com.tencent.mm.sdk.modelmsg.WXWebpageObject;
@@ -20,7 +26,12 @@ import com.tencent.mm.sdk.openapi.WXAPIFactory;
 import com.zl.vo_.R;
 import com.zl.vo_.own.api.ApiConstant;
 import com.zl.vo_.own.base.BaseActivity;
+import com.zl.vo_.own.beans.CityBean;
 import com.zl.vo_.own.util.WhiteBgBitmapUtil;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import butterknife.BindView;
 import butterknife.OnClick;
 /**
@@ -34,6 +45,30 @@ public class AddressListFriendActivity extends BaseActivity {
     RelativeLayout container;
     @BindView(R.id.tv_right)
     TextView tv_right;
+
+    //****************字母索引*************
+    private static final String INDEX_STRING_TOP = "↑";
+    private RecyclerView mRv;
+  //  private CityAdapter mAdapter;
+    private LinearLayoutManager mManager;
+    private List<CityBean> mDatas = new ArrayList<>();
+
+    private SuspensionDecoration mDecoration;
+
+    /**
+     * 右侧边栏导航区域
+     */
+    private IndexBar mIndexBar;
+
+    /**
+     * 显示指示器DialogText
+     */
+    private TextView mTvSideBarHint;
+
+    //****************字母索引*************
+
+
+
     private PopupWindow pw_share;
     private View view_share;
 
@@ -45,6 +80,8 @@ public class AddressListFriendActivity extends BaseActivity {
     }
     @Override
     protected void initData() {
+//        litterIdx =
+//        litterIdx.show();
 
     }
 

@@ -15,13 +15,13 @@ import java.lang.Override;
 public class ChangeMoreActivity_ViewBinding<T extends ChangeMoreActivity> implements Unbinder {
   protected T target;
 
-  private View view2131755346;
+  private View view2131755349;
 
-  private View view2131755242;
+  private View view2131755245;
 
-  private View view2131755246;
+  private View view2131755249;
 
-  private View view2131755248;
+  private View view2131755251;
 
   @UiThread
   public ChangeMoreActivity_ViewBinding(final T target, View source) {
@@ -34,7 +34,7 @@ public class ChangeMoreActivity_ViewBinding<T extends ChangeMoreActivity> implem
     target.tv_address = Utils.findRequiredViewAsType(source, R.id.tv_address, "field 'tv_address'", TextView.class);
     target.tv_sex = Utils.findRequiredViewAsType(source, R.id.tv_sex, "field 'tv_sex'", TextView.class);
     view = Utils.findRequiredView(source, R.id.iv_back, "method 'click'");
-    view2131755346 = view;
+    view2131755349 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -42,7 +42,7 @@ public class ChangeMoreActivity_ViewBinding<T extends ChangeMoreActivity> implem
       }
     });
     view = Utils.findRequiredView(source, R.id.rl_sex, "method 'click'");
-    view2131755242 = view;
+    view2131755245 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -50,7 +50,7 @@ public class ChangeMoreActivity_ViewBinding<T extends ChangeMoreActivity> implem
       }
     });
     view = Utils.findRequiredView(source, R.id.re_address, "method 'click'");
-    view2131755246 = view;
+    view2131755249 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -58,7 +58,7 @@ public class ChangeMoreActivity_ViewBinding<T extends ChangeMoreActivity> implem
       }
     });
     view = Utils.findRequiredView(source, R.id.rl_sign, "method 'click'");
-    view2131755248 = view;
+    view2131755251 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -79,14 +79,14 @@ public class ChangeMoreActivity_ViewBinding<T extends ChangeMoreActivity> implem
     target.tv_address = null;
     target.tv_sex = null;
 
-    view2131755346.setOnClickListener(null);
-    view2131755346 = null;
-    view2131755242.setOnClickListener(null);
-    view2131755242 = null;
-    view2131755246.setOnClickListener(null);
-    view2131755246 = null;
-    view2131755248.setOnClickListener(null);
-    view2131755248 = null;
+    view2131755349.setOnClickListener(null);
+    view2131755349 = null;
+    view2131755245.setOnClickListener(null);
+    view2131755245 = null;
+    view2131755249.setOnClickListener(null);
+    view2131755249 = null;
+    view2131755251.setOnClickListener(null);
+    view2131755251 = null;
 
     this.target = null;
   }

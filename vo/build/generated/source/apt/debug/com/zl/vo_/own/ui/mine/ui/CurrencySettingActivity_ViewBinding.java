@@ -5,6 +5,7 @@ import android.support.annotation.CallSuper;
 import android.support.annotation.UiThread;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import butterknife.Unbinder;
 import butterknife.internal.Utils;
@@ -24,6 +25,8 @@ public class CurrencySettingActivity_ViewBinding<T extends CurrencySettingActivi
     target.back = Utils.findRequiredViewAsType(source, R.id.iv_back, "field 'back'", ImageView.class);
     target.switch_Verification = Utils.findRequiredViewAsType(source, R.id.switch_Verification, "field 'switch_Verification'", SwitchButton.class);
     target.switch_Recommended_address_friends = Utils.findRequiredViewAsType(source, R.id.switch_Recommended_address_friends, "field 'switch_Recommended_address_friends'", SwitchButton.class);
+    target.privacy_addmeway_re = Utils.findRequiredViewAsType(source, R.id.privacy_addmeway_re, "field 'privacy_addmeway_re'", RelativeLayout.class);
+    target.privacy_blackList_re = Utils.findRequiredViewAsType(source, R.id.privacy_blackList_re, "field 'privacy_blackList_re'", RelativeLayout.class);
   }
 
   @Override
@@ -36,6 +39,8 @@ public class CurrencySettingActivity_ViewBinding<T extends CurrencySettingActivi
     target.back = null;
     target.switch_Verification = null;
     target.switch_Recommended_address_friends = null;
+    target.privacy_addmeway_re = null;
+    target.privacy_blackList_re = null;
 
     this.target = null;
   }

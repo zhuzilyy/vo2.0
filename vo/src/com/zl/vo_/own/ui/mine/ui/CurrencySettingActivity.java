@@ -1,9 +1,12 @@
 package com.zl.vo_.own.ui.mine.ui;
 
+import android.content.Intent;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.netease.nim.uikit.common.ui.widget.SwitchButton;
@@ -36,6 +39,15 @@ public class CurrencySettingActivity extends BaseActivity {
     @BindView(R.id.switch_Recommended_address_friends)
     SwitchButton switch_Recommended_address_friends;
     private boolean b_verification ;
+
+
+    //添加我的方式
+    @BindView(R.id.privacy_addmeway_re)
+    RelativeLayout privacy_addmeway_re;
+    //通讯录黑名单
+    @BindView(R.id.privacy_blackList_re)
+    RelativeLayout privacy_blackList_re;
+
     @Override
     protected void initViews() {
         title.setText("通用");
@@ -67,6 +79,24 @@ public class CurrencySettingActivity extends BaseActivity {
                 friendAsme_Verification();
             }
         });
+
+        //添加我的方式
+        privacy_addmeway_re.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+               startActivity(new Intent(CurrencySettingActivity.this,AddMeAsFriendActivity.class));
+            }
+        });
+
+        //通讯录黑名单
+        privacy_blackList_re.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(CurrencySettingActivity.this, "9009", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
 
 
 
