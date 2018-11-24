@@ -25,8 +25,7 @@ public class LivIndex {
     private final Map<String, Integer> mapABC; // 字母:所在的行的index
 
     public LivIndex(ListView contactsListView, LetterIndexView letterIndexView, TextView letterHit, ImageView
-            imgBackLetter,
-                    Map<String, Integer> abcMap) {
+            imgBackLetter, Map<String, Integer> abcMap) {
         this.lvContacts = contactsListView;
         this.livIndex = letterIndexView;
         this.lblLetterHit = letterHit;

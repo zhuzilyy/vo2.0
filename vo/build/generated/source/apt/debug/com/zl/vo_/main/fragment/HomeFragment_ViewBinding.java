@@ -15,9 +15,9 @@ import java.lang.Override;
 public class HomeFragment_ViewBinding<T extends HomeFragment> implements Unbinder {
   protected T target;
 
-  private View view2131755923;
+  private View view2131755930;
 
-  private View view2131755924;
+  private View view2131755931;
 
   @UiThread
   public HomeFragment_ViewBinding(final T target, View source) {
@@ -26,7 +26,7 @@ public class HomeFragment_ViewBinding<T extends HomeFragment> implements Unbinde
     View view;
     view = Utils.findRequiredView(source, R.id.iv_add, "field 'iv_add' and method 'click'");
     target.iv_add = Utils.castView(view, R.id.iv_add, "field 'iv_add'", ImageView.class);
-    view2131755923 = view;
+    view2131755930 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -34,7 +34,7 @@ public class HomeFragment_ViewBinding<T extends HomeFragment> implements Unbinde
       }
     });
     view = Utils.findRequiredView(source, R.id.iv_search, "method 'click'");
-    view2131755924 = view;
+    view2131755931 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -51,10 +51,10 @@ public class HomeFragment_ViewBinding<T extends HomeFragment> implements Unbinde
 
     target.iv_add = null;
 
-    view2131755923.setOnClickListener(null);
-    view2131755923 = null;
-    view2131755924.setOnClickListener(null);
-    view2131755924 = null;
+    view2131755930.setOnClickListener(null);
+    view2131755930 = null;
+    view2131755931.setOnClickListener(null);
+    view2131755931 = null;
 
     this.target = null;
   }

@@ -1,9 +1,6 @@
 package com.zl.vo_.main.fragment;
 
-import android.content.BroadcastReceiver;
-import android.content.Context;
 import android.content.Intent;
-import android.content.IntentFilter;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
@@ -20,6 +17,7 @@ import com.cpiz.android.bubbleview.RelativePos;
 import com.zl.vo_.R;
 import com.zl.vo_.config.preference.Preferences;
 import com.zl.vo_.login.LogoutHelper;
+import com.zl.vo_.own.api.ReqResCodeForVo;
 import com.zl.vo_.own.dialog.CustomerDialog;
 import com.zl.vo_.own.dialog.JiamiDialog;
 import com.zl.vo_.own.dialog.LifeNotePwdDialog;
@@ -51,7 +49,6 @@ public class MineFragment extends MainTabFragment implements View.OnClickListene
     private ImageView iv_guidePravcyFriends,iv_guideLifeNotePwd,iv_guideInfoTrans,iv_guideDeletePravcyFriends;
     private CircleImageView iv_avatar;
     private TextView tv_nickName,tv_voNum;
-    private MyReceiver myReceiver;
     //12345
     //ceshitijiao
     @Override
@@ -95,11 +92,6 @@ public class MineFragment extends MainTabFragment implements View.OnClickListene
         iv_guideInfoTrans.setOnClickListener(this);
         iv_guideDeletePravcyFriends.setOnClickListener(this);
         setDefaultValue();
-        myReceiver = new MyReceiver();
-        //修改头像的广播
-        IntentFilter avatarUpdateFilter = new IntentFilter();
-        avatarUpdateFilter.addAction("com.action.update.avatar");
-        getActivity().registerReceiver(myReceiver,avatarUpdateFilter);
     }
     //设置初始化的数据
     private void setDefaultValue() {
@@ -379,29 +371,20 @@ public class MineFragment extends MainTabFragment implements View.OnClickListene
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if(210 == resultCode){
+        //设置返回的voName,id
+        if(ReqResCodeForVo.USERINFO_VONAME_ID_RESULT_CODE == resultCode){
             String nickName = data.getStringExtra("nick_setOk");
             if(!TextUtils.isEmpty(nickName)){
                 tv_nickName.setText(nickName);
             }
-        }
-    }
-    class MyReceiver extends BroadcastReceiver{
-        @Override
-        public void onReceive(Context context, Intent intent) {
-            String action = intent.getAction();
-            if(action.equals("com.action.update.avatar")){
-                String avatar = intent.getStringExtra("avatar");
-                Glide.with(getActivity()).load(avatar).into(iv_avatar);
+            String voId = data.getStringExtra("void_setOk");
+            if(!TextUtils.isEmpty(voId)){
+                tv_voNum.setText(voId);
             }
-        }
-    }
 
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
-        if (myReceiver!=null){
-            getActivity().unregisterReceiver(myReceiver);
         }
+
+
+
     }
 }

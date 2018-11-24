@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
+import butterknife.BindView;
 import me.everything.android.ui.overscroll.OverScrollDecoratorHelper;
 
 
@@ -62,7 +63,7 @@ public class ContactsFragment extends TFragment {
     private View loadingFrame;
 
     private ContactsCustomization customization;
-
+    //通讯录加载频率控制
     private ReloadFrequencyControl reloadControl = new ReloadFrequencyControl();
 
     public void setContactsCustomization(ContactsCustomization customization) {
@@ -112,12 +113,14 @@ public class ContactsFragment extends TFragment {
     private void initAdapter() {
         IContactDataProvider dataProvider = new ContactDataProvider(ItemTypes.FRIEND);
 
-        adapter = new ContactDataAdapter(getActivity(), new ContactsGroupStrategy(), dataProvider){
+        adapter = new ContactDataAdapter(getActivity(), new ContactsGroupStrategy(), dataProvider)
+        {
             @Override
             protected List<AbsContactItem> onNonDataItems() {
                 if (customization != null) {
                     return customization.onGetFuncItems();
                 }
+
                 return new ArrayList<>();
             }
 
@@ -134,6 +137,7 @@ public class ContactsFragment extends TFragment {
                 onReloadCompleted();
             }
         };
+
 
         adapter.addViewHolder(ItemTypes.LABEL, LabelHolder.class);
         if (customization != null) {
@@ -153,6 +157,7 @@ public class ContactsFragment extends TFragment {
         // ListView
         listView = findView(R.id.contact_list_view);
         listView.addFooterView(countLayout); // 注意：addFooter要放在setAdapter之前，否则旧版本手机可能会add不上
+        //设置适配器
         listView.setAdapter(adapter);
         listView.setOnScrollListener(new AbsListView.OnScrollListener() {
 
@@ -181,21 +186,24 @@ public class ContactsFragment extends TFragment {
         ImageView imgBackLetter = (ImageView) view.findViewById(R.id.img_hit_letter);
         TextView litterHit = (TextView) view.findViewById(R.id.tv_hit_letter);
         litterIdx = adapter.createLivIndex(listView, livIndex, litterHit, imgBackLetter);
+
         litterIdx.show();
     }
+
     private final class ContactItemClickListener implements OnItemClickListener, OnItemLongClickListener {
 
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position,
                                 long id) {
             AbsContactItem item = (AbsContactItem) adapter.getItem(position);
-
             if (item == null) {
                 return;
             }
+
             int type = item.getItemType();
 
             if (type == ItemTypes.FUNC && customization != null) {
+                //跳转
                 customization.onFuncItemClick(item);
                 return;
             }
@@ -275,8 +283,10 @@ public class ContactsFragment extends TFragment {
             // 本次加载完成
             reloadControl.resetStatus();
         }
+
         LogUtil.i(UIKitLogTag.CONTACT, "contact load completed");
     }
+
     /**
      * 通讯录加载频率控制
      */
@@ -330,19 +340,23 @@ public class ContactsFragment extends TFragment {
         public void onAddedOrUpdatedFriends(List<String> accounts) {
             reloadWhenDataChanged(accounts, "onAddedOrUpdatedFriends", true);
         }
+
         @Override
         public void onDeletedFriends(List<String> accounts) {
             reloadWhenDataChanged(accounts, "onDeletedFriends", true);
         }
+
         @Override
         public void onAddUserToBlackList(List<String> accounts) {
             reloadWhenDataChanged(accounts, "onAddUserToBlackList", true);
         }
+
         @Override
         public void onRemoveUserFromBlackList(List<String> accounts) {
             reloadWhenDataChanged(accounts, "onRemoveUserFromBlackList", true);
         }
     };
+
     private UserInfoObserver userInfoObserver = new UserInfoObserver() {
         @Override
         public void onUserInfoChanged(List<String> accounts) {
@@ -414,7 +428,7 @@ public class ContactsFragment extends TFragment {
             adapter.notifyDataSetChanged();
         }
     };
-
+//注册在线状态的监听器
     private void registerOnlineStateChangeListener(boolean register) {
         if (!NimUIKitImpl.enableOnlineState()) {
             return;

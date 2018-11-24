@@ -12,6 +12,7 @@ import com.google.gson.Gson;
 import com.zl.vo_.R;
 import com.zl.vo_.own.api.ApiConstant;
 import com.zl.vo_.own.api.ApiMine;
+import com.zl.vo_.own.api.ReqResCodeForVo;
 import com.zl.vo_.own.base.BaseActivity;
 import com.zl.vo_.own.listener.OnRequestDataListener;
 import com.zl.vo_.own.ui.account.LoginActivity;
@@ -140,7 +141,7 @@ public class ChangeNickNameActivity extends BaseActivity {
                     //ForResult
                     Intent intent = new Intent();
                     intent.putExtra("nick",nickStr);
-                    setResult(202,intent);
+                    setResult(ReqResCodeForVo.CHANGE_VONAME_RESULT_CODE,intent);
 
                     finish();
                 }

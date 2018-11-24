@@ -14,15 +14,15 @@ import java.lang.Override;
 public class LifeNotePwdSettingDialog_ViewBinding<T extends LifeNotePwdSettingDialog> implements Unbinder {
   protected T target;
 
-  private View view2131755480;
+  private View view2131755483;
 
-  private View view2131755902;
+  private View view2131755909;
 
-  private View view2131755903;
+  private View view2131755910;
 
-  private View view2131755905;
+  private View view2131755912;
 
-  private View view2131755906;
+  private View view2131755913;
 
   @UiThread
   public LifeNotePwdSettingDialog_ViewBinding(final T target, View source) {
@@ -30,7 +30,7 @@ public class LifeNotePwdSettingDialog_ViewBinding<T extends LifeNotePwdSettingDi
 
     View view;
     view = Utils.findRequiredView(source, R.id.rl_cancel, "method 'click'");
-    view2131755480 = view;
+    view2131755483 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -38,7 +38,7 @@ public class LifeNotePwdSettingDialog_ViewBinding<T extends LifeNotePwdSettingDi
       }
     });
     view = Utils.findRequiredView(source, R.id.ll_setPwd, "method 'click'");
-    view2131755902 = view;
+    view2131755909 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -46,7 +46,7 @@ public class LifeNotePwdSettingDialog_ViewBinding<T extends LifeNotePwdSettingDi
       }
     });
     view = Utils.findRequiredView(source, R.id.ll_fixPwd, "method 'click'");
-    view2131755903 = view;
+    view2131755910 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -54,7 +54,7 @@ public class LifeNotePwdSettingDialog_ViewBinding<T extends LifeNotePwdSettingDi
       }
     });
     view = Utils.findRequiredView(source, R.id.ll_canclePwd, "method 'click'");
-    view2131755905 = view;
+    view2131755912 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -62,7 +62,7 @@ public class LifeNotePwdSettingDialog_ViewBinding<T extends LifeNotePwdSettingDi
       }
     });
     view = Utils.findRequiredView(source, R.id.ll_findPwd, "method 'click'");
-    view2131755906 = view;
+    view2131755913 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -76,16 +76,16 @@ public class LifeNotePwdSettingDialog_ViewBinding<T extends LifeNotePwdSettingDi
   public void unbind() {
     if (this.target == null) throw new IllegalStateException("Bindings already cleared.");
 
-    view2131755480.setOnClickListener(null);
-    view2131755480 = null;
-    view2131755902.setOnClickListener(null);
-    view2131755902 = null;
-    view2131755903.setOnClickListener(null);
-    view2131755903 = null;
-    view2131755905.setOnClickListener(null);
-    view2131755905 = null;
-    view2131755906.setOnClickListener(null);
-    view2131755906 = null;
+    view2131755483.setOnClickListener(null);
+    view2131755483 = null;
+    view2131755909.setOnClickListener(null);
+    view2131755909 = null;
+    view2131755910.setOnClickListener(null);
+    view2131755910 = null;
+    view2131755912.setOnClickListener(null);
+    view2131755912 = null;
+    view2131755913.setOnClickListener(null);
+    view2131755913 = null;
 
     this.target = null;
   }

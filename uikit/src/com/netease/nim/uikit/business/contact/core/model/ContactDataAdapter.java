@@ -2,13 +2,13 @@ package com.netease.nim.uikit.business.contact.core.model;
 
 import android.content.Context;
 import android.os.AsyncTask;
-import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.netease.nim.uikit.business.contact.core.item.AbsContactItem;
 import com.netease.nim.uikit.business.contact.core.item.ContactItem;
@@ -74,6 +74,7 @@ public class ContactDataAdapter extends BaseAdapter {
     public void addViewHolder(int itemDataType, Class<? extends AbsContactViewHolder<? extends AbsContactItem>> viewHolder) {
         this.viewHolderMap.put(itemDataType, viewHolder);
     }
+
     public final void setFilter(ContactItemFilter filter) {
         this.filter = filter;
     }
@@ -105,11 +106,16 @@ public class ContactDataAdapter extends BaseAdapter {
     public final TextQuery getQuery() {
         return datas != null ? datas.getQuery() : null;
     }
+
     private void updateData(AbsContactDataList datas) {
         this.datas = datas;
+        //从这入手
         updateIndexes(datas.getIndexes());
+
         notifyDataSetChanged();
+
     }
+
     @Override
     public long getItemId(int position) {
         return 0;
@@ -168,6 +174,7 @@ public class ContactDataAdapter extends BaseAdapter {
         if (disableFilter != null) {
             return !disableFilter.filter((AbsContactItem) getItem(position));
         }
+
         return true;
     }
 
@@ -178,12 +185,16 @@ public class ContactDataAdapter extends BaseAdapter {
     public final void query(String query) {
         startTask(new TextQuery(query), true);
     }
+
     public final boolean load(boolean reload) {
         if (!reload && !isEmpty()) {
             return false;
         }
+
         LogUtil.i(UIKitLogTag.CONTACT, "contact load data");
+
         startTask(null, false);
+
         return true;
     }
 
@@ -205,10 +216,12 @@ public class ContactDataAdapter extends BaseAdapter {
                 task.cancel(false); // 设为true有风险！
             }
         }
+
         Task task = new Task(new ContactDataTask(query, dataProvider, filter) {
             @Override
             protected void onPreProvide(AbsContactDataList datas) {
                 List<? extends AbsContactItem> itemsND = onNonDataItems();
+
                 if (itemsND != null) {
                     for (AbsContactItem item : itemsND) {
                         datas.add(item);
@@ -216,7 +229,9 @@ public class ContactDataAdapter extends BaseAdapter {
                 }
             }
         });
+
         tasks.add(task);
+
         task.execute();
     }
 
@@ -245,6 +260,7 @@ public class ContactDataAdapter extends BaseAdapter {
         public void onData(ContactDataTask task, AbsContactDataList datas, boolean all) {
             publishProgress(datas, all);
         }
+
         @Override
         public boolean isCancelled(ContactDataTask task) {
             return isCancelled();
@@ -262,6 +278,7 @@ public class ContactDataAdapter extends BaseAdapter {
         @Override
         protected Void doInBackground(Void... params) {
             task.run(new ContactDataList(groupStrategy));
+
             return null;
         }
 
@@ -269,6 +286,7 @@ public class ContactDataAdapter extends BaseAdapter {
         protected void onProgressUpdate(Object... values) {
             AbsContactDataList datas = (AbsContactDataList) values[0];
             boolean all = (Boolean) values[1];
+
             onPostLoad(datas.isEmpty(), datas.getQueryText(), all);
 
             updateData(datas);
@@ -314,7 +332,6 @@ public class ContactDataAdapter extends BaseAdapter {
     //
 
     private Map<String, Integer> getIndexes() {
-
         return this.indexes;
     }
 

@@ -2,9 +2,14 @@ package com.zl.vo_.own.ui.mine.ui;
 
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.netease.nim.uikit.api.NimUIKit;
+import com.netease.nim.uikit.common.ui.widget.SwitchButton;
 import com.zl.vo_.R;
+import com.zl.vo_.config.preference.UserPreferences;
 import com.zl.vo_.own.base.BaseActivity;
 import com.zl.vo_.own.views.EaseSwitchButton;
 
@@ -16,7 +21,9 @@ public class ChatSettingActivity extends BaseActivity {
     @BindView(R.id.iv_back)
     ImageView back;
     @BindView(R.id.switch_Usehandset)
-    EaseSwitchButton switch_Usehandset;
+    SwitchButton switch_Usehandset;
+    @BindView(R.id.clearAllmsg_re)
+    RelativeLayout clearAllmsg_re;
     @Override
     protected void initViews() {
         title.setText("聊天");
@@ -31,6 +38,12 @@ public class ChatSettingActivity extends BaseActivity {
     @Override
     protected void initData() {
 
+        boolean isEarPhone = NimUIKit.isEarPhoneModeEnable();
+        Toast.makeText(this, "isEarPhone="+isEarPhone, Toast.LENGTH_SHORT).show();
+        NimUIKit.setEarPhoneModeEnable(isEarPhone);
+        switch_Usehandset.setCheck(isEarPhone);
+
+
     }
 
     @Override
@@ -41,18 +54,24 @@ public class ChatSettingActivity extends BaseActivity {
 
     @Override
     protected void initListener() {
-
-        //使用听筒播放语音
-        switch_Usehandset.setOnClickListener(new View.OnClickListener() {
+        //听筒设置
+        switch_Usehandset.setOnChangedListener(new SwitchButton.OnChangedListener() {
             @Override
-            public void onClick(View view) {
-                if(switch_Usehandset.isSwitchOpen()){
-                    switch_Usehandset.closeSwitch();
-                }else {
-                    switch_Usehandset.openSwitch();
-                }
+            public void OnChanged(View v, boolean checkState) {
+                Toast.makeText(ChatSettingActivity.this, "chec="+checkState,Toast.LENGTH_SHORT).show();
+                NimUIKit.setEarPhoneModeEnable(checkState);
+
             }
         });
+
+        //清空聊天记录
+        clearAllmsg_re.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
 
 
     }

@@ -17,9 +17,9 @@ import java.lang.Override;
 public class VipActivity_ViewBinding<T extends VipActivity> implements Unbinder {
   protected T target;
 
-  private View view2131755346;
+  private View view2131755349;
 
-  private View view2131755318;
+  private View view2131755321;
 
   @UiThread
   public VipActivity_ViewBinding(final T target, View source) {
@@ -30,7 +30,7 @@ public class VipActivity_ViewBinding<T extends VipActivity> implements Unbinder 
     target.lv_vip = Utils.findRequiredViewAsType(source, R.id.lv_vip, "field 'lv_vip'", ListView.class);
     target.wv_webview = Utils.findRequiredViewAsType(source, R.id.webView, "field 'wv_webview'", WebView.class);
     view = Utils.findRequiredView(source, R.id.iv_back, "method 'click'");
-    view2131755346 = view;
+    view2131755349 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -38,7 +38,7 @@ public class VipActivity_ViewBinding<T extends VipActivity> implements Unbinder 
       }
     });
     view = Utils.findRequiredView(source, R.id.btn_submit, "method 'click'");
-    view2131755318 = view;
+    view2131755321 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -57,10 +57,10 @@ public class VipActivity_ViewBinding<T extends VipActivity> implements Unbinder 
     target.lv_vip = null;
     target.wv_webview = null;
 
-    view2131755346.setOnClickListener(null);
-    view2131755346 = null;
-    view2131755318.setOnClickListener(null);
-    view2131755318 = null;
+    view2131755349.setOnClickListener(null);
+    view2131755349 = null;
+    view2131755321.setOnClickListener(null);
+    view2131755321 = null;
 
     this.target = null;
   }

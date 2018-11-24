@@ -151,6 +151,8 @@
         <activity android:name=".own.ui.mine.ui.NewMsgSettingsActivity"
             android:screenOrientation="portrait"
             />
+        <activity android:name=".own.ui.mine.ui.AddMeAsFriendActivity"
+            android:screenOrientation="portrait"/>
         <!--勿扰模式界面-->
         <activity android:name=".own.ui.mine.ui.DonotDisturbModeActivity"
             android:screenOrientation="portrait"/>

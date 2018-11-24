@@ -12,6 +12,7 @@ import com.google.gson.Gson;
 import com.zl.vo_.R;
 import com.zl.vo_.own.api.ApiConstant;
 import com.zl.vo_.own.api.ApiMine;
+import com.zl.vo_.own.api.ReqResCodeForVo;
 import com.zl.vo_.own.base.BaseActivity;
 import com.zl.vo_.own.listener.OnRequestDataListener;
 import com.zl.vo_.own.ui.account.LoginActivity;
@@ -41,11 +42,15 @@ public class ChangeVoIDActivity extends BaseActivity {
     protected void initViews() {
         tv_title.setText("更改VO号");
         tv_right.setVisibility(View.VISIBLE);
-        //获取从上一个界面传递的vo号
-        voCode = getIntent().getStringExtra("param");
-        if(!TextUtils.isEmpty(voCode)){
-            et_voId.setText(voCode);
+
+       String  vo_code_can = (String)SPUtils.get(ChangeVoIDActivity.this,"vo_code_can","");
+        if("0".equals(vo_code_can)){
+           voCode = (String )SPUtils.get(ChangeVoIDActivity.this,"vo_code_set","");
+        }else if("1".equals(vo_code_can)) {
+            voCode = (String )SPUtils.get(ChangeVoIDActivity.this,"vo_code","");
         }
+
+      et_voId.setText(voCode);
     }
     @Override
     protected void initData() {
@@ -128,6 +133,21 @@ public class ChangeVoIDActivity extends BaseActivity {
                     intent.putExtra("voCode",vo_code);
                     intent.setAction("com.action.changeVoCode");
                     sendBroadcast(intent);
+
+
+                    if("0".equals(vo_code_can)){
+                        //ForResult
+                        Intent intent1 = new Intent();
+                        intent1.putExtra("voCode",vo_code_set);
+                        setResult(ReqResCodeForVo.CHANGE_VOID_RESULT_CODE,intent1);
+                    }else if("1".equals(vo_code_can)){
+                        Intent intent2 = new Intent();
+                        intent2.putExtra("voCode",vo_code);
+                        setResult(ReqResCodeForVo.CHANGE_VOID_RESULT_CODE,intent2);
+                    }
+
+
+
                     finish();
                 }
             }

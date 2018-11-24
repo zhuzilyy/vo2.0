@@ -8,8 +8,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import butterknife.Unbinder;
 import butterknife.internal.Utils;
+import com.netease.nim.uikit.common.ui.widget.SwitchButton;
 import com.zl.vo_.R;
-import com.zl.vo_.own.views.EaseSwitchButton;
 import java.lang.IllegalStateException;
 import java.lang.Override;
 
@@ -22,10 +22,10 @@ public class NewMsgSettingsActivity_ViewBinding<T extends NewMsgSettingsActivity
 
     target.title = Utils.findRequiredViewAsType(source, R.id.tv_title, "field 'title'", TextView.class);
     target.back = Utils.findRequiredViewAsType(source, R.id.iv_back, "field 'back'", ImageView.class);
-    target.switch_notification = Utils.findRequiredViewAsType(source, R.id.switch_notification, "field 'switch_notification'", EaseSwitchButton.class);
-    target.switch_notify_details = Utils.findRequiredViewAsType(source, R.id.notifySwitch_details, "field 'switch_notify_details'", EaseSwitchButton.class);
-    target.switch_notify_voice = Utils.findRequiredViewAsType(source, R.id.notifySwitch_voice, "field 'switch_notify_voice'", EaseSwitchButton.class);
-    target.switch_notify_vibrate = Utils.findRequiredViewAsType(source, R.id.notifySwitch_vibrate, "field 'switch_notify_vibrate'", EaseSwitchButton.class);
+    target.switch_notification = Utils.findRequiredViewAsType(source, R.id.switch_notification, "field 'switch_notification'", SwitchButton.class);
+    target.switch_notify_details = Utils.findRequiredViewAsType(source, R.id.notifySwitch_details, "field 'switch_notify_details'", SwitchButton.class);
+    target.switch_notify_voice = Utils.findRequiredViewAsType(source, R.id.notifySwitch_voice, "field 'switch_notify_voice'", SwitchButton.class);
+    target.switch_notify_vibrate = Utils.findRequiredViewAsType(source, R.id.notifySwitch_vibrate, "field 'switch_notify_vibrate'", SwitchButton.class);
   }
 
   @Override

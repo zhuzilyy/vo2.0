@@ -25,11 +25,13 @@ final class UserDataProvider {
         LogUtil.i(UIKitLogTag.CONTACT, "contact provide data size =" + items.size());
         return items;
     }
-
+//获取好友联系人，在上一个方法调用
     private static final List<UserInfo> query(TextQuery query) {
-
+        //TODO 筛选加密好友
         List<String> friends = NimUIKit.getContactProvider().getUserInfoOfMyFriends();
+
         List<UserInfo> users = NimUIKit.getUserInfoProvider().getUserInfo(friends);
+
         if (query == null) {
             return users;
         }

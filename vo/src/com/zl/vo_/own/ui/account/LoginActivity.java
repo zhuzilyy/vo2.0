@@ -168,7 +168,7 @@ public class LoginActivity extends BaseActivity {
                     Gson gson = new Gson();
                     UserInfoBean userInfoBean = gson.fromJson(data, UserInfoBean.class);
                     String code = userInfoBean.getCode();
-                    if (code.equals(ApiConstant.SUCCESS_CODE)){
+                    if (ApiConstant.SUCCESS_CODE.equals(code)){
                         UserInfoData userInfoData = userInfoBean.getData();
                         String token = userInfoData.getToken();
                         String vo_code_set = userInfoData.getVo_code_set();
