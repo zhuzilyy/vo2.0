@@ -2,9 +2,9 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/easy_alert_dialog_layout"
     android:layout_width="260dp"
+    android:background="@color/white"
     android:layout_height="wrap_content"
     android:layout_gravity="center"
-    android:background="@drawable/shape_corner"
     android:orientation="vertical" >
     <include
         android:id="@+id/easy_dialog_title_view"

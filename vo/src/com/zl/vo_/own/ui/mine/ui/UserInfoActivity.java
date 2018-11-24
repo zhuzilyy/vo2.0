@@ -40,6 +40,10 @@ public class UserInfoActivity extends BaseActivity {
         IntentFilter changeVoCodeFilter = new IntentFilter();
         changeVoCodeFilter.addAction("com.action.changeVoCode");
         registerReceiver(myReceiver,changeVoCodeFilter);
+        //修改头像的广播
+        IntentFilter avatarUpdateFilter = new IntentFilter();
+        avatarUpdateFilter.addAction("com.action.update.avatar");
+        registerReceiver(myReceiver,avatarUpdateFilter);
     }
     @Override
     protected void initData() {
@@ -130,6 +134,9 @@ public class UserInfoActivity extends BaseActivity {
             if (action.equals("com.action.changeVoCode")){
                 String voCode=intent.getStringExtra("voCode");
                 tv_voNum.setText(voCode);
+            }else if(action.equals("com.action.update.avatar")){
+                String avatar = intent.getStringExtra("avatar");
+                Glide.with(UserInfoActivity.this).load(avatar).into(iv_avatar);
             }
         }
     }

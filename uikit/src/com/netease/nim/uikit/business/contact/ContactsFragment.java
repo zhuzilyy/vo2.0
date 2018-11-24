@@ -220,11 +220,9 @@ public class ContactsFragment extends TFragment {
             if (item == null) {
                 return false;
             }
-
             if (item instanceof ContactItem && NimUIKitImpl.getContactEventListener() != null) {
                 NimUIKitImpl.getContactEventListener().onItemLongClick(getActivity(), (((ContactItem) item).getContact()).getContactId());
             }
-
             return true;
         }
     }
@@ -255,12 +253,10 @@ public class ContactsFragment extends TFragment {
         if (!reloadControl.canDoReload(reload)) {
             return;
         }
-
         if (adapter == null) {
             if (getActivity() == null) {
                 return;
             }
-
             initAdapter();
         }
 
@@ -298,7 +294,6 @@ public class ContactsFragment extends TFragment {
         boolean isReloading = false;
         boolean needReload = false;
         boolean reloadParam = false;
-
         boolean canDoReload(boolean param) {
             if (isReloading) {
                 // 正在加载，那么计划加载完后重载
@@ -308,7 +303,6 @@ public class ContactsFragment extends TFragment {
                     reloadParam = true;
                 }
                 LogUtil.i(UIKitLogTag.CONTACT, "pending reload task");
-
                 return false;
             } else {
                 // 如果当前空闲，那么立即开始加载
@@ -316,7 +310,6 @@ public class ContactsFragment extends TFragment {
                 return true;
             }
         }
-
         boolean continueDoReloadWhenCompleted() {
             return needReload;
         }

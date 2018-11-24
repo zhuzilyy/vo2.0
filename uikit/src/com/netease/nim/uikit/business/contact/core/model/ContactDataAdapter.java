@@ -13,6 +13,7 @@ import android.widget.Toast;
 import com.netease.nim.uikit.business.contact.core.item.AbsContactItem;
 import com.netease.nim.uikit.business.contact.core.item.ContactItem;
 import com.netease.nim.uikit.business.contact.core.item.ContactItemFilter;
+import com.netease.nim.uikit.business.contact.core.item.ItemTypes;
 import com.netease.nim.uikit.business.contact.core.model.ContactDataTask.Host;
 import com.netease.nim.uikit.business.contact.core.query.IContactDataProvider;
 import com.netease.nim.uikit.business.contact.core.query.TextQuery;
@@ -85,16 +86,13 @@ public class ContactDataAdapter extends BaseAdapter {
     public final LivIndex createLivIndex(ListView lv, LetterIndexView liv, TextView tvHit, ImageView ivBk) {
         return new LivIndex(lv, liv, tvHit, ivBk, getIndexes());
     }
-
     //
     // BaseAdapter
     //
-
     @Override
     public int getCount() {
         return datas != null ? datas.getCount() : 0;
     }
-
     @Override
     public Object getItem(int position) {
         return datas != null ? datas.getItem(position) : null;
@@ -122,7 +120,6 @@ public class ContactDataAdapter extends BaseAdapter {
     public long getItemId(int position) {
         return 0;
     }
-
     @Override
     public int getItemViewType(int position) {
         Object obj = getItem(position);
@@ -294,7 +291,6 @@ public class ContactDataAdapter extends BaseAdapter {
 
             updateData(datas);
         }
-
         @Override
         protected void onPostExecute(Void result) {
             onTaskFinish(this);

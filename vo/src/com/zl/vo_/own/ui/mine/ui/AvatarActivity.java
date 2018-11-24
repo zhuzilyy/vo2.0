@@ -14,11 +14,16 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.google.gson.Gson;
 import com.zl.vo_.R;
+import com.zl.vo_.own.api.ApiConstant;
 import com.zl.vo_.own.api.ApiMine;
 import com.zl.vo_.own.base.BaseActivity;
 import com.zl.vo_.own.dialog.PhotoChioceDialog;
 import com.zl.vo_.own.listener.OnRequestDataListener;
+import com.zl.vo_.own.ui.account.LoginActivity;
+import com.zl.vo_.own.ui.account.bean.UserInfoBean;
+import com.zl.vo_.own.ui.account.bean.UserInfoData;
 import com.zl.vo_.own.util.BitmapToBase64;
 import com.zl.vo_.own.util.PhotoUtils;
 import com.zl.vo_.own.util.SPUtils;
@@ -194,24 +199,29 @@ public class AvatarActivity extends BaseActivity {
     }
     //修改头像
     private void changeAvatarBitmap(Bitmap cropBitmap) {
-       /* Bitmap bitmap = null;
-        try {
-            bitmap= MediaStore.Images.Media.getBitmap(getContentResolver(), cropImageUri);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }*/
         String base64Avatar = BitmapToBase64.bitmapToBase64(cropBitmap);
-        Log.i("tag",base64Avatar);
         Map<String,String> params = new HashMap<>();
         params.put("avatar_basestr",base64Avatar);
         ApiMine.changeAvatar(this, params, new OnRequestDataListener() {
             @Override
             public void requestSuccess(String data) {
-                Log.i("tag",data);
+                Gson gson = new Gson();
+                UserInfoBean userInfoBean = gson.fromJson(data, UserInfoBean.class);
+                String code = userInfoBean.getCode();
+                if (code.equals(ApiConstant.SUCCESS_CODE)) {
+                    UserInfoData userInfoData = userInfoBean.getData();
+                    String avatar = userInfoData.getAvatar();
+                    SPUtils.put(AvatarActivity.this,"avatar",avatar);
+                    Intent  intent = new Intent();
+                    intent.putExtra("avatar",avatar);
+                    intent.setAction("com.action.update.avatar");
+                    sendBroadcast(intent);
+                    finish();
+                }
             }
             @Override
             public void requestFailure(int code, String msg) {
-                Log.i("tag",msg);
+                Toast.makeText(AvatarActivity.this, "修改头像失败", Toast.LENGTH_SHORT).show();
             }
         });
     }
