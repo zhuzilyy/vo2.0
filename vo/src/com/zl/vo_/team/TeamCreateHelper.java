@@ -2,15 +2,22 @@ package com.zl.vo_.team;
 
 import android.content.Context;
 import android.os.Handler;
+import android.text.TextUtils;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.netease.nim.uikit.api.model.contact.ContactProvider;
+import com.netease.nim.uikit.api.wrapper.NimUserInfoProvider;
 import com.netease.nim.uikit.common.activity.UI;
+import com.netease.nim.uikit.impl.provider.DefaultContactProvider;
 import com.netease.nimlib.sdk.team.constant.TeamBeInviteModeEnum;
 import com.netease.nimlib.sdk.team.constant.TeamInviteModeEnum;
 import com.netease.nimlib.sdk.team.constant.VerifyTypeEnum;
+import com.netease.nimlib.sdk.uinfo.UserInfoProvider;
+import com.netease.nimlib.sdk.uinfo.model.UserInfo;
 import com.zl.vo_.DemoCache;
 import com.zl.vo_.main.activity.MainActivity;
+import com.zl.vo_.own.util.SPUtils;
 import com.zl.vo_.session.SessionHelper;
 import com.netease.nim.uikit.business.team.helper.TeamHelper;
 import com.netease.nim.uikit.common.ui.dialog.DialogMaker;
@@ -31,6 +38,7 @@ import com.netease.nimlib.sdk.team.model.Team;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
@@ -104,7 +112,13 @@ public class TeamCreateHelper {
      */
     public static void createAdvancedTeam(final Context context, List<String> memberAccounts) {
 
-        String teamName = "群聊xzy";
+        Log.i("qwertyuiop",memberAccounts.size()+"++++++++++");
+        String groupNames = getGroupNames(memberAccounts,context);
+        String teamName = "";
+        if(!TextUtils.isEmpty(groupNames)){
+             teamName = groupNames;
+        }
+
 
         DialogMaker.showProgressDialog(context, context.getString(com.netease.nim.uikit.R.string.empty), true);
         // 创建群
@@ -148,6 +162,31 @@ public class TeamCreateHelper {
                     }
                 }
         );
+    }
+
+    /**
+     * 拼接用户名称当作群的名称
+     * @param memberAccounts
+     * @return
+     */
+    private static String getGroupNames(List<String> memberAccounts,Context context) {
+
+        StringBuffer sb = new StringBuffer();
+        ContactProvider userInfoProvider = new DefaultContactProvider();
+        String myNick = (String) SPUtils.get(context,"nickName","");
+
+        Iterator<String> iterator = memberAccounts.iterator();
+
+        while(iterator.hasNext()){
+            String account = iterator.next();
+           String nick = userInfoProvider.getAlias(account);
+
+            sb.append(nick+",");
+        }
+
+        return sb.toString()+myNick;
+
+
     }
 
     /**
