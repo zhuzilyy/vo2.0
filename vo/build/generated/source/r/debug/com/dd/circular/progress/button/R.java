@@ -44,15 +44,15 @@ public final class R {
     }
     public static final class string {
         public static final int define_circularprogressbutton = 0x7f090119;
-        public static final int library_circularprogressbutton_author = 0x7f0901d0;
-        public static final int library_circularprogressbutton_authorWebsite = 0x7f0901d1;
-        public static final int library_circularprogressbutton_isOpenSource = 0x7f0901d2;
-        public static final int library_circularprogressbutton_libraryDescription = 0x7f0901d3;
-        public static final int library_circularprogressbutton_libraryName = 0x7f0901d4;
-        public static final int library_circularprogressbutton_libraryVersion = 0x7f0901d5;
-        public static final int library_circularprogressbutton_libraryWebsite = 0x7f0901d6;
-        public static final int library_circularprogressbutton_licenseId = 0x7f0901d7;
-        public static final int library_circularprogressbutton_repositoryLink = 0x7f0901d8;
+        public static final int library_circularprogressbutton_author = 0x7f0901d1;
+        public static final int library_circularprogressbutton_authorWebsite = 0x7f0901d2;
+        public static final int library_circularprogressbutton_isOpenSource = 0x7f0901d3;
+        public static final int library_circularprogressbutton_libraryDescription = 0x7f0901d4;
+        public static final int library_circularprogressbutton_libraryName = 0x7f0901d5;
+        public static final int library_circularprogressbutton_libraryVersion = 0x7f0901d6;
+        public static final int library_circularprogressbutton_libraryWebsite = 0x7f0901d7;
+        public static final int library_circularprogressbutton_licenseId = 0x7f0901d8;
+        public static final int library_circularprogressbutton_repositoryLink = 0x7f0901d9;
     }
     public static final class styleable {
         public static final int[] CircularProgressButton = { 0x7f010114, 0x7f010115, 0x7f010116, 0x7f010117, 0x7f010118, 0x7f010119, 0x7f01011a, 0x7f01011b, 0x7f01011c, 0x7f01011d, 0x7f01011e, 0x7f01011f, 0x7f010120, 0x7f010121 };

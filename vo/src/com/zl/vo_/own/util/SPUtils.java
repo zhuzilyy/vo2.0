@@ -110,6 +110,43 @@ public class SPUtils {
         return null;
     }
 
+
+    /**
+     * 更新用户信息
+     * @param key
+     * @param object
+     */
+    public static void updateUserData(Context context,String key,Object object){
+
+        SharedPreferences sp = context.getSharedPreferences(FILE_NAME, Context.MODE_PRIVATE);
+
+        SharedPreferences.Editor editor = sp.edit();
+
+        if (object instanceof String)
+        {
+            editor.putString(key, (String) object);
+        } else if (object instanceof Integer)
+        {
+            editor.putInt(key, (Integer) object);
+        } else if (object instanceof Boolean)
+        {
+            editor.putBoolean(key, (Boolean) object);
+        } else if (object instanceof Float)
+        {
+            editor.putFloat(key, (Float) object);
+        } else if (object instanceof Long)
+        {
+            editor.putLong(key, (Long) object);
+        } else
+        {
+            editor.putString(key, object.toString());
+        }
+
+        SharedPreferencesCompat.apply(editor);
+
+    }
+
+
     /**
      * 移除某个key值已经对应的值
      * @param context
@@ -216,4 +253,8 @@ public class SPUtils {
             editor.commit();
         }
     }
+
+
+
+
 }

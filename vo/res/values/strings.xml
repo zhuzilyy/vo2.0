@@ -225,4 +225,6 @@
     <string name="ack_msg_info">消息已读详情</string>
     <string name="ack_msg_tip">已读回执能力支持文本、图片、音频、视频、文件、自定义等消息类型。此处仅以文本消息作为演示，开发者可以根据具体业务场景进行功能设计。</string>
 
+
+    <string name="download_vo">下载vo吧，给你惊喜</string>
 </resources>

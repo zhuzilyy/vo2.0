@@ -114,6 +114,7 @@
     <dimen name="dp24">24dp</dimen>
     <dimen name="dp25">25dp</dimen>
     <dimen name="dp30">30dp</dimen>
+    <dimen name="dp32">32dp</dimen>
     <dimen name="dp35">35dp</dimen>
     <dimen name="dp40">40dp</dimen>
     <dimen name="dp50">50dp</dimen>

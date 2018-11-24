@@ -410,15 +410,15 @@ public final class R {
         public static final int abc_text_size_title_material_toolbar = 0x7f0a0004;
         public static final int disabled_alpha_material_dark = 0x7f0a00bb;
         public static final int disabled_alpha_material_light = 0x7f0a00bc;
-        public static final int highlight_alpha_material_colored = 0x7f0a0107;
-        public static final int highlight_alpha_material_dark = 0x7f0a0108;
-        public static final int highlight_alpha_material_light = 0x7f0a0109;
-        public static final int item_touch_helper_max_drag_scroll_per_frame = 0x7f0a0117;
-        public static final int item_touch_helper_swipe_escape_max_velocity = 0x7f0a0118;
-        public static final int item_touch_helper_swipe_escape_velocity = 0x7f0a0119;
-        public static final int notification_large_icon_height = 0x7f0a0142;
-        public static final int notification_large_icon_width = 0x7f0a0143;
-        public static final int notification_subtext_size = 0x7f0a0147;
+        public static final int highlight_alpha_material_colored = 0x7f0a0108;
+        public static final int highlight_alpha_material_dark = 0x7f0a0109;
+        public static final int highlight_alpha_material_light = 0x7f0a010a;
+        public static final int item_touch_helper_max_drag_scroll_per_frame = 0x7f0a0118;
+        public static final int item_touch_helper_swipe_escape_max_velocity = 0x7f0a0119;
+        public static final int item_touch_helper_swipe_escape_velocity = 0x7f0a011a;
+        public static final int notification_large_icon_height = 0x7f0a0143;
+        public static final int notification_large_icon_width = 0x7f0a0144;
+        public static final int notification_subtext_size = 0x7f0a0148;
     }
     public static final class drawable {
         public static final int abc_ab_share_pack_mtrl_alpha = 0x7f020000;
@@ -504,7 +504,7 @@ public final class R {
         public static final int abc_textfield_search_default_mtrl_alpha = 0x7f020050;
         public static final int abc_textfield_search_material = 0x7f020051;
         public static final int abc_vector_test = 0x7f020052;
-        public static final int notification_template_icon_bg = 0x7f020323;
+        public static final int notification_template_icon_bg = 0x7f020324;
     }
     public static final class id {
         public static final int action0 = 0x7f10051d;

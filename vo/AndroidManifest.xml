@@ -40,6 +40,8 @@
 
     <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!--发送信息-->
+    <uses-permission android:name="android.permission.SEND_SMS"/>
 
     <!-- SDK权限申明, 第三方APP接入时，请将com.zl.vo_替换为自己的包名 -->
     <!-- 和下面的uses-permission一起加入到你的AndroidManifest文件中。 -->

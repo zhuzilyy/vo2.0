@@ -15,15 +15,15 @@ public final class R {
         public static final int upsdk_white = 0x7f0e0189;
     }
     public static final class dimen {
-        public static final int upsdk_dialog_content_size = 0x7f0a01ab;
-        public static final int upsdk_dialog_subtitle_size = 0x7f0a01ac;
+        public static final int upsdk_dialog_content_size = 0x7f0a01ac;
+        public static final int upsdk_dialog_subtitle_size = 0x7f0a01ad;
     }
     public static final class drawable {
-        public static final int upsdk_btn_emphasis_normal_layer = 0x7f020313;
-        public static final int upsdk_cancel_normal = 0x7f020314;
-        public static final int upsdk_cancel_pressed = 0x7f020315;
-        public static final int upsdk_third_download_bg = 0x7f020316;
-        public static final int upsdk_update_all_button = 0x7f020317;
+        public static final int upsdk_btn_emphasis_normal_layer = 0x7f020314;
+        public static final int upsdk_cancel_normal = 0x7f020315;
+        public static final int upsdk_cancel_pressed = 0x7f020316;
+        public static final int upsdk_third_download_bg = 0x7f020317;
+        public static final int upsdk_update_all_button = 0x7f020318;
     }
     public static final class id {
         public static final int action = 0x7f1005e8;
@@ -77,7 +77,7 @@ public final class R {
         public static final int hms_abort = 0x7f090027;
         public static final int hms_abort_message = 0x7f090028;
         public static final int hms_bindfaildlg_message = 0x7f090029;
-        public static final int hms_bindfaildlg_title = 0x7f090145;
+        public static final int hms_bindfaildlg_title = 0x7f090146;
         public static final int hms_cancel = 0x7f09002a;
         public static final int hms_check_failure = 0x7f09002b;
         public static final int hms_check_no_update = 0x7f09002c;

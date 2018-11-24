@@ -38,7 +38,7 @@ public class CurrencySettingActivity extends BaseActivity {
     SwitchButton switch_Verification;
     @BindView(R.id.switch_Recommended_address_friends)
     SwitchButton switch_Recommended_address_friends;
-    private boolean b_verification ;
+    private boolean b_verification;
 
 
     //添加我的方式
@@ -65,11 +65,20 @@ public class CurrencySettingActivity extends BaseActivity {
         b_verification = UserPreferences.getKeyVerificationFriend();
         switch_Verification.setCheck(b_verification);
 
+
+
+
+
+
+
+
     }
+
     @Override
     protected void getResLayout() {
         setContentView(R.layout.layout_currencysetting_activity);
     }
+
     @Override
     protected void initListener() {
 
@@ -84,7 +93,7 @@ public class CurrencySettingActivity extends BaseActivity {
         privacy_addmeway_re.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               startActivity(new Intent(CurrencySettingActivity.this,AddMeAsFriendActivity.class));
+                startActivity(new Intent(CurrencySettingActivity.this, AddMeAsFriendActivity.class));
             }
         });
 
@@ -97,11 +106,6 @@ public class CurrencySettingActivity extends BaseActivity {
         });
 
 
-
-
-
-
-
     }
 
     @Override
@@ -110,18 +114,18 @@ public class CurrencySettingActivity extends BaseActivity {
     }
 
     //加我为好友时需要验证
-    public void friendAsme_Verification(){
+    public void friendAsme_Verification() {
 
 
-        Map<String,String> params = new HashMap<>();
+        Map<String, String> params = new HashMap<>();
         ApiAccount.FriendAsMe_Verification(CurrencySettingActivity.this, params, new OnRequestDataListener() {
             @Override
             public void requestSuccess(String data) {
-                Log.i("tag","11"+data);
+                Log.i("tag", "11" + data);
                 Gson gson = new Gson();
                 UserInfoBean userInfoBean = gson.fromJson(data, UserInfoBean.class);
                 String code = userInfoBean.getCode();
-                if (code.equals(ApiConstant.SUCCESS_CODE)){
+                if (code.equals(ApiConstant.SUCCESS_CODE)) {
                     UserInfoData userInfoData = userInfoBean.getData();
                     String token = userInfoData.getToken();
                     String vo_code_set = userInfoData.getVo_code_set();
@@ -135,18 +139,18 @@ public class CurrencySettingActivity extends BaseActivity {
                     String id = userInfoData.getId();
                     String vo_code_can = userInfoData.getVo_code_can();
                     String signature = userInfoData.getSignature();
-                    SPUtils.put(CurrencySettingActivity.this,"token",token);
-                    SPUtils.put(CurrencySettingActivity.this,"avatar",avatar);
-                    SPUtils.put(CurrencySettingActivity.this,"vo_code",vo_code);
-                    SPUtils.put(CurrencySettingActivity.this,"nickName",nickName);
-                    SPUtils.put(CurrencySettingActivity.this,"sex",sex);
-                    SPUtils.put(CurrencySettingActivity.this,"country",country);
-                    SPUtils.put(CurrencySettingActivity.this,"city",city);
-                    SPUtils.put(CurrencySettingActivity.this,"province",province);
-                    SPUtils.put(CurrencySettingActivity.this,"id",id);
-                    SPUtils.put(CurrencySettingActivity.this,"vo_code_can",vo_code_can);
-                    SPUtils.put(CurrencySettingActivity.this,"signature",signature);
-                    SPUtils.put(CurrencySettingActivity.this,"vo_code_set",vo_code_set);
+                    SPUtils.put(CurrencySettingActivity.this, "token", token);
+                    SPUtils.put(CurrencySettingActivity.this, "avatar", avatar);
+                    SPUtils.put(CurrencySettingActivity.this, "vo_code", vo_code);
+                    SPUtils.put(CurrencySettingActivity.this, "nickName", nickName);
+                    SPUtils.put(CurrencySettingActivity.this, "sex", sex);
+                    SPUtils.put(CurrencySettingActivity.this, "country", country);
+                    SPUtils.put(CurrencySettingActivity.this, "city", city);
+                    SPUtils.put(CurrencySettingActivity.this, "province", province);
+                    SPUtils.put(CurrencySettingActivity.this, "id", id);
+                    SPUtils.put(CurrencySettingActivity.this, "vo_code_can", vo_code_can);
+                    SPUtils.put(CurrencySettingActivity.this, "signature", signature);
+                    SPUtils.put(CurrencySettingActivity.this, "vo_code_set", vo_code_set);
 
 
                     UserPreferences.setKeyVerificationFriend(!b_verification);

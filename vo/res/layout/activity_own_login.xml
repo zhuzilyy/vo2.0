@@ -32,7 +32,7 @@
                 android:hint="手机号/VO号"
                 android:paddingLeft="15dp"
                 android:paddingRight="15dp"
-                android:text="15524108397"
+                android:text="15702475380"
                 android:textColor="@color/black"
                 android:textColorHint="@color/gray"
                 android:textSize="14sp"/>
@@ -66,7 +66,7 @@
                     android:background="@null"
                     android:password="true"
                     android:hint="请输入密码"
-                    android:text="123456"
+                    android:text="031424"
                     android:textColor="@color/black"
                     android:textColorHint="@color/gray"
                     android:textSize="14sp"

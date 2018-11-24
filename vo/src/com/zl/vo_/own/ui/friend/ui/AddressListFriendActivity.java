@@ -90,7 +90,7 @@ public class AddressListFriendActivity extends BaseActivity {
         mRv = (RecyclerView) findViewById(R.id.rv);
         mRv.setLayoutManager(mManager = new LinearLayoutManager(this));
 
-        mAdapter = new CityAdapter(this, mDatas);
+        mAdapter = new CityAdapter(this, mDatas,AddressListFriendActivity.this);
         mRv.setAdapter(mAdapter);
         mRv.addItemDecoration(mDecoration = new SuspensionDecoration(this, mDatas));
         //如果add两个，那么按照先后顺序，依次渲染。

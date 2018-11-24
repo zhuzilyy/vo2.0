@@ -36,6 +36,7 @@ import com.zl.vo_.own.dialog.CustomerDialog;
 import com.zl.vo_.own.listener.OnRequestDataListener;
 import com.zl.vo_.own.ui.account.bean.UserInfoBean;
 import com.zl.vo_.own.ui.account.bean.UserInfoData;
+import com.zl.vo_.own.ui.mine.ui.CurrencySettingActivity;
 import com.zl.vo_.own.util.SPUtils;
 import com.zl.vo_.own.util.StringToMD5;
 import com.zl.vo_.own.views.ClearEditText;
@@ -182,6 +183,14 @@ public class LoginActivity extends BaseActivity {
                         String id = userInfoData.getId();
                         String vo_code_can = userInfoData.getVo_code_can();
                         String signature = userInfoData.getSignature();
+
+                        int by_mobile = Integer.parseInt(userInfoData.getBy_mobile());
+                        int by_qrcode = Integer.parseInt(userInfoData.getBy_qrcode());
+                        int by_vocode = Integer.parseInt(userInfoData.getBy_vo_code());
+                        int by_card = Integer.parseInt(userInfoData.getBy_card());
+                        int by_group_caht = Integer.parseInt(userInfoData.getBy_group_chat());
+
+
                         SPUtils.put(LoginActivity.this,"token",token);
                         SPUtils.put(LoginActivity.this,"avatar",avatar);
                         SPUtils.put(LoginActivity.this,"vo_code",vo_code);
@@ -194,6 +203,15 @@ public class LoginActivity extends BaseActivity {
                         SPUtils.put(LoginActivity.this,"vo_code_can",vo_code_can);
                         SPUtils.put(LoginActivity.this,"signature",signature);
                         SPUtils.put(LoginActivity.this,"vo_code_set",vo_code_set);
+
+                        SPUtils.put(LoginActivity.this,"by_mobile",by_mobile);
+                        SPUtils.put(LoginActivity.this,"by_vo_code",by_vocode);
+                        SPUtils.put(LoginActivity.this,"by_qrcode",by_qrcode);
+                        SPUtils.put(LoginActivity.this,"by_card",by_card);
+                        SPUtils.put(LoginActivity.this,"by_group_chat",by_group_caht);
+
+
+
                         //云信登录
                         cloudLogin(token,vo_code);
                     }

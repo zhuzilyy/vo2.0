@@ -27,8 +27,9 @@
         tools:text="安徽"/>
     <Button
         android:id="@+id/btn_addOrInvatation"
-        android:layout_width="@dimen/dp60"
-        android:layout_height="@dimen/dp40"
+        android:layout_width="@dimen/dp50"
+        android:layout_height="@dimen/dp32"
+        android:textSize="10sp"
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
         android:layout_marginRight="@dimen/dp20"

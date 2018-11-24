@@ -131,6 +131,10 @@ public class ApiConstant {
     //获取通讯录好友
     public static final String GET_ADDFRIENDS = BASE_URL+"/api/v1/friend/book_friends";
 
+    //通用设置里设置添加方式
+    public static final String SET_WAYS = BASE_URL+"/api/v1/user/way";
+
+
 
 
 
