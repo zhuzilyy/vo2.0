@@ -30,12 +30,12 @@ public final class R {
     public static final class color {
         public static final int dsb_disabled_color = 0x7f0e00b0;
         public static final int dsb_progress_color = 0x7f0e00b1;
-        public static final int dsb_progress_color_list = 0x7f0e01b7;
+        public static final int dsb_progress_color_list = 0x7f0e01b8;
         public static final int dsb_ripple_color_focused = 0x7f0e00b2;
-        public static final int dsb_ripple_color_list = 0x7f0e01b8;
+        public static final int dsb_ripple_color_list = 0x7f0e01b9;
         public static final int dsb_ripple_color_pressed = 0x7f0e00b3;
         public static final int dsb_track_color = 0x7f0e00b4;
-        public static final int dsb_track_color_list = 0x7f0e01b9;
+        public static final int dsb_track_color_list = 0x7f0e01ba;
     }
     public static final class style {
         public static final int Widget_DiscreteIndicatorTextAppearance = 0x7f0b01a3;

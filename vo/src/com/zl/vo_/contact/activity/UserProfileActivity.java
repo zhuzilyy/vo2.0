@@ -96,6 +96,7 @@ public class UserProfileActivity extends UI {
     private SwitchButton blackSwitch;
     private SwitchButton noticeSwitch;
     private Map<String, Boolean> toggleStateMap;
+    private CustomerDialog deleteDialog;
     @BindView(R.id.tv_title)
     TextView tv_title;
     private Dialog loadingDialog,addFriendDialog;
@@ -434,7 +435,6 @@ public class UserProfileActivity extends UI {
                         public void onSuccess(Void param) {
                             Toast.makeText(UserProfileActivity.this, "移除黑名单成功", Toast.LENGTH_SHORT).show();
                         }
-
                         @Override
                         public void onFailed(int code) {
                             if (code == 408) {
@@ -652,7 +652,7 @@ public class UserProfileActivity extends UI {
             }
             @Override
             public void requestFailure(int code, String msg) {
-
+                Toast.makeText(UserProfileActivity.this, "添加好友失败", Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -700,59 +700,70 @@ public class UserProfileActivity extends UI {
                     }
                 });*/
         loadingDialog = WeiboDialogUtils.createLoadingDialog(this, "正在删除");
-        final CustomerDialog dialog=new CustomerDialog(this);
-        dialog.setDialogTitle("删除好友");
-        dialog.setDialogConfirmText("确定");
-        dialog.setDialogMessage("删除好友后,将同时解除双方的好友关系");
-        dialog.setYesOnclickListener(new CustomerDialog.onYesOnclickListener() {
+        deleteDialog=new CustomerDialog(this);
+        deleteDialog.setDialogTitle("删除好友");
+        deleteDialog.setDialogConfirmText("确定");
+        deleteDialog.setDialogMessage("删除好友后,将同时解除双方的好友关系");
+        deleteDialog.setYesOnclickListener(new CustomerDialog.onYesOnclickListener() {
             @Override
             public void onYesClick() {
-                loadingDialog.show();
-                //DialogMaker.showProgressDialog(UserProfileActivity.this, "", true);
-                NIMClient.getService(FriendService.class).deleteFriend(account).setCallback(new RequestCallback<Void>() {
-                    @Override
-                    public void onSuccess(Void param) {
-                        //DialogMaker.dismissProgressDialog();
-                        dialog.dismiss();
-                        WeiboDialogUtils.closeDialog(loadingDialog);
-                        Toast.makeText(UserProfileActivity.this, R.string.remove_friend_success, Toast.LENGTH_SHORT).show();
-                        finish();
-                    }
-                    @Override
-                    public void onFailed(int code) {
-                        dialog.dismiss();
-                        WeiboDialogUtils.closeDialog(loadingDialog);
-                        if (code == 408) {
-                            Toast.makeText(UserProfileActivity.this, R.string.network_is_not_available, Toast.LENGTH_SHORT).show();
-                        } else {
-                            Toast.makeText(UserProfileActivity.this, "on failed:" + code, Toast.LENGTH_SHORT).show();
-                        }
-                    }
-
-                    @Override
-                    public void onException(Throwable exception) {
-                        //DialogMaker.dismissProgressDialog();
-                        dialog.dismiss();
-                        WeiboDialogUtils.closeDialog(loadingDialog);
-                    }
-                });
+                deleteDialog.dismiss();
+                deleteFriend();
             }
         });
-        dialog.setNoOnclickListener(new CustomerDialog.onNoOnclickListener() {
+        deleteDialog.setNoOnclickListener(new CustomerDialog.onNoOnclickListener() {
             @Override
             public void onNoClick() {
-                dialog.dismiss();
-                //WeiboDialogUtils.closeDialog(loadingDialog);
+                deleteDialog.dismiss();
             }
         });
-        dialog.show();
-        /*if (!isFinishing() && !isDestroyedCompatible()) {
-            dialog.show();
-        }*/
-
-
+        deleteDialog.show();
     }
+    //删除好友
+    private void deleteFriend() {
+        loadingDialog.show();
+        Map<String,String> params = new HashMap<>();
+        params.put("f_vo_code",account);
+        ApiFriends.deleteFriend(UserProfileActivity.this, params, new OnRequestDataListener() {
+            @Override
+            public void requestSuccess(String data) {
+                try {
+                    JSONObject jsonObject = new JSONObject(data);
+                    String code = jsonObject.getString("code");
+                    if (code.equals(ApiConstant.SUCCESS_CODE)){
+                        NIMClient.getService(FriendService.class).deleteFriend(account).setCallback(new RequestCallback<Void>() {
+                            @Override
+                            public void onSuccess(Void param) {
+                               loadingDialog.dismiss();
+                                Toast.makeText(UserProfileActivity.this, R.string.remove_friend_success, Toast.LENGTH_SHORT).show();
+                                finish();
+                            }
+                            @Override
+                            public void onFailed(int code) {
+                                loadingDialog.dismiss();
+                                if (code == 408) {
+                                    Toast.makeText(UserProfileActivity.this, R.string.network_is_not_available, Toast.LENGTH_SHORT).show();
+                                } else {
+                                    Toast.makeText(UserProfileActivity.this, "on failed:" + code, Toast.LENGTH_SHORT).show();
+                                }
+                            }
 
+                            @Override
+                            public void onException(Throwable exception) {
+                                loadingDialog.dismiss();
+                            }
+                        });
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+            @Override
+            public void requestFailure(int code, String msg) {
+                Toast.makeText(UserProfileActivity.this, "删除好友失败", Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
     private void onChat() {
         Log.i(TAG, "onChat");
         SessionHelper.startP2PSession(this, account);

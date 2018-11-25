@@ -1,5 +1,6 @@
 package com.zl.vo_.own.ui.friend.ui;
 
+import android.app.Dialog;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
@@ -25,6 +26,7 @@ import com.tencent.mm.sdk.openapi.IWXAPI;
 import com.tencent.mm.sdk.openapi.WXAPIFactory;
 import com.zl.vo_.DemoCache;
 import com.zl.vo_.R;
+import com.zl.vo_.contact.activity.AddFriendActivity;
 import com.zl.vo_.own.api.ApiConstant;
 import com.zl.vo_.own.api.ApiFriends;
 import com.zl.vo_.own.base.BaseActivity;
@@ -32,6 +34,7 @@ import com.zl.vo_.own.beans.CityBean;
 import com.zl.vo_.own.listener.OnRequestDataListener;
 import com.zl.vo_.own.ui.friend.adapter.CityAdapter;
 import com.zl.vo_.own.ui.friend.bean.BookUserInfoBean;
+import com.zl.vo_.own.util.WeiboDialogUtils;
 import com.zl.vo_.own.util.WhiteBgBitmapUtil;
 import com.zl.vo_.own.views.DividerItemDecoration;
 
@@ -79,6 +82,7 @@ public class AddressListFriendActivity extends BaseActivity {
 
     private PopupWindow pw_share;
     private View view_share;
+    private Dialog dialog;
 
     @Override
     protected void initViews() {
@@ -105,19 +109,18 @@ public class AddressListFriendActivity extends BaseActivity {
                 .setNeedRealIndex(true)//设置需要真实的索引
                 .setmLayoutManager(mManager);//设置RecyclerView的LayoutManager
 
-
-
+        dialog= WeiboDialogUtils.createLoadingDialog(this, "正在加载");
     }
     @Override
     protected void initData() {
-
+        dialog.show();
         Map<String,String> params = new HashMap<>();
         String str = DemoCache.getPhone_contacts();
         params.put("book_str", str);
         ApiFriends.getAddressFriends(AddressListFriendActivity.this, params, new OnRequestDataListener() {
             @Override
             public void requestSuccess(String data) {
-
+                dialog.dismiss();
                 Log.i("tag","11"+data);
                 Gson gson = new Gson();
 
@@ -139,6 +142,7 @@ public class AddressListFriendActivity extends BaseActivity {
             @Override
             public void requestFailure(int code, String msg) {
                 Log.i("yuiop",msg);
+                dialog.dismiss();
 
             }
         });
@@ -161,7 +165,7 @@ public class AddressListFriendActivity extends BaseActivity {
     protected void setStatusBarColor() {
 
     }
-    @OnClick({R.id.iv_back,R.id.wx_share_ll})
+    @OnClick({R.id.iv_back,R.id.wx_share_ll,R.id.tv_search_friend,R.id.tv_right})
     public void click(View view){
         switch (view.getId()){
             case R.id.iv_back:
@@ -170,6 +174,12 @@ public class AddressListFriendActivity extends BaseActivity {
             case R.id.wx_share_ll:
                 //分享微信链接
                 wx_share();
+                break;
+            case R.id.tv_search_friend:
+                jumpActivity(AddressListFriendActivity.this,AddFriendActivity.class);
+                break;
+            case R.id.tv_right:
+                jumpActivity(AddressListFriendActivity.this,AddFriendActivity.class);
                 break;
         }
 

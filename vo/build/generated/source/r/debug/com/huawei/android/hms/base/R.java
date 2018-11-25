@@ -8,22 +8,22 @@ package com.huawei.android.hms.base;
 
 public final class R {
     public static final class color {
-        public static final int upsdk_black = 0x7f0e0185;
-        public static final int upsdk_blue_text_007dff = 0x7f0e0186;
-        public static final int upsdk_category_button_select_pressed = 0x7f0e0187;
-        public static final int upsdk_category_button_select_stroke = 0x7f0e0188;
-        public static final int upsdk_white = 0x7f0e0189;
+        public static final int upsdk_black = 0x7f0e0186;
+        public static final int upsdk_blue_text_007dff = 0x7f0e0187;
+        public static final int upsdk_category_button_select_pressed = 0x7f0e0188;
+        public static final int upsdk_category_button_select_stroke = 0x7f0e0189;
+        public static final int upsdk_white = 0x7f0e018a;
     }
     public static final class dimen {
         public static final int upsdk_dialog_content_size = 0x7f0a01ac;
         public static final int upsdk_dialog_subtitle_size = 0x7f0a01ad;
     }
     public static final class drawable {
-        public static final int upsdk_btn_emphasis_normal_layer = 0x7f020314;
-        public static final int upsdk_cancel_normal = 0x7f020315;
-        public static final int upsdk_cancel_pressed = 0x7f020316;
-        public static final int upsdk_third_download_bg = 0x7f020317;
-        public static final int upsdk_update_all_button = 0x7f020318;
+        public static final int upsdk_btn_emphasis_normal_layer = 0x7f020315;
+        public static final int upsdk_cancel_normal = 0x7f020316;
+        public static final int upsdk_cancel_pressed = 0x7f020317;
+        public static final int upsdk_third_download_bg = 0x7f020318;
+        public static final int upsdk_update_all_button = 0x7f020319;
     }
     public static final class id {
         public static final int action = 0x7f1005e8;

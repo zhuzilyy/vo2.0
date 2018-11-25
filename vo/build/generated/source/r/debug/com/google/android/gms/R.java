@@ -16,17 +16,17 @@ public final class R {
         public static final int scopeUris = 0x7f0101d9;
     }
     public static final class color {
-        public static final int common_google_signin_btn_text_dark = 0x7f0e01af;
+        public static final int common_google_signin_btn_text_dark = 0x7f0e01b0;
         public static final int common_google_signin_btn_text_dark_default = 0x7f0e0086;
         public static final int common_google_signin_btn_text_dark_disabled = 0x7f0e0087;
         public static final int common_google_signin_btn_text_dark_focused = 0x7f0e0088;
         public static final int common_google_signin_btn_text_dark_pressed = 0x7f0e0089;
-        public static final int common_google_signin_btn_text_light = 0x7f0e01b0;
+        public static final int common_google_signin_btn_text_light = 0x7f0e01b1;
         public static final int common_google_signin_btn_text_light_default = 0x7f0e008a;
         public static final int common_google_signin_btn_text_light_disabled = 0x7f0e008b;
         public static final int common_google_signin_btn_text_light_focused = 0x7f0e008c;
         public static final int common_google_signin_btn_text_light_pressed = 0x7f0e008d;
-        public static final int common_google_signin_btn_tint = 0x7f0e01b1;
+        public static final int common_google_signin_btn_tint = 0x7f0e01b2;
     }
     public static final class drawable {
         public static final int common_full_open_on_phone = 0x7f0200b8;

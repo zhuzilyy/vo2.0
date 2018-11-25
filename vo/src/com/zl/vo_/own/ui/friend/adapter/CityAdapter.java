@@ -14,7 +14,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
-import com.tbruyelle.rxpermissions2.RxPermissions;
+import com.luck.picture.lib.permissions.RxPermissions;
 import com.zl.vo_.R;
 import com.zl.vo_.own.beans.CityBean;
 import com.zl.vo_.own.util.PhoneUtils;

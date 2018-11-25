@@ -37,6 +37,10 @@ public class ApiFriends {
         Dialog dialog = WeiboDialogUtils.createLoadingDialog(context, "正在加载");
         excutePost(ApiConstant.GET_ADDFRIENDS,"two", context, params,dialog, listener);
     }
-
+    //    删除好友
+    public static void deleteFriend(final Context context, Map<String,String> params, final OnRequestDataListener listener){
+        Dialog dialog = WeiboDialogUtils.createLoadingDialog(context, "正在加载");
+        excutePost(ApiConstant.DELETE_FRIEND,"two", context, params,dialog, listener);
+    }
 
 }

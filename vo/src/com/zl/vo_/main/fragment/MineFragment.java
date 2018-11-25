@@ -392,7 +392,6 @@ public class MineFragment extends MainTabFragment implements View.OnClickListene
             if(!TextUtils.isEmpty(voId)){
                 tv_voNum.setText(voId);
             }
-
         }
     }
     class MyReceiver extends BroadcastReceiver{

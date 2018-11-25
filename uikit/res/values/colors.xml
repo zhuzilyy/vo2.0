@@ -63,4 +63,5 @@
     <color name="robot_link_element_text_blue">#248DFA</color>
     <color name="common_line">#ebebeb</color>
     <color name="mainColor">#5544aa</color>
+    <color name="topMsgColor">#555544aa</color>
 </resources>

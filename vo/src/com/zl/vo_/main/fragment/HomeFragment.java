@@ -36,7 +36,10 @@ import com.zl.vo_.main.helper.SystemMessageUnreadManager;
 import com.zl.vo_.main.model.MainTab;
 import com.zl.vo_.main.reminder.ReminderItem;
 import com.zl.vo_.main.reminder.ReminderManager;
+import com.zl.vo_.own.api.ApiConstant;
 import com.zl.vo_.own.ui.SearchFriendsActivity;
+import com.zl.vo_.own.ui.account.WebViweActivity;
+import com.zl.vo_.own.ui.find.ui.ScanCaptureActivity;
 import com.zl.vo_.own.util.PopupMenuUtil;
 import com.zl.vo_.own.views.DetailsTypePopupWindow;
 import com.zl.vo_.own.views.NoScrollViewPager;
@@ -333,6 +336,7 @@ public class HomeFragment extends TFragment implements OnPageChangeListener, Rem
         typePopupWindow.setmItemsOnClick(new DetailsTypePopupWindow.ItemsOnClick() {
             @Override
             public void itemsOnClick(int position) {
+                Intent intent = null;
                 switch (position) {
                     case 0:
                         //AdvancedTeamSearchActivity.start(getActivity());
@@ -345,15 +349,17 @@ public class HomeFragment extends TFragment implements OnPageChangeListener, Rem
                         break;
                     //扫一扫
                     case 2:
-                        ContactSelectActivity.Option option = TeamHelper.getCreateContactSelectOption(null, 50);
-                        NimUIKit.startContactSelector(getActivity(), option, REQUEST_CODE_NORMAL);
+                        intent = new Intent(getActivity(), ScanCaptureActivity.class);
+                        startActivity(intent);
+                      /*  ContactSelectActivity.Option option = TeamHelper.getCreateContactSelectOption(null, 50);
+                        NimUIKit.startContactSelector(getActivity(), option, REQUEST_CODE_NORMAL);*/
                         break;
                     //帮助及反馈
                     case 3:
-                      /*  Intent intent=new Intent(getActivity(),WebViweActivity.class);
+                        intent=new Intent(getActivity(),WebViweActivity.class);
                         intent.putExtra("url", ApiConstant.FUNCTION_INTRODUCE);
                         intent.putExtra("title","功能介绍");
-                        startActivity(intent);*/
+                        startActivity(intent);
                        /* ContactSelectActivity.Option advancedOption = TeamHelper.getCreateContactSelectOption(null, 50);
                         NimUIKit.startContactSelector(getActivity(), advancedOption, REQUEST_CODE_ADVANCED);*/
                         break;

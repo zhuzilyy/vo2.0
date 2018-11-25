@@ -40,6 +40,8 @@ public class ApiConstant {
     public static final String ADD_FRIEND_DIRECTLY=BASE_URL+"/api/v1/friend/profile";
     //添加好友
     public static final String INSERT_FRIEND=BASE_URL+"/api/v1/friend/insert";
+    //删除好友
+    public static final String DELETE_FRIEND=BASE_URL+"/api/v1/friend/delete";
 
 
 

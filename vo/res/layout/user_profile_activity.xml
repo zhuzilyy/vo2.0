@@ -165,7 +165,6 @@
                 android:textColor="@color/color_red_f04c62"
                 android:textSize="@dimen/text_size_17"
                 android:visibility="gone" />
-
             <Button
                 android:id="@+id/add_buddy"
                 android:layout_width="match_parent"

@@ -16,9 +16,13 @@ import java.lang.Override;
 public class AddressListFriendActivity_ViewBinding<T extends AddressListFriendActivity> implements Unbinder {
   protected T target;
 
+  private View view2131755648;
+
   private View view2131755349;
 
   private View view2131755236;
+
+  private View view2131755234;
 
   @UiThread
   public AddressListFriendActivity_ViewBinding(final T target, View source) {
@@ -27,7 +31,15 @@ public class AddressListFriendActivity_ViewBinding<T extends AddressListFriendAc
     View view;
     target.tv_title = Utils.findRequiredViewAsType(source, R.id.tv_title, "field 'tv_title'", TextView.class);
     target.container = Utils.findRequiredViewAsType(source, R.id.container, "field 'container'", RelativeLayout.class);
-    target.tv_right = Utils.findRequiredViewAsType(source, R.id.tv_right, "field 'tv_right'", TextView.class);
+    view = Utils.findRequiredView(source, R.id.tv_right, "field 'tv_right' and method 'click'");
+    target.tv_right = Utils.castView(view, R.id.tv_right, "field 'tv_right'", TextView.class);
+    view2131755648 = view;
+    view.setOnClickListener(new DebouncingOnClickListener() {
+      @Override
+      public void doClick(View p0) {
+        target.click(p0);
+      }
+    });
     view = Utils.findRequiredView(source, R.id.iv_back, "method 'click'");
     view2131755349 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
@@ -38,6 +50,14 @@ public class AddressListFriendActivity_ViewBinding<T extends AddressListFriendAc
     });
     view = Utils.findRequiredView(source, R.id.wx_share_ll, "method 'click'");
     view2131755236 = view;
+    view.setOnClickListener(new DebouncingOnClickListener() {
+      @Override
+      public void doClick(View p0) {
+        target.click(p0);
+      }
+    });
+    view = Utils.findRequiredView(source, R.id.tv_search_friend, "method 'click'");
+    view2131755234 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -56,10 +76,14 @@ public class AddressListFriendActivity_ViewBinding<T extends AddressListFriendAc
     target.container = null;
     target.tv_right = null;
 
+    view2131755648.setOnClickListener(null);
+    view2131755648 = null;
     view2131755349.setOnClickListener(null);
     view2131755349 = null;
     view2131755236.setOnClickListener(null);
     view2131755236 = null;
+    view2131755234.setOnClickListener(null);
+    view2131755234 = null;
 
     this.target = null;
   }

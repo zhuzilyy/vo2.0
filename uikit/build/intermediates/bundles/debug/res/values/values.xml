@@ -114,6 +114,7 @@
     <color name="robot_link_element_text_blue">#248DFA</color>
     <color name="split_line_grey_color_d9d9d9">#D9D9D9</color>
     <color name="title_color_01d9ae">#01D9AE</color>
+    <color name="topMsgColor">#555544aa</color>
     <color name="transparent">#00000000</color>
     <color name="white">#FFFFFF</color>
     <declare-styleable name="CircleImageView"><attr format="dimension" name="civ_border_width"/><attr format="color" name="civ_border_color"/><attr format="boolean" name="civ_border_overlay"/><attr format="color" name="civ_fill_color"/></declare-styleable>
@@ -430,7 +431,7 @@
     <string name="withdrawn_msg">撤 回</string>
     <string name="without_content">暂无</string>
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
+        
         <item name="colorPrimary">@color/white</item>
         <item name="colorPrimaryDark">@color/color_gray_d9d9d9</item>
         <item name="colorAccent">@color/color_blue_0888ff</item>
@@ -446,7 +447,7 @@
         <item name="windowNoTitle">true</item>
     </style>
     <style name="DarkTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
+        
         <item name="colorPrimary">@color/color_black_333333</item>
         <item name="colorPrimaryDark">@color/black</item>
         <item name="colorAccent">@color/color_blue_0888ff</item>
@@ -507,9 +508,7 @@
         <item name="android:textSize">@dimen/normal_text_size</item>
         <item name="android:textColor">@color/mainColor</item>
         <item name="android:textStyle">bold</item>
-     <!--   <item name="android:paddingLeft">@dimen/dialog_text_margin_horizontal</item>
-        <item name="android:paddingRight">@dimen/dialog_text_margin_horizontal</item>
-        -->
+     
         <item name="android:paddingTop">@dimen/dialog_padding_vertical</item>
         <item name="android:paddingBottom">@dimen/dialog_padding_vertical</item>
     </style>
@@ -522,17 +521,17 @@
     </style>
     <style name="easy_dialog_style" parent="@android:style/Theme.Dialog">
         <item name="android:windowFrame">@null</item>
-        <!-- 边框 -->
+        
         <item name="android:windowIsFloating">true</item>
-        <!-- 是否浮现在activity之上 -->
+        
         <item name="android:windowIsTranslucent">true</item>
-        <!-- 半透明 -->
+        
         <item name="android:windowNoTitle">true</item>
-        <!-- 无标题 -->
+        
         <item name="android:windowBackground">@color/transparent</item>
-        <!-- 背景透明 -->
+        
         <item name="android:backgroundDimEnabled">true</item>
-        <!-- 后面的activity变暗 -->
+        
     </style>
     <style name="edit_text_style">
         <item name="android:textCursorDrawable">@color/black</item>
