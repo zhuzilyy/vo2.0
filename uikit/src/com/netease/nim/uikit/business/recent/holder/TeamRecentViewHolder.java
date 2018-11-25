@@ -58,6 +58,10 @@ public class TeamRecentViewHolder extends CommonRecentViewHolder {
         return TeamHelper.getTeamMemberDisplayName(tid, account);
     }
 
+    /*
+    *
+    * xzy:九宫格群组头像修改
+    * */
     @Override
     protected void loadPortrait(RecentContact recent) {
         super.loadPortrait(recent);

@@ -6,6 +6,7 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.netease.nim.uikit.api.NimUIKit;
 import com.netease.nim.uikit.api.model.contact.ContactProvider;
 import com.netease.nim.uikit.api.wrapper.NimUserInfoProvider;
 import com.netease.nim.uikit.common.activity.UI;
@@ -14,6 +15,8 @@ import com.netease.nimlib.sdk.team.constant.TeamBeInviteModeEnum;
 import com.netease.nimlib.sdk.team.constant.TeamInviteModeEnum;
 import com.netease.nimlib.sdk.team.constant.VerifyTypeEnum;
 import com.netease.nimlib.sdk.uinfo.UserInfoProvider;
+import com.netease.nimlib.sdk.uinfo.UserService;
+import com.netease.nimlib.sdk.uinfo.model.NimUserInfo;
 import com.netease.nimlib.sdk.uinfo.model.UserInfo;
 import com.zl.vo_.DemoCache;
 import com.zl.vo_.main.activity.MainActivity;
@@ -165,7 +168,7 @@ public class TeamCreateHelper {
     }
 
     /**
-     * 拼接用户名称当作群的名称
+     * xzy:拼接用户名称当作群的名称
      * @param memberAccounts
      * @return
      */
@@ -179,15 +182,34 @@ public class TeamCreateHelper {
 
         while(iterator.hasNext()){
             String account = iterator.next();
-           String nick = userInfoProvider.getAlias(account);
 
-            sb.append(nick+",");
+            String userDisplayName = getUserDisplayName(account);
+//            String nick = userInfoProvider.getAlias(account);
+//            NimUserInfo user = NIMClient.getService(UserService.class).getUserInfo(account);
+
+            sb.append(userDisplayName+",");
         }
 
         return sb.toString()+myNick;
 
 
     }
+
+
+    public static String getUserDisplayName(String account) {
+        String alias = NimUIKit.getContactProvider().getAlias(account);
+        if (!TextUtils.isEmpty(alias)) {
+            return alias;
+        } else {
+            UserInfo userInfo = NimUIKit.getUserInfoProvider().getUserInfo(account);
+            if (userInfo != null && !TextUtils.isEmpty(userInfo.getName())) {
+                return userInfo.getName();
+            } else {
+                return account;
+            }
+        }
+    }
+
 
     /**
      * 群创建成功回调
