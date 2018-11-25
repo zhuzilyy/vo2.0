@@ -726,6 +726,7 @@ public class UserProfileActivity extends UI {
         params.put("f_vo_code",account);
         ApiFriends.deleteFriend(UserProfileActivity.this, params, new OnRequestDataListener() {
             @Override
+
             public void requestSuccess(String data) {
                 try {
                     JSONObject jsonObject = new JSONObject(data);
