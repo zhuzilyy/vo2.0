@@ -71,6 +71,7 @@
                 android:layout_alignBottom="@id/portrait_panel"
                 android:layout_marginRight="40dip">
                 <TextView
+                    android:visibility="gone"
                     android:id="@+id/tv_online_state"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"

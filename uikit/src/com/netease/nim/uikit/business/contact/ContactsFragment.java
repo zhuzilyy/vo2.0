@@ -89,12 +89,10 @@ public class ContactsFragment extends TFragment {
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-
         // 界面初始化
         initAdapter();
         findViews();
         buildLitterIdx(getView());
-
         // 注册观察者
         registerObserver(true);
         registerOnlineStateChangeListener(true);

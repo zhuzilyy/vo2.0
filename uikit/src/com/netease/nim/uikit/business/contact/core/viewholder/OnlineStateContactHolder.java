@@ -19,7 +19,7 @@ public class OnlineStateContactHolder extends ContactHolder {
         super.refresh(adapter, position, item);
         IContact contact = item.getContact();
         // 在线状态
-        if (contact.getContactType() != IContact.Type.Friend || !NimUIKitImpl.enableOnlineState()) {
+       /* if (contact.getContactType() != IContact.Type.Friend || !NimUIKitImpl.enableOnlineState()) {
             desc.setVisibility(View.GONE);
         } else {
             String onlineStateContent = NimUIKitImpl.getOnlineStateContentProvider().getSimpleDisplay(contact.getContactId());
@@ -29,6 +29,6 @@ public class OnlineStateContactHolder extends ContactHolder {
                 desc.setVisibility(View.VISIBLE);
                 desc.setText(onlineStateContent);
             }
-        }
+        }*/
     }
 }

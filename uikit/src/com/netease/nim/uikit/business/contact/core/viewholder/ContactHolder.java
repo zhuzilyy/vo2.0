@@ -20,7 +20,7 @@ public class ContactHolder extends AbsContactViewHolder<ContactItem> {
 
     protected TextView name;
 
-    protected TextView desc;
+    protected TextView contacts_item_desc;
 
     protected RelativeLayout headLayout;
 
@@ -45,9 +45,8 @@ public class ContactHolder extends AbsContactViewHolder<ContactItem> {
                 }
             }
         });
-
         // query result
-        desc.setVisibility(View.GONE);
+        //desc.setVisibility(View.GONE);
         /*
         TextQuery query = adapter.getQuery();
         HitInfo hitInfo = query != null ? ContactSearch.hitInfo(contact, query) : null;
@@ -58,16 +57,13 @@ public class ContactHolder extends AbsContactViewHolder<ContactItem> {
         }
         */
     }
-
     @Override
     public View inflate(LayoutInflater inflater) {
         View view = inflater.inflate(R.layout.nim_contacts_item, null);
-
         headLayout = (RelativeLayout) view.findViewById(R.id.head_layout);
         head = (HeadImageView) view.findViewById(R.id.contacts_item_head);
         name = (TextView) view.findViewById(R.id.contacts_item_name);
-        desc = (TextView) view.findViewById(R.id.contacts_item_desc);
-
+        contacts_item_desc = (TextView) view.findViewById(R.id.contacts_item_desc);
         return view;
     }
 }

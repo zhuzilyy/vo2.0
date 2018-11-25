@@ -253,7 +253,7 @@ public abstract class RecentViewHolder extends RecyclerViewHolder<BaseQuickAdapt
     }
 
     protected void updateOnlineState(RecentContact recent) {
-        if (recent.getSessionType() == SessionTypeEnum.Team) {
+      /*  if (recent.getSessionType() == SessionTypeEnum.Team) {
             tvOnlineState.setVisibility(View.GONE);
         } else {
             String onlineStateContent = getOnlineStateContent(recent);
@@ -263,7 +263,7 @@ public abstract class RecentViewHolder extends RecyclerViewHolder<BaseQuickAdapt
                 tvOnlineState.setVisibility(View.VISIBLE);
                 tvOnlineState.setText(getOnlineStateContent(recent));
             }
-        }
+        }*/
     }
 
     protected void updateNickLabel(String nick) {

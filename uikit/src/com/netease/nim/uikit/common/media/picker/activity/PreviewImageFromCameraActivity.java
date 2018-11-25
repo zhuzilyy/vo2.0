@@ -44,7 +44,8 @@ public class PreviewImageFromCameraActivity extends UI {
     private String origImageFilePath;
 
     private String btnText;
-
+    private ImageView iv_back;
+    private TextView tv_title,tv_right;
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.nim_preview_image_from_camera_activity);
@@ -62,6 +63,29 @@ public class PreviewImageFromCameraActivity extends UI {
     private void findViews() {
         sendButton = (Button) findViewById(R.id.buttonSend);
         previewImageView = (ImageView) findViewById(R.id.imageViewPreview);
+        tv_title=findView(R.id.tv_title);
+        tv_right=findView(R.id.tv_right);
+        iv_back=findView(R.id.iv_back);
+        tv_title.setText("拍摄");
+        tv_right.setVisibility(View.VISIBLE);
+        tv_right.setText("重拍");
+        iv_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
+        tv_right.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                deleteTempFile();
+                Intent intent = new Intent();
+                intent.setClass(PreviewImageFromCameraActivity.this, getIntent().getClass());
+                intent.putExtra(RESULT_RETAKE, true);
+                setResult(RESULT_OK, intent);
+                PreviewImageFromCameraActivity.this.finish();
+            }
+        });
     }
 
     private void getIntentData() {

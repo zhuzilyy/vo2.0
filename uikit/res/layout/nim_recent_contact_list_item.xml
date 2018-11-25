@@ -64,13 +64,14 @@
                 android:layout_alignBottom="@id/portrait_panel"
                 android:layout_marginRight="40dip">
                 <TextView
+                    android:visibility="gone"
                     android:id="@+id/tv_online_state"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:lines="1"
                     android:gravity="center_vertical"
                     android:layout_marginRight="6dp"
-                    android:textColor="@color/color_aaaaaa_content_text"
+                    android:textColor="@color/mainColor"
                     android:textSize="12sp"/>
 
                 <ImageView

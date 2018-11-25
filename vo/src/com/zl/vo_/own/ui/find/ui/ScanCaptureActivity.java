@@ -1,6 +1,7 @@
 package com.zl.vo_.own.ui.find.ui;
 
 import android.annotation.TargetApi;
+import android.content.Intent;
 import android.graphics.Rect;
 import android.hardware.Camera;
 import android.os.Build;
@@ -17,6 +18,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.zl.vo_.R;
+import com.zl.vo_.contact.activity.UserProfileActivity;
 import com.zl.vo_.own.base.BaseActivity;
 import com.zl.vo_.own.ui.find.widget.scan.CameraManager;
 import com.zl.vo_.own.ui.find.widget.scan.CameraPreview;
@@ -26,6 +28,9 @@ import net.sourceforge.zbar.Image;
 import net.sourceforge.zbar.ImageScanner;
 import net.sourceforge.zbar.Symbol;
 import net.sourceforge.zbar.SymbolSet;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.io.IOException;
 import java.lang.reflect.Field;
@@ -126,12 +131,10 @@ public class ScanCaptureActivity extends BaseActivity {
                 break;
         }
     }
-
     public void onPause() {
         super.onPause();
         releaseCamera();
     }
-
     private void releaseCamera() {
         if (mCamera != null) {
             previewing = false;
@@ -181,13 +184,21 @@ public class ScanCaptureActivity extends BaseActivity {
                     resultStr = sym.getData();
                 }
             }
-            Log.i("qrcode","resultStr********"+resultStr);
             if (!TextUtils.isEmpty(resultStr)) {
                 previewing = false;
                 mCamera.setPreviewCallback(null);
                 mCamera.stopPreview();
                 releaseCamera();
                 barcodeScanned = true;
+                //跳转到加好友的界面
+                try {
+                    JSONObject jsonObject = new JSONObject(resultStr);
+                    String vo_code = jsonObject.getString("vo_code");
+                    UserProfileActivity.start(ScanCaptureActivity.this,vo_code);
+                    finish();
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
 
             }
         }

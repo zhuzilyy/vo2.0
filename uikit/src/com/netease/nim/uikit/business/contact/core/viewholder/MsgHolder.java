@@ -45,7 +45,7 @@ public class MsgHolder extends AbsContactViewHolder<MsgItem> {
         name = (TextView) view.findViewById(R.id.contacts_item_name);
         time = (TextView) view.findViewById(R.id.contacts_item_time);
         desc = (TextView) view.findViewById(R.id.contacts_item_desc);
-
+        desc.setVisibility(View.GONE);
         // calculate
         View parent = (View) desc.getParent();
         if (parent.getMeasuredWidth() == 0) {
