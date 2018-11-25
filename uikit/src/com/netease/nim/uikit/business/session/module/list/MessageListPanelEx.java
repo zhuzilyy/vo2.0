@@ -75,7 +75,7 @@ import java.util.List;
  * 基于RecyclerView的消息收发模块
  * Created by huangjun on 2016/12/27.
  */
-public class MessageListPanelEx {
+public class MessageListPanelEx {//
 
     private static final int REQUEST_CODE_FORWARD_PERSON = 0x01;
     private static final int REQUEST_CODE_FORWARD_TEAM = 0x02;
@@ -286,6 +286,7 @@ public class MessageListPanelEx {
         boolean needScrollToBottom = isLastMessageVisible();
         boolean needRefresh = false;
         List<IMMessage> addedListItems = new ArrayList<>(messages.size());
+
         for (IMMessage message : messages) {
             if (isMyMessage(message)) {
                 items.add(message);
