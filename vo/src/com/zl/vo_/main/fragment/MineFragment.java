@@ -1,6 +1,9 @@
 package com.zl.vo_.main.fragment;
 
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
@@ -49,6 +52,7 @@ public class MineFragment extends MainTabFragment implements View.OnClickListene
     private ImageView iv_guidePravcyFriends,iv_guideLifeNotePwd,iv_guideInfoTrans,iv_guideDeletePravcyFriends;
     private CircleImageView iv_avatar;
     private TextView tv_nickName,tv_voNum;
+    private MyReceiver myReceiver;
     //12345
     //ceshitijiao
     @Override
@@ -60,8 +64,6 @@ public class MineFragment extends MainTabFragment implements View.OnClickListene
         super.onActivityCreated(savedInstanceState);
         onCurrent();
     }
-
-
     private void initViews() {
         iv_guidePravcyFriends=findView(R.id.iv_guidePravcyFriends);
         iv_guideLifeNotePwd=findView(R.id.iv_guideLifeNotePwd);
@@ -92,7 +94,16 @@ public class MineFragment extends MainTabFragment implements View.OnClickListene
         iv_guideInfoTrans.setOnClickListener(this);
         iv_guideDeletePravcyFriends.setOnClickListener(this);
         setDefaultValue();
+        updateAvatar();
     }
+
+    private void updateAvatar() {
+        myReceiver = new MyReceiver();
+        IntentFilter intentFilter = new IntentFilter();
+        intentFilter.addAction("com.action.update.avatar");
+        getActivity().registerReceiver(myReceiver,intentFilter);
+    }
+
     //设置初始化的数据
     private void setDefaultValue() {
         String avatar = (String) SPUtils.get(getActivity(), "avatar", "");
@@ -383,8 +394,22 @@ public class MineFragment extends MainTabFragment implements View.OnClickListene
             }
 
         }
+    }
+    class MyReceiver extends BroadcastReceiver{
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            if (intent.getAction().equals("com.action.update.avatar")){
+                String avatar = intent.getStringExtra("avatar");
+                Glide.with(getActivity()).load(avatar).into(iv_avatar);
+            }
+        }
+    }
 
-
-
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        if (myReceiver!=null){
+            getActivity().unregisterReceiver(myReceiver);
+        }
     }
 }

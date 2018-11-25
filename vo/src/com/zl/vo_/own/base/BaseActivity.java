@@ -103,6 +103,11 @@ public abstract class BaseActivity extends AppCompatActivity {
         intent.putExtra("param",param);
         startActivityForResult(intent,requestCode);
     }
+    //跳转的方法2:ForResult
+    public void jumpActivity(Context context,Class<?> targetActivity,int requestCode){
+        Intent intent=new Intent(context,targetActivity);
+        startActivityForResult(intent,requestCode);
+    }
 
 
     @Override
