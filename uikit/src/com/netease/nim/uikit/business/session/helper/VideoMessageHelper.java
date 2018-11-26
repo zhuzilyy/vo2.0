@@ -223,7 +223,6 @@ public class VideoMessageHelper {
         if (!AttachmentStore.isFileExist(file)) {
             return false;
         }
-
         if (new File(file).length() > C.MAX_LOCAL_VIDEO_FILE_SIZE) {
             Toast.makeText(activity, R.string.im_choose_video_file_size_too_large, Toast.LENGTH_SHORT).show();
             return false;
