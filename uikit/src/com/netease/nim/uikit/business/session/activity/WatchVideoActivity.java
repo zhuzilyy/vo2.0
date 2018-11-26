@@ -3,6 +3,7 @@ package com.netease.nim.uikit.business.session.activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
+import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.media.MediaPlayer.OnCompletionListener;
 import android.media.MediaPlayer.OnErrorListener;
@@ -104,6 +105,8 @@ public class WatchVideoActivity extends UI implements Callback {
     private boolean downloading;
     private ImageView downloadBtn;
     private AbortableFuture downloadFuture;
+    private TextView tv_title,tv_right;
+    private ImageView iv_back;
 
     public static void start(Context context, IMMessage message) {
         Intent intent = new Intent();
@@ -124,13 +127,11 @@ public class WatchVideoActivity extends UI implements Callback {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.nim_watch_video_activity);
-
         ToolBarOptions options = new NimToolBarOptions();
-        options.navigateId = R.drawable.nim_actionbar_white_back_icon;
+        options.navigateId = R.mipmap.back_;
         setToolBar(R.id.toolbar, options);
-
-        parseIntent();
         findViews();
+        parseIntent();
         initActionbar();
 
         showVideoInfo();
@@ -171,6 +172,7 @@ public class WatchVideoActivity extends UI implements Callback {
         message = (IMMessage) getIntent().getSerializableExtra(INTENT_EXTRA_DATA);
         setTitle(String.format("视频发送于%s", TimeUtil.getDateString(message.getTime())));
         isShowMenu = getIntent().getBooleanExtra(INTENT_EXTRA_MENU, true);
+        tv_title.setText(String.format("视频发送于%s", TimeUtil.getDateString(message.getTime())));
     }
 
     private void findViews() {
@@ -204,8 +206,27 @@ public class WatchVideoActivity extends UI implements Callback {
         });
 
         actionBar = getSupportActionBar();
-    }
 
+
+        tv_title = findView(R.id.tv_title);
+        tv_right = findView(R.id.tv_right);
+        tv_right.setVisibility(View.VISIBLE);
+        tv_right.setText("所有视频");
+        iv_back = findView(R.id.iv_back);
+        iv_back.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
+        tv_right.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                WatchPicAndVideoMenuActivity.startActivity(WatchVideoActivity.this, message);
+            }
+        });
+
+    }
     private void initActionbar() {
         TextView menuBtn = findView(R.id.actionbar_menu);
         if (isShowMenu) {

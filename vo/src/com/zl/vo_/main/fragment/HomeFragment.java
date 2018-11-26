@@ -23,9 +23,11 @@ import com.netease.nim.uikit.common.util.log.LogUtil;
 import com.netease.nimlib.sdk.NIMClient;
 import com.netease.nimlib.sdk.Observer;
 import com.netease.nimlib.sdk.msg.MsgService;
+import com.netease.nimlib.sdk.msg.MsgServiceObserve;
 import com.netease.nimlib.sdk.msg.SystemMessageObserver;
 import com.netease.nimlib.sdk.msg.SystemMessageService;
 import com.netease.nimlib.sdk.msg.constant.SessionTypeEnum;
+import com.netease.nimlib.sdk.msg.model.IMMessage;
 import com.netease.nimlib.sdk.msg.model.RecentContact;
 import com.zl.vo_.R;
 import com.zl.vo_.common.ui.viewpager.FadeInOutPageTransformer;
@@ -47,6 +49,7 @@ import com.zl.vo_.team.TeamCreateHelper;
 import com.zl.vo_.team.activity.AdvancedTeamSearchActivity;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -93,7 +96,6 @@ public class HomeFragment extends TFragment implements OnPageChangeListener, Rem
         requestSystemMessageUnreadCount();
         initUnreadCover();
     }
-
     @Override
     public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
         // TO TABS

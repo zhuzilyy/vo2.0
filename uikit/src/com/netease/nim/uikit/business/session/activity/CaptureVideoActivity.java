@@ -32,6 +32,7 @@ import com.netease.nim.uikit.common.ui.dialog.EasyAlertDialogHelper;
 import com.netease.nim.uikit.common.util.file.AttachmentStore;
 import com.netease.nim.uikit.common.util.log.LogUtil;
 import com.netease.nim.uikit.common.util.sys.TimeUtil;
+import com.netease.nim.uikit.dialog.CustomerDialog;
 
 import java.io.File;
 import java.util.Date;
@@ -550,11 +551,32 @@ public class CaptureVideoActivity extends UI implements SurfaceHolder.Callback {
             }
         };
 
-        final EasyAlertDialog dialog = EasyAlertDialogHelper.createOkCancelDiolag(this, null, message, true, listener);
-
+        //final EasyAlertDialog dialog = EasyAlertDialogHelper.createOkCancelDiolag(this, null, message, true, listener);
+        final CustomerDialog customerDialog = new CustomerDialog(this);
+        customerDialog.setDialogTitle("发送视频");
+        customerDialog.setDialogMessage(message);
+        customerDialog.setNoOnclickListener(new CustomerDialog.onNoOnclickListener() {
+            @Override
+            public void onNoClick() {
+                customerDialog.dismiss();
+                cancelRecord();
+            }
+        });
+        customerDialog.setYesOnclickListener(new CustomerDialog.onYesOnclickListener() {
+            @Override
+            public void onYesClick() {
+                customerDialog.dismiss();
+                Intent intent = new Intent();
+                intent.putExtra("duration", duration);
+                intent.putExtra(EXTRA_DATA_FILE_NAME, filename);
+                setResult(RESULT_OK, intent);
+                finish();
+            }
+        });
         if (!isFinishing() && !destroyed) {
-            dialog.show();
+            customerDialog.show();
         }
+
     }
 
     /**

@@ -6,6 +6,9 @@ import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.netease.nim.uikit.R;
 import com.netease.nim.uikit.api.wrapper.NimToolBarOptions;
@@ -38,7 +41,8 @@ public class WatchPicAndVideoMenuActivity extends UI {
     private IMMessage message;
     private MediaAdapter adapter;
     private List<MediaAdapter.MediaItem> mediaItems;
-
+    private TextView tv_title;
+    private ImageView iv_back;
     public static void startActivity(Context context, IMMessage message) {
         Intent intent = new Intent();
         intent.setClass(context, WatchPicAndVideoMenuActivity.class);
@@ -74,6 +78,16 @@ public class WatchPicAndVideoMenuActivity extends UI {
             @Override
             public int getSpanSize(int position) {
                 return adapter.isDateType(position) ? manager.getSpanCount() : 1;
+            }
+        });
+
+        tv_title=findView(R.id.tv_title);
+        tv_title.setText("视频和图片");
+        iv_back=findView(R.id.iv_back);
+        iv_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
             }
         });
     }

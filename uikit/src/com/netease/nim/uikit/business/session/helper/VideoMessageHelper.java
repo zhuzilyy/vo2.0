@@ -147,7 +147,6 @@ public class VideoMessageHelper {
         String md5 = MD5.getStreamMD5(filePath);
         String filename = md5 + "." + FileUtil.getExtensionName(filePath);
         String md5Path = StorageUtil.getWritePath(filename, StorageType.TYPE_VIDEO);
-
         if (AttachmentStore.copy(filePath, md5Path) != -1) {
             if (listener != null) {
                 listener.onVideoPicked(new File(md5Path), md5);
