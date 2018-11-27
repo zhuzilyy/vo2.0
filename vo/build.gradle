@@ -47,13 +47,13 @@ android {
 
     signingConfigs {
         debug {
-            storeFile file('/Users/tianou/Desktop/AndroidContent/keystone/android.keystore')
+            storeFile file('C:/Program Files/Java/jdk1.7.0_67/bin/android.keystore')
             keyAlias 'android.keystore'
             keyPassword '031424'
             storePassword '031424'
         }
         release {
-            storeFile file('/Users/tianou/Desktop/AndroidContent/keystone/android.keystore')
+            storeFile file('C:/Program Files/Java/jdk1.7.0_67/bin/android.keystore')
             storePassword '031424'
             keyAlias 'android.keystore'
             keyPassword '031424'

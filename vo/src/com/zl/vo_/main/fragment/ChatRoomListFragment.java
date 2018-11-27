@@ -2,6 +2,7 @@ package com.zl.vo_.main.fragment;
 
 import com.zl.vo_.R;
 import com.zl.vo_.main.model.MainTab;
+import com.zl.vo_.own.util.WeiboDialogUtils;
 
 /**
  * 聊天室主TAB页
@@ -9,11 +10,9 @@ import com.zl.vo_.main.model.MainTab;
  */
 public class ChatRoomListFragment extends MainTabFragment {
     private com.zl.vo_.chatroom.fragment.ChatRoomListFragment fragment;
-
     public ChatRoomListFragment() {
         setContainerId(MainTab.CHAT_ROOM.fragmentId);
     }
-
     @Override
     protected void onInit() {
         // 采用静态集成，这里不需要做什么了

@@ -4,6 +4,7 @@ import android.content.Context;
 import android.os.Build;
 import android.os.Environment;
 import android.text.TextUtils;
+import android.util.Log;
 
 import java.io.File;
 
@@ -117,6 +118,7 @@ public class StorageUtil {
     }
 
     public static boolean isInvalidVideoFile(String filePath) {
+        Log.i("tag",filePath);
         return filePath.toLowerCase().endsWith(".3gp")
                 || filePath.toLowerCase().endsWith(".mp4");
     }

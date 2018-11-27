@@ -58,7 +58,7 @@ public class SessionTeamCustomization extends SessionCustomization{
                 }
             }
         };
-        infoButton.iconId = R.drawable.nim_ic_message_actionbar_team;
+        infoButton.iconId = R.mipmap.nim_ic_message_actionbar_team;
         //optionsButtons.add(cloudMsgButton);
         optionsButtons.add(infoButton);
         buttons = optionsButtons;

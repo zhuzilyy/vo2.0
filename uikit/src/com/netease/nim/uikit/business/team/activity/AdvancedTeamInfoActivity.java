@@ -1,6 +1,7 @@
 package com.netease.nim.uikit.business.team.activity;
 
 import android.app.Activity;
+import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -42,6 +43,7 @@ import com.netease.nim.uikit.common.ui.dialog.MenuDialog;
 import com.netease.nim.uikit.common.ui.imageview.HeadImageView;
 import com.netease.nim.uikit.common.util.log.LogUtil;
 import com.netease.nim.uikit.common.util.sys.TimeUtil;
+import com.netease.nim.uikit.dialog.WeiboDialogUtils;
 import com.netease.nimlib.sdk.AbortableFuture;
 import com.netease.nimlib.sdk.NIMClient;
 import com.netease.nimlib.sdk.RequestCallback;
@@ -148,6 +150,7 @@ public class AdvancedTeamInfoActivity extends UI implements
     private boolean isSelfManager = false;
     private TextView tv_title;
     private ImageView iv_back;
+    private Dialog loadingDialog;
     public static void start(Context context, String tid) {
         Intent intent = new Intent();
         intent.putExtra(EXTRA_ID, tid);
@@ -191,6 +194,7 @@ public class AdvancedTeamInfoActivity extends UI implements
         loadTeamInfo();
         requestMembers();
         registerObservers(true);
+        loadingDialog = WeiboDialogUtils.createLoadingDialog(this, "正在加载");
     }
 
     @Override
@@ -911,11 +915,13 @@ public class AdvancedTeamInfoActivity extends UI implements
      * 非群主退出群
      */
     private void quitTeam() {
-        DialogMaker.showProgressDialog(this, getString(R.string.empty), true);
+        loadingDialog.show();
+        //DialogMaker.showProgressDialog(this, getString(R.string.empty), true);
         NIMClient.getService(TeamService.class).quitTeam(teamId).setCallback(new RequestCallback<Void>() {
             @Override
             public void onSuccess(Void param) {
-                DialogMaker.dismissProgressDialog();
+                //DialogMaker.dismissProgressDialog();
+                loadingDialog.dismiss();
                 Toast.makeText(AdvancedTeamInfoActivity.this, R.string.quit_team_success, Toast.LENGTH_SHORT).show();
                 setResult(Activity.RESULT_OK, new Intent().putExtra(RESULT_EXTRA_REASON, RESULT_EXTRA_REASON_QUIT));
                 finish();
@@ -923,13 +929,15 @@ public class AdvancedTeamInfoActivity extends UI implements
 
             @Override
             public void onFailed(int code) {
-                DialogMaker.dismissProgressDialog();
+               // DialogMaker.dismissProgressDialog();
+                loadingDialog.dismiss();
                 Toast.makeText(AdvancedTeamInfoActivity.this, R.string.quit_team_failed, Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onException(Throwable exception) {
-                DialogMaker.dismissProgressDialog();
+                //DialogMaker.dismissProgressDialog();
+                loadingDialog.dismiss();
             }
         });
     }
@@ -938,11 +946,13 @@ public class AdvancedTeamInfoActivity extends UI implements
      * 群主解散群(直接退出)
      */
     private void dismissTeam() {
-        DialogMaker.showProgressDialog(this, getString(R.string.empty), true);
+        loadingDialog.show();
+        //DialogMaker.showProgressDialog(this, getString(R.string.empty), true);
         NIMClient.getService(TeamService.class).dismissTeam(teamId).setCallback(new RequestCallback<Void>() {
             @Override
             public void onSuccess(Void param) {
-                DialogMaker.dismissProgressDialog();
+                loadingDialog.dismiss();
+                //DialogMaker.dismissProgressDialog();
                 setResult(Activity.RESULT_OK, new Intent().putExtra(RESULT_EXTRA_REASON, RESULT_EXTRA_REASON_DISMISS));
                 Toast.makeText(AdvancedTeamInfoActivity.this, R.string.dismiss_team_success, Toast.LENGTH_SHORT).show();
                 finish();
@@ -950,13 +960,15 @@ public class AdvancedTeamInfoActivity extends UI implements
 
             @Override
             public void onFailed(int code) {
-                DialogMaker.dismissProgressDialog();
+                loadingDialog.dismiss();
+                //DialogMaker.dismissProgressDialog();
                 Toast.makeText(AdvancedTeamInfoActivity.this, R.string.dismiss_team_failed, Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onException(Throwable exception) {
-                DialogMaker.dismissProgressDialog();
+                //DialogMaker.dismissProgressDialog();
+                loadingDialog.dismiss();
             }
         });
     }
@@ -1004,29 +1016,32 @@ public class AdvancedTeamInfoActivity extends UI implements
                 @Override
                 public void onButtonClick(String name) {
                     teamNotifyDialog.dismiss();
-
                     TeamMessageNotifyTypeEnum type = TeamHelper.getNotifyType(name);
                     if (type == null) {
                         return;
                     }
-                    DialogMaker.showProgressDialog(AdvancedTeamInfoActivity.this, getString(R.string.empty), true);
+                    dialog.show();
+                    //DialogMaker.showProgressDialog(AdvancedTeamInfoActivity.this, getString(R.string.empty), true);
                     NIMClient.getService(TeamService.class).muteTeam(teamId, type).setCallback(new RequestCallback<Void>() {
                         @Override
                         public void onSuccess(Void param) {
-                            DialogMaker.dismissProgressDialog();
+                            //DialogMaker.dismissProgressDialog();
+                            dialog.dismiss();
                             updateTeamNotifyText(team.getMessageNotifyType());
                         }
 
                         @Override
                         public void onFailed(int code) {
-                            DialogMaker.dismissProgressDialog();
+                           // DialogMaker.dismissProgressDialog();
                             teamNotifyDialog.undoLastSelect();
+                            dialog.dismiss();
                             Log.d(TAG, "muteTeam failed code:" + code);
                         }
 
                         @Override
                         public void onException(Throwable exception) {
-                            DialogMaker.dismissProgressDialog();
+                            //DialogMaker.dismissProgressDialog();
+                            dialog.dismiss();
                         }
                     });
                 }
@@ -1148,25 +1163,29 @@ public class AdvancedTeamInfoActivity extends UI implements
      * @param nickname 群昵称
      */
     private void setBusinessCard(final String nickname) {
-        DialogMaker.showProgressDialog(this, getString(R.string.empty), true);
+        loadingDialog.show();
+        //DialogMaker.showProgressDialog(this, getString(R.string.empty), true);
         NIMClient.getService(TeamService.class).updateMemberNick(teamId, NimUIKit.getAccount(), nickname).setCallback(new RequestCallback<Void>() {
             @Override
             public void onSuccess(Void param) {
-                DialogMaker.dismissProgressDialog();
+                loadingDialog.dismiss();
+                //DialogMaker.dismissProgressDialog();
                 teamBusinessCard.setText(nickname);
                 Toast.makeText(AdvancedTeamInfoActivity.this, R.string.update_success, Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onFailed(int code) {
-                DialogMaker.dismissProgressDialog();
+                loadingDialog.dismiss();
+                //DialogMaker.dismissProgressDialog();
                 Toast.makeText(AdvancedTeamInfoActivity.this, String.format(getString(R.string.update_failed), code),
                         Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onException(Throwable exception) {
-                DialogMaker.dismissProgressDialog();
+               // DialogMaker.dismissProgressDialog();
+                loadingDialog.dismiss();
             }
         });
     }
@@ -1197,11 +1216,13 @@ public class AdvancedTeamInfoActivity extends UI implements
      * @param type 验证类型
      */
     private void setAuthen(final VerifyTypeEnum type) {
-        DialogMaker.showProgressDialog(this, getString(R.string.empty));
+        loadingDialog.show();
+        //DialogMaker.showProgressDialog(this, getString(R.string.empty));
         NIMClient.getService(TeamService.class).updateTeam(teamId, TeamFieldEnum.VerifyType, type).setCallback(new RequestCallback<Void>() {
             @Override
             public void onSuccess(Void param) {
-                DialogMaker.dismissProgressDialog();
+                //DialogMaker.dismissProgressDialog();
+                loadingDialog.dismiss();
                 setAuthenticationText(type);
                 Toast.makeText(AdvancedTeamInfoActivity.this, R.string.update_success, Toast.LENGTH_SHORT).show();
             }
@@ -1209,13 +1230,15 @@ public class AdvancedTeamInfoActivity extends UI implements
             @Override
             public void onFailed(int code) {
                 authenDialog.undoLastSelect(); // 撤销选择
-                DialogMaker.dismissProgressDialog();
+                //DialogMaker.dismissProgressDialog();
+                loadingDialog.dismiss();
                 Toast.makeText(AdvancedTeamInfoActivity.this, String.format(getString(R.string.update_failed), code), Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onException(Throwable exception) {
-                DialogMaker.dismissProgressDialog();
+                //DialogMaker.dismissProgressDialog();
+                loadingDialog.dismiss();
             }
         });
     }
@@ -1245,11 +1268,13 @@ public class AdvancedTeamInfoActivity extends UI implements
      * @param type 邀请他人类型
      */
     private void updateInviteMode(final TeamInviteModeEnum type) {
-        DialogMaker.showProgressDialog(this, getString(R.string.empty));
+        loadingDialog.show();
+        //DialogMaker.showProgressDialog(this, getString(R.string.empty));
         NIMClient.getService(TeamService.class).updateTeam(teamId, TeamFieldEnum.InviteMode, type).setCallback(new RequestCallback<Void>() {
             @Override
             public void onSuccess(Void param) {
-                DialogMaker.dismissProgressDialog();
+                loadingDialog.dismiss();
+               // DialogMaker.dismissProgressDialog();
                 updateInviteText(type);
                 Toast.makeText(AdvancedTeamInfoActivity.this, R.string.update_success, Toast.LENGTH_SHORT).show();
             }
@@ -1257,13 +1282,15 @@ public class AdvancedTeamInfoActivity extends UI implements
             @Override
             public void onFailed(int code) {
                 inviteDialog.undoLastSelect(); // 撤销选择
-                DialogMaker.dismissProgressDialog();
+                //DialogMaker.dismissProgressDialog();
+                loadingDialog.dismiss();
                 Toast.makeText(AdvancedTeamInfoActivity.this, String.format(getString(R.string.update_failed), code), Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onException(Throwable exception) {
-                DialogMaker.dismissProgressDialog();
+                //DialogMaker.dismissProgressDialog();
+                loadingDialog.dismiss();
             }
         });
     }
@@ -1283,11 +1310,13 @@ public class AdvancedTeamInfoActivity extends UI implements
      * @param type 群资料修改类型
      */
     private void updateInfoUpdateMode(final TeamUpdateModeEnum type) {
-        DialogMaker.showProgressDialog(this, getString(R.string.empty));
+        loadingDialog.show();
+        //DialogMaker.showProgressDialog(this, getString(R.string.empty));
         NIMClient.getService(TeamService.class).updateTeam(teamId, TeamFieldEnum.TeamUpdateMode, type).setCallback(new RequestCallback<Void>() {
             @Override
             public void onSuccess(Void param) {
-                DialogMaker.dismissProgressDialog();
+                loadingDialog.dismiss();
+                //DialogMaker.dismissProgressDialog();
                 updateInfoUpateText(type);
                 Toast.makeText(AdvancedTeamInfoActivity.this, R.string.update_success, Toast.LENGTH_SHORT).show();
             }
@@ -1295,13 +1324,15 @@ public class AdvancedTeamInfoActivity extends UI implements
             @Override
             public void onFailed(int code) {
                 teamInfoUpdateDialog.undoLastSelect(); // 撤销选择
-                DialogMaker.dismissProgressDialog();
+                loadingDialog.dismiss();
+                //DialogMaker.dismissProgressDialog();
                 Toast.makeText(AdvancedTeamInfoActivity.this, String.format(getString(R.string.update_failed), code), Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onException(Throwable exception) {
-                DialogMaker.dismissProgressDialog();
+                //DialogMaker.dismissProgressDialog();
+                loadingDialog.dismiss();
             }
         });
     }
@@ -1321,13 +1352,14 @@ public class AdvancedTeamInfoActivity extends UI implements
      * @param type 被邀请人类型
      */
     private void updateBeInvitedMode(final TeamBeInviteModeEnum type) {
-        DialogMaker.showProgressDialog(this, getString(R.string.empty));
+        loadingDialog.show();
+        //DialogMaker.showProgressDialog(this, getString(R.string.empty));
         NIMClient.getService(TeamService.class).updateTeam(teamId, TeamFieldEnum.BeInviteMode, type).setCallback(new RequestCallback<Void>() {
             @Override
             public void onSuccess(Void param) {
 
-
-                DialogMaker.dismissProgressDialog();
+                loadingDialog.dismiss();
+               // DialogMaker.dismissProgressDialog();
                 updateBeInvitedText(type);
                 Toast.makeText(AdvancedTeamInfoActivity.this, R.string.update_success, Toast.LENGTH_SHORT).show();
             }
@@ -1335,13 +1367,15 @@ public class AdvancedTeamInfoActivity extends UI implements
             @Override
             public void onFailed(int code) {
                 teamInviteeDialog.undoLastSelect(); // 撤销选择
-                DialogMaker.dismissProgressDialog();
+                loadingDialog.dismiss();
+               // DialogMaker.dismissProgressDialog();
                 Toast.makeText(AdvancedTeamInfoActivity.this, String.format(getString(R.string.update_failed), code), Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onException(Throwable exception) {
-                DialogMaker.dismissProgressDialog();
+               // DialogMaker.dismissProgressDialog();
+                loadingDialog.dismiss();
             }
         });
     }
@@ -1434,12 +1468,13 @@ public class AdvancedTeamInfoActivity extends UI implements
         if (file == null) {
             return;
         }
-        DialogMaker.showProgressDialog(this, null, null, true, new DialogInterface.OnCancelListener() {
+       /* DialogMaker.showProgressDialog(this, null, null, true, new DialogInterface.OnCancelListener() {
             @Override
             public void onCancel(DialogInterface dialog) {
                 cancelUpload(R.string.team_update_cancel);
             }
-        }).setCanceledOnTouchOutside(true);
+        }).setCanceledOnTouchOutside(true);*/
+        loadingDialog.show();
 
         LogUtil.i(TAG, "start upload icon, local file path=" + file.getAbsolutePath());
         new Handler().postDelayed(outimeTask, ICON_TIME_OUT);
@@ -1453,20 +1488,23 @@ public class AdvancedTeamInfoActivity extends UI implements
                     NIMClient.getService(TeamService.class).updateTeam(teamId, TeamFieldEnum.ICON, url).setCallback(new RequestCallback<Void>() {
                         @Override
                         public void onSuccess(Void param) {
-                            DialogMaker.dismissProgressDialog();
+                            loadingDialog.dismiss();
+                            //DialogMaker.dismissProgressDialog();
                             Toast.makeText(AdvancedTeamInfoActivity.this, R.string.update_success, Toast.LENGTH_SHORT).show();
                             onUpdateDone();
                         }
 
                         @Override
                         public void onFailed(int code) {
-                            DialogMaker.dismissProgressDialog();
+                            loadingDialog.dismiss();
+                            //DialogMaker.dismissProgressDialog();
                             Toast.makeText(AdvancedTeamInfoActivity.this, String.format(getString(R.string.update_failed), code), Toast.LENGTH_SHORT).show();
                         }
 
                         @Override
                         public void onException(Throwable exception) {
-                            DialogMaker.dismissProgressDialog();
+                            //DialogMaker.dismissProgressDialog();
+                            loadingDialog.dismiss();
                         }
                     }); // 更新资料
                 } else {
@@ -1495,6 +1533,7 @@ public class AdvancedTeamInfoActivity extends UI implements
 
     private void onUpdateDone() {
         uploadFuture = null;
-        DialogMaker.dismissProgressDialog();
+        //DialogMaker.dismissProgressDialog();
+        loadingDialog.dismiss();
     }
 }

@@ -4,6 +4,6 @@
     <item android:drawable="@color/mainColor" android:state_enabled="false"/>
     <item android:drawable="@color/mainColor"/>-->
     <solid android:color="@color/mainColor"/>
-    <corners android:radius="5dp"/>
+    <corners android:radius="4dp"/>
 
 </shape>

@@ -731,14 +731,14 @@ public final class R {
         public static final int notification_bg_normal = 0x7f02029d;
         public static final int notification_bg_normal_pressed = 0x7f02029e;
         public static final int notification_icon_background = 0x7f0202a0;
-        public static final int notification_template_icon_bg = 0x7f020325;
-        public static final int notification_template_icon_low_bg = 0x7f020326;
+        public static final int notification_template_icon_bg = 0x7f020326;
+        public static final int notification_template_icon_low_bg = 0x7f020327;
         public static final int notification_tile_bg = 0x7f0202a1;
         public static final int notify_panel_notification_icon_bg = 0x7f0202a2;
         public static final int tooltip_frame_dark = 0x7f020305;
         public static final int tooltip_frame_light = 0x7f020306;
-        public static final int zero_blur_level_item_selected = 0x7f020322;
-        public static final int zero_blur_level_item_unselected = 0x7f020323;
+        public static final int zero_blur_level_item_selected = 0x7f020323;
+        public static final int zero_blur_level_item_unselected = 0x7f020324;
     }
     public static final class id {
         public static final int action0 = 0x7f10051d;
@@ -952,13 +952,13 @@ public final class R {
         public static final int item0501 = 0x7f030040;
         public static final int mood = 0x7f030056;
         public static final int nature = 0x7f03005b;
-        public static final int princesscrown = 0x7f030063;
-        public static final int slowlived = 0x7f03006e;
-        public static final int tears = 0x7f03006f;
-        public static final int tiara = 0x7f030071;
-        public static final int tokyo = 0x7f030072;
-        public static final int warm = 0x7f03007e;
-        public static final int yellowear = 0x7f030083;
+        public static final int princesscrown = 0x7f030065;
+        public static final int slowlived = 0x7f030070;
+        public static final int tears = 0x7f030071;
+        public static final int tiara = 0x7f030073;
+        public static final int tokyo = 0x7f030074;
+        public static final int warm = 0x7f030081;
+        public static final int yellowear = 0x7f030086;
     }
     public static final class string {
         public static final int abc_action_bar_home_description = 0x7f090000;

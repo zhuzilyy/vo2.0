@@ -22,6 +22,8 @@ public final class R {
         public static final int design_bottom_sheet_slide_out = 0x7f05000d;
         public static final int design_snackbar_in = 0x7f05000e;
         public static final int design_snackbar_out = 0x7f05000f;
+        public static final int dialog_enter_shopping = 0x7f050010;
+        public static final int dialog_exit_shopping = 0x7f050011;
         public static final int tooltip_enter = 0x7f050032;
         public static final int tooltip_exit = 0x7f050033;
     }
@@ -950,6 +952,8 @@ public final class R {
         public static final int design_ic_visibility_off = 0x7f0200d5;
         public static final int design_password_eye = 0x7f0200d6;
         public static final int design_snackbar_background = 0x7f0200d7;
+        public static final int dialog_loading = 0x7f0200d9;
+        public static final int dialog_loading_img = 0x7f0200da;
         public static final int gray = 0x7f02010e;
         public static final int icon_trans = 0x7f020130;
         public static final int navigation_empty_icon = 0x7f0201cb;
@@ -1150,8 +1154,8 @@ public final class R {
         public static final int notification_bg_normal = 0x7f02029d;
         public static final int notification_bg_normal_pressed = 0x7f02029e;
         public static final int notification_icon_background = 0x7f0202a0;
-        public static final int notification_template_icon_bg = 0x7f020325;
-        public static final int notification_template_icon_low_bg = 0x7f020326;
+        public static final int notification_template_icon_bg = 0x7f020326;
+        public static final int notification_template_icon_low_bg = 0x7f020327;
         public static final int notification_tile_bg = 0x7f0202a1;
         public static final int notify_panel_notification_icon_bg = 0x7f0202a2;
         public static final int openversion = 0x7f0202a4;
@@ -1162,7 +1166,8 @@ public final class R {
         public static final int shape_first_item = 0x7f0202d3;
         public static final int tooltip_frame_dark = 0x7f020305;
         public static final int tooltip_frame_light = 0x7f020306;
-        public static final int zi = 0x7f020324;
+        public static final int voice = 0x7f020320;
+        public static final int zi = 0x7f020325;
     }
     public static final class id {
         public static final int BaseQuickAdapter_databinding_support = 0x7f100000;
@@ -1263,6 +1268,7 @@ public final class R {
         public static final int design_menu_item_action_area_stub = 0x7f1001d5;
         public static final int design_menu_item_text = 0x7f1001d4;
         public static final int design_navigation_view = 0x7f1001d3;
+        public static final int dialog_loading_view = 0x7f1001e0;
         public static final int discussion_name = 0x7f1004fa;
         public static final int divider = 0x7f10040f;
         public static final int divider_line = 0x7f100475;
@@ -1448,6 +1454,7 @@ public final class R {
         public static final int popup_menu_icon = 0x7f1004d9;
         public static final int popup_menu_title = 0x7f1004da;
         public static final int portrait_panel = 0x7f1003cf;
+        public static final int progressBar1 = 0x7f1001e1;
         public static final int progress_circular = 0x7f10000f;
         public static final int progress_horizontal = 0x7f100010;
         public static final int quit_team = 0x7f1004f5;
@@ -1571,6 +1578,7 @@ public final class R {
         public static final int timer = 0x7f10042d;
         public static final int timer_tip = 0x7f10042f;
         public static final int timer_tip_container = 0x7f10042e;
+        public static final int tipTextView = 0x7f1001e2;
         public static final int title = 0x7f100022;
         public static final int titleDividerNoCustom = 0x7f1000ae;
         public static final int title_template = 0x7f1000ac;
@@ -1677,6 +1685,7 @@ public final class R {
         public static final int design_text_input_password_icon = 0x7f04006d;
         public static final int dialog_customer = 0x7f04006f;
         public static final int dialog_edittext_customer = 0x7f040070;
+        public static final int dialog_loading = 0x7f040071;
         public static final int layout_title = 0x7f040105;
         public static final int nim_action_bar_custom_view = 0x7f04011b;
         public static final int nim_action_bar_right_clickable_tv = 0x7f04011c;
@@ -1813,7 +1822,9 @@ public final class R {
         public static final int create_chattingroom = 0x7f030011;
         public static final int dialog_close = 0x7f030015;
         public static final int gray = 0x7f030024;
-        public static final int zi = 0x7f030084;
+        public static final int nim_picker_image_selected = 0x7f03005e;
+        public static final int voice = 0x7f030080;
+        public static final int zi = 0x7f030087;
     }
     public static final class raw {
         public static final int audio_end_tip = 0x7f080000;
@@ -2240,6 +2251,7 @@ public final class R {
         public static final int Base_Widget_Design_AppBarLayout = 0x7f0b0081;
         public static final int Base_Widget_Design_TabLayout = 0x7f0b00e2;
         public static final int DarkTheme = 0x7f0b00e4;
+        public static final int MyDialogStyle = 0x7f0b00f5;
         public static final int Platform_AppCompat = 0x7f0b001f;
         public static final int Platform_AppCompat_Light = 0x7f0b0020;
         public static final int Platform_ThemeOverlay_AppCompat = 0x7f0b0082;
@@ -2254,6 +2266,7 @@ public final class R {
         public static final int Platform_V25_AppCompat = 0x7f0b009c;
         public static final int Platform_V25_AppCompat_Light = 0x7f0b009d;
         public static final int Platform_Widget_AppCompat_Spinner = 0x7f0b0023;
+        public static final int PopWindowAnimStyle = 0x7f0b00f6;
         public static final int RtlOverlay_DialogWindowTitle_AppCompat = 0x7f0b002c;
         public static final int RtlOverlay_Widget_AppCompat_ActionBar_TitleItem = 0x7f0b002d;
         public static final int RtlOverlay_Widget_AppCompat_DialogTitle_Icon = 0x7f0b002e;

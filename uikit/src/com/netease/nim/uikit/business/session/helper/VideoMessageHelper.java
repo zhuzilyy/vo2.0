@@ -138,7 +138,6 @@ public class VideoMessageHelper {
         if (data == null) {
             return;
         }
-
         String filePath = filePathFromIntent(data);
         if (StringUtil.isEmpty(filePath) || !checkVideoFile(filePath)) {
             return;

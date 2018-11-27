@@ -100,6 +100,7 @@
             android:scaleType="center" />
 
         <TextView
+            android:layout_marginBottom="1dp"
             android:padding="5dp"
             android:id="@+id/buttonSendMessage"
             android:layout_width="wrap_content"
