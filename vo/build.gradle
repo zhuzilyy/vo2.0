@@ -176,5 +176,4 @@ dependencies {
     compile 'org.xutils:xutils:3.5.0'
 }
 
-
 apply plugin: 'com.google.gms.google-services'
