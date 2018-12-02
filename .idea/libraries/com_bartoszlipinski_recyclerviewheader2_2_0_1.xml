@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="com.bartoszlipinski:recyclerviewheader2-2.0.1">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/recyclerviewheader2-2.0.1.aar/4e01a97ed89388975fa780d8536ed1b3/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/recyclerviewheader2-2.0.1.aar/4e01a97ed89388975fa780d8536ed1b3/res" />
+      <root url="jar://$USER_HOME$/.gradle/wrapper/dists/gradle-3.3-all/caches/transforms-1/files-1.1/recyclerviewheader2-2.0.1.aar/1c4386f2b3bec76a662116c09fa25744/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/wrapper/dists/gradle-3.3-all/caches/transforms-1/files-1.1/recyclerviewheader2-2.0.1.aar/1c4386f2b3bec76a662116c09fa25744/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

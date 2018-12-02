@@ -1,33 +1,33 @@
 -- Merging decision tree log ---
 manifest
-ADDED from E:\studioWorkspace\vo2.0\faceunity\AndroidManifest.xml:1:1-10:12
-INJECTED from E:\studioWorkspace\vo2.0\faceunity\AndroidManifest.xml:1:1-10:12
-INJECTED from E:\studioWorkspace\vo2.0\faceunity\AndroidManifest.xml:1:1-10:12
+ADDED from D:\Android\StudioContent3.0\vo2.0\faceunity\AndroidManifest.xml:1:1-10:12
+INJECTED from D:\Android\StudioContent3.0\vo2.0\faceunity\AndroidManifest.xml:1:1-10:12
+INJECTED from D:\Android\StudioContent3.0\vo2.0\faceunity\AndroidManifest.xml:1:1-10:12
 	package
-		ADDED from E:\studioWorkspace\vo2.0\faceunity\AndroidManifest.xml:3:5-28
-		INJECTED from E:\studioWorkspace\vo2.0\faceunity\AndroidManifest.xml
-		INJECTED from E:\studioWorkspace\vo2.0\faceunity\AndroidManifest.xml
+		ADDED from D:\Android\StudioContent3.0\vo2.0\faceunity\AndroidManifest.xml:3:5-28
+		INJECTED from D:\Android\StudioContent3.0\vo2.0\faceunity\AndroidManifest.xml
+		INJECTED from D:\Android\StudioContent3.0\vo2.0\faceunity\AndroidManifest.xml
 	xmlns:android
-		ADDED from E:\studioWorkspace\vo2.0\faceunity\AndroidManifest.xml:1:11-69
+		ADDED from D:\Android\StudioContent3.0\vo2.0\faceunity\AndroidManifest.xml:1:11-69
 application
-ADDED from E:\studioWorkspace\vo2.0\faceunity\AndroidManifest.xml:5:5-8:19
+ADDED from D:\Android\StudioContent3.0\vo2.0\faceunity\AndroidManifest.xml:5:5-8:19
 	android:supportsRtl
-		ADDED from E:\studioWorkspace\vo2.0\faceunity\AndroidManifest.xml:6:9-35
+		ADDED from D:\Android\StudioContent3.0\vo2.0\faceunity\AndroidManifest.xml:6:9-35
 	android:label
-		ADDED from E:\studioWorkspace\vo2.0\faceunity\AndroidManifest.xml:5:45-77
+		ADDED from D:\Android\StudioContent3.0\vo2.0\faceunity\AndroidManifest.xml:5:45-77
 	android:allowBackup
-		ADDED from E:\studioWorkspace\vo2.0\faceunity\AndroidManifest.xml:5:18-44
+		ADDED from D:\Android\StudioContent3.0\vo2.0\faceunity\AndroidManifest.xml:5:18-44
 uses-sdk
-INJECTED from E:\studioWorkspace\vo2.0\faceunity\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from E:\studioWorkspace\vo2.0\faceunity\AndroidManifest.xml
-INJECTED from E:\studioWorkspace\vo2.0\faceunity\AndroidManifest.xml
-INJECTED from E:\studioWorkspace\vo2.0\faceunity\AndroidManifest.xml
-INJECTED from E:\studioWorkspace\vo2.0\faceunity\AndroidManifest.xml
+INJECTED from D:\Android\StudioContent3.0\vo2.0\faceunity\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from D:\Android\StudioContent3.0\vo2.0\faceunity\AndroidManifest.xml
+INJECTED from D:\Android\StudioContent3.0\vo2.0\faceunity\AndroidManifest.xml
+INJECTED from D:\Android\StudioContent3.0\vo2.0\faceunity\AndroidManifest.xml
+INJECTED from D:\Android\StudioContent3.0\vo2.0\faceunity\AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from E:\studioWorkspace\vo2.0\faceunity\AndroidManifest.xml
-		ADDED from E:\studioWorkspace\vo2.0\faceunity\AndroidManifest.xml
-		INJECTED from E:\studioWorkspace\vo2.0\faceunity\AndroidManifest.xml
+		INJECTED from D:\Android\StudioContent3.0\vo2.0\faceunity\AndroidManifest.xml
+		ADDED from D:\Android\StudioContent3.0\vo2.0\faceunity\AndroidManifest.xml
+		INJECTED from D:\Android\StudioContent3.0\vo2.0\faceunity\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from E:\studioWorkspace\vo2.0\faceunity\AndroidManifest.xml
-		ADDED from E:\studioWorkspace\vo2.0\faceunity\AndroidManifest.xml
-		INJECTED from E:\studioWorkspace\vo2.0\faceunity\AndroidManifest.xml
+		INJECTED from D:\Android\StudioContent3.0\vo2.0\faceunity\AndroidManifest.xml
+		ADDED from D:\Android\StudioContent3.0\vo2.0\faceunity\AndroidManifest.xml
+		INJECTED from D:\Android\StudioContent3.0\vo2.0\faceunity\AndroidManifest.xml
