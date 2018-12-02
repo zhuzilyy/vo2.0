@@ -174,6 +174,16 @@ dependencies {
     compile 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.4@aar'
     compile 'io.reactivex.rxjava2:rxjava:2.1.0'
     compile 'org.xutils:xutils:3.5.0'
+
+
+
+
+
+
+
+
+
+    //测试提交
 }
 
 apply plugin: 'com.google.gms.google-services'

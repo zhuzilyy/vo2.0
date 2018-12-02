@@ -692,7 +692,7 @@
         <activity android:name=".own.ui.account.ui.RegisterActivity"
             android:screenOrientation="portrait"
             />
-        <!--注册-->
+        <!--登录-->
         <activity android:name=".own.ui.account.ui.LoginActivity"
             android:screenOrientation="portrait"
             />
