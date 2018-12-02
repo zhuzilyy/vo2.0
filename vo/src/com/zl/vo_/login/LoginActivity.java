@@ -87,7 +87,6 @@ public class LoginActivity extends UI implements OnKeyListener {
         intent.putExtra(KICK_OUT, kickOut);
         context.startActivity(intent);
     }
-
     @Override
     protected boolean displayHomeAsUpEnabled() {
         return false;
