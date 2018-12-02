@@ -15,9 +15,9 @@ import java.lang.Override;
 public class CustomerDialog_ViewBinding<T extends CustomerDialog> implements Unbinder {
   protected T target;
 
-  private View view2131755486;
+  private View view2131755493;
 
-  private View view2131755483;
+  private View view2131755490;
 
   @UiThread
   public CustomerDialog_ViewBinding(final T target, View source) {
@@ -28,7 +28,7 @@ public class CustomerDialog_ViewBinding<T extends CustomerDialog> implements Unb
     target.tv_dialogContent = Utils.findRequiredViewAsType(source, R.id.tv_dialogContent, "field 'tv_dialogContent'", TextView.class);
     view = Utils.findRequiredView(source, R.id.tv_dialog_confrim, "field 'tv_dialogConfrim' and method 'click'");
     target.tv_dialogConfrim = Utils.castView(view, R.id.tv_dialog_confrim, "field 'tv_dialogConfrim'", TextView.class);
-    view2131755486 = view;
+    view2131755493 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -36,7 +36,7 @@ public class CustomerDialog_ViewBinding<T extends CustomerDialog> implements Unb
       }
     });
     view = Utils.findRequiredView(source, R.id.rl_cancel, "method 'click'");
-    view2131755483 = view;
+    view2131755490 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -55,10 +55,10 @@ public class CustomerDialog_ViewBinding<T extends CustomerDialog> implements Unb
     target.tv_dialogContent = null;
     target.tv_dialogConfrim = null;
 
-    view2131755486.setOnClickListener(null);
-    view2131755486 = null;
-    view2131755483.setOnClickListener(null);
-    view2131755483 = null;
+    view2131755493.setOnClickListener(null);
+    view2131755493 = null;
+    view2131755490.setOnClickListener(null);
+    view2131755490 = null;
 
     this.target = null;
   }

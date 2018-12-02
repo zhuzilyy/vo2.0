@@ -28,7 +28,6 @@ import com.zl.vo_.own.dialog.LifeNotePwdSettingDialog;
 import com.zl.vo_.own.dialog.PrivateFriendsDialog;
 import com.zl.vo_.own.dialog.VipDialog;
 import com.zl.vo_.own.dialog.VipFunctionIntroduceDialog;
-import com.zl.vo_.own.ui.account.LoginActivity;
 import com.zl.vo_.own.ui.mine.ui.CancleLifeNotePwdActivity;
 import com.zl.vo_.own.ui.mine.ui.ChangePrivateFriendsActivity;
 import com.zl.vo_.own.ui.mine.ui.FindLifeNotePwdActivity;
@@ -181,7 +180,7 @@ public class MineFragment extends MainTabFragment implements View.OnClickListene
         // 清理缓存&注销监听
         LogoutHelper.logout();
         // 启动登录
-        Intent intent=new Intent(getActivity(), LoginActivity.class);
+        Intent intent=new Intent(getActivity(), com.zl.vo_.own.ui.account.ui.LoginActivity.class);
         startActivity(intent);
     }
     //设置加密好友

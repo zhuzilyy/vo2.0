@@ -10,19 +10,15 @@ import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.netease.nim.uikit.common.ui.widget.SwitchButton;
-import com.netease.nimlib.sdk.friend.constant.VerifyType;
 import com.zl.vo_.R;
 import com.zl.vo_.config.preference.UserPreferences;
-import com.zl.vo_.contact.activity.UserProfileActivity;
 import com.zl.vo_.own.api.ApiAccount;
 import com.zl.vo_.own.api.ApiConstant;
 import com.zl.vo_.own.base.BaseActivity;
 import com.zl.vo_.own.listener.OnRequestDataListener;
-import com.zl.vo_.own.ui.account.LoginActivity;
 import com.zl.vo_.own.ui.account.bean.UserInfoBean;
 import com.zl.vo_.own.ui.account.bean.UserInfoData;
 import com.zl.vo_.own.util.SPUtils;
-import com.zl.vo_.own.views.EaseSwitchButton;
 
 import java.util.HashMap;
 import java.util.Map;

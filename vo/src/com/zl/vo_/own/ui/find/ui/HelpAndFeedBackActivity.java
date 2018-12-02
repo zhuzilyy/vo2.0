@@ -7,7 +7,7 @@ import android.widget.TextView;
 import com.zl.vo_.R;
 import com.zl.vo_.own.api.ApiConstant;
 import com.zl.vo_.own.base.BaseActivity;
-import com.zl.vo_.own.ui.account.WebViweActivity;
+import com.zl.vo_.own.ui.account.ui.WebViweActivity;
 
 import butterknife.BindView;
 import butterknife.OnClick;

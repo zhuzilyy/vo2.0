@@ -15,7 +15,7 @@ import java.lang.Override;
 public class FixLifeNotePwdActivity_ViewBinding<T extends FixLifeNotePwdActivity> implements Unbinder {
   protected T target;
 
-  private View view2131755349;
+  private View view2131755356;
 
   @UiThread
   public FixLifeNotePwdActivity_ViewBinding(final T target, View source) {
@@ -24,7 +24,7 @@ public class FixLifeNotePwdActivity_ViewBinding<T extends FixLifeNotePwdActivity
     View view;
     target.tv_title = Utils.findRequiredViewAsType(source, R.id.tv_title, "field 'tv_title'", TextView.class);
     view = Utils.findRequiredView(source, R.id.iv_back, "method 'click'");
-    view2131755349 = view;
+    view2131755356 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -41,8 +41,8 @@ public class FixLifeNotePwdActivity_ViewBinding<T extends FixLifeNotePwdActivity
 
     target.tv_title = null;
 
-    view2131755349.setOnClickListener(null);
-    view2131755349 = null;
+    view2131755356.setOnClickListener(null);
+    view2131755356 = null;
 
     this.target = null;
   }

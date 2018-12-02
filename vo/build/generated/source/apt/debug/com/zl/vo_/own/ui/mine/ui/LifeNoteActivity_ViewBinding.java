@@ -17,7 +17,7 @@ import java.lang.Override;
 public class LifeNoteActivity_ViewBinding<T extends LifeNoteActivity> implements Unbinder {
   protected T target;
 
-  private View view2131755349;
+  private View view2131755356;
 
   @UiThread
   public LifeNoteActivity_ViewBinding(final T target, View source) {
@@ -28,7 +28,7 @@ public class LifeNoteActivity_ViewBinding<T extends LifeNoteActivity> implements
     target.rv_lifeNote = Utils.findRequiredViewAsType(source, R.id.rv_lifeNote, "field 'rv_lifeNote'", RecyclerView.class);
     target.swipe_refresh_layout = Utils.findRequiredViewAsType(source, R.id.swipe_refresh_layout, "field 'swipe_refresh_layout'", SwipeRefreshLayout.class);
     view = Utils.findRequiredView(source, R.id.iv_back, "method 'onClick'");
-    view2131755349 = view;
+    view2131755356 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -47,8 +47,8 @@ public class LifeNoteActivity_ViewBinding<T extends LifeNoteActivity> implements
     target.rv_lifeNote = null;
     target.swipe_refresh_layout = null;
 
-    view2131755349.setOnClickListener(null);
-    view2131755349 = null;
+    view2131755356.setOnClickListener(null);
+    view2131755356 = null;
 
     this.target = null;
   }

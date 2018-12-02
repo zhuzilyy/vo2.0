@@ -15,7 +15,6 @@ import com.zl.vo_.own.api.ApiMine;
 import com.zl.vo_.own.api.ReqResCodeForVo;
 import com.zl.vo_.own.base.BaseActivity;
 import com.zl.vo_.own.listener.OnRequestDataListener;
-import com.zl.vo_.own.ui.account.LoginActivity;
 import com.zl.vo_.own.ui.account.bean.UserInfoBean;
 import com.zl.vo_.own.ui.account.bean.UserInfoData;
 import com.zl.vo_.own.util.SPUtils;

@@ -16,13 +16,13 @@ import java.lang.Override;
 public class MainActivity_ViewBinding<T extends MainActivity> implements Unbinder {
   protected T target;
 
-  private View view2131755291;
-
-  private View view2131755295;
-
   private View view2131755298;
 
   private View view2131755302;
+
+  private View view2131755305;
+
+  private View view2131755309;
 
   @UiThread
   public MainActivity_ViewBinding(final T target, View source) {
@@ -38,22 +38,6 @@ public class MainActivity_ViewBinding<T extends MainActivity> implements Unbinde
     target.tv_find = Utils.findRequiredViewAsType(source, R.id.tv_find, "field 'tv_find'", TextView.class);
     target.tv_mine = Utils.findRequiredViewAsType(source, R.id.tv_mine, "field 'tv_mine'", TextView.class);
     view = Utils.findRequiredView(source, R.id.rl_msg, "method 'click'");
-    view2131755291 = view;
-    view.setOnClickListener(new DebouncingOnClickListener() {
-      @Override
-      public void doClick(View p0) {
-        target.click(p0);
-      }
-    });
-    view = Utils.findRequiredView(source, R.id.ll_frineds, "method 'click'");
-    view2131755295 = view;
-    view.setOnClickListener(new DebouncingOnClickListener() {
-      @Override
-      public void doClick(View p0) {
-        target.click(p0);
-      }
-    });
-    view = Utils.findRequiredView(source, R.id.rl_find, "method 'click'");
     view2131755298 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
@@ -61,8 +45,24 @@ public class MainActivity_ViewBinding<T extends MainActivity> implements Unbinde
         target.click(p0);
       }
     });
-    view = Utils.findRequiredView(source, R.id.ll_mine, "method 'click'");
+    view = Utils.findRequiredView(source, R.id.ll_frineds, "method 'click'");
     view2131755302 = view;
+    view.setOnClickListener(new DebouncingOnClickListener() {
+      @Override
+      public void doClick(View p0) {
+        target.click(p0);
+      }
+    });
+    view = Utils.findRequiredView(source, R.id.rl_find, "method 'click'");
+    view2131755305 = view;
+    view.setOnClickListener(new DebouncingOnClickListener() {
+      @Override
+      public void doClick(View p0) {
+        target.click(p0);
+      }
+    });
+    view = Utils.findRequiredView(source, R.id.ll_mine, "method 'click'");
+    view2131755309 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -86,14 +86,14 @@ public class MainActivity_ViewBinding<T extends MainActivity> implements Unbinde
     target.tv_find = null;
     target.tv_mine = null;
 
-    view2131755291.setOnClickListener(null);
-    view2131755291 = null;
-    view2131755295.setOnClickListener(null);
-    view2131755295 = null;
     view2131755298.setOnClickListener(null);
     view2131755298 = null;
     view2131755302.setOnClickListener(null);
     view2131755302 = null;
+    view2131755305.setOnClickListener(null);
+    view2131755305 = null;
+    view2131755309.setOnClickListener(null);
+    view2131755309 = null;
 
     this.target = null;
   }

@@ -9,7 +9,7 @@ import android.widget.Toast;
 
 import com.zl.vo_.own.callback.RequestCallBack;
 import com.zl.vo_.own.listener.OnRequestDataListener;
-import com.zl.vo_.own.ui.account.LoginActivity;
+import com.zl.vo_.own.ui.account.ui.LoginActivity;
 import com.zl.vo_.own.util.InternetUtil;
 import com.zl.vo_.own.util.OkHttpManager;
 import com.zl.vo_.own.util.SPUtils;
@@ -46,6 +46,22 @@ public class ApiAccount {
     /*获取验证码*/
     public static void getConfirmCode(final Context context, Map<String,String> params, final OnRequestDataListener listener) {
         Dialog dialog = WeiboDialogUtils.createLoadingDialog(context, "加载中");
+        excutePost(ApiConstant.GET_CONFIRM_CODE,"two", context, params,dialog, listener);
+    }
+    /*微信绑定*/
+    public static void wxBind(final Context context, Map<String,String> params, final OnRequestDataListener listener) {
+        Dialog dialog = WeiboDialogUtils.createLoadingDialog(context, "加载中");
+        excutePost(ApiConstant.WX_BIND,"one", context, params,dialog, listener);
+    }
+    /*微信注册*/
+    public static void wxRegister(final Context context, Map<String,String> params, final OnRequestDataListener listener) {
+        Dialog dialog = WeiboDialogUtils.createLoadingDialog(context, "加载中");
+        excutePost(ApiConstant.WX_REGISTER,"one", context, params,dialog, listener);
+    }
+    /*微信登录*/
+    public static void wechatLogin(final Context context, Map<String,String> params, final OnRequestDataListener listener) {
+        Dialog dialog = WeiboDialogUtils.createLoadingDialog(context, "加载中");
+        excutePost(ApiConstant.WECHAT_LOGIN, "one",context, params,dialog, listener);
         //excutePost("http://www.xfxhfgs.cn/index.php/user/VoUser/sendCode/2", context, params,dialog, listener);
     }
     protected static void excutePost(final String url,String typeHeader,final Context context, Map<String,String> params,final Dialog dialog, final OnRequestDataListener listener) {
@@ -61,7 +77,6 @@ public class ApiAccount {
                 if (!TextUtils.isEmpty(token)){
                     SPUtils.put(context,"cloudToken",token);
                 }
-                Log.i("tag",token+"===token====");
                 if(null != context){
                     if(dialog != null && null != dialog.getContext() && null != dialog.getWindow())
                         dialog.dismiss();

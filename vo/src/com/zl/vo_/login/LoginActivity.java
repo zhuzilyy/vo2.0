@@ -83,7 +83,7 @@ public class LoginActivity extends UI implements OnKeyListener {
     }
 
     public static void start(Context context, boolean kickOut) {
-        Intent intent = new Intent(context, com.zl.vo_.own.ui.account.LoginActivity.class);
+        Intent intent = new Intent(context, com.zl.vo_.own.ui.account.ui.LoginActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
         intent.putExtra(KICK_OUT, kickOut);
         context.startActivity(intent);

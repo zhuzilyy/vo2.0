@@ -9,7 +9,7 @@ import android.widget.Toast;
 
 import com.zl.vo_.own.callback.RequestCallBack;
 import com.zl.vo_.own.listener.OnRequestDataListener;
-import com.zl.vo_.own.ui.account.LoginActivity;
+import com.zl.vo_.own.ui.account.ui.LoginActivity;
 import com.zl.vo_.own.util.InternetUtil;
 import com.zl.vo_.own.util.OkHttpManager;
 import com.zl.vo_.own.util.SPUtils;

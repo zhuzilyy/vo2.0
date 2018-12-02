@@ -42,6 +42,14 @@ public class ApiConstant {
     public static final String INSERT_FRIEND=BASE_URL+"/api/v1/friend/insert";
     //删除好友
     public static final String DELETE_FRIEND=BASE_URL+"/api/v1/friend/delete";
+    //微信登录
+    public static final String WECHAT_LOGIN=BASE_URL+"/api/v1/WeChatLogin";
+    //获取验证码
+    public static final String GET_CONFIRM_CODE=BASE_URL+"/api/v1/sendSms";
+    //微信注册
+    public static final String WX_REGISTER=BASE_URL+"/api/v1/WeChatRegister";
+    //微信绑定
+    public static final String WX_BIND=BASE_URL+"/api/v1/WeChatBind";
 
 
 

@@ -8,7 +8,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.zl.vo_.R;
 import com.zl.vo_.config.preference.Preferences;
@@ -17,7 +16,7 @@ import com.zl.vo_.main.activity.NoDisturbActivity;
 import com.zl.vo_.own.api.ApiAccount;
 import com.zl.vo_.own.base.BaseActivity;
 import com.zl.vo_.own.listener.OnRequestDataListener;
-import com.zl.vo_.own.ui.account.Login_Register_Acitivity;
+import com.zl.vo_.own.ui.account.ui.Login_Register_Acitivity;
 
 import org.json.JSONObject;
 

@@ -47,13 +47,14 @@ import com.netease.nimlib.sdk.mixpush.NIMPushClient;
 import com.netease.nimlib.sdk.uinfo.model.UserInfo;
 import com.netease.nimlib.sdk.util.NIMUtil;
 
+import org.xutils.x;
+
 import java.util.ArrayList;
 import java.util.List;
 
 import io.fabric.sdk.android.Fabric;
 
 public class NimApplication extends Application {
-
     private static NimApplication nimApplication;
     public static IWXAPI mWxApi;
     @Override
@@ -93,6 +94,7 @@ public class NimApplication extends Application {
         super.onCreate();
         DemoCache.setContext(this);
         SophixManager.getInstance().queryAndLoadNewPatch();
+        x.Ext.init(this);
         //注册到微信
         registToWX();
         // 4.6.0 开始，第三方推送配置入口改为 SDKOption#mixPushConfig，旧版配置方式依旧支持。

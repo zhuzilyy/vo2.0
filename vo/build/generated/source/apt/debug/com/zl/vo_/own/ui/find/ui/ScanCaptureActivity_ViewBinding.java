@@ -18,7 +18,7 @@ import java.lang.Override;
 public class ScanCaptureActivity_ViewBinding<T extends ScanCaptureActivity> implements Unbinder {
   protected T target;
 
-  private View view2131755349;
+  private View view2131755356;
 
   @UiThread
   public ScanCaptureActivity_ViewBinding(final T target, View source) {
@@ -32,7 +32,7 @@ public class ScanCaptureActivity_ViewBinding<T extends ScanCaptureActivity> impl
     target.scanCropView = Utils.findRequiredViewAsType(source, R.id.capture_crop_view, "field 'scanCropView'", RelativeLayout.class);
     target.scanLine = Utils.findRequiredViewAsType(source, R.id.capture_scan_line, "field 'scanLine'", ImageView.class);
     view = Utils.findRequiredView(source, R.id.iv_back, "method 'click'");
-    view2131755349 = view;
+    view2131755356 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -54,8 +54,8 @@ public class ScanCaptureActivity_ViewBinding<T extends ScanCaptureActivity> impl
     target.scanCropView = null;
     target.scanLine = null;
 
-    view2131755349.setOnClickListener(null);
-    view2131755349 = null;
+    view2131755356.setOnClickListener(null);
+    view2131755356 = null;
 
     this.target = null;
   }

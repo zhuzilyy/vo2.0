@@ -573,22 +573,11 @@
             android:value="c3b7877640734c92138bf0a8becce1df29155681" />
         <!--自己添加的清单文件-->
         <!--注册-->
-        <activity
-            android:screenOrientation="portrait"
-            android:name=".own.ui.account.RegisterActivity">
-        </activity>
         <!--主界面-->
         <activity android:name=".own.ui.MainActivity"
             android:screenOrientation="portrait"/>
         <!--选择登录还是注册界面-->
-        <activity android:name=".own.ui.account.Login_Register_Acitivity"
-            android:launchMode="singleTask"
-            android:screenOrientation="portrait"/>
         <!--手机登录界面-->
-        <activity android:name=".own.ui.account.LoginActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".own.ui.account.SplashActivity">
-        </activity>
         <!--人生笔记设置密码-->
         <activity android:name=".own.ui.mine.ui.SetLifeNotePwdActivity"
             android:screenOrientation="portrait"
@@ -642,9 +631,6 @@
             android:screenOrientation="portrait"
             />
         <!--webview界面-->
-        <activity android:name=".own.ui.account.WebViweActivity"
-            android:screenOrientation="portrait"
-            />
         <!--反馈界面-->
         <activity android:name=".own.ui.find.ui.FeebackActivity"
             android:screenOrientation="portrait"
@@ -687,7 +673,27 @@
             android:screenOrientation="portrait"
             />
         <!--忘记密码-->
-        <activity android:name=".own.ui.account.ForgetPwdActivity"
+        <activity android:name=".own.ui.account.ui.ForgetPwdActivity"
+            android:screenOrientation="portrait"
+            />
+        <!--微信授权-->
+        <activity android:name=".wxapi.WXEntryActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".own.ui.account.ui.BindPhoneActivity"
+            android:screenOrientation="portrait"
+            />
+        <!--登录-->
+        <activity android:name=".own.ui.account.ui.Login_Register_Acitivity"
+            android:screenOrientation="portrait"
+            />
+        <!--注册-->
+        <activity android:name=".own.ui.account.ui.RegisterActivity"
+            android:screenOrientation="portrait"
+            />
+        <!--注册-->
+        <activity android:name=".own.ui.account.ui.LoginActivity"
             android:screenOrientation="portrait"
             />
     </application>

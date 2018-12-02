@@ -17,7 +17,7 @@ import java.lang.Override;
 public class QrCodeActivity_ViewBinding<T extends QrCodeActivity> implements Unbinder {
   protected T target;
 
-  private View view2131755349;
+  private View view2131755356;
 
   @UiThread
   public QrCodeActivity_ViewBinding(final T target, View source) {
@@ -31,7 +31,7 @@ public class QrCodeActivity_ViewBinding<T extends QrCodeActivity> implements Unb
     target.et_nick = Utils.findRequiredViewAsType(source, R.id.ewm_nick, "field 'et_nick'", TextView.class);
     target.et_address = Utils.findRequiredViewAsType(source, R.id.ewm_address, "field 'et_address'", TextView.class);
     view = Utils.findRequiredView(source, R.id.iv_back, "method 'click'");
-    view2131755349 = view;
+    view2131755356 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -53,8 +53,8 @@ public class QrCodeActivity_ViewBinding<T extends QrCodeActivity> implements Unb
     target.et_nick = null;
     target.et_address = null;
 
-    view2131755349.setOnClickListener(null);
-    view2131755349 = null;
+    view2131755356.setOnClickListener(null);
+    view2131755356 = null;
 
     this.target = null;
   }
