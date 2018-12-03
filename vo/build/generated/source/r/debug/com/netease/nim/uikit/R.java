@@ -956,7 +956,6 @@ public final class R {
         public static final int dialog_loading_img = 0x7f0200da;
         public static final int gray = 0x7f02010e;
         public static final int icon_trans = 0x7f020130;
-        public static final int loading_bg = 0x7f020196;
         public static final int navigation_empty_icon = 0x7f0201cb;
         public static final int nim_actionbar_black_bg = 0x7f0201d1;
         public static final int nim_actionbar_dark_back_icon = 0x7f0201d2;

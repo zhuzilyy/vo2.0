@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="com.netease.nimlib:jsbridge-1.3.1">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/jsbridge-1.3.1.aar/5654e6ccc19a760f4bb9214cb52b421a/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/jsbridge-1.3.1.aar/5654e6ccc19a760f4bb9214cb52b421a/res" />
+      <root url="jar://$USER_HOME$/.gradle/wrapper/dists/gradle-3.3-all/caches/transforms-1/files-1.1/jsbridge-1.3.1.aar/7a2469d084874b54535d3bbf5151dfc5/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/wrapper/dists/gradle-3.3-all/caches/transforms-1/files-1.1/jsbridge-1.3.1.aar/7a2469d084874b54535d3bbf5151dfc5/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
